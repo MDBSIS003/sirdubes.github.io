@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings></PropertyGroup>
+  <ItemGroup>
+    <None Update="sample-fixtures.json" CopyToOutputDirectory="PreserveNewest" />
+    <Compile Include="../FuturePathStudentAdvisingSystem/BusinessLogic/*.cs" Link="BusinessLogic/%(Filename)%(Extension)" />
+    <Compile Include="../FuturePathStudentAdvisingSystem/Models/*.cs" Link="Models/%(Filename)%(Extension)" />
+    <Compile Include="../FuturePathStudentAdvisingSystem/Security/*.cs" Link="Security/%(Filename)%(Extension)" />
+    <Compile Include="../FuturePathStudentAdvisingSystem/DataAccess/*.cs" Exclude="../FuturePathStudentAdvisingSystem/DataAccess/LearnerProfileDAL.cs" Link="DataAccess/%(Filename)%(Extension)" />
+    <PackageReference Include="Microsoft.SqlServer.TransactSql.ScriptDom" Version="180.140.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.1.1" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
+  </ItemGroup>
+</Project>

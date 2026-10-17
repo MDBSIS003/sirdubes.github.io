@@ -1,0 +1,8 @@
+  FuturePathStudentAdvisingSystem -> /workspace/futurepath-integration/FuturePathStudentAdvisingSystem/bin/Debug/net10.0-windows/FuturePathStudentAdvisingSystem.dll
+  FuturePath.Tests -> /workspace/futurepath-integration/FuturePath.Tests/bin/Debug/net10.0/FuturePath.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.81

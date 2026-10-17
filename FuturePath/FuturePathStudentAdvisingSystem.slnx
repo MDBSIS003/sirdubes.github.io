@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FuturePathStudentAdvisingSystem/FuturePathStudentAdvisingSystem.csproj" />
+  <Project Path="FuturePath.Tests/FuturePath.Tests.csproj" />
+</Solution>

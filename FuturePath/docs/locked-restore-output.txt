@@ -1,0 +1,3 @@
+  Determining projects to restore...
+  Restored /workspace/futurepath-integration/FuturePathStudentAdvisingSystem/FuturePathStudentAdvisingSystem.csproj (in 233 ms).
+  Restored /workspace/futurepath-integration/FuturePath.Tests/FuturePath.Tests.csproj (in 233 ms).

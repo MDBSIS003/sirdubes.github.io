@@ -1,0 +1,11 @@
+# Phase 1 inspection
+
+The actual solution is FuturePathStudentAdvisingSystem.slnx; its sole startup project is FuturePathStudentAdvisingSystem/FuturePathStudentAdvisingSystem.csproj (net10.0-windows). Program starts frmWelcome.
+
+Existing runtime: branded welcome, login and registration; FPPage-derived profile, marks, questionnaire, recommendations, funding and staff screens. BrandedForm/Theme/RoleCard provide reusable inheritance and composition. Models contain only DegreeProgramme. DAL has reference reads, account CRUD and an obsolete profile INSERT. No business layer or automated tests exists. Passwords are plaintext and DAL operations lack ownership checks. Profile update ignores phone and grade. Most screens are prototypes. Sidebar opens a modeless form then closes the modal home, ending the session prematurely. FPPage redeclares `allowed` in a nested scope (CS0136); renamed before integration.
+
+Duplicate/outdated files: root Presentation/FuturePathScreens.cs and Presentation/LoginModule are outside the SDK project and not compiled; these must never be copied into the active project. Form1/2/3 and designers are legacy screens, superseded by branded pages. Project-local Database scripts duplicate root Database, with drift and no staff script. Both copies of create scripts drop user data. The integration makes root Database canonical and synchronises the project-local copies. Legacy screens are retained for history but excluded from compilation so obsolete entry points cannot bypass the current workflow. Uploaded baseline is preserved in the initial Git commit.
+
+Requirements: the supplied case study is the functional source, including its five named eligibility scenarios, >=8 questions, local rules, three reports and sample data. Overall guidelines and Part 1 document provide architecture and design constraints; the evaluation form assesses design documentation. These supporting documents are not independent user instructions. Team-approved design and any additional lecturer test dataset were not supplied. New policy choices are explicitly documented as assumptions, not official admission rules.
+
+Validation: initial static inspection complete. Cross-compilation and executable business tests follow once .NET SDK is installed. Windows GUI/LocalDB execution requires Windows and is not claimed on Linux.
