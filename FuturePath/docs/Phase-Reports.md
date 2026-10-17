@@ -64,3 +64,7 @@ See `build-output.txt`, `portable-test-output.txt` and `locked-restore-output.tx
 Ready for handoff: integrated source, SQL/scripts, tests and documentation. Before describing the system as fully demonstrated, run the Windows database suite and acceptance cases, record results and resolve any runtime findings. No publication/deployment or fresh Windows execution is claimed.
 
 Additional packaging checks passed: deterministic fixture/production-assessment regeneration, byte-identical root/project SQL mirrors, and Git whitespace validation.
+
+## Startup handoff correction
+
+Added `RUN-FUTUREPATH.cmd` and an app-only `FuturePath-App.slnx` after the user reported seeing console PASS output. That output identifies the test runner being selected as startup project. The app-only solution builds successfully on Linux with Windows targeting. The Windows launcher was inspected but cannot be executed on Linux; no new GUI runtime validation is claimed. The full original solution remains available for development and testing.

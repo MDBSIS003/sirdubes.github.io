@@ -4,6 +4,7 @@ Baseline is the uploaded ZIP captured in the first local Git commit; integration
 
 | File/group | Reason |
 |---|---|
+| `RUN-FUTUREPATH.cmd`, `FuturePath-App.slnx` (new) | Explicit Windows app launcher and app-only Visual Studio solution to avoid accidentally starting the console tests. |
 | `FuturePathStudentAdvisingSystem.slnx` | Keep the original executable and add the console test project. |
 | `FuturePathStudentAdvisingSystem/FuturePathStudentAdvisingSystem.csproj` | Enable Windows cross-target compilation; exclude obsolete Form1/2/3 and insert-only DAL from runtime; retain SQL client; pin patched PKCS dependency. |
 | `DataAccess/DatabaseConnection.cs` | Preserve LocalDB default; optional test/development connection override. |

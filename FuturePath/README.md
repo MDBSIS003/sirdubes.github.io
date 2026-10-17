@@ -4,6 +4,14 @@ Integrated continuation of the supplied Windows Forms starter, on branch `integr
 
 **Validation boundary:** the solution has been cross-compiled and business tests executed on Linux. Windows Forms interaction, PowerShell helpers and SQL Server LocalDB integration require the Windows verification below. A successful build is not a claim that the GUI or live database tests passed.
 
+## Start the app (not the tests)
+
+Extract the ZIP completely using **Extract All**. On Windows, double-click **RUN-FUTUREPATH.cmd** in the extracted folder. It builds only the Windows Forms project and launches its executable. It does not run the test runner. The .NET 10 SDK and database setup below are still required.
+
+For Visual Studio, open **FuturePath-App.slnx** for an app-only solution, then press **F5**. The original `FuturePathStudentAdvisingSystem.slnx` includes both the app and automated tests. If that solution prints `PASS` in a terminal, right-click **FuturePathStudentAdvisingSystem** in Solution Explorer and choose **Set as Startup Project**. Do not select **FuturePath.Tests** to launch the GUI.
+
+`PASS` output means the automated tests ran; it is not the application screen. The expected application screen is the branded **Future Path — Welcome** window with Student, Guest, Career Advisor and Administrator cards.
+
 ## Open and build on Windows
 
 1. Install a Visual Studio version supporting .NET 10 and `.slnx` (Visual Studio 2026 recommended), with **.NET desktop development** and **SQL Server Express LocalDB** components. Alternatively use the .NET 10 SDK CLI and SSMS for the database.
