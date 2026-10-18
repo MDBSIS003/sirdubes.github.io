@@ -49,7 +49,7 @@ namespace FuturePath.Desktop
             txtName.ReadOnly = followUp && learner.Name.Trim().Length > 0;
             txtSchool.ReadOnly = followUp && learner.School.Trim().Length > 0;
             txtEmail.ReadOnly = followUp && learner.Email.Trim().Length > 0;
-            txtPhone.ReadOnly = followUp && learner.Phone.Trim().Length > 0;
+            txtPhone.ReadOnly = followUp && AdvisingValidation.IsValidContactNumber(learner.Phone);
             cboProvince.Enabled = !followUp || learner.Province.Trim().Length == 0;
             txtName.Validating += Contact_Validating;
             txtEmail.Validating += Contact_Validating;

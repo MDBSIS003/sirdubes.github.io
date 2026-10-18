@@ -8,8 +8,8 @@ namespace FuturePath.Desktop
         private System.ComponentModel.IContainer? components;
         private TableLayoutPanel tblFields = null!;
         private CheckBox chkFunding = null!;
-        private Label lbltxtFunding = null!;
-        private TextBox txtFunding = null!;
+        private Label lbllblFunding = null!;
+        private Label lblFunding = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -28,10 +28,10 @@ namespace FuturePath.Desktop
             tblFields.Name = "tblFields";
             chkFunding = new CheckBox();
             chkFunding.Name = "chkFunding";
-            lbltxtFunding = new Label();
-            lbltxtFunding.Name = "lbltxtFunding";
-            txtFunding = new TextBox();
-            txtFunding.Name = "txtFunding";
+            lbllblFunding = new Label();
+            lbllblFunding.Name = "lbllblFunding";
+            lblFunding = new Label();
+            lblFunding.Name = "lblFunding";
             SuspendLayout();
             tblFields.AutoSize = true;
             tblFields.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -47,20 +47,20 @@ namespace FuturePath.Desktop
             chkFunding.AutoSize = true;
             chkFunding.CheckedChanged += chkFunding_CheckedChanged;
             tblFields.Controls.Add(chkFunding, 0, 0);
-            lbltxtFunding.Text = "Linked funding opportunities";
-            lbltxtFunding.AutoSize = true;
-            lbltxtFunding.Margin = new Padding(6, 10, 6, 3);
-            tblFields.Controls.Add(lbltxtFunding, 0, 1);
-            txtFunding.Name = "txtFunding";
-            txtFunding.AccessibleName = "Linked funding opportunities";
-            txtFunding.Dock = DockStyle.Fill;
-            txtFunding.Margin = new Padding(6, 3, 6, 8);
-            txtFunding.MinimumSize = new Size(0, 30);
-            txtFunding.Multiline = true;
-            txtFunding.ReadOnly = true;
-            txtFunding.ScrollBars = ScrollBars.Vertical;
-            txtFunding.Height = 400;
-            tblFields.Controls.Add(txtFunding, 0, 2);
+            lbllblFunding.Text = "Linked funding opportunities";
+            lbllblFunding.AutoSize = true;
+            lbllblFunding.Margin = new Padding(6, 10, 6, 3);
+            tblFields.Controls.Add(lbllblFunding, 0, 1);
+            lblFunding.Name = "lblFunding";
+            lblFunding.AccessibleName = "Linked funding opportunities";
+            lblFunding.Dock = DockStyle.Fill;
+            lblFunding.Margin = new Padding(6, 3, 6, 8);
+            lblFunding.MinimumSize = new Size(0, 30);
+            lblFunding.AutoSize = true;
+            lblFunding.BackColor = Color.White;
+            lblFunding.Padding = new Padding(14);
+            lblFunding.UseMnemonic = false;
+            tblFields.Controls.Add(lblFunding, 0, 2);
             tblFields.RowCount = 3;
             pnlBody.Controls.Add(tblFields);
             Configure("Explore funding and save your assessment", 6);

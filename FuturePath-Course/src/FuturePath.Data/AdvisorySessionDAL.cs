@@ -65,7 +65,7 @@ Name=CASE WHEN LEN(LTRIM(RTRIM(Name)))=0 THEN @p1 ELSE Name END,
 School=CASE WHEN LEN(LTRIM(RTRIM(School)))=0 THEN @p2 ELSE School END,
 Province=CASE WHEN LEN(LTRIM(RTRIM(Province)))=0 THEN @p3 ELSE Province END,
 Email=CASE WHEN LEN(LTRIM(RTRIM(Email)))=0 THEN @p4 ELSE Email END,
-Phone=CASE WHEN LEN(LTRIM(RTRIM(Phone)))=0 THEN @p5 ELSE Phone END
+Phone=CASE WHEN LEN(Phone)<>10 OR Phone COLLATE Latin1_General_100_BIN2 LIKE '%[^0-9]%' THEN @p5 ELSE Phone END
 WHERE Id=@p0", tx, learnerId, l.Name, l.School, l.Province, l.Email, l.Phone);
                     }
 
@@ -217,7 +217,8 @@ WHERE Id=@p0", tx, learnerId, l.Name, l.School, l.Province, l.Email, l.Phone);
 FROM AdvisorySession s JOIN Learner l ON l.Id=s.LearnerId JOIN DegreeProgramme d ON d.Id=s.DegreeId
 JOIN Faculty f ON f.Id=d.FacultyId JOIN RecommendationResult r ON r.SessionId=s.Id AND r.[Rank]=0
 WHERE CAST(s.CreatedUtc AS date)>=@p0 AND CAST(s.CreatedUtc AS date)<=@p1
-  AND (CHARINDEX(@p2,l.Name)>0 OR CHARINDEX(@p2,d.Name)>0 OR CONVERT(nvarchar(20),s.Id)=@p2)
+  AND (CHARINDEX(@p2,l.Name)>0 OR CHARINDEX(@p2,l.School)>0 OR CHARINDEX(@p2,l.Email)>0
+       OR CHARINDEX(@p2,l.Phone)>0 OR CHARINDEX(@p2,l.Province)>0 OR CHARINDEX(@p2,d.Name)>0 OR CONVERT(nvarchar(20),s.Id)=@p2)
 ORDER BY s.CreatedUtc DESC,s.Id DESC", null, from.ToDateTime(TimeOnly.MinValue), to.ToDateTime(TimeOnly.MinValue), search))
                 {
                     DataTable tableData = ReadData(cmd);

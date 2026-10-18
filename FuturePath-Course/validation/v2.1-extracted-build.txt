@@ -1,0 +1,9 @@
+  FuturePath.Business -> /workspace/verify-2.1/FuturePath/src/FuturePath.Business/bin/Release/net10.0/FuturePath.Business.dll
+  FuturePath.Data -> /workspace/verify-2.1/FuturePath/src/FuturePath.Data/bin/Release/net10.0/FuturePath.Data.dll
+  FuturePath.Desktop -> /workspace/verify-2.1/FuturePath/src/FuturePath.Desktop/bin/Release/net10.0-windows/FuturePath.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:06.36

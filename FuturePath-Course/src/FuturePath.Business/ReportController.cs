@@ -19,7 +19,7 @@ namespace FuturePath.Business
             this.clock = clock;
         }
 
-        public ReportDocument Summary(int sessionId)
+        public ReportDocument Summary(int sessionId, bool detailed = true)
         {
             access.RequireSession(sessionId);
             AdvisorySession session = store.GetSession(sessionId) ?? throw new ValidationException("Session not found.");
@@ -30,7 +30,7 @@ namespace FuturePath.Business
             }
 
             ReportComposer composer = new ReportComposer();
-            return composer.Summary(session, funding, clock.UtcNow);
+            return composer.Summary(session, funding, clock.UtcNow, detailed);
         }
 
         public ReportDocument Activity(DateOnly from, DateOnly to, bool exceptionsOnly, string search = "", int facultyId = 0, int degreeId = 0, string outcome = "")

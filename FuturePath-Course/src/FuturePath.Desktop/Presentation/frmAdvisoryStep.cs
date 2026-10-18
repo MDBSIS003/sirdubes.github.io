@@ -25,6 +25,7 @@ namespace FuturePath.Desktop
             if (step == 7)
             {
                 btnNext.Text = "Finish";
+                btnEnd.Visible = false;
             }
         }
 
@@ -68,7 +69,7 @@ namespace FuturePath.Desktop
 
         private void btnNext_Click(object? sender, EventArgs e)
         {
-            main.GoNext();
+            if (Visible) { main.GoNext(); }
         }
 
         private void btnEnd_Click(object? sender, EventArgs e)

@@ -31,9 +31,27 @@ namespace FuturePath.Desktop
             }
 
             lblMessage.ForeColor = Color.DarkGreen;
-            report = app.Reports.Summary(main.SavedSession.Id);
-            lblSummary.Text = report.Content;
-            ShowMessage("Saved as session #" + main.SavedSession.Id + ". Export or print your summary before finishing.");
+            ShowMessage("Assessment saved. Your reference is FP-" + main.SavedSession.Id + ". You may save a copy or select Finish.");
+            btnExport.Enabled = btnPrint.Enabled = false;
+            btnRetry.Visible = false;
+            report = null;
+            try
+            {
+                report = app.Reports.Summary(main.SavedSession.Id, detailed: false);
+                lblSummary.Text = report.Content;
+                btnExport.Enabled = btnPrint.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                lblSummary.Text = "Your assessment is saved. The summary could not be loaded. Choose Retry summary, or give your reference to a career advisor." +
+                    Environment.NewLine + Environment.NewLine + ex.Message;
+                btnRetry.Visible = true;
+            }
+        }
+
+        private void btnRetry_Click(object? sender, EventArgs e)
+        {
+            RefreshStep();
         }
 
         private void btnExport_Click(object? sender, EventArgs e)

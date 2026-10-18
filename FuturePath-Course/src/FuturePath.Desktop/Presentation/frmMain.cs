@@ -13,6 +13,7 @@ namespace FuturePath.Desktop
         private frmWelcome? welcome;
         private frmAdvisoryStep? [] steps = new frmAdvisoryStep? [7];
         private int currentStep;
+        private bool navigating;
         private AdvisoryInput input = new AdvisoryInput();
         private AdvisorySession? preview;
         private AdvisorySession? savedSession;
@@ -117,14 +118,6 @@ namespace FuturePath.Desktop
 
         private void ShowStep(int index)
         {
-            foreach (frmAdvisoryStep? step in steps)
-            {
-                if (step != null)
-                {
-                    step.Hide();
-                }
-            }
-
             if (steps[index] == null)
             {
                 switch (index)
@@ -156,14 +149,24 @@ namespace FuturePath.Desktop
                 steps[index]!.WindowState = FormWindowState.Maximized;
             }
 
-            currentStep = index;
             steps[index]!.RefreshStep();
+            foreach (frmAdvisoryStep? step in steps)
+            {
+                if (step != null)
+                {
+                    step.Hide();
+                }
+            }
+
+            currentStep = index;
             steps[index]!.Show();
             steps[index]!.Activate();
         }
 
         public void GoNext()
         {
+            if (navigating) { return; }
+            navigating = true;
             try
             {
                 if (currentStep == 6)
@@ -175,9 +178,20 @@ namespace FuturePath.Desktop
                 steps[currentStep]!.SaveInput();
                 ShowStep(currentStep + 1);
             }
-            catch (Exception ex)
+            catch (ValidationException ex)
             {
                 MessageBox.Show(this, ex.Message, "Check your entries", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                string message = currentStep == 5 && savedSession == null
+                    ? "Your assessment could not be saved. Your entries are still here; please try again." + Environment.NewLine + ex.Message
+                    : "The next page could not be opened. Your entries are still here." + Environment.NewLine + ex.Message;
+                MessageBox.Show(this, message, "Future Path", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                navigating = false;
             }
         }
 
@@ -191,6 +205,11 @@ namespace FuturePath.Desktop
 
         public void EndSession()
         {
+            if (savedSession != null)
+            {
+                ShowOverview();
+                return;
+            }
             if (MessageBox.Show(this, "End this learner workspace? Unsaved entries will be lost.", "Future Path", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ShowOverview();
@@ -257,11 +276,15 @@ namespace FuturePath.Desktop
             }
         }
 
-        private void mnuPassword_Click(object? sender, EventArgs e)
+        private void mnuSecurity_Click(object? sender, EventArgs e)
         {
-            using (frmPassword form = new frmPassword(app))
+            using (frmSecurity form = new frmSecurity(app))
             {
-                form.ShowDialog(this);
+                if (form.ShowDialog(this) == DialogResult.OK)
+                {
+                    ShowOverview();
+                    lblStatus.Text = "Security settings saved | " + app.Access.DisplayName + " | " + app.Access.Role;
+                }
             }
         }
 

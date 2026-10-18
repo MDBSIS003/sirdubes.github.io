@@ -12,6 +12,7 @@ namespace FuturePath.Desktop
         public frmFundingOptions()
         {
             InitializeComponent();
+            WrapDisplayLabel(lblFunding);
         }
 
         public frmFundingOptions(AppController app, frmMain main) : this()
@@ -24,7 +25,9 @@ namespace FuturePath.Desktop
         public override void RefreshStep()
         {
             chkFunding.Checked = main.Input.FundingRequested;
-            btnNext.Text = "Save and view summary";
+            btnNext.Text = "Complete and save";
+            lblMessage.ForeColor = Color.FromArgb(22, 45, 63);
+            ShowMessage("Review any funding options, then select Complete and save to finish your assessment. Sample funding information must be verified with the provider.");
             chkFunding_CheckedChanged(this, EventArgs.Empty);
         }
 
@@ -35,26 +38,27 @@ namespace FuturePath.Desktop
                 return;
             }
 
-            txtFunding.Clear();
+            System.Text.StringBuilder details = new System.Text.StringBuilder();
             if (!chkFunding.Checked)
             {
-                txtFunding.Text = "Funding guidance is optional. You can save your assessment without it.";
+                lblFunding.Text = "Funding guidance is optional. You can save your assessment without it.";
                 return;
             }
 
             List<FundingOption> options = app.Advising.Funding(main.Input.DegreeId);
             foreach (FundingOption option in options)
             {
-                txtFunding.AppendText(option.Name + " - " + option.Type + Environment.NewLine);
-                txtFunding.AppendText("Eligibility: " + option.Eligibility + Environment.NewLine);
-                txtFunding.AppendText("Documents: " + option.Documents + Environment.NewLine);
-                txtFunding.AppendText("Closing date: " + option.ClosingDate.ToString("yyyy-MM-dd") + Environment.NewLine);
-                txtFunding.AppendText("Contact / application: " + option.Contact + Environment.NewLine + "Sample information - verify with provider." + Environment.NewLine + Environment.NewLine);
+                details.Append(option.Name + " - " + option.Type + Environment.NewLine);
+                details.Append("Eligibility: " + option.Eligibility + Environment.NewLine);
+                details.Append("Documents: " + option.Documents + Environment.NewLine);
+                details.Append("Closing date: " + option.ClosingDate.ToString("yyyy-MM-dd") + Environment.NewLine);
+                details.Append("Contact / application: " + option.Contact + Environment.NewLine + Environment.NewLine + Environment.NewLine);
             }
 
+            lblFunding.Text = details.ToString().TrimEnd();
             if (options.Count == 0)
             {
-                txtFunding.Text = "No open, active funding records are linked to this programme or faculty. This does not establish funding ineligibility.";
+                lblFunding.Text = "No open, active funding records are linked to this programme or faculty. This does not establish funding ineligibility.";
             }
         }
 

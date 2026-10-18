@@ -78,6 +78,13 @@ namespace FuturePath.Business
             Role = user.Role;
         }
 
+        internal void RefreshStaff(UserAccount user)
+        {
+            UserId = user.Id;
+            DisplayName = user.Username;
+            Role = user.Role;
+        }
+
         public void ClearLearnerWorkspace()
         {
             ownedSessions.Clear();

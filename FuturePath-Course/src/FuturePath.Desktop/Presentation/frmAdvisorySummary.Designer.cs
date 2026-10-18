@@ -9,7 +9,8 @@ namespace FuturePath.Desktop
         private TableLayoutPanel tblFields = null!;
         private Button btnExport = null!;
         private Button btnPrint = null!;
-        private Label lbllblSummary = null!;
+        private Button btnRetry = null!;
+        private Label lblSummaryHeading = null!;
         private Label lblSummary = null!;
         protected override void Dispose(bool disposing)
         {
@@ -31,10 +32,12 @@ namespace FuturePath.Desktop
             btnExport.Name = "btnExport";
             btnPrint = new Button();
             btnPrint.Name = "btnPrint";
-            lbllblSummary = new Label();
-            lbllblSummary.Name = "lbllblSummary";
+            lblSummaryHeading = new Label();
+            lblSummaryHeading.Name = "lblSummaryHeading";
             lblSummary = new Label();
             lblSummary.Name = "lblSummary";
+            btnRetry = new Button();
+            btnRetry.Name = "btnRetry";
             SuspendLayout();
             tblFields.AutoSize = true;
             tblFields.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -46,7 +49,7 @@ namespace FuturePath.Desktop
             btnExport.AccessibleName = "btnExport";
             btnExport.Dock = DockStyle.Fill;
             btnExport.Margin = new Padding(6, 3, 6, 8);
-            btnExport.Text = "Save report (HTML / text)";
+            btnExport.Text = "Save a copy";
             btnExport.AutoSize = true;
             btnExport.Click += btnExport_Click;
             tblFields.Controls.Add(btnExport, 0, 0);
@@ -54,16 +57,16 @@ namespace FuturePath.Desktop
             btnPrint.AccessibleName = "btnPrint";
             btnPrint.Dock = DockStyle.Fill;
             btnPrint.Margin = new Padding(6, 3, 6, 8);
-            btnPrint.Text = "Print / Save as PDF";
+            btnPrint.Text = "Print or save PDF";
             btnPrint.AutoSize = true;
             btnPrint.Click += btnPrint_Click;
             tblFields.Controls.Add(btnPrint, 0, 1);
-            lbllblSummary.Text = "Saved assessment";
-            lbllblSummary.AutoSize = true;
-            lbllblSummary.Margin = new Padding(6, 10, 6, 3);
-            tblFields.Controls.Add(lbllblSummary, 0, 2);
+            lblSummaryHeading.Text = "Your study pathway";
+            lblSummaryHeading.AutoSize = true;
+            lblSummaryHeading.Margin = new Padding(6, 10, 6, 3);
+            tblFields.Controls.Add(lblSummaryHeading, 0, 2);
             lblSummary.Name = "lblSummary";
-            lblSummary.AccessibleName = "Saved assessment";
+            lblSummary.AccessibleName = "Your study pathway";
             lblSummary.Dock = DockStyle.Fill;
             lblSummary.Margin = new Padding(6, 3, 6, 8);
             lblSummary.MinimumSize = new Size(0, 30);
@@ -72,7 +75,14 @@ namespace FuturePath.Desktop
             lblSummary.Padding = new Padding(14);
             lblSummary.UseMnemonic = false;
             tblFields.Controls.Add(lblSummary, 0, 3);
-            tblFields.RowCount = 4;
+            btnRetry.Text = "Retry summary";
+            btnRetry.AutoSize = true;
+            btnRetry.Dock = DockStyle.Fill;
+            btnRetry.Margin = new Padding(6, 3, 6, 8);
+            btnRetry.Visible = false;
+            btnRetry.Click += btnRetry_Click;
+            tblFields.Controls.Add(btnRetry, 0, 4);
+            tblFields.RowCount = 5;
             pnlBody.Controls.Add(tblFields);
             Configure("Your saved advisory summary", 7);
             Name = "frmAdvisorySummary";

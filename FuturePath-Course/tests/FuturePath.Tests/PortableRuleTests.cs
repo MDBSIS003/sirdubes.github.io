@@ -195,7 +195,7 @@ public sealed class PortableRuleTests
         {
             Grade = 11,
             Email = "learner@example.invalid",
-            Phone = "+27 71 123 4567"
+            Phone = "0711234567"
         };
         AdvisingValidation.Profile(learner);
         learner.Email = "";

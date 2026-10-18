@@ -17,6 +17,12 @@ namespace FuturePath.Desktop
             });
         }
 
+        [System.ComponentModel.DesignerSerializationVisibility(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public string AccountUsername
+        {
+            get { return txtUsername.Text.Trim(); }
+        }
+
         private AppController app = null!;
         private int recordId;
         public frmEditUserAccount(AppController app, ReferenceRow? row) : this()
@@ -27,6 +33,13 @@ namespace FuturePath.Desktop
             txtUsername.Text = row == null ? "" : row.Text("Username");
             chkActive.Checked = row == null || Convert.ToInt32(row.Values["Active"]) == 1;
             cboRole.SelectedItem = row == null ? UserRole.Advisor : Enum.Parse<UserRole>(row.Text("Role"));
+            if (row == null)
+            {
+                lblHeading.Text = "Create staff account";
+                lbltxtPassword.Text = "Password (12–128 characters, including a letter and number)";
+                btnSave.Text = "Create account";
+            }
+            AcceptButton = btnSave;
             TrackChanges(this);
         }
 
@@ -39,10 +52,15 @@ namespace FuturePath.Desktop
                     throw new ValidationException("Choose a staff role.");
                 }
 
+                if (txtPassword.Text != txtConfirm.Text)
+                {
+                    throw new ValidationException("The passwords do not match.");
+                }
                 if (!ConfirmDeactivation()) { return; }
 
                 app.Authentication.SaveUser(recordId, txtUsername.Text, (UserRole)cboRole.SelectedItem, chkActive.Checked, txtPassword.Text.Length == 0 ? null : txtPassword.Text);
                 txtPassword.Clear();
+                txtConfirm.Clear();
                 DialogResult = DialogResult.OK;
             }
             catch (Exception ex)

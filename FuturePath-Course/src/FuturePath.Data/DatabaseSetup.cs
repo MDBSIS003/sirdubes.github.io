@@ -9,6 +9,26 @@ namespace FuturePath.Data
 {
          public static class DatabaseSetup
     {
+        public static void Upgrade(string databaseName)
+        {
+            DatabaseConnection database = new DatabaseConnection(databaseName);
+            using (Stream stream = typeof(DatabaseSetup).Assembly.GetManifestResourceStream("FuturePath.Setup.05_TesterRegistration.sql") ?? throw new InvalidOperationException("The database upgrade resource is missing."))
+            using (StreamReader reader = new StreamReader(stream))
+            using (SqlConnection connection = database.CreateConnection())
+            {
+                connection.Open();
+                string script = reader.ReadToEnd().Replace(DatabaseConnection.DefaultDatabase, databaseName, StringComparison.Ordinal);
+                foreach (string batch in Regex.Split(script, @"^\s*GO\s*$", RegexOptions.Multiline | RegexOptions.IgnoreCase))
+                {
+                    if (string.IsNullOrWhiteSpace(batch)) { continue; }
+                    using (SqlCommand command = new SqlCommand(batch, connection) { CommandTimeout = 90 })
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
         public static void PrepareDemo(string databaseName = DatabaseConnection.DefaultDatabase)
         {
 
@@ -20,7 +40,8 @@ namespace FuturePath.Data
                 {
                     "01_CreateDatabase.sql",
                     "02_CreateTables.sql",
-                    "03_SeedData.sql"
+                    "03_SeedData.sql",
+                    "05_TesterRegistration.sql"
                 }
 
                 )

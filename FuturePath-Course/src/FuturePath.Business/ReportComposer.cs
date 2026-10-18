@@ -34,13 +34,21 @@ namespace FuturePath.Business
             return "SESSIONS WITH IDENTIFIED GAPS\n  Missing/unconfirmed required-subject data: " + subjectData + "\n  Mark/average shortfalls: " + markGaps + "\n  Incomplete questionnaires: " + questionnaires + "\n";
         }
 
-        public ReportDocument Summary(AdvisorySession session, IReadOnlyList<FundingOption> funding, DateTime now)
+        public ReportDocument Summary(AdvisorySession session, IReadOnlyList<FundingOption> funding, DateTime now, bool detailed = true)
         {
             LearnerProfile learner = session.Input.Learner;
             StringBuilder b = new StringBuilder();
             b.AppendLine("FUTURE PATH  |  LEARNER ADVISORY SUMMARY");
-            b.AppendLine($"Generated: {now:u}  •  Session #{session.Id}  •  Assessed: {session.CreatedUtc:u}");
-            b.AppendLine("Rules: " + session.RuleVersion);
+            if (detailed)
+            {
+                b.AppendLine($"Generated: {now:u}  •  Session #{session.Id}  •  Assessed: {session.CreatedUtc:u}");
+                b.AppendLine("Rules: " + session.RuleVersion);
+            }
+            else
+            {
+                b.AppendLine($"Reference: FP-{session.Id}  |  Assessed: {session.CreatedUtc.ToLocalTime():dd MMMM yyyy}");
+                b.AppendLine($"Generated: {now.ToLocalTime():dd MMMM yyyy}");
+            }
             b.AppendLine();
             string name = learner.Name.Length == 0 ? "Anonymous learner" : learner.Name;
             b.AppendLine("Learner: " + name + "  |  Grade " + learner.Grade);
@@ -50,7 +58,14 @@ namespace FuturePath.Business
             b.AppendLine("Selected: " + session.Selected.Programme + " (" + session.Selected.Faculty + ")");
             b.AppendLine("Outcome: " + session.Selected.OutcomeText);
             b.AppendLine($"Overall recommendation score: {session.Selected.OverallScore:0.##}%");
-            b.AppendLine($"Subject coverage {session.Selected.SubjectScore:0.##}% • mark match {session.Selected.MarkScore:0.##}% • interest {session.Selected.InterestScore:0.##}% • faculty preference {session.Selected.PreferenceScore:0.##}%");
+            if (detailed)
+            {
+                b.AppendLine($"Subject coverage {session.Selected.SubjectScore:0.##}% • mark match {session.Selected.MarkScore:0.##}% • interest {session.Selected.InterestScore:0.##}% • faculty preference {session.Selected.PreferenceScore:0.##}%");
+            }
+            else
+            {
+                b.AppendLine($"Interest alignment: {session.Selected.InterestScore:0.##}%");
+            }
             b.AppendLine();
             b.AppendLine("SUBJECTS AND MARKS");
             decimal total = 0;
@@ -67,12 +82,16 @@ namespace FuturePath.Business
                 b.AppendLine($"  Average (all captured subjects): {total / marks.Count:0.##}%");
             }
 
-            b.AppendLine("Subject list confirmed complete: " + (session.Input.SubjectsComplete ? "Yes" : "No"));
-            b.AppendLine();
-            b.AppendLine("INTEREST QUESTIONNAIRE RESPONSES (1–5)");
-            foreach (InterestResponse response in session.Input.Responses)
+            if (detailed)
             {
-                b.AppendLine("  Question " + response.QuestionId + ": " + response.Score + " / 5");
+                b.AppendLine("Subject list confirmed complete: " + (session.Input.SubjectsComplete ? "Yes" : "No"));
+                b.AppendLine();
+                b.AppendLine("INTEREST QUESTIONNAIRE RESPONSES (1–5)");
+                foreach (InterestResponse response in session.Input.Responses)
+                {
+                    b.AppendLine("  Question " + response.QuestionId + ": " + response.Score + " / 5");
+                }
+                b.AppendLine();
             }
             b.AppendLine();
             b.AppendLine("INTEREST CATEGORY RESULTS (0–100%)");
@@ -89,7 +108,7 @@ namespace FuturePath.Business
             foreach (Recommendation alternative in session.Alternatives)
             {
                 b.AppendLine($"  {alternative.Programme} — {alternative.OutcomeText} — {alternative.OverallScore:0.##}% (interest {alternative.InterestScore:0.##}%)");
-                b.AppendLine(alternative.Explanation);
+                if (detailed) { b.AppendLine(alternative.Explanation); }
                 b.AppendLine();
             }
 
@@ -98,10 +117,28 @@ namespace FuturePath.Business
                 b.AppendLine("No suitable alternatives can be confirmed from the current data. Complete missing information or discuss other pathways with an advisor.");
             }
 
-            AppendFunding(b, session.Input.FundingRequested, funding);
+            AppendFunding(b, session.Input.FundingRequested, funding, detailed);
             b.AppendLine();
             b.AppendLine("NEXT STEPS");
-            b.AppendLine("Review the gaps above; discuss alternatives with a career advisor. Verify official entry criteria before applying.");
+            switch (session.Selected.Outcome)
+            {
+                case AdvisoryOutcome.StrongMatch:
+                    b.AppendLine("Check the programme’s official entry requirements and application dates. Compare your study options before applying.");
+                    break;
+                case AdvisoryOutcome.PossibleMatch:
+                    b.AppendLine("Review the gaps above and work on the areas that need improvement. Discuss the alternatives with a career advisor.");
+                    break;
+                case AdvisoryOutcome.NotCurrentlyEligible:
+                    b.AppendLine("Use the subject and mark gaps above to plan your next steps. Explore alternative programmes or another study route with a career advisor.");
+                    break;
+                default:
+                    b.AppendLine("Ask a career advisor to check the missing information and programme requirements before deciding on a study route.");
+                    break;
+            }
+            if (session.Input.FundingRequested)
+            {
+                b.AppendLine("Check funding eligibility, documents and closing dates with the provider before applying.");
+            }
             b.AppendLine();
             b.AppendLine(RecommendationEngine.Disclaimer);
             b.AppendLine("Privacy: this report contains learner information; share only with intended recipients.");
@@ -118,7 +155,7 @@ namespace FuturePath.Business
             return string.Compare(first.SubjectName, second.SubjectName, StringComparison.CurrentCulture);
         }
 
-        private void AppendFunding(StringBuilder b, bool requested, IReadOnlyList<FundingOption> funding)
+        private void AppendFunding(StringBuilder b, bool requested, IReadOnlyList<FundingOption> funding, bool detailed)
         {
             b.AppendLine();
             b.AppendLine("FUNDING INFORMATION");
@@ -134,7 +171,7 @@ namespace FuturePath.Business
                 b.AppendLine("  Eligibility: " + option.Eligibility);
                 b.AppendLine("  Documents: " + option.Documents);
                 b.AppendLine("  Contact: " + option.Contact);
-                b.AppendLine(option.Sample ? "  SAMPLE / VERIFY WITH PROVIDER" : "  Verify current details with provider");
+                if (detailed) { b.AppendLine(option.Sample ? "  SAMPLE / VERIFY WITH PROVIDER" : "  Verify current details with provider"); }
                 b.AppendLine();
             }
 

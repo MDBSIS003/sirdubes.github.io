@@ -19,6 +19,7 @@ namespace FuturePath.Desktop
         {
             this.app = app;
             this.main = main;
+            AcceptButton = btnSearch;
             app.Access.RequireStaff();
             dtpFrom.Value = dtpFrom.MinDate;
             dtpTo.Value = DateTime.UtcNow.Date;
@@ -33,10 +34,12 @@ namespace FuturePath.Desktop
                 lstSessions.Items.Clear();
                 foreach (SessionSummary session in sessions)
                 {
-                    ListViewItem item = new ListViewItem(session.Id.ToString());
+                    ListViewItem item = new ListViewItem("FP-" + session.Id);
                     item.SubItems.Add(session.Learner);
+                    item.SubItems.Add(session.Grade.ToString());
                     item.SubItems.Add(session.Programme);
                     item.SubItems.Add(session.Outcome);
+                    item.SubItems.Add(session.CreatedUtc.ToLocalTime().ToString("yyyy-MM-dd"));
                     item.Tag = session.Id;
                     lstSessions.Items.Add(item);
                 }

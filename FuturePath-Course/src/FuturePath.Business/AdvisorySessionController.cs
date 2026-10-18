@@ -71,7 +71,12 @@ namespace FuturePath.Business
                 throw new ValidationException("The start date must be on or before the end date.");
             }
 
-            return store.FindSessions(from, to, search.Trim());
+            search = search.Trim();
+            if (search.StartsWith("FP-", StringComparison.OrdinalIgnoreCase) && int.TryParse(search.Substring(3), out int reference) && reference > 0)
+            {
+                search = reference.ToString();
+            }
+            return store.FindSessions(from, to, search);
         }
 
         private void Validate(AdvisoryInput input)
@@ -86,7 +91,7 @@ namespace FuturePath.Business
                 if ((stored.Name.Trim().Length > 0 && stored.Name.Trim() != learner.Name) ||
                     (stored.School.Trim().Length > 0 && stored.School.Trim() != learner.School) ||
                     (stored.Email.Trim().Length > 0 && stored.Email.Trim() != learner.Email) ||
-                    (stored.Phone.Trim().Length > 0 && stored.Phone.Trim() != learner.Phone) ||
+                    (AdvisingValidation.IsValidContactNumber(stored.Phone.Trim()) && stored.Phone.Trim() != learner.Phone) ||
                     (stored.Province.Trim().Length > 0 && stored.Province.Trim() != learner.Province))
                 {
                     throw new ValidationException("A follow-up preserves learner identity. Start a new learner profile to capture different personal details.");

@@ -78,14 +78,14 @@ public sealed class RequiredProfilePersistenceTests
         input.Learner.School = "QA School";
         input.Learner.Province = "Gauteng";
         input.Learner.Email = "qa.learner@example.com";
-        input.Learner.Phone = "+27 71 234 5678";
+        input.Learner.Phone = "0712345678";
         var saved = db.Advising.Assess(input);
         var reopened = new FuturePath.Data.SqlServerStore(db.Store.DatabaseName).GetSession(saved.Id)!;
         Assert.Equal("QA Learner", reopened.Input.Learner.Name);
         Assert.Equal("QA School", reopened.Input.Learner.School);
         Assert.Equal("Gauteng", reopened.Input.Learner.Province);
         Assert.Equal("qa.learner@example.com", reopened.Input.Learner.Email);
-        Assert.Equal("+27 71 234 5678", reopened.Input.Learner.Phone);
+        Assert.Equal("0712345678", reopened.Input.Learner.Phone);
         Assert.Equal(input.Marks.OrderBy(m => m.SubjectId).Select(m => (m.SubjectId,m.Mark)), reopened.Input.Marks.OrderBy(m => m.SubjectId).Select(m => (m.SubjectId,m.Mark)));
         Assert.Equal(input.Responses.OrderBy(r => r.QuestionId).Select(r => (r.QuestionId,r.Score)), reopened.Input.Responses.OrderBy(r => r.QuestionId).Select(r => (r.QuestionId,r.Score)));
         db.Advisor();

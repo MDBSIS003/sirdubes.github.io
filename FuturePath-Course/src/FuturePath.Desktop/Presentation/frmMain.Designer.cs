@@ -11,7 +11,7 @@ namespace FuturePath.Desktop
         private ToolStripMenuItem mnuSessions = null!;
         private ToolStripMenuItem mnuReports = null!;
         private ToolStripMenuItem mnuAdmin = null!;
-        private ToolStripMenuItem mnuPassword = null!;
+        private ToolStripMenuItem mnuSecurity = null!;
         private ToolStripMenuItem mnuLogout = null!;
         private StatusStrip status = null!;
         private ToolStripStatusLabel lblStatus = null!;
@@ -39,8 +39,8 @@ namespace FuturePath.Desktop
             mnuReports.Name = "mnuReports";
             mnuAdmin = new ToolStripMenuItem();
             mnuAdmin.Name = "mnuAdmin";
-            mnuPassword = new ToolStripMenuItem();
-            mnuPassword.Name = "mnuPassword";
+            mnuSecurity = new ToolStripMenuItem();
+            mnuSecurity.Name = "mnuSecurity";
             mnuLogout = new ToolStripMenuItem();
             mnuLogout.Name = "mnuLogout";
             status = new StatusStrip();
@@ -60,20 +60,20 @@ namespace FuturePath.Desktop
             mnuSessions.Text = "Learners and sessions";
             mnuReports.Text = "Reports";
             mnuAdmin.Text = "Administration";
-            mnuPassword.Text = "Change password";
+            mnuSecurity.Text = "Security";
             mnuLogout.Text = "Sign out";
             mnuHome.Click += mnuHome_Click;
             mnuSessions.Click += mnuSessions_Click;
             mnuReports.Click += mnuReports_Click;
             mnuAdmin.Click += mnuAdmin_Click;
-            mnuPassword.Click += mnuPassword_Click;
+            mnuSecurity.Click += mnuSecurity_Click;
             mnuLogout.Click += mnuLogout_Click;
             mnuStaff.Items.AddRange(new ToolStripItem[] {
                 mnuHome,
                 mnuSessions,
                 mnuReports,
                 mnuAdmin,
-                mnuPassword,
+                mnuSecurity,
                 mnuLogout
             });
             mnuStaff.Visible = false;

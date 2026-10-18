@@ -20,6 +20,8 @@ namespace FuturePath.Business
         UserAccount? GetUser(int id);
         void RecordLogin(int userId, bool success, DateTime now);
         void SavePassword(int userId, string hash);
+        UserAccount CreateTesterAccount(string email, string username, string hash, UserRole role, DateTime now);
+        void SaveSecurity(int userId, string username, string? passwordHash, DateTime now);
         void SaveUser(int id, string username, UserRole role, bool active, string? passwordHash);
         List<ReferenceRow> GetReference(string key);
         int SaveReference(string key, int id, IReadOnlyDictionary<string, object?> values);

@@ -96,6 +96,16 @@ namespace FuturePath.Data
             userAccountDAL.SavePassword(userId, hash);
         }
 
+        public UserAccount CreateTesterAccount(string email, string username, string hash, UserRole role, DateTime now)
+        {
+            return userAccountDAL.CreateTesterAccount(email, username, hash, role, now);
+        }
+
+        public void SaveSecurity(int userId, string username, string? passwordHash, DateTime now)
+        {
+            userAccountDAL.SaveSecurity(userId, username, passwordHash, now);
+        }
+
         public void SaveUser(int id, string username, UserRole role, bool active, string? passwordHash)
         {
             userAccountDAL.SaveUser(id, username, role, active, passwordHash);

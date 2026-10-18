@@ -57,7 +57,7 @@ public class DesktopTests
             new frmMain(), new frmWelcome(), new frmDatabaseSetup(), new frmLearnerProfile(),
             new frmSubjectMarks(), new frmInterestQuestionnaire(), new frmDegreeEligibility(),
             new frmAdvisoryResults(), new frmFundingOptions(), new frmAdvisorySummary(),
-            new frmLogin(), new frmPassword(), new frmLearnerSessions(), new frmReports(),
+            new frmLogin(), new frmTesterRegistration(), new frmSecurity(), new frmLearnerSessions(), new frmReports(),
             new frmReportPreview(), new frmAdminMaintenance(), new frmEditDegreeProgramme(),
             new frmEditProgrammeRequirement(), new frmEditInterestQuestion(), new frmEditDegreeInterestMapping(),
             new frmEditFundingOption(), new frmEditFundingFaculty(), new frmEditFundingProgramme(),
@@ -177,6 +177,8 @@ public class DesktopTests
         Assert.False(Field<Button>(main.ActiveMdiChild!, "btnBack").Enabled);
         Assert.Contains("Course UI test", Field<Label>(main.ActiveMdiChild!, "lblSummary").Text);
         Assert.Equal(before + 1, db.Store.FindSessions(DateOnly.MinValue, DateOnly.MaxValue, "").Count);
+        Assert.False(Field<Button>(main.ActiveMdiChild!, "btnEnd").Visible);
+        Assert.DoesNotContain("Rules:", Field<Label>(main.ActiveMdiChild!, "lblSummary").Text);
         Assert.Equal(1, Application.OpenForms.Cast<Form>().Count(form => !form.IsMdiChild));
         Next(main);
         Assert.IsType<frmWelcome>(main.ActiveMdiChild);
@@ -210,7 +212,7 @@ public class DesktopTests
     [InlineData(1280, 720)]
     public void RequirementsAndResultsUseCompleteWrappingDisplays(int width, int height) => Sta(() =>
     {
-        foreach (frmAdvisoryStep page in new frmAdvisoryStep[] { new frmDegreeEligibility(), new frmAdvisoryResults(), new frmAdvisorySummary() })
+        foreach (frmAdvisoryStep page in new frmAdvisoryStep[] { new frmDegreeEligibility(), new frmAdvisoryResults(), new frmAdvisorySummary(), new frmFundingOptions() })
         {
             using (page)
             using (Form host = new Form())
@@ -220,7 +222,7 @@ public class DesktopTests
                 page.Dock = DockStyle.Fill;
                 host.Controls.Add(page);
                 host.Show(); page.Show(); Application.DoEvents();
-                string name = page is frmDegreeEligibility ? "lblRequirements" : page is frmAdvisoryResults ? "lblOutcomeDetails" : "lblSummary";
+                string name = page is frmDegreeEligibility ? "lblRequirements" : page is frmAdvisoryResults ? "lblOutcomeDetails" : page is frmFundingOptions ? "lblFunding" : "lblSummary";
                 Label display = Field<Label>(page, name);
                 display.Text = string.Join(Environment.NewLine + Environment.NewLine, Enumerable.Repeat("Required: Mathematics at 60%. Improve marks and review the full programme requirements.", 20));
                 Application.DoEvents();
@@ -257,6 +259,80 @@ public class DesktopTests
         welcome = main.MdiChildren.OfType<frmWelcome>().Single();
         Assert.True(Field<Button>(welcome,"btnAdministration").Visible);
         main.Close();
+    });
+
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void SecurityFormSavesUsernameAndOptionalPassword(bool replacePassword) => Sta(() =>
+    {
+        using LocalDbDatabase db = new();
+        AppController app = new(db.Store);
+        app.Authentication.Login("advisor_test","FuturePathAdvisor2026!");
+        using frmSecurity form = new(app);
+        form.Show();
+        Assert.Equal("advisor_test",Field<TextBox>(form,"txtUsername").Text);
+        Field<TextBox>(form,"txtUsername").Text="qa.advisor";
+        Field<TextBox>(form,"txtCurrent").Text="FuturePathAdvisor2026!";
+        if (replacePassword)
+        {
+            Field<TextBox>(form,"txtNew").Text="ReplacementPass2026!";
+            Field<TextBox>(form,"txtConfirm").Text="ReplacementPass2026!";
+        }
+        Field<Button>(form,"btnSave").PerformClick();
+        Assert.Equal(DialogResult.OK,form.DialogResult);
+        Assert.Equal("qa.advisor",app.Access.DisplayName);
+        app.Access.SignOut();
+        app.Authentication.Login("qa.advisor",replacePassword ? "ReplacementPass2026!" : "FuturePathAdvisor2026!");
+        Assert.Equal(UserRole.Advisor,app.Access.Role);
+        form.Close();
+    });
+
+    [Theory]
+    [InlineData(UserRole.Advisor)]
+    [InlineData(UserRole.Administrator)]
+    public void StaffAccountEditorCreatesUsableMarkerCredentials(UserRole role) => Sta(() =>
+    {
+        using LocalDbDatabase db = new();
+        AppController app = new(db.Store);
+        app.Authentication.Login("admin_test","FuturePathAdmin2026!");
+        using frmEditUserAccount editor = new(app,null);
+        editor.Show();
+        Field<TextBox>(editor,"txtUsername").Text="marker.account";
+        Field<ComboBox>(editor,"cboRole").SelectedItem=role;
+        Field<TextBox>(editor,"txtPassword").Text="MarkerPassword2026!";
+        Field<TextBox>(editor,"txtConfirm").Text="MarkerPassword2026!";
+        Field<Button>(editor,"btnSave").PerformClick();
+        Assert.Equal(DialogResult.OK,editor.DialogResult);
+        Assert.Equal("marker.account",editor.AccountUsername);
+        app.Access.SignOut();
+        app.Authentication.Login("marker.account","MarkerPassword2026!");
+        Assert.Equal(role,app.Access.Role);
+        editor.Close();
+    });
+
+    [Fact]
+    public void OfflineTesterFormCreatesAccountThenOrdinaryLoginWorks() => Sta(() =>
+    {
+        using LocalDbDatabase db = new();
+        AppController app = new(db.Store);
+        using frmTesterRegistration form = new(app);
+        form.Show();
+        Assert.False(Field<Button>(form,"btnCode").Enabled);
+        Field<TextBox>(form,"txtEmail").Text="marker@example.com";
+        Field<TextBox>(form,"txtUsername").Text="marker.account";
+        Field<TextBox>(form,"txtPassword").Text="MarkerPassword2026!";
+        Field<TextBox>(form,"txtConfirm").Text="MarkerPassword2026!";
+        Field<ComboBox>(form,"cboRole").SelectedItem=UserRole.Administrator;
+        Field<Button>(form,"btnRequest").PerformClick();
+        Assert.False(app.Access.IsStaff);
+        Assert.True(Field<Button>(form,"btnCode").Enabled);
+        Field<Button>(form,"btnCode").PerformClick();
+        Assert.Equal(DialogResult.OK,form.DialogResult);
+        Assert.Equal(UserRole.Administrator,app.Access.Role);
+        form.Close(); app.Access.SignOut();
+        app.Authentication.Login("marker@example.com","MarkerPassword2026!");
+        Assert.Equal("marker.account",app.Access.DisplayName);
     });
 
 }

@@ -18,6 +18,8 @@ namespace FuturePath.Desktop
         private Label lbltxtPassword = null!;
         private TextBox txtPassword = null!;
         private Button btnSave = null!;
+        private Label lblConfirm = null!;
+        private TextBox txtConfirm = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -56,6 +58,10 @@ namespace FuturePath.Desktop
             txtPassword.Name = "txtPassword";
             btnSave = new Button();
             btnSave.Name = "btnSave";
+            lblConfirm = new Label();
+            lblConfirm.Name = "lblConfirm";
+            txtConfirm = new TextBox();
+            txtConfirm.Name = "txtConfirm";
             SuspendLayout();
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
@@ -125,8 +131,18 @@ namespace FuturePath.Desktop
             btnSave.MinimumSize = new Size(0, 40);
             btnSave.Text = "Save staff account";
             btnSave.Click += btnSave_Click;
-            tblDialog.Controls.Add(btnSave, 0, 9);
-            tblDialog.RowCount = 10;
+            lblConfirm.Text = "Confirm new password";
+            lblConfirm.AutoSize = true;
+            lblConfirm.Margin = new Padding(5, 10, 5, 3);
+            txtConfirm.Dock = DockStyle.Fill;
+            txtConfirm.UseSystemPasswordChar = true;
+            txtConfirm.MaxLength = 128;
+            txtConfirm.AccessibleName = "Confirm new password";
+            txtConfirm.Margin = new Padding(5, 3, 5, 8);
+            tblDialog.Controls.Add(lblConfirm, 0, 9);
+            tblDialog.Controls.Add(txtConfirm, 0, 10);
+            tblDialog.Controls.Add(btnSave, 0, 11);
+            tblDialog.RowCount = 12;
             pnlScroll.Controls.Add(tblDialog);
             Controls.Add(pnlScroll);
             Text = "Future Path | Maintain staff account";

@@ -6,17 +6,20 @@ using FuturePath.Business;
 
 namespace FuturePath.Desktop
 {
-    public partial class frmPassword : frmStaffForm
+    public partial class frmSecurity : frmStaffForm
     {
-        public frmPassword()
+        public frmSecurity()
         {
             InitializeComponent();
         }
 
         private AppController app = null!;
-        public frmPassword(AppController app) : this()
+        public frmSecurity(AppController app) : this()
         {
             this.app = app;
+            app.Access.RequireStaff();
+            txtUsername.Text = app.Access.DisplayName;
+            AcceptButton = btnSave;
         }
 
         private void btnSave_Click(object? sender, EventArgs e)
@@ -28,9 +31,11 @@ namespace FuturePath.Desktop
                     throw new ValidationException("The new passwords do not match.");
                 }
 
-                app.Authentication.ChangePassword(txtCurrent.Text, txtNew.Text);
-                MessageBox.Show(this, "Password updated.", "Future Path");
-                Close();
+                app.Authentication.ChangeSecurity(txtUsername.Text, txtCurrent.Text, txtNew.Text);
+                txtCurrent.Clear();
+                txtNew.Clear();
+                txtConfirm.Clear();
+                DialogResult = DialogResult.OK;
             }
             catch (Exception ex)
             {

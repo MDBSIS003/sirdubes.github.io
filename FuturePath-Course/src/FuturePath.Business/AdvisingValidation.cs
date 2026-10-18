@@ -67,9 +67,9 @@ namespace FuturePath.Business
                 throw new ValidationException("Enter a valid email address.");
             }
 
-            if (learner.Phone.Length > 0 && (learner.Phone.Length < 7 || learner.Phone.Length > 20 || !ValidPhoneCharacters(learner.Phone)))
+            if (learner.Phone.Length > 0 && (!IsValidContactNumber(learner.Phone)))
             {
-                throw new ValidationException("Enter a valid contact number containing at least seven digits.");
+                throw new ValidationException("Enter a contact number of exactly 10 digits, for example 0712345678.");
             }
 
             if (learner.Province.Length > 0 && Array.IndexOf(ReferenceCatalog.Provinces, learner.Province) < 0)
@@ -181,22 +181,20 @@ namespace FuturePath.Business
             return hasLetter;
         }
 
-        private static bool ValidPhoneCharacters(string phone)
+        public static bool IsValidContactNumber(string phone)
         {
-            int digits = 0;
-            foreach (char character in phone)
+            if (phone.Length != 10)
             {
-                if (char.IsDigit(character))
-                {
-                    digits++;
-                }
-                else if ("+()- ".IndexOf(character) < 0)
+                return false;
+            }
+            foreach (char digit in phone)
+            {
+                if (digit < '0' || digit > '9')
                 {
                     return false;
                 }
             }
-
-            return digits >= 7;
+            return true;
         }
     }
 }
