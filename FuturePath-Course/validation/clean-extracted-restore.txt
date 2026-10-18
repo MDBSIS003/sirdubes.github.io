@@ -1,0 +1,4 @@
+  Determining projects to restore...
+  Restored /workspace/verify-clean-final/FuturePath/src/FuturePath.Business/FuturePath.Business.csproj (in 192 ms).
+  Restored /workspace/verify-clean-final/FuturePath/src/FuturePath.Data/FuturePath.Data.csproj (in 284 ms).
+  Restored /workspace/verify-clean-final/FuturePath/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 284 ms).
