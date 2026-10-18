@@ -1,0 +1,27 @@
+PASS PBKDF2 unique salts, correct password, wrong password, malformed hashes
+PASS Password length bounds
+PASS Guest cannot access staff screens or protected operations
+PASS Learner ownership and role separation
+PASS Profile validation accepts valid data and rejects invalid fields
+PASS Mark boundaries and duplicate prevention
+PASS Questionnaire requires all valid unique responses
+PASS Meets exact minimums with high interest => Strong Match and 100 score
+PASS Below minimum => Possible Match, explicitly academically ineligible
+PASS Missing mandatory mathematics cannot be replaced by Mathematical Literacy
+PASS Incomplete subject capture or questionnaire => More Information Needed
+PASS Weak interests cannot imply academic ineligibility
+PASS Explicit OR groups accept Mathematical Literacy; absent optional subject is not a gate
+PASS Missing programme rules or mappings never gives false positive
+PASS Rank eligible programmes first, exclude inactive, mark alternatives
+PASS SQL identifiers are allowlisted
+PASS Case study: Gadija Jacobs
+PASS Case study: Aadiel-Raboo Magwa
+PASS Case study: Labeeqah Rademeyer
+PASS Case study: Siyabonga Dickson
+PASS Case study: Derek Vin Diesel
+PASS Management validation rejects empty names and invalid minimums
+PASS All active sample programmes have rules and interest mappings
+PASS All canonical SQL scripts parse as SQL Server T-SQL
+PASS DAL raw SQL query grammar
+SKIP LocalDB integration group: use --database on Windows; creates and removes a dedicated temporary test database.
+RESULT: 25 passed, 0 failed, 1 skipped groups

@@ -1,0 +1,1425 @@
+{
+  "Degrees": [
+    {
+      "DegreeID": 1,
+      "FacultyID": 1,
+      "ProgrammeName": "BCom Information Systems",
+      "Description": "Combining business knowledge with information technology and systems. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Commerce"
+    },
+    {
+      "DegreeID": 2,
+      "FacultyID": 1,
+      "ProgrammeName": "BCom Accounting",
+      "Description": "Focuses on financial accounting, auditing, management accounting and taxation. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Commerce"
+    },
+    {
+      "DegreeID": 3,
+      "FacultyID": 1,
+      "ProgrammeName": "BCom General",
+      "Description": "A broad commerce degree covering business, economics and management. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Commerce"
+    },
+    {
+      "DegreeID": 4,
+      "FacultyID": 3,
+      "ProgrammeName": "BSc Computer Science",
+      "Description": "Programming, algorithms and software development. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Science"
+    },
+    {
+      "DegreeID": 5,
+      "FacultyID": 3,
+      "ProgrammeName": "BSc Biological Sciences",
+      "Description": "Study of living organisms, ecology and biological research. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Science"
+    },
+    {
+      "DegreeID": 6,
+      "FacultyID": 4,
+      "ProgrammeName": "BSc Engineering (Mechanical Engineering)",
+      "Description": "Design and analysis of mechanical systems and machines. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Engineering"
+    },
+    {
+      "DegreeID": 7,
+      "FacultyID": 2,
+      "ProgrammeName": "BA Humanities",
+      "Description": "A broad arts degree in languages, history and the social world. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Humanities"
+    },
+    {
+      "DegreeID": 8,
+      "FacultyID": 2,
+      "ProgrammeName": "BSocSci",
+      "Description": "Social science degree covering society, politics and human behaviour. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Humanities"
+    },
+    {
+      "DegreeID": 9,
+      "FacultyID": 2,
+      "ProgrammeName": "Law-related qualification",
+      "Description": "A law-related pathway focused on legal reasoning and society. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Humanities"
+    },
+    {
+      "DegreeID": 10,
+      "FacultyID": 5,
+      "ProgrammeName": "Bachelor of Health Sciences",
+      "Description": "A health sciences pathway into clinical and related health careers. Sample data only, not official university information, please check with official university policies",
+      "IsActive": true,
+      "FacultyName": "Health Sciences"
+    }
+  ],
+  "Requirements": [
+    {
+      "RequirementID": 1,
+      "DegreeID": 1,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed for academic reading and writing. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 2,
+      "DegreeID": 1,
+      "SubjectID": 3,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 60% or higher is needed for the quantitative and systems modules. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 3,
+      "DegreeID": 1,
+      "SubjectID": 12,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample recommendation: Computer Applications Technology at 50% is helpful but not compulsory. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Computer Applications Technology",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 4,
+      "DegreeID": 2,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 5,
+      "DegreeID": 2,
+      "SubjectID": 3,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 60% or higher is needed for financial and quantitative modules. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 6,
+      "DegreeID": 2,
+      "SubjectID": 7,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Accounting at 60% or higher shows readiness for accounting modules. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Accounting",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 7,
+      "DegreeID": 3,
+      "SubjectID": 1,
+      "MinimumMark": 55,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 55% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 8,
+      "DegreeID": 3,
+      "SubjectID": 3,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematics at 50% OR Mathematical Literacy at 60% is accepted. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 9,
+      "DegreeID": 3,
+      "SubjectID": 4,
+      "MinimumMark": 60,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematical Literacy at 60% is accepted instead of Mathematics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematical Literacy",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 10,
+      "DegreeID": 4,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 11,
+      "DegreeID": 4,
+      "SubjectID": 3,
+      "MinimumMark": 70,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 70% or higher is needed for programming and algorithm modules. Mathematical Literacy is not accepted. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 12,
+      "DegreeID": 5,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 13,
+      "DegreeID": 5,
+      "SubjectID": 3,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 60% or higher is needed for statistics and quantitative biology. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 14,
+      "DegreeID": 5,
+      "SubjectID": 5,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Physical Sciences at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Physical Sciences",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 15,
+      "DegreeID": 5,
+      "SubjectID": 6,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Life Sciences at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Life Sciences",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 16,
+      "DegreeID": 6,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 17,
+      "DegreeID": 6,
+      "SubjectID": 3,
+      "MinimumMark": 70,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 70% or higher is needed for engineering mathematics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 18,
+      "DegreeID": 6,
+      "SubjectID": 5,
+      "MinimumMark": 70,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Physical Sciences at 70% or higher is needed for mechanics and physics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Physical Sciences",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 19,
+      "DegreeID": 6,
+      "SubjectID": 15,
+      "MinimumMark": 60,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample recommendation: Engineering Graphics and Design at 60% is helpful but not compulsory. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Engineering Graphics and Design",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 20,
+      "DegreeID": 7,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 21,
+      "DegreeID": 7,
+      "SubjectID": 11,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample recommendation: History at 50% is helpful but not compulsory. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "History",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 22,
+      "DegreeID": 7,
+      "SubjectID": 3,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematics at 50% OR Mathematical Literacy at 60% is accepted. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 23,
+      "DegreeID": 7,
+      "SubjectID": 4,
+      "MinimumMark": 60,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematical Literacy at 60% is accepted instead of Mathematics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematical Literacy",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 24,
+      "DegreeID": 8,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 25,
+      "DegreeID": 8,
+      "SubjectID": 3,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematics at 50% OR Mathematical Literacy at 60% is accepted. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 26,
+      "DegreeID": 8,
+      "SubjectID": 4,
+      "MinimumMark": 60,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematical Literacy at 60% is accepted instead of Mathematics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematical Literacy",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 27,
+      "DegreeID": 8,
+      "SubjectID": 11,
+      "MinimumMark": 50,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample recommendation: History at 50% is helpful but not compulsory. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "History",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 30,
+      "DegreeID": 9,
+      "SubjectID": 4,
+      "MinimumMark": 60,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample alternative: Mathematical Literacy at 60% is accepted instead of Mathematics. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematical Literacy",
+      "AlternativeGroup": "Sample numeracy choice"
+    },
+    {
+      "RequirementID": 31,
+      "DegreeID": 9,
+      "SubjectID": 11,
+      "MinimumMark": 55,
+      "IsMandatory": false,
+      "AdvisoryNote": "Sample recommendation: History at 55% is helpful but not compulsory. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "History",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 32,
+      "DegreeID": 10,
+      "SubjectID": 1,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: English at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "English",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 33,
+      "DegreeID": 10,
+      "SubjectID": 3,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Mathematics at 60% or higher is needed. Mathematical Literacy is not accepted. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Mathematics",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 34,
+      "DegreeID": 10,
+      "SubjectID": 5,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Physical Sciences at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Physical Sciences",
+      "AlternativeGroup": null
+    },
+    {
+      "RequirementID": 35,
+      "DegreeID": 10,
+      "SubjectID": 6,
+      "MinimumMark": 60,
+      "IsMandatory": true,
+      "AdvisoryNote": "Sample requirement: Life Sciences at 60% or higher is needed. Sample data only, not official university information, please check with official university policies",
+      "SubjectName": "Life Sciences",
+      "AlternativeGroup": null
+    }
+  ],
+  "Questions": [
+    {
+      "QuestionID": 1,
+      "CategoryID": 1,
+      "QuestionText": "I enjoy solving problems using numbers or data."
+    },
+    {
+      "QuestionID": 2,
+      "CategoryID": 2,
+      "QuestionText": "I enjoy helping people and communities."
+    },
+    {
+      "QuestionID": 3,
+      "CategoryID": 3,
+      "QuestionText": "I enjoy working with technology."
+    },
+    {
+      "QuestionID": 4,
+      "CategoryID": 4,
+      "QuestionText": "I enjoy science experiments and research."
+    },
+    {
+      "QuestionID": 5,
+      "CategoryID": 8,
+      "QuestionText": "I enjoy reading, writing and analysing ideas."
+    },
+    {
+      "QuestionID": 6,
+      "CategoryID": 5,
+      "QuestionText": "I enjoy business, entrepreneurship and finance."
+    },
+    {
+      "QuestionID": 7,
+      "CategoryID": 6,
+      "QuestionText": "I enjoy designing or building practical solutions."
+    },
+    {
+      "QuestionID": 8,
+      "CategoryID": 7,
+      "QuestionText": "I enjoy understanding society, law or politics."
+    },
+    {
+      "QuestionID": 9,
+      "CategoryID": 1,
+      "QuestionText": " I can make several complex calculations in my mind"
+    },
+    {
+      "QuestionID": 10,
+      "CategoryID": 2,
+      "QuestionText": " I help other students understand concepts"
+    }
+  ],
+  "Mappings": [
+    {
+      "MappingID": 1,
+      "DegreeID": 1,
+      "CategoryID": 3,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 2,
+      "DegreeID": 1,
+      "CategoryID": 5,
+      "Weight": 0.8
+    },
+    {
+      "MappingID": 3,
+      "DegreeID": 1,
+      "CategoryID": 1,
+      "Weight": 0.6
+    },
+    {
+      "MappingID": 4,
+      "DegreeID": 2,
+      "CategoryID": 5,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 5,
+      "DegreeID": 2,
+      "CategoryID": 1,
+      "Weight": 0.9
+    },
+    {
+      "MappingID": 6,
+      "DegreeID": 3,
+      "CategoryID": 5,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 7,
+      "DegreeID": 3,
+      "CategoryID": 1,
+      "Weight": 0.5
+    },
+    {
+      "MappingID": 8,
+      "DegreeID": 3,
+      "CategoryID": 8,
+      "Weight": 0.4
+    },
+    {
+      "MappingID": 9,
+      "DegreeID": 4,
+      "CategoryID": 3,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 10,
+      "DegreeID": 4,
+      "CategoryID": 1,
+      "Weight": 0.9
+    },
+    {
+      "MappingID": 11,
+      "DegreeID": 4,
+      "CategoryID": 6,
+      "Weight": 0.5
+    },
+    {
+      "MappingID": 12,
+      "DegreeID": 5,
+      "CategoryID": 4,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 13,
+      "DegreeID": 5,
+      "CategoryID": 1,
+      "Weight": 0.5
+    },
+    {
+      "MappingID": 14,
+      "DegreeID": 5,
+      "CategoryID": 2,
+      "Weight": 0.4
+    },
+    {
+      "MappingID": 15,
+      "DegreeID": 6,
+      "CategoryID": 6,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 16,
+      "DegreeID": 6,
+      "CategoryID": 1,
+      "Weight": 0.8
+    },
+    {
+      "MappingID": 17,
+      "DegreeID": 6,
+      "CategoryID": 4,
+      "Weight": 0.6
+    },
+    {
+      "MappingID": 18,
+      "DegreeID": 6,
+      "CategoryID": 3,
+      "Weight": 0.4
+    },
+    {
+      "MappingID": 19,
+      "DegreeID": 7,
+      "CategoryID": 8,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 20,
+      "DegreeID": 7,
+      "CategoryID": 7,
+      "Weight": 0.8
+    },
+    {
+      "MappingID": 21,
+      "DegreeID": 7,
+      "CategoryID": 2,
+      "Weight": 0.5
+    },
+    {
+      "MappingID": 22,
+      "DegreeID": 8,
+      "CategoryID": 7,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 23,
+      "DegreeID": 8,
+      "CategoryID": 2,
+      "Weight": 0.8
+    },
+    {
+      "MappingID": 24,
+      "DegreeID": 8,
+      "CategoryID": 8,
+      "Weight": 0.7
+    },
+    {
+      "MappingID": 25,
+      "DegreeID": 9,
+      "CategoryID": 7,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 26,
+      "DegreeID": 9,
+      "CategoryID": 8,
+      "Weight": 0.9
+    },
+    {
+      "MappingID": 27,
+      "DegreeID": 10,
+      "CategoryID": 2,
+      "Weight": 1.0
+    },
+    {
+      "MappingID": 28,
+      "DegreeID": 10,
+      "CategoryID": 4,
+      "Weight": 0.8
+    },
+    {
+      "MappingID": 29,
+      "DegreeID": 10,
+      "CategoryID": 1,
+      "Weight": 0.4
+    }
+  ],
+  "Sessions": [
+    {
+      "SessionID": 1,
+      "UserID": 1,
+      "GradeLevelID": 2,
+      "FacultyID": 1,
+      "DegreeID": 1,
+      "SessionDate": "2026-09-15T10:00:00",
+      "SubjectsComplete": true,
+      "FundingRequested": true,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 72
+        },
+        {
+          "SubjectID": 3,
+          "SubjectName": "Mathematics",
+          "Mark": 70
+        },
+        {
+          "SubjectID": 7,
+          "SubjectName": "Accounting",
+          "Mark": 74
+        },
+        {
+          "SubjectID": 8,
+          "SubjectName": "Business Studies",
+          "Mark": 79
+        },
+        {
+          "SubjectID": 9,
+          "SubjectName": "Economics",
+          "Mark": 70
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 80
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 3.0
+        }
+      ]
+    },
+    {
+      "SessionID": 2,
+      "UserID": 2,
+      "GradeLevelID": 2,
+      "FacultyID": 3,
+      "DegreeID": 4,
+      "SessionDate": "2026-09-16T10:30:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 65
+        },
+        {
+          "SubjectID": 4,
+          "SubjectName": "Mathematical Literacy",
+          "Mark": 78
+        },
+        {
+          "SubjectID": 8,
+          "SubjectName": "Business Studies",
+          "Mark": 71
+        },
+        {
+          "SubjectID": 11,
+          "SubjectName": "History",
+          "Mark": 69
+        },
+        {
+          "SubjectID": 14,
+          "SubjectName": "Tourism",
+          "Mark": 75
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 82
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 2.0
+        }
+      ]
+    },
+    {
+      "SessionID": 3,
+      "UserID": 3,
+      "GradeLevelID": 1,
+      "FacultyID": 3,
+      "DegreeID": 5,
+      "SessionDate": "2026-09-17T11:30:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 80
+        },
+        {
+          "SubjectID": 3,
+          "SubjectName": "Mathematics",
+          "Mark": 58
+        },
+        {
+          "SubjectID": 5,
+          "SubjectName": "Physical Sciences",
+          "Mark": 62
+        },
+        {
+          "SubjectID": 6,
+          "SubjectName": "Life Sciences",
+          "Mark": 70
+        },
+        {
+          "SubjectID": 10,
+          "SubjectName": "Geography",
+          "Mark": 66
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 85
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 4.0
+        }
+      ]
+    },
+    {
+      "SessionID": 4,
+      "UserID": 4,
+      "GradeLevelID": 2,
+      "FacultyID": 4,
+      "DegreeID": 6,
+      "SessionDate": "2026-09-18T14:00:00",
+      "SubjectsComplete": true,
+      "FundingRequested": true,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 70
+        },
+        {
+          "SubjectID": 3,
+          "SubjectName": "Mathematics",
+          "Mark": 75
+        },
+        {
+          "SubjectID": 5,
+          "SubjectName": "Physical Sciences",
+          "Mark": 78
+        },
+        {
+          "SubjectID": 15,
+          "SubjectName": "Engineering Graphics and Design",
+          "Mark": 73
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 80
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 2.0
+        }
+      ]
+    },
+    {
+      "SessionID": 5,
+      "UserID": 5,
+      "GradeLevelID": 2,
+      "FacultyID": 5,
+      "DegreeID": 10,
+      "SessionDate": "2026-09-21T09:15:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 82
+        },
+        {
+          "SubjectID": 4,
+          "SubjectName": "Mathematical Literacy",
+          "Mark": 76
+        },
+        {
+          "SubjectID": 11,
+          "SubjectName": "History",
+          "Mark": 79
+        },
+        {
+          "SubjectID": 6,
+          "SubjectName": "Life Sciences",
+          "Mark": 68
+        },
+        {
+          "SubjectID": 16,
+          "SubjectName": "Visual Arts",
+          "Mark": 85
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 90
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 5.0
+        }
+      ]
+    },
+    {
+      "SessionID": 6,
+      "UserID": 6,
+      "GradeLevelID": 2,
+      "FacultyID": 1,
+      "DegreeID": 2,
+      "SessionDate": "2026-09-22T09:45:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 68
+        },
+        {
+          "SubjectID": 3,
+          "SubjectName": "Mathematics",
+          "Mark": 62
+        },
+        {
+          "SubjectID": 7,
+          "SubjectName": "Accounting",
+          "Mark": 55
+        },
+        {
+          "SubjectID": 8,
+          "SubjectName": "Business Studies",
+          "Mark": 70
+        },
+        {
+          "SubjectID": 9,
+          "SubjectName": "Economics",
+          "Mark": 64
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 75
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 3.0
+        }
+      ]
+    },
+    {
+      "SessionID": 7,
+      "UserID": 7,
+      "GradeLevelID": 2,
+      "FacultyID": 3,
+      "DegreeID": 4,
+      "SessionDate": "2026-09-24T14:30:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 66
+        },
+        {
+          "SubjectID": 2,
+          "SubjectName": "Afrikaans",
+          "Mark": 64
+        },
+        {
+          "SubjectID": 3,
+          "SubjectName": "Mathematics",
+          "Mark": 72
+        },
+        {
+          "SubjectID": 5,
+          "SubjectName": "Physical Sciences",
+          "Mark": 68
+        },
+        {
+          "SubjectID": 12,
+          "SubjectName": "Computer Applications Technology",
+          "Mark": 75
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 78
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 5.0
+        }
+      ]
+    },
+    {
+      "SessionID": 8,
+      "UserID": 8,
+      "GradeLevelID": 2,
+      "FacultyID": 2,
+      "DegreeID": 9,
+      "SessionDate": "2026-09-29T11:15:00",
+      "SubjectsComplete": true,
+      "FundingRequested": true,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 74
+        },
+        {
+          "SubjectID": 4,
+          "SubjectName": "Mathematical Literacy",
+          "Mark": 72
+        },
+        {
+          "SubjectID": 11,
+          "SubjectName": "History",
+          "Mark": 68
+        },
+        {
+          "SubjectID": 10,
+          "SubjectName": "Geography",
+          "Mark": 65
+        },
+        {
+          "SubjectID": 6,
+          "SubjectName": "Life Sciences",
+          "Mark": 60
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 80
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 4.0
+        }
+      ]
+    },
+    {
+      "SessionID": 9,
+      "UserID": 9,
+      "GradeLevelID": 1,
+      "FacultyID": 3,
+      "DegreeID": 5,
+      "SessionDate": "2026-10-01T15:30:00",
+      "SubjectsComplete": false,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 63
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 70
+        }
+      ],
+      "Responses": []
+    },
+    {
+      "SessionID": 10,
+      "UserID": 10,
+      "GradeLevelID": 1,
+      "FacultyID": 2,
+      "DegreeID": 7,
+      "SessionDate": "2026-10-05T12:00:00",
+      "SubjectsComplete": true,
+      "FundingRequested": false,
+      "IsFinalized": true,
+      "Marks": [
+        {
+          "SubjectID": 1,
+          "SubjectName": "English",
+          "Mark": 58
+        },
+        {
+          "SubjectID": 4,
+          "SubjectName": "Mathematical Literacy",
+          "Mark": 65
+        },
+        {
+          "SubjectID": 11,
+          "SubjectName": "History",
+          "Mark": 72
+        },
+        {
+          "SubjectID": 10,
+          "SubjectName": "Geography",
+          "Mark": 66
+        },
+        {
+          "SubjectID": 13,
+          "SubjectName": "Life Orientation",
+          "Mark": 77
+        }
+      ],
+      "Responses": [
+        {
+          "QuestionID": 1,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 2,
+          "Score": 4.0
+        },
+        {
+          "QuestionID": 3,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 4,
+          "Score": 1.0
+        },
+        {
+          "QuestionID": 5,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 6,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 7,
+          "Score": 3.0
+        },
+        {
+          "QuestionID": 8,
+          "Score": 5.0
+        },
+        {
+          "QuestionID": 9,
+          "Score": 2.0
+        },
+        {
+          "QuestionID": 10,
+          "Score": 4.0
+        }
+      ]
+    }
+  ]
+}

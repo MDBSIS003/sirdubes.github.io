@@ -1,0 +1,167 @@
+                                                                                        1
+
+
+
+
+        Department of Information Systems Systems Design
+                  & Implementation (INF2011S)
+                                 Project Guidelines
+Objectives of the project
+The objectives of the project are to:
+
+•   Complete the systems development life cycle by designing, constructing, testing and
+     implementing a basic information system
+•   Develop a detailed systems specification for a single iteration of the project
+•   Build, populate and maintain a relational database
+•   Understand how C#.net programs are structured and coded in an object oriented
+    environment
+•   Provide students with the skills to develop larger and more complex systems in their
+    third year projects.
+
+How the Project Works
+In order to ensure consistency across the whole class, these guidelines will help you
+define what will be acceptable as a project.
+
+1. Overall Deliverables
+   There are two major deliverables making up the project. Both deliverables must be
+   handed in on the due date of the project. They are:
+   • Systems Specification document as detailed below (Project Part 1)
+   • Working C#.Net system (Project Part 2)
+   • Test cases should be included in the documentation AND handed in at the
+       demonstration
+    For control purposes you are required to hand in your source code library on the due
+    date for Part 2 and the markers will request you to use this file when
+    demonstrating your project. Please submit your systems specification document
+    AND your source code on Amathuba.
+
+2. Functionality to appear in the system:
+   The required use cases must be developed in C#.Net in your existing theory
+   workshop group and should contain all the functionality detailed in this document.
+                                                                                          2
+
+3. Due date
+Due date for hand-in of Part 1 is 17 September 2026 at 23:55 and Part 2 is 16 October
+2026 at 23:55. In the interests of a rapid marking process as well as limiting the impact on
+future deliverables, this deadline is not negotiable. The usual 10% per day penalty will
+be deducted from the marks of deliverables that are late, limited to one day (24 hours)
+after the due date. Submissions submitted later than this will not be marked. Note that
+you will only be able to hand in once!
+
+4. Getting help
+Tutor support will be implemented to assist you with coding problems. This will run as
+indicated on the course timetable.
+
+5. The project demonstration process (Part 2) - Runs in the week of 19 October 2026
+You will be required to prepare a demonstration of your project to your markers in a half-
+hour appointment (including question time). The objective of this demonstration is to allow
+you to present your system in the best possible light and ensure the markers see the
+results of your efforts. Make sure when you demonstrate the system, you have sufficient
+sample data in the databases to demonstrate that the system works properly. In your
+presentation, each member should demonstrate sufficient technical understanding of the
+system to be able to state how certain changes might be made to the system, or to explain
+how a particular section of code works.
+
+6. Dishonesty and uneven effort in the group
+Marks will be awarded jointly to the group, even where there may have been differing skills
+levels on the part of each member. If however, in the opinion of the markers, the workload
+and effort in the group has been unequally distributed, or the system has suffered
+significantly because of non-participation or poor effort by a partner, students may be
+required to demonstrate the project separately and individually for re-evaluation. In
+such circumstances, the total marks for the project are likely to be redistributed on a
+basis which reflects the student effort.
+
+7. Presentation mark allocation
+The following mark breakdown gives a rough indication of how many marks will be
+allocated to aspects of the project.
+     Presentation         5%     Punctuality,   professionalism   and   demonstration
+                                 flow.
+     Test Cases           10%    Full coverage of functionality and system
+                                 capabilities. Test cases compatible with reality.
+                                 Suitability of data (input and test database).
+     System               40%    How many of the specified functions are present
+     functionality               and working. Are they simplistic or will they solve
+                                 the real-world problem elegantly?
+     Interface and        15%    GUI features implemented, ease of use, thoughtful
+     system design               features, dropdowns, no unnecessary keystrokes
+     Integrity, quality   20%    No bugs, databases updated correctly, all data
+     and fault                   correctly presented on screens, referential integrity
+     tolerance                   preserved, system robustness, no system crashes
+                                                                                          3
+       General             5%     General quality, professionalism, evidence of effort,
+                                  attention to detail
+       Additional          10%    Must contribute to system (make good business
+       Features                   sense)
+       (Bonus)
+       Code                5%     One member of the group will be selected to walk
+       Walkthrough                the markers through the source code (on the
+                                  computer) to demonstrate his/her understanding of
+                                  the code and to explain how particular aspects of
+                                  the system have been developed.
+
+8. Hints when developing the system:
+   • Remember the golden rule. For each activity in the systems development process,
+      ask yourself why are you doing it and what purpose does it serve. Do not follow the
+      process blindly and only complete work that is important and appropriate. You will
+      gain very little by “painting by numbers”.
+   •    Read all documentation carefully. It is important that you develop the system
+        as requested. Ensure you understand the functionality contained in the specified
+        use cases and the roles of the various classes.
+   •    Complete the systems specification first. This should include all the sections
+        detailed in this document. You should not contemplate building parts of the system
+        until the detailed “blue print” has been completed.
+   •    To obtain a pass mark for the system, the system needs to allow the user to do
+        everything specified in a reasonably efficient and businesslike way. Bugs, crashes
+        or errors will mean that the user can’t use that function, and you will lose marks.
+   •    Ensure that you have a fair amount of proper data in the system! This indicates to
+        the markers that you have, in fact, been able to use the system yourself, that
+        you have tested it properly, and it also makes your report and enquiries much
+        more interesting!
+
+   •    Higher marks will be awarded for more elegant designs and solutions, non-hard
+        coded aspects, lookups, validation, better business solutions, more effort on the
+        interface etc.
+                                                                                                4
+
+Working C#.Net System
+Once you have completed your systems design and developed an implementation plan,
+you can commence construction of the system. The system must meet the following
+requirements:
+    • demonstrate the user requirements as specified (see use cases in scope)
+    •       developed as a single user system, i.e., one user at at time, but with multiple roles
+    •       developed in C#.Net
+    •       system functionality should be supported by an underlying relational database
+            environment.
+    •       demonstrate all controls required to ensure integrity and security of the system
+Follow the order specified in your implementation plan to develop the various components
+of the system. Your plan should include at least the following:
+    • Create your SQL database and populate the tables with sample data. Note that
+       certain tables are required by this iteration of the project but the use cases to
+       maintain these tables are not in scope. In this case you will create the tables and
+       enter your sample data directly into database rather than through the system. A
+       document with specified sample data with which to populate the database tables for
+       the final presentation will be provided. You must also enter additional realistic data
+       to create a proper test database with which to test and demonstrate your system.
+   •    Build the classes that are required by the system. These may include (depending
+        on the design of your classes):
+        •     Entity Classes (such as Booking and Guest)
+        •     Boundary Classes (screen forms)
+        •     Data access layer classes
+        •     Controller Classes (representing the various use cases)
+   •    Unit test the system as you construct and use your test cases to test each
+        completed use case. Ensure that your test approach and data are rigorous.
+   •    Provide time to prepare the system and your group for the final demonstration to
+        markers. This session is designed as a walk through of the system, using the test
+        cases provided to show the functionality and integrity of the system.
+Test Cases
+You are required to hand in a set of test cases (at the final presentation and in your
+documentation) to demonstrate that your project meets the specified functionality
+requirements. These test cases will be executed during the project evaluation.
+A test case must describe how to test a specific path through a use case. The description
+must include:
+    •   function to be tested
+    •   system state before executing the test
+    •   test data
+    •   expected outcome of the test
+The test cases must be documented using a test case template that will be provided.
+                         End of Project Specification Document
+

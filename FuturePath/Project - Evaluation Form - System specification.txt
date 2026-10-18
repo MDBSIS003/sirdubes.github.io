@@ -1,0 +1,59 @@
+System Specification Evaluation Form – Mark Plan (50% of project mark)
+
+1. General                                                       Group Number ____ Members __________
+                                  Poor       OK      Good      Excel                      Comment                        Score
+                                                                           Introduction and Support Narrative to
+       Document Flow               3         6         9       12            provide continuity and explanation
+
+Presentation of diagrams and                                               Elegant and clear with colour and text
+           tables                  1         2         3        4                    where required
+
+                                                                             Clear and quality narration with no
+   Spelling and Grammar            ½         1       1½         2              grammatical or spelling errors
+
+                                                                         Professional presentation. Title (1), table
+   Overall Presentation,         0-4         5       6-8 10                of contents(1), page numbers (1), and
+ Typing, Layout and Styling                                                figure numbers (2) , Use of colour and
+                                                                         varied headings (3), evidence of pride (2).
+
+                                                                                                    Out of 28
+General Comments
+
+
+
+
+2. Design Artifacts
+                                  Poor       OK      Good      Excel                      Comment                        Score
+                                                                         Intuitive Interface Flow Diagram of overall
+                                                                           application (8). At least one rich dialog
+        Dialog Design              4         8       12 16                   showing design considerations (4).
+                                                                           Discussion of explicit considerations of
+                                                                                          usability (4)
+                                                                        Design 2 Sequence diagrams (one for each
+                                                                       use case (6 marks each)) Notation should be
+ Design Sequence Diagram           3         6         9       12      correct. Tiered - GUI, Controller and detailed
+                                                                       messages. Deduct 1 for each obvious error.
+                                                                          Design view of all domain and controller
+                                                                          classes (only relating to the scope of the
+                                                                       project). Should include correct domain and
+   Design Class Diagrams           4         8       12 16              controller classes, associations and correct
+                                                                       attribute definitions and method signatures –
+                                                                              should correlate with functionality
+                                                                       Entity Relationship Diagram with info required
+      Database Design              4         8       12 16                 (or a separate data dictionary showing
+                                                                              attributes, keys, types and sizes.
+                                                                        Discussion of controls you have included in
+    Outputs and Controls           2         4         6        8                      the system.
+
+                                                                         Inclusion of test cases. 1 marks for each
+          Test Plan                1         2         3        4       complete test case scenario, test data and
+                                                                                    expected response
+
+                                                                                                    Out of 72
+General Comments
+
+
+
+  NOTE – No marks are dedicated to use cases diagrams and scenarios because these are analysis artifacts. However, you need to
+           use these as the basis for developing the test cases, but they need not be included in the final documentation.
+
