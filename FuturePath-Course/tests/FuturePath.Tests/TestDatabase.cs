@@ -30,8 +30,8 @@ public sealed class TestDatabase : IDisposable
         Reports = new(Store, Access, Clock);
     }
 
-    public void Admin() => Auth.Login("Adonias", "NKSADO001");
-    public void Advisor() => Auth.Login("SIRDUBES", "MDBSI003");
+    public void Admin() => Auth.Login("sidurbes", "MDBSIS003");
+    public void Advisor() => Auth.Login("adonias", "NKSADO001");
     public AdvisoryInput Input(int sampleId = 1)
     {
         var input = Store.GetSession(sampleId)!.Input;

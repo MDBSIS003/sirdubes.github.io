@@ -68,7 +68,7 @@ foreach (var row in fixture.Rows("AdvisorySession"))
         sql.AppendLine($"INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT {id},Id,{category.Value.ToString(CultureInfo.InvariantCulture)} FROM dbo.InterestCategory WHERE Name={Quote(category.Key)};");
 }
 
-string staffScript = File.ReadAllText(Path.Combine(root, "Database", "06_StaffAccounts.sql"));
+string staffScript = File.ReadAllText(Path.Combine(root, "Database", "07_RoleSignIn.sql"));
 foreach (System.Text.RegularExpressions.Match account in System.Text.RegularExpressions.Regex.Matches(staffScript,
     @"INSERT dbo.UserAccount\(Username,PasswordHash,Role,Active\) VALUES\(N'[^']+',N'[^']+',N'[^']+',1\);"))
     sql.AppendLine(account.Value);

@@ -18,20 +18,25 @@ namespace FuturePath.Desktop
         {
             this.app = app;
             AcceptButton = btnLogin;
-            ActiveControl = txtUsername;
+            ActiveControl = cboRole;
         }
 
         private void btnLogin_Click(object? sender, EventArgs e)
         {
             try
             {
+                if (cboRole.SelectedItem is not UserRole role)
+                {
+                    cboRole.Focus();
+                    throw new ValidationException("Choose Advisor or Administrator before signing in.");
+                }
                 if (string.IsNullOrWhiteSpace(txtUsername.Text) || txtPassword.Text.Length == 0)
                 {
                     throw new ValidationException("Enter your staff username and password.");
                 }
 
                 btnLogin.Enabled = false;
-                app.Authentication.Login(txtUsername.Text, txtPassword.Text);
+                app.Authentication.Login(txtUsername.Text, txtPassword.Text, role);
                 txtPassword.Clear();
                 DialogResult = DialogResult.OK;
             }
@@ -40,7 +45,8 @@ namespace FuturePath.Desktop
                 lblError.ForeColor = Color.Firebrick;
                 lblError.Text = ex.Message;
                 txtPassword.Clear();
-                txtPassword.Focus();
+                if (cboRole.SelectedIndex < 0) { cboRole.Focus(); }
+                else { txtPassword.Focus(); }
             }
             finally
             {

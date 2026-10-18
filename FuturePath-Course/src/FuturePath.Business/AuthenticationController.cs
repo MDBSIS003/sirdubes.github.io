@@ -19,20 +19,24 @@ namespace FuturePath.Business
         }
 
         private readonly PasswordHasher hasher = new PasswordHasher();
-        public void Login(string username, string password)
+        public void Login(string username, string password, UserRole? selectedRole = null)
         {
-            UserAccount? user = store.FindUser(username.Trim());
-            if (user is null || !user.Active || user.LockedUntilUtc > clock.UtcNow)
+            if (selectedRole.HasValue && selectedRole != UserRole.Advisor && selectedRole != UserRole.Administrator)
             {
-                throw new ValidationException("Sign-in failed. Check your details, account status, or wait 5 minutes if locked.");
+                throw new ValidationException("Choose Advisor or Administrator before signing in.");
+            }
+            UserAccount? user = store.FindUser(username.Trim());
+            if (user is null || !user.Active || user.Role is not (UserRole.Advisor or UserRole.Administrator) || user.LockedUntilUtc > clock.UtcNow)
+            {
+                throw new ValidationException("Sign-in failed. Check the selected role, username and password, or wait 5 minutes if locked.");
             }
 
-            bool valid = hasher.Verify(password, user.PasswordHash);
+            bool valid = hasher.Verify(password, user.PasswordHash) && (!selectedRole.HasValue || user.Role == selectedRole.Value);
             store.RecordLogin(user.Id, valid, clock.UtcNow);
             store.Audit(user.Id, valid ? "Login" : "Failed login", user.Username, clock.UtcNow);
             if (!valid)
             {
-                throw new ValidationException("Sign-in failed. Check your details, account status, or wait 5 minutes if locked.");
+                throw new ValidationException("Sign-in failed. Check the selected role, username and password, or wait 5 minutes if locked.");
             }
 
             access.SignIn(user);

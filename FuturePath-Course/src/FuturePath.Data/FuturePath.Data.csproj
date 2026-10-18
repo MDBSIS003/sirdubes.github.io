@@ -8,6 +8,6 @@
     <EmbeddedResource Include="../../Database/01_CreateDatabase.sql" LogicalName="FuturePath.Setup.01_CreateDatabase.sql" />
     <EmbeddedResource Include="../../Database/02_CreateTables.sql" LogicalName="FuturePath.Setup.02_CreateTables.sql" />
     <EmbeddedResource Include="../../Database/03_SeedData.sql" LogicalName="FuturePath.Setup.03_SeedData.sql" />
-    <EmbeddedResource Include="../../Database/06_StaffAccounts.sql" LogicalName="FuturePath.Setup.06_StaffAccounts.sql" />
+    <EmbeddedResource Include="../../Database/07_RoleSignIn.sql" LogicalName="FuturePath.Setup.07_RoleSignIn.sql" />
   </ItemGroup>
 </Project>

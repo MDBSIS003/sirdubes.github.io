@@ -190,10 +190,10 @@ public class DesktopTests
         using LocalDbDatabase db = new LocalDbDatabase();
         AppController app = new AppController(db.Store);
         Assert.Throws<AccessDeniedException>(() => app.Maintenance.Rows("Subject"));
-        app.Authentication.Login("SIRDUBES", "MDBSI003");
+        app.Authentication.Login("adonias", "NKSADO001");
         using (frmReports reports = new frmReports(app)) { reports.CreateControl(); }
         Assert.Throws<AccessDeniedException>(() => new frmAdminMaintenance(app));
-        app.Authentication.Login("Adonias", "NKSADO001");
+        app.Authentication.Login("sidurbes", "MDBSIS003");
         using (frmAdminMaintenance admin = new frmAdminMaintenance(app)) { admin.CreateControl(); }
         ReferenceRow user = app.Maintenance.Rows("UserAccount").First();
         using (frmEditUserAccount editor = new frmEditUserAccount(app, user))
@@ -245,8 +245,13 @@ public class DesktopTests
         login.Show();
         Assert.Single(Descendants(login).OfType<Button>());
         Assert.Equal("Sign in", Descendants(login).OfType<Button>().Single().Text);
-        Field<TextBox>(login,"txtUsername").Text = "SIRDUBES";
-        Field<TextBox>(login,"txtPassword").Text = "MDBSI003";
+        ComboBox role = Field<ComboBox>(login,"cboRole");
+        Assert.Equal(ComboBoxStyle.DropDownList, role.DropDownStyle);
+        Assert.Equal(-1, role.SelectedIndex);
+        Assert.Equal(new object[] { UserRole.Advisor, UserRole.Administrator }, role.Items.Cast<object>().ToArray());
+        role.SelectedItem = UserRole.Advisor;
+        Field<TextBox>(login,"txtUsername").Text = "adonias";
+        Field<TextBox>(login,"txtPassword").Text = "NKSADO001";
         Field<Button>(login,"btnLogin").PerformClick();
         Assert.Equal(DialogResult.OK,login.DialogResult);
         Assert.Equal(UserRole.Advisor,app.Access.Role);
@@ -256,10 +261,36 @@ public class DesktopTests
         Form welcome = main.MdiChildren.OfType<frmWelcome>().Single();
         Assert.True(Field<Button>(welcome,"btnReports").Visible);
         Assert.False(Field<Button>(welcome,"btnAdministration").Visible);
-        app.Authentication.Login("Adonias","NKSADO001");
+        app.Authentication.Login("sidurbes","MDBSIS003");
         main.ShowOverview();
         welcome = main.MdiChildren.OfType<frmWelcome>().Single();
         Assert.True(Field<Button>(welcome,"btnAdministration").Visible);
+        main.Close();
+    });
+
+    [Theory]
+    [InlineData("adonias", "NKSADO001", UserRole.Advisor)]
+    [InlineData("sidurbes", "MDBSIS003", UserRole.Administrator)]
+    public void SelectedStaffRoleAndReadmeCredentialsOpenTheirOwnWorkspace(string username, string password, UserRole role) => Sta(() =>
+    {
+        using LocalDbDatabase db = new();
+        AppController app = new(db.Store);
+        using frmLogin login = new(app);
+        login.Show();
+        Field<ComboBox>(login, "cboRole").SelectedItem = role;
+        Field<TextBox>(login, "txtUsername").Text = username;
+        Field<TextBox>(login, "txtPassword").Text = password;
+        Field<Button>(login, "btnLogin").PerformClick();
+        Assert.Equal(DialogResult.OK, login.DialogResult);
+        Assert.Equal(role, app.Access.Role);
+        Assert.Equal(username, app.Access.DisplayName);
+        Assert.Single(Descendants(login).OfType<Button>());
+        login.Close();
+        using frmMain main = new(app);
+        main.Show(); WaitForOverview(main);
+        Form welcome = main.MdiChildren.OfType<frmWelcome>().Single();
+        Assert.True(Field<Button>(welcome, "btnReports").Visible);
+        Assert.Equal(role == UserRole.Administrator, Field<Button>(welcome, "btnAdministration").Visible);
         main.Close();
     });
 
@@ -270,12 +301,12 @@ public class DesktopTests
     {
         using LocalDbDatabase db = new();
         AppController app = new(db.Store);
-        app.Authentication.Login("SIRDUBES","MDBSI003");
+        app.Authentication.Login("adonias","NKSADO001");
         using frmSecurity form = new(app);
         form.Show();
-        Assert.Equal("SIRDUBES",Field<TextBox>(form,"txtUsername").Text);
+        Assert.Equal("adonias",Field<TextBox>(form,"txtUsername").Text);
         Field<TextBox>(form,"txtUsername").Text="qa.advisor";
-        Field<TextBox>(form,"txtCurrent").Text="MDBSI003";
+        Field<TextBox>(form,"txtCurrent").Text="NKSADO001";
         if (replacePassword)
         {
             Field<TextBox>(form,"txtNew").Text="ReplacementPass2026!";
@@ -285,7 +316,7 @@ public class DesktopTests
         Assert.Equal(DialogResult.OK,form.DialogResult);
         Assert.Equal("qa.advisor",app.Access.DisplayName);
         app.Access.SignOut();
-        app.Authentication.Login("qa.advisor",replacePassword ? "ReplacementPass2026!" : "MDBSI003");
+        app.Authentication.Login("qa.advisor",replacePassword ? "ReplacementPass2026!" : "NKSADO001");
         Assert.Equal(UserRole.Advisor,app.Access.Role);
         form.Close();
     });
@@ -297,7 +328,7 @@ public class DesktopTests
     {
         using LocalDbDatabase db = new();
         AppController app = new(db.Store);
-        app.Authentication.Login("Adonias","NKSADO001");
+        app.Authentication.Login("sidurbes","MDBSIS003");
         using frmEditUserAccount editor = new(app,null);
         editor.Show();
         Field<TextBox>(editor,"txtUsername").Text="marker.account";

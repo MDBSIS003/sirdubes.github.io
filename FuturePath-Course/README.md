@@ -1,4 +1,4 @@
-# Future Path 2.2
+# Future Path 2.3
 
 C# Windows Forms student advising system with Desktop, Business and Data projects.
 
@@ -9,18 +9,18 @@ C# Windows Forms student advising system with Desktop, Business and Data project
 3. Allow NuGet package restore to finish, then press F5. `FuturePath.Desktop` is the startup project.
 4. If there is no database, select **Prepare demonstration database** in the application.
 
-The database is `FuturePathStudentAdvisingSystem` on `(localdb)\MSSQLLocalDB`. Existing version 1 or 2 databases are upgraded automatically. Existing learner records, assessments and staff accounts are preserved.
+The database is `FuturePathStudentAdvisingSystem` on `(localdb)\MSSQLLocalDB`. Existing databases are upgraded automatically. Learner records, assessments and unrelated staff accounts are preserved. The upgrade sets the two accounts below to the requested roles and passwords once; subsequent starts preserve changes made in Security.
 
 ## Staff login details
 
-Select **Staff sign in** and use one of these accounts:
+Select **Staff sign in**, choose the correct role under **Sign in as**, then enter the matching username and password:
 
 | Role | Username | Password |
 |---|---|---|
-| Administrator | Adonias | NKSADO001 |
-| Advisor | SIRDUBES | MDBSI003 |
+| Advisor | adonias | NKSADO001 |
+| Administrator | sidurbes | MDBSIS003 |
 
-Enter the passwords exactly as shown. There is no registration or email-code step. These accounts are stored in the database. If an account's details have been changed in Security or by an administrator, use the updated details; reopening the application does not reset them.
+Enter the passwords exactly as shown, including uppercase letters. The selected role must match the account; selecting Administrator does not give an Advisor account administrative access. There is no registration or email-code step. These accounts are stored in the database. If an account's details have been changed in Security or by an administrator, use the updated details; reopening the application does not reset them.
 
 The Administrator can use learner searches, reports, reference-data maintenance, staff-account administration and database backup. The Advisor can search learners, retrieve assessments, create follow-up assessments and use reports. Administrative functions require the Administrator account.
 

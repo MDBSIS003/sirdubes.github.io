@@ -184,7 +184,7 @@ public sealed class SpecificationAcceptanceTests
         Assert.Equal(1, store.SaveCalls);
         access.SignOut();
         Assert.Throws<AccessDeniedException>(() => advising.Load(id));
-        new AuthenticationController(store, access, new TestClock()).Login("SIRDUBES", "MDBSI003");
+        new AuthenticationController(store, access, new TestClock()).Login("adonias", "NKSADO001");
         var report = new ReportController(store, access, new TestClock()).Summary(id).Content;
         Assert.Contains("learner@example.com", report);
         Assert.Contains("0712345678", report);
@@ -192,21 +192,67 @@ public sealed class SpecificationAcceptanceTests
         Assert.DoesNotContain("No external AI", report);
     }
     [Theory]
-    [InlineData("SIRDUBES", "MDBSI003", UserRole.Advisor)]
-    [InlineData("Adonias", "NKSADO001", UserRole.Administrator)]
+    [InlineData("adonias", "NKSADO001", UserRole.Advisor)]
+    [InlineData("sidurbes", "MDBSIS003", UserRole.Administrator)]
     public void SeedCredentialsAuthenticateToTheirStoredRoles(string name, string password, UserRole role)
     {
         var store = Store(); var access = new AccessSession();
-        new AuthenticationController(store, access, new TestClock()).Login(" " + name + " ", password);
+        new AuthenticationController(store, access, new TestClock()).Login(" " + name + " ", password, role);
         Assert.Equal(role, access.Role);
         access.RequireStaff();
         if (role == UserRole.Advisor) Assert.Throws<AccessDeniedException>(() => access.RequireAdmin());
         else access.RequireAdmin();
     }
     [Theory]
-    [InlineData("SIRDUBES", "wrong")]
-    [InlineData("unknown", "MDBSI003")]
-    [InlineData("' OR 1=1--", "MDBSI003")]
+    [InlineData("adonias", "NKSADO001", UserRole.Administrator)]
+    [InlineData("sidurbes", "MDBSIS003", UserRole.Advisor)]
+    public void CorrectPasswordWithWrongSelectedRoleDoesNotSignIn(string name, string password, UserRole selectedRole)
+    {
+        var store = Store(); var access = new AccessSession();
+        var auth = new AuthenticationController(store, access, new TestClock());
+        Assert.Throws<ValidationException>(() => auth.Login(name, password, selectedRole));
+        Assert.Equal(UserRole.Learner, access.Role);
+        Assert.Null(access.UserId);
+        Assert.False(access.IsStaff);
+    }
+    [Theory]
+    [InlineData(UserRole.Learner)]
+    [InlineData((UserRole)99)]
+    public void InvalidSelectedRolesNeverGrantStaffAccess(UserRole role)
+    {
+        var access = new AccessSession();
+        var auth = new AuthenticationController(Store(), access, new TestClock());
+        Assert.Throws<ValidationException>(() => auth.Login("sidurbes", "MDBSIS003", role));
+        Assert.False(access.IsStaff);
+        Assert.Null(access.UserId);
+    }
+    [Theory]
+    [InlineData("adonias", "wrong", UserRole.Advisor)]
+    [InlineData("sidurbes", "wrong", UserRole.Administrator)]
+    [InlineData("unknown", "MDBSIS003", UserRole.Administrator)]
+    [InlineData("' OR 1=1--", "NKSADO001", UserRole.Advisor)]
+    public void SelectingStaffRoleDoesNotBypassPasswordAndAccountChecks(string name, string password, UserRole role)
+    {
+        var access = new AccessSession();
+        var auth = new AuthenticationController(Store(), access, new TestClock());
+        Assert.Throws<ValidationException>(() => auth.Login(name, password, role));
+        Assert.False(access.IsStaff);
+        Assert.Null(access.UserId);
+    }
+    [Fact]
+    public void LearnerRoleStoredOnAccountCannotUseStaffLogin()
+    {
+        var store = Store(); var access = new AccessSession();
+        store.FindUser("adonias")!.Role = UserRole.Learner;
+        var auth = new AuthenticationController(store, access, new TestClock());
+        Assert.Throws<ValidationException>(() => auth.Login("adonias", "NKSADO001", UserRole.Advisor));
+        Assert.False(access.IsStaff);
+        Assert.Null(access.UserId);
+    }
+    [Theory]
+    [InlineData("adonias", "wrong")]
+    [InlineData("unknown", "NKSADO001")]
+    [InlineData("' OR 1=1--", "NKSADO001")]
     public void WrongCredentialsAndSqlTextDoNotAuthenticate(string name, string password)
     {
         var access = new AccessSession();
@@ -217,17 +263,17 @@ public sealed class SpecificationAcceptanceTests
     public void InactiveAndLockedStaffCannotSignIn()
     {
         var store = Store(); var access = new AccessSession(); var auth = new AuthenticationController(store, access, new TestClock { UtcNow = Now });
-        store.Users[0].Active = false;
-        Assert.Throws<ValidationException>(() => auth.Login(store.Users[0].Username, "NKSADO001"));
-        store.Users[1].LockedUntilUtc = Now.AddMinutes(5);
-        Assert.Throws<ValidationException>(() => auth.Login(store.Users[1].Username, "MDBSI003"));
+        store.FindUser("adonias")!.Active = false;
+        Assert.Throws<ValidationException>(() => auth.Login("adonias", "NKSADO001", UserRole.Advisor));
+        store.FindUser("sidurbes")!.LockedUntilUtc = Now.AddMinutes(5);
+        Assert.Throws<ValidationException>(() => auth.Login("sidurbes", "MDBSIS003", UserRole.Administrator));
         Assert.False(access.IsStaff);
     }
     [Fact]
     public void ExceptionReportIncludesEverySpecifiedFieldAndGroupsByOutcome()
     {
         var store = Store(); var access = new AccessSession();
-        new AuthenticationController(store, access, new TestClock()).Login("SIRDUBES", "MDBSI003");
+        new AuthenticationController(store, access, new TestClock()).Login("adonias", "NKSADO001");
         var report = new ReportController(store, access, new TestClock()).Activity(new(2026,9,1), new(2026,9,30), true).Content;
         Assert.Contains("Sessions: 3", report);
         foreach (string field in new[] { "Faculty: Science", "Interest alignment:", "Alternative degree recommendations:", "Required: Mathematics", "Aadiel-Raboo Magwa", "Derek Vin Diesel", "Yusuf Patel" }) Assert.Contains(field, report);
@@ -240,7 +286,7 @@ public sealed class SpecificationAcceptanceTests
     public void InitialActivityReportHasExactSeededCountsAndFilters()
     {
         var store = Store(); var access = new AccessSession();
-        new AuthenticationController(store, access, new TestClock()).Login("SIRDUBES", "MDBSI003");
+        new AuthenticationController(store, access, new TestClock()).Login("adonias", "NKSADO001");
         var reports = new ReportController(store, access, new TestClock());
         string text = reports.Activity(new(2026,9,1), new(2026,9,30), false).Content;
         foreach (string value in new[] { "Sessions: 10", "Distinct learners: 10", "Strong Match: 3", "Possible Match: 4", "Not Currently Eligible: 2", "More Information Needed: 1", "Funding requested: 4" }) Assert.Contains(value,text);
@@ -303,8 +349,8 @@ public sealed class SpecificationAcceptanceTests
         Assert.Equal(0,store.SaveCalls);
     }
     [Theory]
-    [InlineData("SIRDUBES","MDBSI003",UserRole.Advisor)]
-    [InlineData("Adonias","NKSADO001",UserRole.Administrator)]
+    [InlineData("adonias","NKSADO001",UserRole.Advisor)]
+    [InlineData("sidurbes","MDBSIS003",UserRole.Administrator)]
     public void StaffCanRenameOwnAccountWithoutChangingPasswordOrRole(string original,string password,UserRole role)
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
@@ -323,41 +369,41 @@ public sealed class SpecificationAcceptanceTests
     public void StaffCanChangeUsernameAndPasswordTogether()
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
-        auth.Login("SIRDUBES","MDBSI003");
-        auth.ChangeSecurity("qa.advisor","MDBSI003","ReplacementPass2026!");
+        auth.Login("adonias","NKSADO001");
+        auth.ChangeSecurity("qa.advisor","NKSADO001","ReplacementPass2026!");
         access.SignOut();
-        Assert.Throws<ValidationException>(()=>auth.Login("qa.advisor","MDBSI003"));
+        Assert.Throws<ValidationException>(()=>auth.Login("qa.advisor","NKSADO001"));
         auth.Login("qa.advisor","ReplacementPass2026!");
         Assert.Equal(UserRole.Advisor,access.Role);
         Assert.Throws<AccessDeniedException>(()=>new AdminMaintenanceController(store,access,new TestClock()).Rows("Faculty"));
         Assert.Throws<AccessDeniedException>(()=>auth.SaveUser(0,"elevated",UserRole.Administrator,true,"PasswordPass2026!"));
     }
     [Theory]
-    [InlineData("x", "MDBSI003", "")]
-    [InlineData("bad name", "MDBSI003", "")]
-    [InlineData("Adonias", "MDBSI003", "")]
-    [InlineData("ADONIAS", "MDBSI003", "")]
+    [InlineData("x", "NKSADO001", "")]
+    [InlineData("bad name", "NKSADO001", "")]
+    [InlineData("sidurbes", "NKSADO001", "")]
+    [InlineData("SIDURBES", "NKSADO001", "")]
     [InlineData("qa.advisor", "wrong", "")]
-    [InlineData("qa.advisor", "MDBSI003", "short1")]
-    [InlineData("qa.advisor", "MDBSI003", "no_digits_here")]
+    [InlineData("qa.advisor", "NKSADO001", "short1")]
+    [InlineData("qa.advisor", "NKSADO001", "no_digits_here")]
     public void InvalidSecurityChangesPreserveCurrentSignIn(string name,string current,string password)
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
-        auth.Login("SIRDUBES","MDBSI003");
+        auth.Login("adonias","NKSADO001");
         Assert.Throws<ValidationException>(()=>auth.ChangeSecurity(name,current,password));
-        Assert.Equal("SIRDUBES",access.DisplayName);
+        Assert.Equal("adonias",access.DisplayName);
         Assert.Equal(0,store.SecuritySaves);
-        Assert.True(new PasswordHasher().Verify("MDBSI003",store.FindUser("SIRDUBES")!.PasswordHash));
+        Assert.True(new PasswordHasher().Verify("NKSADO001",store.FindUser("adonias")!.PasswordHash));
     }
     [Fact]
     public void SecurityStoreFailureDoesNotRenameSessionOrChangeCredentials()
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
-        auth.Login("SIRDUBES","MDBSI003"); store.FailSecurity=true;
-        Assert.Throws<IOException>(()=>auth.ChangeSecurity("qa.advisor","MDBSI003","ReplacementPass2026!"));
-        Assert.Equal("SIRDUBES",access.DisplayName);
+        auth.Login("adonias","NKSADO001"); store.FailSecurity=true;
+        Assert.Throws<IOException>(()=>auth.ChangeSecurity("qa.advisor","NKSADO001","ReplacementPass2026!"));
+        Assert.Equal("adonias",access.DisplayName);
         Assert.Null(store.FindUser("qa.advisor"));
-        Assert.True(new PasswordHasher().Verify("MDBSI003",store.FindUser("SIRDUBES")!.PasswordHash));
+        Assert.True(new PasswordHasher().Verify("NKSADO001",store.FindUser("adonias")!.PasswordHash));
     }
     [Fact]
     public void GuestCannotAccessSecuritySettings()
@@ -375,7 +421,7 @@ public sealed class SpecificationAcceptanceTests
         foreach(string value in new[]{"FP-"+id,"Gadija Jacobs","learner@example.com","0712345678","SUBJECTS AND MARKS","INTEREST CATEGORY","EXPLANATION","ALTERNATIVE","NEXT STEPS"}) Assert.Contains(value,learner);
         foreach(string value in new[]{"Rules:","Subject coverage","faculty preference","Question 1:","Subject list confirmed"}) Assert.DoesNotContain(value,learner);
         access.SignOut();
-        new AuthenticationController(store,access,new TestClock()).Login("SIRDUBES","MDBSI003");
+        new AuthenticationController(store,access,new TestClock()).Login("adonias","NKSADO001");
         string staff=reports.Summary(id).Content;
         Assert.Contains("Question 1:",staff);
         Assert.Contains("Rules:",staff);
@@ -387,7 +433,7 @@ public sealed class SpecificationAcceptanceTests
     public void InvalidStoredPhoneCanBeCorrectedByStaffDuringFollowUp()
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
-        auth.Login("SIRDUBES","MDBSI003");
+        auth.Login("adonias","NKSADO001");
         store.Sessions[1].Input.Learner.Phone="+27 71 234 5678";
         var input=Input(); input.Learner.Id=1;
         Assert.True(Controller(store,access).Assess(input).Id>0);
@@ -400,7 +446,7 @@ public sealed class SpecificationAcceptanceTests
     {
         var store=Store(); var guest=new AccessSession(); var registration=new AccessSession();
         var creator=new AuthenticationController(store,registration,new TestClock());
-        creator.Login("Adonias","NKSADO001");
+        creator.Login("sidurbes","MDBSIS003");
         creator.SaveUser(0,"marker.account",role,true,"MarkerPassword2026!");
         Assert.Equal(UserRole.Learner,guest.Role);
         Assert.Null(guest.UserId);
@@ -416,7 +462,7 @@ public sealed class SpecificationAcceptanceTests
     public void InvalidNewStaffAccountsAreNotStored(string username,string password)
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
-        auth.Login("Adonias","NKSADO001");
+        auth.Login("sidurbes","MDBSIS003");
         Assert.Throws<ValidationException>(()=>auth.SaveUser(0,username,UserRole.Advisor,true,password));
         Assert.Equal(2,store.Users.Count);
     }
@@ -425,7 +471,7 @@ public sealed class SpecificationAcceptanceTests
     {
         var store=Store(); var access=new AccessSession(); var auth=new AuthenticationController(store,access,new TestClock());
         Assert.Throws<AccessDeniedException>(()=>auth.SaveUser(0,"marker.account",UserRole.Administrator,true,"MarkerPassword2026!"));
-        auth.Login("SIRDUBES","MDBSI003");
+        auth.Login("adonias","NKSADO001");
         Assert.Throws<AccessDeniedException>(()=>auth.SaveUser(0,"marker.account",UserRole.Administrator,true,"MarkerPassword2026!"));
         Assert.Equal(2,store.Users.Count);
     }

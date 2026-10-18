@@ -54,7 +54,7 @@ public sealed class SecurityTests
     public void BadPasswordAndInjectionDoNotGrantAccess()
     {
         using var db = new TestDatabase();
-        Assert.Throws<ValidationException>(() => db.Auth.Login("Adonias", "incorrect"));
+        Assert.Throws<ValidationException>(() => db.Auth.Login("sidurbes", "incorrect"));
         Assert.Throws<ValidationException>(() => db.Auth.Login("' OR 1=1 --", "incorrect"));
         Assert.Equal(UserRole.Learner, db.Access.Role);
     }
@@ -64,13 +64,13 @@ public sealed class SecurityTests
     {
         using var db = new TestDatabase();
         for (var i = 0; i < 5; i++)
-            Assert.Throws<ValidationException>(() => db.Auth.Login("SIRDUBES", "incorrect"));
-        Assert.NotNull(db.Store.FindUser("SIRDUBES")!.LockedUntilUtc);
+            Assert.Throws<ValidationException>(() => db.Auth.Login("adonias", "incorrect"));
+        Assert.NotNull(db.Store.FindUser("adonias")!.LockedUntilUtc);
         Assert.Throws<ValidationException>(() => db.Advisor());
         db.Clock.UtcNow = db.Clock.UtcNow.AddMinutes(6);
         db.Advisor();
         Assert.Equal(UserRole.Advisor, db.Access.Role);
-        Assert.Equal(0, db.Store.FindUser("SIRDUBES")!.FailedAttempts);
+        Assert.Equal(0, db.Store.FindUser("adonias")!.FailedAttempts);
     }
 
     [LocalDbFact]
@@ -95,8 +95,8 @@ public sealed class SecurityTests
     {
         using var db = new TestDatabase();
         db.Admin();
-        Assert.Throws<ValidationException>(() => db.Auth.SaveUser(db.Access.UserId!.Value, "Adonias", UserRole.Administrator, false, null));
-        Assert.Throws<ValidationException>(() => db.Auth.SaveUser(db.Access.UserId!.Value, "Adonias", UserRole.Advisor, true, null));
+        Assert.Throws<ValidationException>(() => db.Auth.SaveUser(db.Access.UserId!.Value, "sidurbes", UserRole.Administrator, false, null));
+        Assert.Throws<ValidationException>(() => db.Auth.SaveUser(db.Access.UserId!.Value, "sidurbes", UserRole.Advisor, true, null));
     }
 
     [LocalDbFact]
@@ -105,10 +105,10 @@ public sealed class SecurityTests
         using var db = new TestDatabase();
         db.Advisor();
         Assert.Throws<ValidationException>(() => db.Auth.ChangePassword("wrong", "ReplacementPass12"));
-        db.Auth.ChangePassword("MDBSI003", "ReplacementPass12");
+        db.Auth.ChangePassword("NKSADO001", "ReplacementPass12");
         db.Access.SignOut();
         Assert.Throws<ValidationException>(() => db.Advisor());
-        db.Auth.Login("SIRDUBES", "ReplacementPass12");
+        db.Auth.Login("adonias", "ReplacementPass12");
         Assert.True(db.Access.IsStaff);
     }
 
@@ -131,14 +131,14 @@ public sealed class SecurityAndSearchPersistenceTests
         using TestDatabase db = new();
         db.Advisor();
         int id = db.Access.UserId!.Value;
-        string password = replacePassword ? "ReplacementPass2026!" : "MDBSI003";
-        db.Auth.ChangeSecurity("qa.advisor", "MDBSI003", replacePassword ? password : "");
+        string password = replacePassword ? "ReplacementPass2026!" : "NKSADO001";
+        db.Auth.ChangeSecurity("qa.advisor", "NKSADO001", replacePassword ? password : "");
         var store = new FuturePath.Data.SqlServerStore(db.Store.DatabaseName);
         var user = store.FindUser("qa.advisor")!;
         Assert.Equal(id,user.Id);
         Assert.Equal(UserRole.Advisor,user.Role);
         Assert.True(new PasswordHasher().Verify(password,user.PasswordHash));
-        Assert.Null(store.FindUser("SIRDUBES"));
+        Assert.Null(store.FindUser("adonias"));
         db.Access.SignOut();
         db.Auth.Login("qa.advisor",password);
         Assert.Throws<AccessDeniedException>(() => db.Maintenance.Rows("Faculty"));
@@ -147,7 +147,7 @@ public sealed class SecurityAndSearchPersistenceTests
     public void DuplicateUsernameRollsBackPasswordAndLeavesBothAccountsUsable()
     {
         using TestDatabase db = new(); db.Advisor();
-        Assert.Throws<ValidationException>(() => db.Auth.ChangeSecurity("ADONIAS","MDBSI003","ReplacementPass2026!"));
+        Assert.Throws<ValidationException>(() => db.Auth.ChangeSecurity("SIDURBES","NKSADO001","ReplacementPass2026!"));
         db.Access.SignOut(); db.Advisor(); db.Access.SignOut(); db.Admin();
         Assert.Equal(UserRole.Administrator,db.Access.Role);
     }
@@ -162,10 +162,10 @@ public sealed class SecurityAndSearchPersistenceTests
             trigger.CommandText = "CREATE TRIGGER dbo.QA_BlockSecurityAudit ON dbo.AuditEvent AFTER INSERT AS BEGIN THROW 51001, 'Controlled audit failure', 1; END;";
             trigger.ExecuteNonQuery();
         }
-        Assert.Throws<Microsoft.Data.SqlClient.SqlException>(() => db.Auth.ChangeSecurity("qa.advisor","MDBSI003","ReplacementPass2026!"));
-        Assert.Equal("SIRDUBES",db.Access.DisplayName);
+        Assert.Throws<Microsoft.Data.SqlClient.SqlException>(() => db.Auth.ChangeSecurity("qa.advisor","NKSADO001","ReplacementPass2026!"));
+        Assert.Equal("adonias",db.Access.DisplayName);
         Assert.Null(db.Store.FindUser("qa.advisor"));
-        Assert.True(new PasswordHasher().Verify("MDBSI003",db.Store.FindUser("SIRDUBES")!.PasswordHash));
+        Assert.True(new PasswordHasher().Verify("NKSADO001",db.Store.FindUser("adonias")!.PasswordHash));
     }
     [LocalDbFact]
     public void StaffSearchFindsCompletedStudentAfterNewStoreConnection()
@@ -180,7 +180,7 @@ public sealed class SecurityAndSearchPersistenceTests
         db.Access.SignOut();
         var reopened = new FuturePath.Data.SqlServerStore(db.Store.DatabaseName);
         var access = new AccessSession();
-        new AuthenticationController(reopened,access,db.Clock).Login("SIRDUBES","MDBSI003");
+        new AuthenticationController(reopened,access,db.Clock).Login("adonias","NKSADO001");
         var advising = new AdvisorySessionController(reopened,access,db.Clock);
         foreach (string query in new[] { "QA Learner","QA Secondary","qa.unique@example.com","0712345678","FP-"+session.Id })
             Assert.Contains(advising.Search(DateOnly.MinValue,DateOnly.MaxValue,query), r => r.Id==session.Id);
@@ -236,15 +236,15 @@ public sealed class MarkerAccountPersistenceTests
 public sealed class NamedStaffAccountTests
 {
     [LocalDbTheory]
-    [InlineData("Adonias", "NKSADO001", UserRole.Administrator)]
-    [InlineData("SIRDUBES", "MDBSI003", UserRole.Advisor)]
+    [InlineData("sidurbes", "MDBSIS003", UserRole.Administrator)]
+    [InlineData("adonias", "NKSADO001", UserRole.Advisor)]
     public void ReadmeCredentialsSignInAfterReopeningDatabase(string username, string password, UserRole role)
     {
         using TestDatabase db = new();
         var reopened = new FuturePath.Data.SqlServerStore(db.Store.DatabaseName);
         reopened.Initialize();
         var access = new AccessSession();
-        new AuthenticationController(reopened, access, db.Clock).Login(username, password);
+        new AuthenticationController(reopened, access, db.Clock).Login(username, password, role);
         Assert.Equal(role, access.Role);
         Assert.Equal(username, access.DisplayName);
         Assert.NotEqual(password, reopened.FindUser(username)!.PasswordHash);
@@ -254,15 +254,16 @@ public sealed class NamedStaffAccountTests
     [LocalDbTheory]
     [InlineData(1)]
     [InlineData(2)]
+    [InlineData(3)]
     public void UpgradeAddsReadmeAccountsAndPreservesExistingAccountsAndLearners(int oldVersion)
     {
         using TestDatabase db = new();
-        string oldHash = db.Store.FindUser("Adonias")!.PasswordHash;
+        string oldHash = db.Store.FindUser("sidurbes")!.PasswordHash;
         using var connection = new Microsoft.Data.SqlClient.SqlConnection(db.Store.ConnectionString);
         connection.Open();
         using (var command = connection.CreateCommand())
         {
-            command.CommandText = "UPDATE dbo.UserAccount SET Username=N'legacy.admin' WHERE Username=N'Adonias'; UPDATE dbo.UserAccount SET Username=N'legacy.advisor' WHERE Username=N'SIRDUBES'; DELETE dbo.SchemaVersion WHERE Version>1; IF @version=2 INSERT dbo.SchemaVersion(Version) VALUES(2);";
+            command.CommandText = "UPDATE dbo.UserAccount SET Username=N'legacy.admin' WHERE Username=N'sidurbes'; UPDATE dbo.UserAccount SET Username=N'legacy.advisor' WHERE Username=N'adonias'; DELETE dbo.SchemaVersion WHERE Version>1; IF @version>1 INSERT dbo.SchemaVersion(Version) VALUES(@version);";
             command.Parameters.AddWithValue("@version", oldVersion);
             command.ExecuteNonQuery();
         }
@@ -270,19 +271,61 @@ public sealed class NamedStaffAccountTests
         db.Store.Initialize();
         Assert.Equal(oldHash, db.Store.FindUser("legacy.admin")!.PasswordHash);
         Assert.Equal(10, db.Store.FindSessions(DateOnly.MinValue, DateOnly.MaxValue, "").Count);
-        db.Auth.Login("Adonias", "NKSADO001");
+        db.Auth.Login("sidurbes", "MDBSIS003", UserRole.Administrator);
         Assert.Equal(UserRole.Administrator, db.Access.Role);
         db.Access.SignOut();
-        db.Auth.Login("SIRDUBES", "MDBSI003");
+        db.Auth.Login("adonias", "NKSADO001", UserRole.Advisor);
         Assert.Equal(UserRole.Advisor, db.Access.Role);
         using var check = connection.CreateCommand();
-        check.CommandText = "SELECT COUNT(*) FROM dbo.SchemaVersion WHERE Version=3";
+        check.CommandText = "SELECT COUNT(*) FROM dbo.SchemaVersion WHERE Version=4";
         Assert.Equal(1, Convert.ToInt32(check.ExecuteScalar()));
-        db.Auth.ChangeSecurity("SIRDUBES", "MDBSI003", "UpdatedPassword2026!");
+        db.Auth.ChangeSecurity("renamed.advisor", "NKSADO001", "UpdatedPassword2026!");
         db.Store.Initialize();
         FuturePath.Data.DatabaseSetup.PrepareDemo(db.Store.DatabaseName);
         db.Access.SignOut();
-        db.Auth.Login("SIRDUBES", "UpdatedPassword2026!");
+        db.Auth.Login("renamed.advisor", "UpdatedPassword2026!", UserRole.Advisor);
         Assert.Equal(UserRole.Advisor, db.Access.Role);
+        Assert.Null(db.Store.FindUser("adonias"));
+    }
+
+    [LocalDbFact]
+    public void VersionThreeUpgradeCorrectsRequestedRolesAndPasswordsOnceWithoutLosingOtherRecords()
+    {
+        using TestDatabase db = new();
+        int advisorId = db.Store.FindUser("adonias")!.Id;
+        int adminId = db.Store.FindUser("sidurbes")!.Id;
+        db.Admin();
+        db.Auth.SaveUser(0, "retained.staff", UserRole.Advisor, true, "RetainedPassword2026!");
+        string retainedHash = db.Store.FindUser("retained.staff")!.PasswordHash;
+        db.Access.SignOut();
+        using var connection = new Microsoft.Data.SqlClient.SqlConnection(db.Store.ConnectionString);
+        connection.Open();
+        using (var command = connection.CreateCommand())
+        {
+            command.CommandText = "UPDATE dbo.UserAccount SET Username=N'Adonias', Role=N'Administrator', PasswordHash=@hash WHERE Id=@advisor; UPDATE dbo.UserAccount SET Username=N'SIRDUBES', Role=N'Advisor', PasswordHash=@hash WHERE Id=@admin; DELETE dbo.SchemaVersion WHERE Version>3; IF NOT EXISTS(SELECT 1 FROM dbo.SchemaVersion WHERE Version=3) INSERT dbo.SchemaVersion(Version) VALUES(3);";
+            command.Parameters.AddWithValue("@hash", new PasswordHasher().Hash("PreviousPassword2026!"));
+            command.Parameters.AddWithValue("@advisor", advisorId);
+            command.Parameters.AddWithValue("@admin", adminId);
+            command.ExecuteNonQuery();
+        }
+        db.Store.Initialize();
+        Assert.Equal(advisorId, db.Store.FindUser("adonias")!.Id);
+        Assert.Equal(adminId, db.Store.FindUser("sidurbes")!.Id);
+        Assert.Null(db.Store.FindUser("SIRDUBES"));
+        Assert.Equal(retainedHash, db.Store.FindUser("retained.staff")!.PasswordHash);
+        Assert.Equal(10, db.Store.FindSessions(DateOnly.MinValue, DateOnly.MaxValue, "").Count);
+        Assert.Throws<ValidationException>(() => db.Auth.Login("adonias", "NKSADO001", UserRole.Administrator));
+        Assert.False(db.Access.IsStaff);
+        db.Auth.Login("adonias", "NKSADO001", UserRole.Advisor);
+        db.Access.SignOut();
+        db.Auth.Login("sidurbes", "MDBSIS003", UserRole.Administrator);
+        db.Auth.ChangeSecurity("renamed.admin", "MDBSIS003", "UpdatedAdminPassword2026!");
+        db.Store.Initialize();
+        FuturePath.Data.DatabaseSetup.PrepareDemo(db.Store.DatabaseName);
+        db.Access.SignOut();
+        db.Auth.Login("renamed.admin", "UpdatedAdminPassword2026!", UserRole.Administrator);
+        Assert.Equal(UserRole.Administrator, db.Access.Role);
+        Assert.Null(db.Store.FindUser("sidurbes"));
+        Assert.Equal(retainedHash, db.Store.FindUser("retained.staff")!.PasswordHash);
     }
 }

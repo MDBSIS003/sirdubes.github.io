@@ -6,7 +6,7 @@ SET XACT_ABORT ON;
 IF OBJECT_ID(N'dbo.SchemaVersion',N'U') IS NULL AND EXISTS(SELECT 1 FROM sys.tables WHERE is_ms_shipped=0)
  THROW 51000,'This database already contains unversioned tables. Back it up and choose a new demonstration database name.',1;
 IF OBJECT_ID(N'dbo.SchemaVersion',N'U') IS NOT NULL
- EXEC(N'IF ISNULL((SELECT MAX(Version) FROM dbo.SchemaVersion),-1) NOT IN (1,2,3) THROW 51000,''Unsupported schema version. No changes were applied.'',1;');
+ EXEC(N'IF ISNULL((SELECT MAX(Version) FROM dbo.SchemaVersion),-1) NOT IN (1,2,3,4) THROW 51000,''Unsupported schema version. No changes were applied.'',1;');
 
 BEGIN TRANSACTION;
 IF OBJECT_ID(N'dbo.GradeLevel', N'U') IS NULL
