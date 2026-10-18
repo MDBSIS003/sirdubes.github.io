@@ -1,0 +1,1 @@
+PASS: all 15 complete SQL statements in AdvisorySessionDAL parse, including legacy profile completion inside the save transaction.

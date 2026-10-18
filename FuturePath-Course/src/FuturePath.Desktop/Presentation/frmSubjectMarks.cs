@@ -34,7 +34,7 @@ namespace FuturePath.Desktop
             }
 
             PopulateList();
-            ShowMessage("An unconfirmed subject list produces More Information Needed.");
+            UpdateProgress();
         }
 
         private void PopulateList()
@@ -48,7 +48,7 @@ namespace FuturePath.Desktop
                 lstMarks.Items.Add(item);
             }
 
-            btnNext.Enabled = main.Input.Marks.Count > 0;
+            UpdateProgress();
         }
 
         private void btnAdd_Click(object? sender, EventArgs e)
@@ -69,6 +69,13 @@ namespace FuturePath.Desktop
                 }
             }
 
+            if (found != null && (lstMarks.SelectedItems.Count == 0 ||
+                ((SubjectMark)lstMarks.SelectedItems[0].Tag!).SubjectId != found.SubjectId))
+            {
+                ShowMessage("This subject is already captured. Select its row to update the mark.");
+                return;
+            }
+
             if (found == null)
             {
                 found = new SubjectMark(subject.Id, subject.Name, nudMark.Value);
@@ -77,7 +84,7 @@ namespace FuturePath.Desktop
 
             found.Mark = nudMark.Value;
             PopulateList();
-            ShowMessage("Subject saved in this draft. The database is saved at the funding step.");
+            UpdateProgress();
         }
 
         private void lstMarks_SelectedIndexChanged(object? sender, EventArgs e)
@@ -99,14 +106,37 @@ namespace FuturePath.Desktop
                 return;
             }
 
+            if (MessageBox.Show(this, "Remove the selected subject and mark?", "Future Path", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            {
+                return;
+            }
+
             main.Input.Marks.Remove((SubjectMark)lstMarks.SelectedItems[0].Tag!);
             PopulateList();
+        }
+
+        private void UpdateProgress()
+        {
+            bool enough = main.Input.Marks.Count >= AdvisingValidation.MinimumSubjects;
+            btnNext.Enabled = enough && chkComplete.Checked;
+            lblMessage.ForeColor = btnNext.Enabled ? Color.DarkGreen : Color.FromArgb(22, 45, 63);
+            ShowMessage("Subjects entered: " + main.Input.Marks.Count + ". Enter at least seven different subjects and confirm the complete list.");
+        }
+
+        private void chkComplete_CheckedChanged(object? sender, EventArgs e)
+        {
+            UpdateProgress();
         }
 
         public override void SaveInput()
         {
             AdvisingValidation.Marks(main.Input.Marks, app.Advising.Subjects());
-            main.Input.SubjectsComplete = chkComplete.Checked;
+            if (!chkComplete.Checked)
+            {
+                throw new ValidationException("Confirm that this is your complete subject list.");
+            }
+
+            main.Input.SubjectsComplete = true;
         }
     }
 }

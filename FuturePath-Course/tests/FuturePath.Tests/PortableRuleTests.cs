@@ -145,6 +145,7 @@ public sealed class PortableRuleTests
     public void InvalidMarksAreRejectedBeforePersistence(decimal value)
     {
         var marks = fixture.Input(1).Marks;
+        marks.Add(new SubjectMark(2, "Afrikaans", 70));
         marks[0].Mark = value;
         Assert.Throws<ValidationException>(() => AdvisingValidation.Marks(marks, Subjects()));
     }
@@ -153,6 +154,7 @@ public sealed class PortableRuleTests
     public void BoundaryDecimalDuplicateAndUnknownSubjectsAreHandled()
     {
         var marks = fixture.Input(1).Marks;
+        marks.Add(new SubjectMark(2, "Afrikaans", 70));
         marks[0].Mark = 0;
         marks[1].Mark = 100;
         marks[2].Mark = 72.35m;

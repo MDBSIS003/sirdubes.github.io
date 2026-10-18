@@ -9,8 +9,8 @@ namespace FuturePath.Desktop
         private TableLayoutPanel tblFields = null!;
         private Button btnExport = null!;
         private Button btnPrint = null!;
-        private Label lbltxtSummary = null!;
-        private TextBox txtSummary = null!;
+        private Label lbllblSummary = null!;
+        private Label lblSummary = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -31,10 +31,10 @@ namespace FuturePath.Desktop
             btnExport.Name = "btnExport";
             btnPrint = new Button();
             btnPrint.Name = "btnPrint";
-            lbltxtSummary = new Label();
-            lbltxtSummary.Name = "lbltxtSummary";
-            txtSummary = new TextBox();
-            txtSummary.Name = "txtSummary";
+            lbllblSummary = new Label();
+            lbllblSummary.Name = "lbllblSummary";
+            lblSummary = new Label();
+            lblSummary.Name = "lblSummary";
             SuspendLayout();
             tblFields.AutoSize = true;
             tblFields.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -58,20 +58,20 @@ namespace FuturePath.Desktop
             btnPrint.AutoSize = true;
             btnPrint.Click += btnPrint_Click;
             tblFields.Controls.Add(btnPrint, 0, 1);
-            lbltxtSummary.Text = "Saved assessment";
-            lbltxtSummary.AutoSize = true;
-            lbltxtSummary.Margin = new Padding(6, 10, 6, 3);
-            tblFields.Controls.Add(lbltxtSummary, 0, 2);
-            txtSummary.Name = "txtSummary";
-            txtSummary.AccessibleName = "Saved assessment";
-            txtSummary.Dock = DockStyle.Fill;
-            txtSummary.Margin = new Padding(6, 3, 6, 8);
-            txtSummary.MinimumSize = new Size(0, 30);
-            txtSummary.Multiline = true;
-            txtSummary.ReadOnly = true;
-            txtSummary.ScrollBars = ScrollBars.Vertical;
-            txtSummary.Height = 450;
-            tblFields.Controls.Add(txtSummary, 0, 3);
+            lbllblSummary.Text = "Saved assessment";
+            lbllblSummary.AutoSize = true;
+            lbllblSummary.Margin = new Padding(6, 10, 6, 3);
+            tblFields.Controls.Add(lbllblSummary, 0, 2);
+            lblSummary.Name = "lblSummary";
+            lblSummary.AccessibleName = "Saved assessment";
+            lblSummary.Dock = DockStyle.Fill;
+            lblSummary.Margin = new Padding(6, 3, 6, 8);
+            lblSummary.MinimumSize = new Size(0, 30);
+            lblSummary.AutoSize = true;
+            lblSummary.BackColor = Color.White;
+            lblSummary.Padding = new Padding(14);
+            lblSummary.UseMnemonic = false;
+            tblFields.Controls.Add(lblSummary, 0, 3);
             tblFields.RowCount = 4;
             pnlBody.Controls.Add(tblFields);
             Configure("Your saved advisory summary", 7);

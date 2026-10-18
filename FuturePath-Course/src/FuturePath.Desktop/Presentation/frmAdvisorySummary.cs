@@ -12,6 +12,7 @@ namespace FuturePath.Desktop
         public frmAdvisorySummary()
         {
             InitializeComponent();
+            WrapDisplayLabel(lblSummary);
         }
 
         public frmAdvisorySummary(AppController app, frmMain main) : this()
@@ -31,7 +32,7 @@ namespace FuturePath.Desktop
 
             lblMessage.ForeColor = Color.DarkGreen;
             report = app.Reports.Summary(main.SavedSession.Id);
-            txtSummary.Text = report.Content;
+            lblSummary.Text = report.Content;
             ShowMessage("Saved as session #" + main.SavedSession.Id + ". Export or print your summary before finishing.");
         }
 

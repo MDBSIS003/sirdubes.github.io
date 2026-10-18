@@ -6,14 +6,29 @@ using System.Net.Mail;
 
 namespace FuturePath.Business
 {
-    /// <summary>Shared page/service validation; it never opens a database or reads a control.</summary>
-    public static class AdvisingValidation
+         public static class AdvisingValidation
     {
-        // Part 1 requires school and province when capturing a new learner.
-        // Profile alone remains available for reading legacy, optional school records.
+        public const int MinimumSubjects = 7;
+
+
         public static void ProfileCapture(LearnerProfile learner)
         {
             Profile(learner);
+            if (learner.Name.Length == 0)
+            {
+                throw new ValidationException("Name and surname are required.");
+            }
+
+            if (learner.Email.Length == 0)
+            {
+                throw new ValidationException("Email is required.");
+            }
+
+            if (learner.Phone.Length == 0)
+            {
+                throw new ValidationException("Contact number is required.");
+            }
+
             if (learner.School.Length == 0)
             {
                 throw new ValidationException("School is required.");
@@ -42,14 +57,19 @@ namespace FuturePath.Business
                 throw new ValidationException("Names and schools must be at most 120 characters; email at most 150.");
             }
 
+            if (learner.Name.Length > 0 && !ValidName(learner.Name))
+            {
+                throw new ValidationException("Use letters, spaces, hyphens and apostrophes for the learner name.");
+            }
+
             if (learner.Email.Length > 0 && (!MailAddress.TryCreate(learner.Email, out var email) || email.Address != learner.Email))
             {
-                throw new ValidationException("Enter a valid email address or leave it blank.");
+                throw new ValidationException("Enter a valid email address.");
             }
 
             if (learner.Phone.Length > 0 && (learner.Phone.Length < 7 || learner.Phone.Length > 20 || !ValidPhoneCharacters(learner.Phone)))
             {
-                throw new ValidationException("Enter a valid contact number or leave it blank.");
+                throw new ValidationException("Enter a valid contact number containing at least seven digits.");
             }
 
             if (learner.Province.Length > 0 && Array.IndexOf(ReferenceCatalog.Provinces, learner.Province) < 0)
@@ -60,9 +80,9 @@ namespace FuturePath.Business
 
         public static void Marks(IReadOnlyList<SubjectMark> marks, IReadOnlyList<LookupItem> activeSubjects)
         {
-            if (marks.Count == 0)
+            if (marks.Count < MinimumSubjects)
             {
-                throw new ValidationException("Add at least one subject and mark before continuing.");
+                throw new ValidationException("Enter at least seven different subjects and their marks before continuing.");
             }
 
             HashSet<int> captured = new HashSet<int>();
@@ -143,17 +163,40 @@ namespace FuturePath.Business
             return false;
         }
 
-        private static bool ValidPhoneCharacters(string phone)
+        private static bool ValidName(string name)
         {
-            foreach (char character in phone)
+            bool hasLetter = false;
+            foreach (char character in name)
             {
-                if (!char.IsDigit(character) && "+()- ".IndexOf(character) < 0)
+                if (char.IsLetter(character))
+                {
+                    hasLetter = true;
+                }
+                else if (character != ' ' && character != '-' && character != '\'' && character != '’')
                 {
                     return false;
                 }
             }
 
-            return true;
+            return hasLetter;
+        }
+
+        private static bool ValidPhoneCharacters(string phone)
+        {
+            int digits = 0;
+            foreach (char character in phone)
+            {
+                if (char.IsDigit(character))
+                {
+                    digits++;
+                }
+                else if ("+()- ".IndexOf(character) < 0)
+                {
+                    return false;
+                }
+            }
+
+            return digits >= 7;
         }
     }
 }

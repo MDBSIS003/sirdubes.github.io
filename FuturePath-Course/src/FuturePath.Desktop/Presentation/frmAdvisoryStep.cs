@@ -28,7 +28,7 @@ namespace FuturePath.Desktop
             }
         }
 
-        // The child form overrides these methods, just like the workshop's virtual methods.
+
         public virtual void RefreshStep()
         {
         }
@@ -40,6 +40,25 @@ namespace FuturePath.Desktop
         protected void ShowMessage(string message)
         {
             lblMessage.Text = message;
+            lblMessage.Visible = message.Length > 0;
+        }
+
+        protected void WrapDisplayLabel(Label label)
+        {
+            label.AutoSize = true;
+            label.UseMnemonic = false;
+            Control parent = label.Parent!;
+            EventHandler resize = (sender, e) =>
+            {
+                int width = Math.Max(1, parent.ClientSize.Width - parent.Padding.Horizontal - label.Margin.Horizontal);
+                if (label.MaximumSize.Width != width)
+                {
+                    label.MaximumSize = new Size(width, 0);
+                }
+            };
+            parent.SizeChanged += resize;
+            label.Disposed += (sender, e) => parent.SizeChanged -= resize;
+            resize(parent, EventArgs.Empty);
         }
 
         private void btnBack_Click(object? sender, EventArgs e)

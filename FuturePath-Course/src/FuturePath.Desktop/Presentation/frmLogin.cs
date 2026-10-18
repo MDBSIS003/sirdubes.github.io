@@ -18,12 +18,19 @@ namespace FuturePath.Desktop
         {
             this.app = app;
             AcceptButton = btnLogin;
+            ActiveControl = txtUsername;
         }
 
         private void btnLogin_Click(object? sender, EventArgs e)
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(txtUsername.Text) || txtPassword.Text.Length == 0)
+                {
+                    throw new ValidationException("Enter your staff username and password.");
+                }
+
+                btnLogin.Enabled = false;
                 app.Authentication.Login(txtUsername.Text, txtPassword.Text);
                 txtPassword.Clear();
                 DialogResult = DialogResult.OK;
@@ -32,6 +39,11 @@ namespace FuturePath.Desktop
             {
                 lblError.Text = ex.Message;
                 txtPassword.Clear();
+                txtPassword.Focus();
+            }
+            finally
+            {
+                btnLogin.Enabled = true;
             }
         }
     }

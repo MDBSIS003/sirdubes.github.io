@@ -49,6 +49,8 @@ namespace FuturePath.Desktop
         {
             try
             {
+                if (!ConfirmDeactivation()) { return; }
+
                 Dictionary<string, object?> values = new Dictionary<string, object?>();
                 values.Add("DegreeId", cboDegreeId.SelectedValue);
                 values.Add("CategoryId", cboCategoryId.SelectedValue);

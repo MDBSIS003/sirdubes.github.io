@@ -76,7 +76,7 @@ namespace FuturePath.Data
 
         public void Initialize()
         {
-            // Startup verifies an existing installation. Creating/seeding a database is an explicit setup action.
+
             try
             {
                 using (SqlConnection connection = Open())
@@ -86,7 +86,7 @@ namespace FuturePath.Data
                         object version = command.ExecuteScalar();
                         if (version == null || version == DBNull.Value || Convert.ToInt32(version) != 1)
                         {
-                            throw new ValidationException("The database schema version is not supported. See docs/Database-Setup.md.");
+                            throw new ValidationException("The database schema version is not supported. Use Prepare demonstration database in the application.");
                         }
                     }
                 }

@@ -34,7 +34,7 @@ namespace FuturePath.Business
             set { minimumMark = value; }
         }
 
-        // Zero means an independent requirement; positive groups are OR choices.
+
         public int AlternativeGroup
         {
             get { return alternativeGroup; }

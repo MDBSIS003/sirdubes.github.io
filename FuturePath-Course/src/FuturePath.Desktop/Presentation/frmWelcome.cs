@@ -22,12 +22,36 @@ namespace FuturePath.Desktop
             this.main = main;
             FormBorderStyle = FormBorderStyle.None;
             ControlBox = false;
-            btnLogin.Text = app.Access.IsStaff ? "View saved sessions" : "Staff sign in";
+            btnLogin.Text = app.Access.IsStaff ? "View saved learner sessions" : "Staff sign in";
+            btnReports.Visible = app.Access.IsStaff;
+            btnAdministration.Visible = app.Access.Role == UserRole.Administrator;
+            if (app.Access.IsStaff)
+            {
+                lblHeading.Text = "Staff workspace";
+                lblIntroduction.Text = "Signed in as " + app.Access.DisplayName + " (" + app.Access.Role + ")." + Environment.NewLine +
+                    "View saved learner information, create follow-up assessments and generate reports.";
+            }
         }
 
         private void btnStart_Click(object? sender, EventArgs e)
         {
             main.StartAdvisory();
+        }
+
+        private void btnReports_Click(object? sender, EventArgs e)
+        {
+            using (frmReports form = new frmReports(app))
+            {
+                form.ShowDialog(this);
+            }
+        }
+
+        private void btnAdministration_Click(object? sender, EventArgs e)
+        {
+            using (frmAdminMaintenance form = new frmAdminMaintenance(app))
+            {
+                form.ShowDialog(this);
+            }
         }
 
         private void btnLogin_Click(object? sender, EventArgs e)

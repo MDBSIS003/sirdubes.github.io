@@ -33,6 +33,8 @@ namespace FuturePath.Desktop
         {
             try
             {
+                if (!ConfirmDeactivation()) { return; }
+
                 Dictionary<string, object?> values = new Dictionary<string, object?>();
                 values.Add("Name", txtName.Text);
                 values.Add("Active", chkActive.Checked ? 1 : 0);

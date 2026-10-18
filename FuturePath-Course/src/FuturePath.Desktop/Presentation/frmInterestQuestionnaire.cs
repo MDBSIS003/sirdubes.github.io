@@ -64,7 +64,9 @@ namespace FuturePath.Desktop
                 }
             }
 
-            btnNext.Enabled = complete || chkIncomplete.Checked;
+            btnNext.Enabled = complete;
+            lblMessage.ForeColor = complete ? Color.DarkGreen : Color.FromArgb(22, 45, 63);
+            ShowMessage(complete ? "All questions answered." : "Answer every question before continuing.");
         }
 
         public override void SaveInput()
@@ -81,7 +83,7 @@ namespace FuturePath.Desktop
                 main.Input.Responses.Add(response);
             }
 
-            AdvisingValidation.Interests(main.Input.Responses, app.Advising.Questions(), !chkIncomplete.Checked);
+            AdvisingValidation.Interests(main.Input.Responses, app.Advising.Questions(), true);
         }
     }
 }

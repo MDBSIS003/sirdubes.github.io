@@ -4,10 +4,11 @@ using System.Windows.Forms;
 
 namespace FuturePath.Desktop
 {
-    // Standard forms inherit this small display safeguard for high-DPI laptop screens.
+
     public class frmStaffForm : Form
     {
         private bool hasChanges;
+        private bool wasActive;
         protected void TrackChanges(Control parent)
         {
             foreach (Control control in parent.Controls)
@@ -19,6 +20,10 @@ namespace FuturePath.Desktop
 
                 if (control is CheckBox check)
                 {
+                    if (check.Name == "chkActive")
+                    {
+                        wasActive = check.Checked;
+                    }
                     check.CheckedChanged += EditorChanged;
                 }
 
@@ -34,6 +39,16 @@ namespace FuturePath.Desktop
 
                 TrackChanges(control);
             }
+        }
+
+        protected bool ConfirmDeactivation()
+        {
+            Control[] controls = Controls.Find("chkActive", true);
+            if (wasActive && controls.Length > 0 && controls[0] is CheckBox check && !check.Checked)
+            {
+                return MessageBox.Show(this, "Deactivate this record?", "Future Path", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            }
+            return true;
         }
 
         private void EditorChanged(object? sender, EventArgs e)

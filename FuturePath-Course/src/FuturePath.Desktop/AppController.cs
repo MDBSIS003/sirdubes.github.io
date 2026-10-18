@@ -3,7 +3,7 @@ using FuturePath.Data;
 
 namespace FuturePath.Desktop
 {
-    // One shared set of controllers, passed to forms through their constructors.
+
     public class AppController
     {
         private SqlServerStore store;

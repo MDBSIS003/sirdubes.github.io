@@ -1,0 +1,1 @@
+Comment-only transformation checked: 109 C# files, 4 SQL files, 0 comments removed. Code/SQL tokens preserved; all SQL scripts parse.

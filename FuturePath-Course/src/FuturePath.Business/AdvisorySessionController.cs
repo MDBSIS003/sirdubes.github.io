@@ -77,25 +77,30 @@ namespace FuturePath.Business
         private void Validate(AdvisoryInput input)
         {
             LearnerProfile learner = input.Learner;
-            AdvisingValidation.Profile(learner);
-            if (learner.Id == 0)
-            {
-                AdvisingValidation.ProfileCapture(learner);
-            }
+            AdvisingValidation.ProfileCapture(learner);
 
             if (learner.Id != 0)
             {
                 access.RequireStaff();
                 LearnerProfile stored = store.GetLearner(learner.Id) ?? throw new ValidationException("Learner not found.");
-                if (stored.Name != learner.Name || stored.School != learner.School || stored.Email != learner.Email || stored.Phone != learner.Phone || stored.Province != learner.Province)
+                if ((stored.Name.Trim().Length > 0 && stored.Name.Trim() != learner.Name) ||
+                    (stored.School.Trim().Length > 0 && stored.School.Trim() != learner.School) ||
+                    (stored.Email.Trim().Length > 0 && stored.Email.Trim() != learner.Email) ||
+                    (stored.Phone.Trim().Length > 0 && stored.Phone.Trim() != learner.Phone) ||
+                    (stored.Province.Trim().Length > 0 && stored.Province.Trim() != learner.Province))
                 {
                     throw new ValidationException("A follow-up preserves learner identity. Start a new learner profile to capture different personal details.");
                 }
             }
 
             AdvisingValidation.Marks(input.Marks, Subjects());
-            // An imported or deliberately incomplete draft still receives More Information Needed from the engine.
-            AdvisingValidation.Interests(input.Responses, Questions(), requireComplete: false);
+
+            if (!input.SubjectsComplete)
+            {
+                throw new ValidationException("Confirm that every subject and mark has been entered before continuing.");
+            }
+
+            AdvisingValidation.Interests(input.Responses, Questions(), requireComplete: true);
             bool facultyFound = false;
             foreach (LookupItem faculty in Faculties())
             {

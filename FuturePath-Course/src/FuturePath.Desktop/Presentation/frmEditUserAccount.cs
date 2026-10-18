@@ -39,6 +39,8 @@ namespace FuturePath.Desktop
                     throw new ValidationException("Choose a staff role.");
                 }
 
+                if (!ConfirmDeactivation()) { return; }
+
                 app.Authentication.SaveUser(recordId, txtUsername.Text, (UserRole)cboRole.SelectedItem, chkActive.Checked, txtPassword.Text.Length == 0 ? null : txtPassword.Text);
                 txtPassword.Clear();
                 DialogResult = DialogResult.OK;

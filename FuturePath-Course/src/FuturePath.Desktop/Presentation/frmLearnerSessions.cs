@@ -20,8 +20,8 @@ namespace FuturePath.Desktop
             this.app = app;
             this.main = main;
             app.Access.RequireStaff();
-            dtpFrom.Value = new DateTime(2026, 1, 1);
-            dtpTo.Value = DateTime.Today;
+            dtpFrom.Value = dtpFrom.MinDate;
+            dtpTo.Value = DateTime.UtcNow.Date;
             btnSearch_Click(this, EventArgs.Empty);
         }
 

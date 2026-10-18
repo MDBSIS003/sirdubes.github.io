@@ -117,6 +117,7 @@ namespace FuturePath.Desktop
             chkComplete.Margin = new Padding(6, 3, 6, 8);
             chkComplete.Text = "I confirm that this is my complete subject list";
             chkComplete.AutoSize = true;
+            chkComplete.CheckedChanged += chkComplete_CheckedChanged;
             tblFields.Controls.Add(chkComplete, 0, 8);
             tblFields.RowCount = 9;
             pnlBody.Controls.Add(tblFields);

@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace FuturePath.Business
 {
-    // Only these fields may be edited by the administrator. This is also the SQL allowlist.
+
     public class ReferenceField
     {
         public string Name { get; private set; }

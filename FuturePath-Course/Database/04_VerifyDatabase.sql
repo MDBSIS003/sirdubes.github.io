@@ -1,6 +1,6 @@
 USE FuturePathStudentAdvisingSystem;
 GO
--- Read-only checks. Expected counts apply to the explicitly seeded demonstration database.
+
 SELECT 'Learner' AS Entity, COUNT(*) AS Rows FROM dbo.Learner
 UNION ALL SELECT 'Subject',COUNT(*) FROM dbo.Subject
 UNION ALL SELECT 'Faculty',COUNT(*) FROM dbo.Faculty

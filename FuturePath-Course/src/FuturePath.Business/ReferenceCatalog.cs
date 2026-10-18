@@ -5,8 +5,7 @@ using System.Threading;
 
 namespace FuturePath.Business
 {
-    /// <summary>Whitelisted reference entities shared by typed validation, data access and form editors.</summary>
-    public static class ReferenceCatalog
+         public static class ReferenceCatalog
     {
         public static readonly string[] Provinces = new string[]
         {

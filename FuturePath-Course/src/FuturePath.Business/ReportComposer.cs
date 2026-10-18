@@ -13,7 +13,7 @@ namespace FuturePath.Business
             int questionnaires = 0;
             foreach (SessionSummary session in sessions)
             {
-                // Use saved reasons; new rule edits must not recalculate history.
+
                 string reasons = session.Explanation;
                 if (reasons.Contains("Required:", StringComparison.Ordinal))
                 {
@@ -68,6 +68,12 @@ namespace FuturePath.Business
             }
 
             b.AppendLine("Subject list confirmed complete: " + (session.Input.SubjectsComplete ? "Yes" : "No"));
+            b.AppendLine();
+            b.AppendLine("INTEREST QUESTIONNAIRE RESPONSES (1–5)");
+            foreach (InterestResponse response in session.Input.Responses)
+            {
+                b.AppendLine("  Question " + response.QuestionId + ": " + response.Score + " / 5");
+            }
             b.AppendLine();
             b.AppendLine("INTEREST CATEGORY RESULTS (0–100%)");
             foreach (KeyValuePair<string, decimal> category in session.InterestScores)

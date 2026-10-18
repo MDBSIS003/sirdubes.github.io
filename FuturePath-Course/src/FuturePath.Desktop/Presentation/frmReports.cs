@@ -19,7 +19,7 @@ namespace FuturePath.Desktop
             this.app = app;
             app.Access.RequireStaff();
             dtpFrom.Value = new DateTime(2026, 1, 1);
-            dtpTo.Value = DateTime.Today;
+            dtpTo.Value = DateTime.UtcNow.Date;
             List<LookupItem> faculties = app.Reports.Faculties();
             faculties.Insert(0, new LookupItem {
                 Id = 0,

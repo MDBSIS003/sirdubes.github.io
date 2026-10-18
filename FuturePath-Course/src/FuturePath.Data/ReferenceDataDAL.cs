@@ -111,7 +111,7 @@ namespace FuturePath.Data
 
         public int SaveReference(string key, int id, IReadOnlyDictionary<string, object?> values)
         {
-            // Table/column names come only from this fixed catalog, never from a text box.
+
             ReferenceDefinition definition = ReferenceCatalog.Get(key);
             List<string> columns = new List<string>();
             List<string> parameters = new List<string>();

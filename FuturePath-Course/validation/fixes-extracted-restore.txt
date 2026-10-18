@@ -1,0 +1,4 @@
+  Determining projects to restore...
+  Restored /workspace/verify-fixed-zip/FuturePath/src/FuturePath.Business/FuturePath.Business.csproj (in 183 ms).
+  Restored /workspace/verify-fixed-zip/FuturePath/src/FuturePath.Data/FuturePath.Data.csproj (in 277 ms).
+  Restored /workspace/verify-fixed-zip/FuturePath/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 277 ms).

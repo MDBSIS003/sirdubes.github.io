@@ -83,12 +83,28 @@ namespace FuturePath.Business
 
             b.AppendLine();
             b.AppendLine(exceptionsOnly ? "LEARNERS REQUIRING FOLLOW-UP" : "SESSION DETAILS");
-            rows.Sort(CompareSessions);
+            rows.Sort(exceptionsOnly ? CompareExceptions : CompareSessions);
             foreach (SessionSummary session in rows)
             {
                 b.AppendLine($"#{session.Id} | {session.Learner} | Grade {session.Grade} | {session.CreatedUtc:yyyy-MM-dd} | {session.Programme}");
                 b.AppendLine($"  {session.Outcome} — {session.Score:0.##}%");
+                b.AppendLine("  Faculty: " + session.Faculty);
                 b.AppendLine(session.Explanation);
+                if (exceptionsOnly)
+                {
+                    AdvisorySession detail = store.GetSession(session.Id) ?? throw new ValidationException("Session not found.");
+                    b.AppendLine("  Interest alignment: " + detail.Selected.InterestScore.ToString("0.##") + "%");
+                    b.AppendLine("  Alternative degree recommendations:");
+                    foreach (Recommendation alternative in detail.Alternatives)
+                    {
+                        b.AppendLine("    " + alternative.Programme + " — " + alternative.OutcomeText + " — " + alternative.OverallScore.ToString("0.##") + "%");
+                        b.AppendLine(alternative.Explanation);
+                    }
+                    if (detail.Alternatives.Count == 0)
+                    {
+                        b.AppendLine("    No eligible or near-match alternatives can be confirmed.");
+                    }
+                }
                 b.AppendLine();
             }
 
@@ -105,6 +121,14 @@ namespace FuturePath.Business
             report.GeneratedUtc = clock.UtcNow;
             report.Content = b.ToString();
             return report;
+        }
+
+        private static int CompareExceptions(SessionSummary first, SessionSummary second)
+        {
+            int firstOrder = first.Outcome == "Not Currently Eligible" ? 0 : 1;
+            int secondOrder = second.Outcome == "Not Currently Eligible" ? 0 : 1;
+            int difference = firstOrder.CompareTo(secondOrder);
+            return difference == 0 ? CompareSessions(first, second) : difference;
         }
 
         private static int CompareSessions(SessionSummary first, SessionSummary second)
@@ -376,7 +400,7 @@ namespace FuturePath.Business
             }
 
             string content = Path.GetExtension(path).Equals(".html", StringComparison.OrdinalIgnoreCase) ? report.ToHtml() : report.Content;
-            // Write to the destination volume first so a failed write does not truncate an existing report.
+
             string temp = path + "." + Guid.NewGuid().ToString("N") + ".tmp";
             try
             {

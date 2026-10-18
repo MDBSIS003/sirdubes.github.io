@@ -13,7 +13,7 @@ namespace FuturePath.Business
         public const decimal NearMatchGap = 5m;
         public const decimal StrongInterest = 60m;
         public const string RuleVersion = "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60";
-        public const string Disclaimer = "Preliminary guidance only, not an admission decision or funding award. " + "Programme requirements and funding records are sample data. Verify current requirements, dates and eligibility with the institution or provider. " + "Grade 11 results are provisional. No external AI or online service is used.";
+        public const string Disclaimer = "Preliminary guidance only, not an admission decision or funding award. " + "Programme requirements and funding records are sample data. Verify current requirements, dates and eligibility with the institution or provider. " + "Grade 11 results are provisional.";
         #endregion
         #region Interest Calculation
         public Dictionary<string, decimal> CalculateInterests(IEnumerable<InterestResponse> responses, IEnumerable<InterestQuestion> questions)
@@ -163,7 +163,7 @@ namespace FuturePath.Business
 
         #endregion
         #region Check One Degree
-        // Each helper performs one part of the assessment; none opens a database.
+
         private class EligibilityCheck
         {
             public bool Missing;

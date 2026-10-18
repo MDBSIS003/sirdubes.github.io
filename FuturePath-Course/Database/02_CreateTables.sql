@@ -2,7 +2,7 @@ USE FuturePathStudentAdvisingSystem;
 GO
 SET XACT_ABORT ON;
 
--- Refuse an unrelated/unversioned database rather than modifying unknown user tables.
+
 IF OBJECT_ID(N'dbo.SchemaVersion',N'U') IS NULL AND EXISTS(SELECT 1 FROM sys.tables WHERE is_ms_shipped=0)
  THROW 51000,'This database already contains unversioned tables. Back it up and choose a new demonstration database name.',1;
 IF OBJECT_ID(N'dbo.SchemaVersion',N'U') IS NOT NULL

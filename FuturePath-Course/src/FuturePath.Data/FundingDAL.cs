@@ -18,7 +18,7 @@ namespace FuturePath.Data
         {
             using (SqlConnection c = Open())
             {
-                // Explicit programme links narrow an award; faculty-wide options have no active programme links.
+
                 using (SqlCommand cmd = Command(c, @"SELECT f.Id,f.Name,f.Type,f.Eligibility,f.Documents,f.ClosingDate,f.Contact,f.Sample
 FROM FundingOption f JOIN DegreeProgramme d ON d.Id=@p0 JOIN Faculty fa ON fa.Id=d.FacultyId
 WHERE f.Active=1 AND d.Active=1 AND fa.Active=1 AND f.ClosingDate>=@p1 AND (

@@ -14,12 +14,12 @@ public sealed class AdvisingTests
     public void CaseStudyScenariosAreComputedByRealEngine(int id, string name, AdvisoryOutcome expected)
     {
         using var db = new TestDatabase();
-        var input = db.Input(id);
-        var session = db.Advising.Assess(input);
+        var input = db.Store.GetSession(id)!.Input;
+        var session = new RecommendationEngine().Assess(input, db.Advising.Programmes(), db.Advising.Questions(), db.Clock.UtcNow);
         Assert.Equal(name, session.Input.Learner.Name);
         Assert.Equal(expected, session.Selected.Outcome);
         Assert.InRange(session.Selected.OverallScore, 0m, 100m);
-        Assert.Equal(expected, db.Store.GetSession(session.Id)!.Selected.Outcome);
+        Assert.Equal(expected, db.Store.GetSession(id)!.Selected.Outcome);
     }
 
     [LocalDbFact]
@@ -83,9 +83,7 @@ public sealed class AdvisingTests
         using var db = new TestDatabase();
         var input = db.Input();
         input.Responses.RemoveAt(0);
-        var result = db.Advising.Assess(input);
-        Assert.Equal(AdvisoryOutcome.MoreInformationNeeded, result.Selected.Outcome);
-        Assert.Empty(result.Alternatives);
+        Assert.Throws<ValidationException>(() => db.Advising.Assess(input));
     }
 
     [LocalDbFact]
@@ -94,7 +92,7 @@ public sealed class AdvisingTests
         using var db = new TestDatabase();
         var input = db.Input();
         input.SubjectsComplete = false;
-        Assert.Equal(AdvisoryOutcome.MoreInformationNeeded, db.Advising.Assess(input).Selected.Outcome);
+        Assert.Throws<ValidationException>(() => db.Advising.Assess(input));
     }
 
     [LocalDbFact]
@@ -174,13 +172,12 @@ public sealed class AdvisingTests
     }
 
     [LocalDbFact]
-    public void AnonymousProfileIsSupported()
+    public void MissingRequiredNameIsRejected()
     {
         using var db = new TestDatabase();
         var input = db.Input();
         input.Learner.Name = "";
-        var session = db.Advising.Assess(input);
-        Assert.Contains("Anonymous learner", db.Reports.Summary(session.Id).Content);
+        Assert.Throws<ValidationException>(() => db.Advising.Assess(input));
     }
 
     [LocalDbTheory]

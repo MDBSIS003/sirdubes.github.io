@@ -61,8 +61,11 @@ namespace FuturePath.Desktop
         public override void SaveInput()
         {
             main.Input.FundingRequested = chkFunding.Checked;
-            // One call commits the learner, marks, responses and results together.
-            main.SavedSession = app.Advising.Assess(main.Input);
+
+            if (main.SavedSession == null)
+            {
+                main.SavedSession = app.Advising.Assess(main.Input);
+            }
         }
     }
 }

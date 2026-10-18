@@ -9,7 +9,6 @@ namespace FuturePath.Desktop
         private TableLayoutPanel tblFields = null!;
         private Label lblpnlQuestions = null!;
         private TableLayoutPanel pnlQuestions = null!;
-        private CheckBox chkIncomplete = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -30,8 +29,6 @@ namespace FuturePath.Desktop
             lblpnlQuestions.Name = "lblpnlQuestions";
             pnlQuestions = new TableLayoutPanel();
             pnlQuestions.Name = "pnlQuestions";
-            chkIncomplete = new CheckBox();
-            chkIncomplete.Name = "chkIncomplete";
             SuspendLayout();
             tblFields.AutoSize = true;
             tblFields.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -51,15 +48,7 @@ namespace FuturePath.Desktop
             pnlQuestions.ColumnCount = 1;
             pnlQuestions.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tblFields.Controls.Add(pnlQuestions, 0, 1);
-            chkIncomplete.Name = "chkIncomplete";
-            chkIncomplete.AccessibleName = "chkIncomplete";
-            chkIncomplete.Dock = DockStyle.Fill;
-            chkIncomplete.Margin = new Padding(6, 3, 6, 8);
-            chkIncomplete.Text = "Continue with an incomplete questionnaire (More Information Needed)";
-            chkIncomplete.AutoSize = true;
-            chkIncomplete.CheckedChanged += ResponseChanged;
-            tblFields.Controls.Add(chkIncomplete, 0, 2);
-            tblFields.RowCount = 3;
+            tblFields.RowCount = 2;
             pnlBody.Controls.Add(tblFields);
             Configure("Explore your interests", 3);
             Name = "frmInterestQuestionnaire";

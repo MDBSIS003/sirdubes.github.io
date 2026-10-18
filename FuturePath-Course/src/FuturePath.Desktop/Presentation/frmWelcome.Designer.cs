@@ -13,6 +13,8 @@ namespace FuturePath.Desktop
         private Label lblIntroduction = null!;
         private Button btnStart = null!;
         private Button btnLogin = null!;
+        private Button btnReports = null!;
+        private Button btnAdministration = null!;
         private Label lblDisclaimer = null!;
         protected override void Dispose(bool disposing)
         {
@@ -42,6 +44,10 @@ namespace FuturePath.Desktop
             btnStart.Name = "btnStart";
             btnLogin = new Button();
             btnLogin.Name = "btnLogin";
+            btnReports = new Button();
+            btnReports.Name = "btnReports";
+            btnAdministration = new Button();
+            btnAdministration.Name = "btnAdministration";
             lblDisclaimer = new Label();
             lblDisclaimer.Name = "lblDisclaimer";
             SuspendLayout();
@@ -71,7 +77,7 @@ namespace FuturePath.Desktop
             lblIntroduction.AccessibleName = "lblIntroduction";
             lblIntroduction.Dock = DockStyle.Fill;
             lblIntroduction.Margin = new Padding(5, 3, 5, 8);
-            lblIntroduction.Text = "1. Capture your profile and marks.\r\n2. Explore interests, programmes and alternatives.\r\n3. Choose funding guidance and save your advisory summary.\r\n\r\nPersonal name and contact details are optional. School, province and grade are required.";
+            lblIntroduction.Text = "1. Capture your profile and marks.\r\n2. Explore interests, programmes and alternatives.\r\n3. Choose funding guidance and save your advisory summary.\r\n\r\nComplete every profile field, enter at least seven subjects and answer every interest question.";
             lblIntroduction.AutoSize = true;
             tblDialog.Controls.Add(lblIntroduction, 0, 2);
             btnStart.Name = "btnStart";
@@ -98,8 +104,24 @@ namespace FuturePath.Desktop
             lblDisclaimer.Margin = new Padding(5, 3, 5, 8);
             lblDisclaimer.Text = "\r\n\r\nEnd your session before another learner uses this computer. Only signed-in staff can retrieve other saved sessions.";
             lblDisclaimer.AutoSize = true;
-            tblDialog.Controls.Add(lblDisclaimer, 0, 5);
-            tblDialog.RowCount = 6;
+            btnReports.AutoSize = true;
+            btnReports.Dock = DockStyle.Fill;
+            btnReports.MinimumSize = new Size(0, 40);
+            btnReports.Margin = new Padding(5, 3, 5, 8);
+            btnReports.Text = "Staff reports";
+            btnReports.Visible = false;
+            btnReports.Click += btnReports_Click;
+            btnAdministration.AutoSize = true;
+            btnAdministration.Dock = DockStyle.Fill;
+            btnAdministration.MinimumSize = new Size(0, 40);
+            btnAdministration.Margin = new Padding(5, 3, 5, 8);
+            btnAdministration.Text = "Administration";
+            btnAdministration.Visible = false;
+            btnAdministration.Click += btnAdministration_Click;
+            tblDialog.Controls.Add(btnReports, 0, 5);
+            tblDialog.Controls.Add(btnAdministration, 0, 6);
+            tblDialog.Controls.Add(lblDisclaimer, 0, 7);
+            tblDialog.RowCount = 8;
             pnlScroll.Controls.Add(tblDialog);
             Controls.Add(pnlScroll);
             Text = "Future Path | Plan your future";

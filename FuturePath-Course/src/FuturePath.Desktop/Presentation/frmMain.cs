@@ -223,7 +223,14 @@ namespace FuturePath.Desktop
 
         private void mnuHome_Click(object? sender, EventArgs e)
         {
-            ShowOverview();
+            if (steps[0] != null && savedSession == null)
+            {
+                EndSession();
+            }
+            else
+            {
+                ShowOverview();
+            }
         }
 
         private void mnuSessions_Click(object? sender, EventArgs e)

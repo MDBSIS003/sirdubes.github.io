@@ -11,8 +11,8 @@ namespace FuturePath.Desktop
         private ComboBox cboFaculty = null!;
         private Label lblcboDegree = null!;
         private ComboBox cboDegree = null!;
-        private Label lbltxtRequirements = null!;
-        private TextBox txtRequirements = null!;
+        private Label lbllblRequirements = null!;
+        private Label lblRequirements = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -37,10 +37,10 @@ namespace FuturePath.Desktop
             lblcboDegree.Name = "lblcboDegree";
             cboDegree = new ComboBox();
             cboDegree.Name = "cboDegree";
-            lbltxtRequirements = new Label();
-            lbltxtRequirements.Name = "lbltxtRequirements";
-            txtRequirements = new TextBox();
-            txtRequirements.Name = "txtRequirements";
+            lbllblRequirements = new Label();
+            lbllblRequirements.Name = "lbllblRequirements";
+            lblRequirements = new Label();
+            lblRequirements.Name = "lblRequirements";
             SuspendLayout();
             tblFields.AutoSize = true;
             tblFields.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -72,20 +72,20 @@ namespace FuturePath.Desktop
             cboDegree.DropDownStyle = ComboBoxStyle.DropDownList;
             cboDegree.SelectedIndexChanged += cboDegree_SelectedIndexChanged;
             tblFields.Controls.Add(cboDegree, 0, 3);
-            lbltxtRequirements.Text = "Current programme requirements";
-            lbltxtRequirements.AutoSize = true;
-            lbltxtRequirements.Margin = new Padding(6, 10, 6, 3);
-            tblFields.Controls.Add(lbltxtRequirements, 0, 4);
-            txtRequirements.Name = "txtRequirements";
-            txtRequirements.AccessibleName = "Current programme requirements";
-            txtRequirements.Dock = DockStyle.Fill;
-            txtRequirements.Margin = new Padding(6, 3, 6, 8);
-            txtRequirements.MinimumSize = new Size(0, 30);
-            txtRequirements.Multiline = true;
-            txtRequirements.ReadOnly = true;
-            txtRequirements.ScrollBars = ScrollBars.Vertical;
-            txtRequirements.Height = 280;
-            tblFields.Controls.Add(txtRequirements, 0, 5);
+            lbllblRequirements.Text = "Current programme requirements";
+            lbllblRequirements.AutoSize = true;
+            lbllblRequirements.Margin = new Padding(6, 10, 6, 3);
+            tblFields.Controls.Add(lbllblRequirements, 0, 4);
+            lblRequirements.Name = "lblRequirements";
+            lblRequirements.AccessibleName = "Current programme requirements";
+            lblRequirements.Dock = DockStyle.Fill;
+            lblRequirements.Margin = new Padding(6, 3, 6, 8);
+            lblRequirements.MinimumSize = new Size(0, 30);
+            lblRequirements.AutoSize = true;
+            lblRequirements.BackColor = Color.White;
+            lblRequirements.Padding = new Padding(14);
+            lblRequirements.UseMnemonic = false;
+            tblFields.Controls.Add(lblRequirements, 0, 5);
             tblFields.RowCount = 6;
             pnlBody.Controls.Add(tblFields);
             Configure("Select a faculty and degree", 4);

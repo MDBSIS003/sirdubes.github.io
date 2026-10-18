@@ -8,8 +8,7 @@ using FuturePath.Business;
 
 namespace FuturePath.Data
 {
-    /// <summary>One local SQL Server instance, Windows authentication, no stored password.</summary>
-    public sealed class DatabaseConnection
+         public sealed class DatabaseConnection
     {
         private string databaseName = "";
         private string connectionString = "";

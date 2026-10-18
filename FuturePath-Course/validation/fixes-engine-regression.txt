@@ -1,0 +1,2 @@
+PASS: 260 full assessment comparisons against the supplied engine (10 exact seed scenarios + 250 deterministic variations).
+Compared every score, outcome, explanation, ranked alternative and interest-category result. No database or Windows UI was executed.

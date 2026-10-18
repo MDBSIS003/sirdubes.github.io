@@ -46,8 +46,12 @@ namespace FuturePath.Desktop
             }
 
             bool followUp = learner.Id > 0;
-            txtName.ReadOnly = txtSchool.ReadOnly = txtEmail.ReadOnly = txtPhone.ReadOnly = followUp;
-            cboProvince.Enabled = !followUp;
+            txtName.ReadOnly = followUp && learner.Name.Trim().Length > 0;
+            txtSchool.ReadOnly = followUp && learner.School.Trim().Length > 0;
+            txtEmail.ReadOnly = followUp && learner.Email.Trim().Length > 0;
+            txtPhone.ReadOnly = followUp && learner.Phone.Trim().Length > 0;
+            cboProvince.Enabled = !followUp || learner.Province.Trim().Length == 0;
+            txtName.Validating += Contact_Validating;
             txtEmail.Validating += Contact_Validating;
             txtPhone.Validating += Contact_Validating;
             txtName.TextChanged += ProfileChanged;
@@ -100,9 +104,8 @@ namespace FuturePath.Desktop
 
         private void ValidateProfileInput()
         {
-            // Preserve optional fields on an existing legacy profile; new capture follows Part 1.
-            if (main.Input.Learner.Id > 0) { AdvisingValidation.Profile(main.Input.Learner); }
-            else { AdvisingValidation.ProfileCapture(main.Input.Learner); }
+
+            AdvisingValidation.ProfileCapture(main.Input.Learner);
         }
 
         private void ReadProfile()

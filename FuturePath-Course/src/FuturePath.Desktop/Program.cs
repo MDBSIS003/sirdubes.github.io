@@ -29,7 +29,7 @@ namespace FuturePath.Desktop
                     databaseName = args[1];
                 }
 
-                // A database identifier is validated before it reaches SQL or the single-instance name.
+
                 SqlServerStore store = new SqlServerStore(databaseName);
                 string hash = Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(databaseName.ToUpperInvariant())));
                 bool firstInstance;

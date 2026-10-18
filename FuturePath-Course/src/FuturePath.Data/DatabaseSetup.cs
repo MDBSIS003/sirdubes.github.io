@@ -7,12 +7,11 @@ using Microsoft.Data.SqlClient;
 
 namespace FuturePath.Data
 {
-    /// <summary>Explicit, non-destructive demonstration setup, requested from the first-run screen.</summary>
-    public static class DatabaseSetup
+         public static class DatabaseSetup
     {
         public static void PrepareDemo(string databaseName = DatabaseConnection.DefaultDatabase)
         {
-            // Validate before substituting the catalog identifier in the trusted, embedded scripts.
+
             DatabaseConnection database = new DatabaseConnection(databaseName);
             using (SqlConnection connection = new SqlConnection(new SqlConnectionStringBuilder(database.ConnectionString) { InitialCatalog = "master" }.ConnectionString))
             {
@@ -31,7 +30,7 @@ namespace FuturePath.Data
                         using (StreamReader reader = new StreamReader(stream))
                         {
                             string script = reader.ReadToEnd().Replace(DatabaseConnection.DefaultDatabase, database.DatabaseName, StringComparison.Ordinal);
-                            // GO is a script batch separator; keep one connection so seed transaction/SET state is retained.
+
                             foreach (string batch in Regex.Split(script, @"^\s*GO\s*$", RegexOptions.Multiline | RegexOptions.IgnoreCase))
                             {
                                 if (string.IsNullOrWhiteSpace(batch))

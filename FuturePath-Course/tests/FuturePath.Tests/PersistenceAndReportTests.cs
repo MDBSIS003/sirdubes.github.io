@@ -96,7 +96,7 @@ public sealed class PersistenceAndReportTests
     {
         using var db = new TestDatabase();
         var input = db.Input();
-        input.Learner.Name = "<script>alert('learner')</script>";
+        input.Learner.School = "<script>alert('learner')</script>";
         var session = db.Advising.Assess(input);
         var report = db.Reports.Summary(session.Id);
         foreach (var field in new[]
@@ -238,6 +238,9 @@ public sealed class PersistenceAndReportTests
         using var db = new TestDatabase();
         db.Advisor();
         var input = db.Advising.Load(3).Input;
+        input.Learner.Email = "learner@example.com";
+        input.Learner.Phone = "0712345678";
+        if (input.Marks.Count < 7) input.Marks.Add(new SubjectMark(2, "Afrikaans", 70));
         input.Marks.Single(m => m.SubjectId == 3).Mark = 65;
         var s = db.Advising.Assess(input);
         Assert.Equal(3, s.Input.Learner.Id);

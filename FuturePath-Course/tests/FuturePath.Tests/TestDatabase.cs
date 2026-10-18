@@ -36,6 +36,17 @@ public sealed class TestDatabase : IDisposable
     {
         var input = Store.GetSession(sampleId)!.Input;
         input.Learner.Id = 0;
+        input.Learner.Email = "learner@example.com";
+        input.Learner.Phone = "0712345678";
+        input.Learner.School = "QA School";
+        input.Learner.Province = "Western Cape";
+        var used = input.Marks.Select(m => m.SubjectId).ToHashSet();
+        foreach (var subject in Store.GetLookup("Subject"))
+        {
+            if (input.Marks.Count >= AdvisingValidation.MinimumSubjects) { break; }
+            if (subject.Id == 3 || subject.Id == 5 || !used.Add(subject.Id)) { continue; }
+            input.Marks.Add(new SubjectMark(subject.Id, subject.Name, 70));
+        }
         return input;
     }
 

@@ -126,6 +126,9 @@ public class DesktopTests
         Form page = main.ActiveMdiChild!;
         Field<TextBox>(page, "txtName").Text = "Course UI test";
         Field<TextBox>(page, "txtSchool").Text = "Sample school";
+        Assert.False(Field<Button>(page, "btnNext").Enabled);
+        Field<TextBox>(page, "txtEmail").Text = "learner@example.com";
+        Field<TextBox>(page, "txtPhone").Text = "0712345678";
         Field<ComboBox>(page, "cboProvince").SelectedItem = "Western Cape";
         Field<ComboBox>(page, "cboGrade").SelectedItem = "12";
         Assert.True(Field<Button>(page, "btnNext").Enabled);
@@ -135,8 +138,8 @@ public class DesktopTests
         Assert.Equal("Course UI test", Field<TextBox>(main.ActiveMdiChild!, "txtName").Text);
         Next(main);
         page = main.ActiveMdiChild!;
-        int[] subjects = { 1, 3, 7, 8, 9, 13 };
-        decimal[] marks = { 72, 70, 74, 79, 70, 80 };
+        int[] subjects = { 1, 3, 7, 8, 9, 13, 2 };
+        decimal[] marks = { 72, 70, 74, 79, 70, 80, 70 };
         for (int index = 0; index < subjects.Length; index++)
         {
             Field<ComboBox>(page, "cboSubject").SelectedValue = subjects[index];
@@ -145,17 +148,24 @@ public class DesktopTests
         }
         // Updating the same subject must not add a duplicate row.
         Field<Button>(page, "btnAdd").PerformClick();
-        Assert.Equal(6, Field<ListView>(page, "lstMarks").Items.Count);
+        Assert.Equal(7, Field<ListView>(page, "lstMarks").Items.Count);
+        Assert.False(Field<Button>(page, "btnNext").Enabled);
         Field<CheckBox>(page, "chkComplete").Checked = true;
         Next(main);
         Assert.IsType<frmInterestQuestionnaire>(main.ActiveMdiChild);
+        Assert.DoesNotContain(Descendants(main.ActiveMdiChild!), control => control.Name == "chkIncomplete");
+        Assert.False(Field<Button>(main.ActiveMdiChild!, "btnNext").Enabled);
         foreach (QuestionRow row in Descendants(main.ActiveMdiChild!).OfType<QuestionRow>()) { row.Score = 5; }
+        Assert.True(Field<Button>(main.ActiveMdiChild!, "btnNext").Enabled);
         Next(main);
         Assert.IsType<frmDegreeEligibility>(main.ActiveMdiChild);
         Field<ComboBox>(main.ActiveMdiChild!, "cboFaculty").SelectedValue = 1;
         Field<ComboBox>(main.ActiveMdiChild!, "cboDegree").SelectedValue = 1;
+        Assert.IsType<Label>(Field<Label>(main.ActiveMdiChild!, "lblRequirements"));
+        Assert.DoesNotContain(Descendants(main.ActiveMdiChild!).OfType<TextBox>(), control => control.Name == "txtRequirements");
         Next(main);
         Assert.IsType<frmAdvisoryResults>(main.ActiveMdiChild);
+        Assert.NotEmpty(Field<Label>(main.ActiveMdiChild!, "lblOutcomeDetails").Text);
         Assert.Equal(AdvisoryOutcome.StrongMatch, main.Preview!.Selected.Outcome);
         Assert.Equal(before, db.Store.FindSessions(DateOnly.MinValue, DateOnly.MaxValue, "").Count);
         Next(main);
@@ -165,7 +175,7 @@ public class DesktopTests
         Assert.IsType<frmAdvisorySummary>(main.ActiveMdiChild);
         Assert.NotNull(main.SavedSession);
         Assert.False(Field<Button>(main.ActiveMdiChild!, "btnBack").Enabled);
-        Assert.Contains("Course UI test", Field<TextBox>(main.ActiveMdiChild!, "txtSummary").Text);
+        Assert.Contains("Course UI test", Field<Label>(main.ActiveMdiChild!, "lblSummary").Text);
         Assert.Equal(before + 1, db.Store.FindSessions(DateOnly.MinValue, DateOnly.MaxValue, "").Count);
         Assert.Equal(1, Application.OpenForms.Cast<Form>().Count(form => !form.IsMdiChild));
         Next(main);
@@ -194,4 +204,59 @@ public class DesktopTests
         using (frmEditFundingOption editor = new frmEditFundingOption(app, app.Maintenance.Rows("FundingOption").First()))
         { Assert.NotNull(Field<ComboBox>(editor, "cboType").SelectedItem); }
     });
+    [Theory]
+    [InlineData(760, 520)]
+    [InlineData(980, 640)]
+    [InlineData(1280, 720)]
+    public void RequirementsAndResultsUseCompleteWrappingDisplays(int width, int height) => Sta(() =>
+    {
+        foreach (frmAdvisoryStep page in new frmAdvisoryStep[] { new frmDegreeEligibility(), new frmAdvisoryResults(), new frmAdvisorySummary() })
+        {
+            using (page)
+            using (Form host = new Form())
+            {
+                host.ClientSize = new Size(width, height);
+                page.TopLevel = false;
+                page.Dock = DockStyle.Fill;
+                host.Controls.Add(page);
+                host.Show(); page.Show(); Application.DoEvents();
+                string name = page is frmDegreeEligibility ? "lblRequirements" : page is frmAdvisoryResults ? "lblOutcomeDetails" : "lblSummary";
+                Label display = Field<Label>(page, name);
+                display.Text = string.Join(Environment.NewLine + Environment.NewLine, Enumerable.Repeat("Required: Mathematics at 60%. Improve marks and review the full programme requirements.", 20));
+                Application.DoEvents();
+                Assert.True(display.AutoSize);
+                Assert.True(display.MaximumSize.Width > 0);
+                Assert.True(display.Height >= display.GetPreferredSize(new Size(display.MaximumSize.Width,0)).Height);
+                Assert.Empty(Descendants(page).OfType<TextBox>());
+                Button next = Field<Button>(page,"btnNext");
+                Assert.True(host.ClientRectangle.Contains(host.RectangleToClient(next.RectangleToScreen(next.ClientRectangle))));
+                host.Close();
+            }
+        }
+    });
+    [Fact]
+    public void StaffLoginExposesCorrectWorkspaceActions() => Sta(() =>
+    {
+        using LocalDbDatabase db = new();
+        AppController app = new(db.Store);
+        using frmLogin login = new(app);
+        login.Show();
+        Field<TextBox>(login,"txtUsername").Text = "advisor_test";
+        Field<TextBox>(login,"txtPassword").Text = "FuturePathAdvisor2026!";
+        Field<Button>(login,"btnLogin").PerformClick();
+        Assert.Equal(DialogResult.OK,login.DialogResult);
+        Assert.Equal(UserRole.Advisor,app.Access.Role);
+        login.Close();
+        using frmMain main = new(app);
+        main.Show(); WaitForOverview(main);
+        Form welcome = main.MdiChildren.OfType<frmWelcome>().Single();
+        Assert.True(Field<Button>(welcome,"btnReports").Visible);
+        Assert.False(Field<Button>(welcome,"btnAdministration").Visible);
+        app.Authentication.Login("admin_test","FuturePathAdmin2026!");
+        main.ShowOverview();
+        welcome = main.MdiChildren.OfType<frmWelcome>().Single();
+        Assert.True(Field<Button>(welcome,"btnAdministration").Visible);
+        main.Close();
+    });
+
 }

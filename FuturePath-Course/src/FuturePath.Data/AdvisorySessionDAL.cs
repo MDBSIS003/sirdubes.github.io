@@ -58,6 +58,17 @@ namespace FuturePath.Data
                         }
                     }
 
+                    else
+                    {
+                        Execute(c, @"UPDATE Learner SET
+Name=CASE WHEN LEN(LTRIM(RTRIM(Name)))=0 THEN @p1 ELSE Name END,
+School=CASE WHEN LEN(LTRIM(RTRIM(School)))=0 THEN @p2 ELSE School END,
+Province=CASE WHEN LEN(LTRIM(RTRIM(Province)))=0 THEN @p3 ELSE Province END,
+Email=CASE WHEN LEN(LTRIM(RTRIM(Email)))=0 THEN @p4 ELSE Email END,
+Phone=CASE WHEN LEN(LTRIM(RTRIM(Phone)))=0 THEN @p5 ELSE Phone END
+WHERE Id=@p0", tx, learnerId, l.Name, l.School, l.Province, l.Email, l.Phone);
+                    }
+
                     using (SqlCommand sessionCommand = Command(c, "INSERT INTO AdvisorySession(LearnerId,GradeId,DegreeId,PreferredFacultyId,CreatedUtc,SubjectsComplete,FundingRequested,RuleVersion) OUTPUT INSERTED.Id VALUES(@p0,@p1,@p2,@p3,@p4,@p5,@p6,@p7)", tx, learnerId, l.Grade, input.DegreeId, input.PreferredFacultyId, session.CreatedUtc, input.SubjectsComplete, input.FundingRequested, session.RuleVersion))
                     {
                         int id = Convert.ToInt32(sessionCommand.ExecuteScalar());

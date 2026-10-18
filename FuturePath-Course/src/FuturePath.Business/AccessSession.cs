@@ -6,8 +6,7 @@ using System.Security.Cryptography;
 
 namespace FuturePath.Business
 {
-    /// <summary>Identity is only changed by successful authentication, never by a caller-supplied role.</summary>
-    public sealed class AccessSession
+         public sealed class AccessSession
     {
         private int? userId;
         private string displayName = "Learner workspace";

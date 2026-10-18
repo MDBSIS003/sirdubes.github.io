@@ -12,6 +12,7 @@ namespace FuturePath.Desktop
         public frmDegreeEligibility()
         {
             InitializeComponent();
+            WrapDisplayLabel(lblRequirements);
         }
 
         public frmDegreeEligibility(AppController app, frmMain main) : this()
@@ -74,21 +75,30 @@ namespace FuturePath.Desktop
         private void cboDegree_SelectedIndexChanged(object? sender, EventArgs e)
         {
             btnNext.Enabled = cboDegree.SelectedItem != null;
-            txtRequirements.Clear();
+            lblRequirements.Text = "";
             if (cboDegree.SelectedItem is not DegreeProgramme programme)
             {
                 return;
             }
 
-            txtRequirements.AppendText(programme.Description + Environment.NewLine);
-            txtRequirements.AppendText("Minimum overall average: " + programme.MinimumAverage + "%" + Environment.NewLine);
+            System.Text.StringBuilder details = new System.Text.StringBuilder();
+            details.AppendLine(programme.Description);
+            details.AppendLine();
+            details.AppendLine("Minimum overall average: " + programme.MinimumAverage.ToString("0.##") + "%");
+            details.AppendLine();
+            details.AppendLine("Subject requirements");
             foreach (ProgrammeRequirement requirement in programme.Requirements)
             {
                 string group = requirement.AlternativeGroup == 0 ? "" : " (OR group " + requirement.AlternativeGroup + ")";
-                txtRequirements.AppendText(requirement.Subject + ": " + requirement.MinimumMark + "%" + group + Environment.NewLine);
+                string status = requirement.Mandatory ? "Required" : "Helpful, not compulsory";
+                details.AppendLine("• " + requirement.Subject + ": " + requirement.MinimumMark.ToString("0.##") + "% — " + status + group);
+                if (!string.IsNullOrWhiteSpace(requirement.Note))
+                {
+                    details.AppendLine("  " + requirement.Note);
+                }
             }
 
-            txtRequirements.AppendText(Environment.NewLine + RecommendationEngine.Disclaimer);
+            lblRequirements.Text = details.ToString().TrimEnd();
         }
 
         public override void SaveInput()

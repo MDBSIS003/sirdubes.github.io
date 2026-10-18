@@ -6,7 +6,7 @@ using FuturePath.Business;
 
 namespace FuturePath.Desktop
 {
-    // File and printer dialogs are kept out of the business rules.
+
     internal class ReportFiles
     {
         public static void Save(IWin32Window owner, ReportController controller, ReportDocument report)
@@ -59,7 +59,7 @@ namespace FuturePath.Desktop
         }
     }
 
-    // A real use of inheritance and override (PL 2.3 / PL 2.4).
+
     internal class ReportPrinter : PrintDocument
     {
         private ReportDocument report;
