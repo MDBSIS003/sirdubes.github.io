@@ -1,0 +1,1995 @@
+{
+  "AdvisorySession": [
+    {
+      "Id": 1,
+      "LearnerId": 1,
+      "GradeId": 12,
+      "DegreeId": 1,
+      "PreferredFacultyId": 1,
+      "CreatedUtc": "2026-09-15T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 1,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 2,
+      "LearnerId": 2,
+      "GradeId": 12,
+      "DegreeId": 4,
+      "PreferredFacultyId": 3,
+      "CreatedUtc": "2026-09-16T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 3,
+      "LearnerId": 3,
+      "GradeId": 11,
+      "DegreeId": 5,
+      "PreferredFacultyId": 3,
+      "CreatedUtc": "2026-09-17T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 4,
+      "LearnerId": 4,
+      "GradeId": 12,
+      "DegreeId": 6,
+      "PreferredFacultyId": 4,
+      "CreatedUtc": "2026-09-18T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 1,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 5,
+      "LearnerId": 5,
+      "GradeId": 12,
+      "DegreeId": 10,
+      "PreferredFacultyId": 5,
+      "CreatedUtc": "2026-09-19T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 6,
+      "LearnerId": 6,
+      "GradeId": 12,
+      "DegreeId": 2,
+      "PreferredFacultyId": 1,
+      "CreatedUtc": "2026-09-20T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 1,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 7,
+      "LearnerId": 7,
+      "GradeId": 12,
+      "DegreeId": 4,
+      "PreferredFacultyId": 3,
+      "CreatedUtc": "2026-09-21T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 8,
+      "LearnerId": 8,
+      "GradeId": 12,
+      "DegreeId": 9,
+      "PreferredFacultyId": 2,
+      "CreatedUtc": "2026-09-22T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 1,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 9,
+      "LearnerId": 9,
+      "GradeId": 11,
+      "DegreeId": 5,
+      "PreferredFacultyId": 3,
+      "CreatedUtc": "2026-09-23T10:00:00.0000000Z",
+      "SubjectsComplete": 0,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    },
+    {
+      "Id": 10,
+      "LearnerId": 10,
+      "GradeId": 11,
+      "DegreeId": 7,
+      "PreferredFacultyId": 2,
+      "CreatedUtc": "2026-09-24T10:00:00.0000000Z",
+      "SubjectsComplete": 1,
+      "FundingRequested": 0,
+      "RuleVersion": "FP-1.0: 35S/35M/25I/5F; near miss <=5; strong interest >=60"
+    }
+  ],
+  "AuditEvent": [],
+  "DegreeInterestMapping": [
+    {
+      "Id": 1,
+      "DegreeId": 1,
+      "CategoryId": 3,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "DegreeId": 1,
+      "CategoryId": 5,
+      "Weight": 0.8,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "DegreeId": 1,
+      "CategoryId": 1,
+      "Weight": 0.6,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "DegreeId": 2,
+      "CategoryId": 5,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "DegreeId": 2,
+      "CategoryId": 1,
+      "Weight": 0.9,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "DegreeId": 3,
+      "CategoryId": 5,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "DegreeId": 3,
+      "CategoryId": 1,
+      "Weight": 0.5,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "DegreeId": 3,
+      "CategoryId": 8,
+      "Weight": 0.4,
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "DegreeId": 4,
+      "CategoryId": 3,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "DegreeId": 4,
+      "CategoryId": 1,
+      "Weight": 0.9,
+      "Active": 1
+    },
+    {
+      "Id": 11,
+      "DegreeId": 4,
+      "CategoryId": 6,
+      "Weight": 0.5,
+      "Active": 1
+    },
+    {
+      "Id": 12,
+      "DegreeId": 5,
+      "CategoryId": 4,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 13,
+      "DegreeId": 5,
+      "CategoryId": 1,
+      "Weight": 0.5,
+      "Active": 1
+    },
+    {
+      "Id": 14,
+      "DegreeId": 5,
+      "CategoryId": 2,
+      "Weight": 0.4,
+      "Active": 1
+    },
+    {
+      "Id": 15,
+      "DegreeId": 6,
+      "CategoryId": 6,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 16,
+      "DegreeId": 6,
+      "CategoryId": 1,
+      "Weight": 0.8,
+      "Active": 1
+    },
+    {
+      "Id": 17,
+      "DegreeId": 6,
+      "CategoryId": 4,
+      "Weight": 0.6,
+      "Active": 1
+    },
+    {
+      "Id": 18,
+      "DegreeId": 6,
+      "CategoryId": 3,
+      "Weight": 0.4,
+      "Active": 1
+    },
+    {
+      "Id": 19,
+      "DegreeId": 7,
+      "CategoryId": 8,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 20,
+      "DegreeId": 7,
+      "CategoryId": 7,
+      "Weight": 0.8,
+      "Active": 1
+    },
+    {
+      "Id": 21,
+      "DegreeId": 7,
+      "CategoryId": 2,
+      "Weight": 0.5,
+      "Active": 1
+    },
+    {
+      "Id": 22,
+      "DegreeId": 8,
+      "CategoryId": 7,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 23,
+      "DegreeId": 8,
+      "CategoryId": 2,
+      "Weight": 0.8,
+      "Active": 1
+    },
+    {
+      "Id": 24,
+      "DegreeId": 8,
+      "CategoryId": 8,
+      "Weight": 0.7,
+      "Active": 1
+    },
+    {
+      "Id": 25,
+      "DegreeId": 9,
+      "CategoryId": 7,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 26,
+      "DegreeId": 9,
+      "CategoryId": 8,
+      "Weight": 0.9,
+      "Active": 1
+    },
+    {
+      "Id": 27,
+      "DegreeId": 10,
+      "CategoryId": 2,
+      "Weight": 1,
+      "Active": 1
+    },
+    {
+      "Id": 28,
+      "DegreeId": 10,
+      "CategoryId": 4,
+      "Weight": 0.8,
+      "Active": 1
+    },
+    {
+      "Id": 29,
+      "DegreeId": 10,
+      "CategoryId": 1,
+      "Weight": 0.4,
+      "Active": 1
+    }
+  ],
+  "DegreeProgramme": [
+    {
+      "Id": 1,
+      "Name": "BCom Information Systems",
+      "FacultyId": 1,
+      "Description": "Business knowledge, information technology and systems. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Name": "BCom Accounting",
+      "FacultyId": 1,
+      "Description": "Financial accounting, auditing and taxation. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Name": "BCom General",
+      "FacultyId": 1,
+      "Description": "Business, economics and management. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Name": "BSc Computer Science",
+      "FacultyId": 3,
+      "Description": "Programming, algorithms and software development. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Name": "BSc Biological Sciences",
+      "FacultyId": 3,
+      "Description": "Living organisms, ecology and biological research. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "Name": "BSc Engineering (Mechanical Engineering)",
+      "FacultyId": 4,
+      "Description": "Design and analysis of mechanical systems. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "Name": "BA Humanities",
+      "FacultyId": 2,
+      "Description": "Languages, history and the social world. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "Name": "BSocSci",
+      "FacultyId": 2,
+      "Description": "Society, politics and human behaviour. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "Name": "Law-related qualification",
+      "FacultyId": 2,
+      "Description": "Legal reasoning, debate and society. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "Name": "Bachelor of Health Sciences",
+      "FacultyId": 5,
+      "Description": "Clinical and related health sciences. SAMPLE programme; verify official university requirements.",
+      "MinimumAverage": 0,
+      "Active": 1
+    }
+  ],
+  "ExportReport": [],
+  "Faculty": [
+    {
+      "Id": 1,
+      "Name": "Commerce",
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Name": "Humanities",
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Science",
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Name": "Engineering",
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Name": "Health Sciences",
+      "Active": 1
+    }
+  ],
+  "FundingFaculty": [
+    {
+      "Id": 1,
+      "FundingId": 1,
+      "FacultyId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "FundingId": 2,
+      "FacultyId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "FundingId": 3,
+      "FacultyId": 3,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "FundingId": 4,
+      "FacultyId": 3,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "FundingId": 5,
+      "FacultyId": 4,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "FundingId": 6,
+      "FacultyId": 4,
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "FundingId": 7,
+      "FacultyId": 5,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "FundingId": 8,
+      "FacultyId": 5,
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "FundingId": 9,
+      "FacultyId": 2,
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "FundingId": 10,
+      "FacultyId": 1,
+      "Active": 1
+    }
+  ],
+  "FundingOption": [
+    {
+      "Id": 1,
+      "Name": "Commerce Merit Award",
+      "Type": "Merit award",
+      "Eligibility": "Academic merit: sample average 75% and Mathematics 70%.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-03-31",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Name": "Commerce Access Bursary",
+      "Type": "Bursary",
+      "Eligibility": "Financial need: sample household income threshold R150,000 annually.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-02-28",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Science Excellence Scholarship",
+      "Type": "Scholarship",
+      "Eligibility": "Academic merit: sample Mathematics and science marks at least 70%.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-04-15",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Name": "Science Opportunity Grant",
+      "Type": "Financial aid",
+      "Eligibility": "Financial need: sample support for low-income households entering science.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-03-15",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Name": "Engineering Future Scholarship",
+      "Type": "Scholarship",
+      "Eligibility": "Academic merit: sample Mathematics and Physical Sciences marks at least 75%.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-05-31",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "Name": "Engineering Industry Bursary (archived)",
+      "Type": "Bursary",
+      "Eligibility": "Archived sample award, no longer open.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2026-09-30",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 0
+    },
+    {
+      "Id": 7,
+      "Name": "Health Sciences Access Fund",
+      "Type": "Financial aid",
+      "Eligibility": "Financial need: sample support for health sciences learners.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-03-31",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "Name": "Health Merit Award (closed)",
+      "Type": "Merit award",
+      "Eligibility": "Closed sample award.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2026-06-30",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 0
+    },
+    {
+      "Id": 9,
+      "Name": "Humanities Future Leaders Award",
+      "Type": "Merit award",
+      "Eligibility": "Academic merit: sample average at least 70% entering humanities or law.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2027-04-30",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "Name": "Community Study Support (archived)",
+      "Type": "External funding",
+      "Eligibility": "Archived sample award.",
+      "Documents": "ID; latest school report; proof of household income where applicable; proof of application",
+      "ClosingDate": "2025-10-31",
+      "Contact": "Fictional example only — contact your school career advisor to verify actual providers.",
+      "Sample": 1,
+      "Active": 0
+    }
+  ],
+  "FundingProgramme": [
+    {
+      "Id": 1,
+      "FundingId": 1,
+      "DegreeId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "FundingId": 1,
+      "DegreeId": 2,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "FundingId": 1,
+      "DegreeId": 3,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "FundingId": 2,
+      "DegreeId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "FundingId": 2,
+      "DegreeId": 2,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "FundingId": 2,
+      "DegreeId": 3,
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "FundingId": 3,
+      "DegreeId": 4,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "FundingId": 3,
+      "DegreeId": 5,
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "FundingId": 4,
+      "DegreeId": 4,
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "FundingId": 4,
+      "DegreeId": 5,
+      "Active": 1
+    },
+    {
+      "Id": 11,
+      "FundingId": 5,
+      "DegreeId": 6,
+      "Active": 1
+    },
+    {
+      "Id": 12,
+      "FundingId": 6,
+      "DegreeId": 6,
+      "Active": 1
+    },
+    {
+      "Id": 13,
+      "FundingId": 7,
+      "DegreeId": 10,
+      "Active": 1
+    },
+    {
+      "Id": 14,
+      "FundingId": 8,
+      "DegreeId": 10,
+      "Active": 1
+    },
+    {
+      "Id": 15,
+      "FundingId": 9,
+      "DegreeId": 7,
+      "Active": 1
+    },
+    {
+      "Id": 16,
+      "FundingId": 9,
+      "DegreeId": 8,
+      "Active": 1
+    },
+    {
+      "Id": 17,
+      "FundingId": 9,
+      "DegreeId": 9,
+      "Active": 1
+    },
+    {
+      "Id": 18,
+      "FundingId": 10,
+      "DegreeId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 19,
+      "FundingId": 10,
+      "DegreeId": 2,
+      "Active": 1
+    }
+  ],
+  "GradeLevel": [
+    {
+      "Id": 11,
+      "Name": "Grade 11"
+    },
+    {
+      "Id": 12,
+      "Name": "Grade 12"
+    }
+  ],
+  "InterestCategory": [
+    {
+      "Id": 1,
+      "Name": "Numeracy",
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Name": "Helping People",
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Technology",
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Name": "Science and Research",
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Name": "Business and Finance",
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "Name": "Design Thinking",
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "Name": "Society and Politics",
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "Name": "Reading, Writing and Analysis",
+      "Active": 1
+    }
+  ],
+  "InterestQuestion": [
+    {
+      "Id": 1,
+      "Text": "I enjoy solving problems using numbers or data.",
+      "CategoryId": 1,
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Text": "I enjoy helping people and communities.",
+      "CategoryId": 2,
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Text": "I enjoy working with technology.",
+      "CategoryId": 3,
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Text": "I enjoy science experiments and research.",
+      "CategoryId": 4,
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Text": "I enjoy reading, writing and analysing ideas.",
+      "CategoryId": 8,
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "Text": "I enjoy business, entrepreneurship and finance.",
+      "CategoryId": 5,
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "Text": "I enjoy designing or building practical solutions.",
+      "CategoryId": 6,
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "Text": "I enjoy understanding society, law or politics.",
+      "CategoryId": 7,
+      "Active": 1
+    }
+  ],
+  "Learner": [
+    {
+      "Id": 1,
+      "Name": "Gadija Jacobs",
+      "GradeId": 12,
+      "School": "Kuilsriver High School",
+      "Province": "Western Cape",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 2,
+      "Name": "Aadiel-Raboo Magwa",
+      "GradeId": 12,
+      "School": "Tsomo High School",
+      "Province": "Eastern Cape",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 3,
+      "Name": "Labeeqah Rademeyer",
+      "GradeId": 11,
+      "School": "Paarl High School",
+      "Province": "Western Cape",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 4,
+      "Name": "Siyabonga Dickson",
+      "GradeId": 12,
+      "School": "Pretoria Boys High School",
+      "Province": "Gauteng",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 5,
+      "Name": "Derek Vin Diesel",
+      "GradeId": 12,
+      "School": "Hilton College",
+      "Province": "KwaZulu-Natal",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 6,
+      "Name": "Thandi Nkosi",
+      "GradeId": 12,
+      "School": "St Marys DSG",
+      "Province": "Gauteng",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 7,
+      "Name": "Stef Van Wyk",
+      "GradeId": 12,
+      "School": "St Andrews School",
+      "Province": "Free State",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 8,
+      "Name": "Paxton Kgomo",
+      "GradeId": 12,
+      "School": "Turf High",
+      "Province": "Limpopo",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 9,
+      "Name": "Yusuf Patel",
+      "GradeId": 11,
+      "School": "",
+      "Province": "",
+      "Email": "",
+      "Phone": ""
+    },
+    {
+      "Id": 10,
+      "Name": "Zama Zulu",
+      "GradeId": 11,
+      "School": "Hazyview Combined High School",
+      "Province": "Mpumalanga",
+      "Email": "",
+      "Phone": ""
+    }
+  ],
+  "LearnerInterestResponse": [
+    {
+      "SessionId": 1,
+      "QuestionId": 1,
+      "Score": 4
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 2,
+      "Score": 3
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 3,
+      "Score": 5
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 4,
+      "Score": 2
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 5,
+      "Score": 3
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 6,
+      "Score": 5
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 7,
+      "Score": 3
+    },
+    {
+      "SessionId": 1,
+      "QuestionId": 8,
+      "Score": 2
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 1,
+      "Score": 4
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 2,
+      "Score": 2
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 3,
+      "Score": 5
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 4,
+      "Score": 1
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 5,
+      "Score": 3
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 6,
+      "Score": 3
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 7,
+      "Score": 4
+    },
+    {
+      "SessionId": 2,
+      "QuestionId": 8,
+      "Score": 2
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 1,
+      "Score": 3
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 2,
+      "Score": 4
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 3,
+      "Score": 2
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 4,
+      "Score": 5
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 5,
+      "Score": 4
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 6,
+      "Score": 1
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 7,
+      "Score": 2
+    },
+    {
+      "SessionId": 3,
+      "QuestionId": 8,
+      "Score": 3
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 1,
+      "Score": 5
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 2,
+      "Score": 2
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 3,
+      "Score": 3
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 4,
+      "Score": 4
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 5,
+      "Score": 2
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 6,
+      "Score": 2
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 7,
+      "Score": 5
+    },
+    {
+      "SessionId": 4,
+      "QuestionId": 8,
+      "Score": 1
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 1,
+      "Score": 2
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 2,
+      "Score": 5
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 3,
+      "Score": 1
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 4,
+      "Score": 3
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 5,
+      "Score": 4
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 6,
+      "Score": 2
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 7,
+      "Score": 3
+    },
+    {
+      "SessionId": 5,
+      "QuestionId": 8,
+      "Score": 3
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 1,
+      "Score": 5
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 2,
+      "Score": 3
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 3,
+      "Score": 2
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 4,
+      "Score": 1
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 5,
+      "Score": 3
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 6,
+      "Score": 5
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 7,
+      "Score": 2
+    },
+    {
+      "SessionId": 6,
+      "QuestionId": 8,
+      "Score": 2
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 1,
+      "Score": 2
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 2,
+      "Score": 5
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 3,
+      "Score": 2
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 4,
+      "Score": 3
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 5,
+      "Score": 3
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 6,
+      "Score": 1
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 7,
+      "Score": 2
+    },
+    {
+      "SessionId": 7,
+      "QuestionId": 8,
+      "Score": 3
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 1,
+      "Score": 2
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 2,
+      "Score": 4
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 3,
+      "Score": 1
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 4,
+      "Score": 2
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 5,
+      "Score": 5
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 6,
+      "Score": 2
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 7,
+      "Score": 2
+    },
+    {
+      "SessionId": 8,
+      "QuestionId": 8,
+      "Score": 5
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 1,
+      "Score": 2
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 2,
+      "Score": 4
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 3,
+      "Score": 1
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 4,
+      "Score": 2
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 5,
+      "Score": 5
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 6,
+      "Score": 2
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 7,
+      "Score": 2
+    },
+    {
+      "SessionId": 10,
+      "QuestionId": 8,
+      "Score": 5
+    }
+  ],
+  "LearnerSubject": [
+    {
+      "SessionId": 1,
+      "SubjectId": 1,
+      "Mark": 72
+    },
+    {
+      "SessionId": 1,
+      "SubjectId": 3,
+      "Mark": 70
+    },
+    {
+      "SessionId": 1,
+      "SubjectId": 7,
+      "Mark": 74
+    },
+    {
+      "SessionId": 1,
+      "SubjectId": 8,
+      "Mark": 79
+    },
+    {
+      "SessionId": 1,
+      "SubjectId": 9,
+      "Mark": 70
+    },
+    {
+      "SessionId": 1,
+      "SubjectId": 13,
+      "Mark": 80
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 1,
+      "Mark": 65
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 4,
+      "Mark": 78
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 8,
+      "Mark": 71
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 11,
+      "Mark": 69
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 14,
+      "Mark": 75
+    },
+    {
+      "SessionId": 2,
+      "SubjectId": 13,
+      "Mark": 82
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 1,
+      "Mark": 80
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 3,
+      "Mark": 58
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 5,
+      "Mark": 62
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 6,
+      "Mark": 70
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 10,
+      "Mark": 66
+    },
+    {
+      "SessionId": 3,
+      "SubjectId": 13,
+      "Mark": 85
+    },
+    {
+      "SessionId": 4,
+      "SubjectId": 1,
+      "Mark": 70
+    },
+    {
+      "SessionId": 4,
+      "SubjectId": 3,
+      "Mark": 75
+    },
+    {
+      "SessionId": 4,
+      "SubjectId": 5,
+      "Mark": 78
+    },
+    {
+      "SessionId": 4,
+      "SubjectId": 15,
+      "Mark": 73
+    },
+    {
+      "SessionId": 4,
+      "SubjectId": 13,
+      "Mark": 80
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 1,
+      "Mark": 82
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 4,
+      "Mark": 76
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 11,
+      "Mark": 79
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 6,
+      "Mark": 68
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 16,
+      "Mark": 85
+    },
+    {
+      "SessionId": 5,
+      "SubjectId": 13,
+      "Mark": 90
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 1,
+      "Mark": 68
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 3,
+      "Mark": 62
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 7,
+      "Mark": 55
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 8,
+      "Mark": 70
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 9,
+      "Mark": 64
+    },
+    {
+      "SessionId": 6,
+      "SubjectId": 13,
+      "Mark": 75
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 1,
+      "Mark": 66
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 2,
+      "Mark": 64
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 3,
+      "Mark": 72
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 5,
+      "Mark": 68
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 12,
+      "Mark": 75
+    },
+    {
+      "SessionId": 7,
+      "SubjectId": 13,
+      "Mark": 78
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 1,
+      "Mark": 74
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 4,
+      "Mark": 72
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 11,
+      "Mark": 68
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 10,
+      "Mark": 65
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 6,
+      "Mark": 60
+    },
+    {
+      "SessionId": 8,
+      "SubjectId": 13,
+      "Mark": 80
+    },
+    {
+      "SessionId": 9,
+      "SubjectId": 1,
+      "Mark": 63
+    },
+    {
+      "SessionId": 9,
+      "SubjectId": 13,
+      "Mark": 70
+    },
+    {
+      "SessionId": 10,
+      "SubjectId": 1,
+      "Mark": 58
+    },
+    {
+      "SessionId": 10,
+      "SubjectId": 4,
+      "Mark": 65
+    },
+    {
+      "SessionId": 10,
+      "SubjectId": 11,
+      "Mark": 72
+    },
+    {
+      "SessionId": 10,
+      "SubjectId": 10,
+      "Mark": 66
+    },
+    {
+      "SessionId": 10,
+      "SubjectId": 13,
+      "Mark": 77
+    }
+  ],
+  "ProgrammeRequirement": [
+    {
+      "Id": 1,
+      "DegreeId": 1,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "DegreeId": 1,
+      "SubjectId": 3,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "DegreeId": 1,
+      "SubjectId": 12,
+      "MinimumMark": 50,
+      "Mandatory": 0,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "DegreeId": 2,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "DegreeId": 2,
+      "SubjectId": 3,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "DegreeId": 2,
+      "SubjectId": 7,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "DegreeId": 3,
+      "SubjectId": 1,
+      "MinimumMark": 55,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "DegreeId": 3,
+      "SubjectId": 3,
+      "MinimumMark": 50,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "DegreeId": 3,
+      "SubjectId": 4,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "DegreeId": 4,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 11,
+      "DegreeId": 4,
+      "SubjectId": 3,
+      "MinimumMark": 70,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 12,
+      "DegreeId": 5,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 13,
+      "DegreeId": 5,
+      "SubjectId": 3,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 14,
+      "DegreeId": 5,
+      "SubjectId": 5,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 15,
+      "DegreeId": 5,
+      "SubjectId": 6,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 16,
+      "DegreeId": 6,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 17,
+      "DegreeId": 6,
+      "SubjectId": 3,
+      "MinimumMark": 70,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 18,
+      "DegreeId": 6,
+      "SubjectId": 5,
+      "MinimumMark": 70,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 19,
+      "DegreeId": 6,
+      "SubjectId": 15,
+      "MinimumMark": 60,
+      "Mandatory": 0,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 20,
+      "DegreeId": 7,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 21,
+      "DegreeId": 7,
+      "SubjectId": 11,
+      "MinimumMark": 50,
+      "Mandatory": 0,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 22,
+      "DegreeId": 7,
+      "SubjectId": 3,
+      "MinimumMark": 50,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 23,
+      "DegreeId": 7,
+      "SubjectId": 4,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 24,
+      "DegreeId": 8,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 25,
+      "DegreeId": 8,
+      "SubjectId": 3,
+      "MinimumMark": 50,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 26,
+      "DegreeId": 8,
+      "SubjectId": 4,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 27,
+      "DegreeId": 8,
+      "SubjectId": 11,
+      "MinimumMark": 50,
+      "Mandatory": 0,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 28,
+      "DegreeId": 9,
+      "SubjectId": 1,
+      "MinimumMark": 65,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 29,
+      "DegreeId": 9,
+      "SubjectId": 3,
+      "MinimumMark": 50,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 30,
+      "DegreeId": 9,
+      "SubjectId": 4,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 1,
+      "Note": "Sample requirement. Either subject in this OR group is accepted.",
+      "Active": 1
+    },
+    {
+      "Id": 31,
+      "DegreeId": 9,
+      "SubjectId": 11,
+      "MinimumMark": 55,
+      "Mandatory": 0,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 32,
+      "DegreeId": 10,
+      "SubjectId": 1,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 33,
+      "DegreeId": 10,
+      "SubjectId": 3,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 34,
+      "DegreeId": 10,
+      "SubjectId": 5,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    },
+    {
+      "Id": 35,
+      "DegreeId": 10,
+      "SubjectId": 6,
+      "MinimumMark": 60,
+      "Mandatory": 1,
+      "AlternativeGroup": 0,
+      "Note": "Sample requirement. Verify official entry criteria.",
+      "Active": 1
+    }
+  ],
+  "RecommendationResult": [],
+  "SessionInterestScore": [],
+  "Subject": [
+    {
+      "Id": 1,
+      "Name": "English",
+      "Active": 1
+    },
+    {
+      "Id": 2,
+      "Name": "Afrikaans",
+      "Active": 1
+    },
+    {
+      "Id": 3,
+      "Name": "Mathematics",
+      "Active": 1
+    },
+    {
+      "Id": 4,
+      "Name": "Mathematical Literacy",
+      "Active": 1
+    },
+    {
+      "Id": 5,
+      "Name": "Physical Sciences",
+      "Active": 1
+    },
+    {
+      "Id": 6,
+      "Name": "Life Sciences",
+      "Active": 1
+    },
+    {
+      "Id": 7,
+      "Name": "Accounting",
+      "Active": 1
+    },
+    {
+      "Id": 8,
+      "Name": "Business Studies",
+      "Active": 1
+    },
+    {
+      "Id": 9,
+      "Name": "Economics",
+      "Active": 1
+    },
+    {
+      "Id": 10,
+      "Name": "Geography",
+      "Active": 1
+    },
+    {
+      "Id": 11,
+      "Name": "History",
+      "Active": 1
+    },
+    {
+      "Id": 12,
+      "Name": "Computer Applications Technology",
+      "Active": 1
+    },
+    {
+      "Id": 13,
+      "Name": "Life Orientation",
+      "Active": 1
+    },
+    {
+      "Id": 14,
+      "Name": "Tourism",
+      "Active": 1
+    },
+    {
+      "Id": 15,
+      "Name": "Engineering Graphics and Design",
+      "Active": 1
+    },
+    {
+      "Id": 16,
+      "Name": "Visual Arts",
+      "Active": 1
+    },
+    {
+      "Id": 17,
+      "Name": "Zulu",
+      "Active": 1
+    },
+    {
+      "Id": 18,
+      "Name": "Xhosa",
+      "Active": 1
+    }
+  ],
+  "UserAccount": []
+}

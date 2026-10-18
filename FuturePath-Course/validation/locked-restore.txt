@@ -1,0 +1,4 @@
+  Determining projects to restore...
+  Restored /workspace/futurepath-course/src/FuturePath.Business/FuturePath.Business.csproj (in 778 ms).
+  Restored /workspace/futurepath-course/src/FuturePath.Data/FuturePath.Data.csproj (in 795 ms).
+  3 of 5 projects are up-to-date for restore.

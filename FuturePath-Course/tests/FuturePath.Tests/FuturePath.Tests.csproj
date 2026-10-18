@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/FuturePath.Data/FuturePath.Data.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio"><PrivateAssets>all</PrivateAssets></PackageReference>
+    <Compile Include="../../tools/SeedGenerator/ReferenceFixture.cs" Link="Support/ReferenceFixture.cs" />
+    <None Include="../../validation/reference/sample-data.json" Link="sample-data.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../validation/reference/expected-engine-results.json" Link="expected-engine-results.json" CopyToOutputDirectory="PreserveNewest" />
+    <Using Include="Xunit" />
+    <Using Include="FuturePath.TestSupport" />
+    <Compile Include="../Shared/LocalDbDatabase.cs" Link="Support/LocalDbDatabase.cs" />
+    <None Include="../../Database/*.sql" Link="Database/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

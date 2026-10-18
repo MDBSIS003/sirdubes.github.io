@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a4c57db1-73f7-44b4-9fa5-241ef35f34f6" name="@8128b7ce6a31 2026-10-18 14:10:59" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-18T14:10:59.8760060+00:00" queuing="2026-10-18T14:10:59.8760060+00:00" start="2026-10-18T14:10:59.0873223+00:00" finish="2026-10-18T14:11:00.0465590+00:00" />
+  <TestSettings name="default" id="375b4f33-edb9-4652-b26b-de0aa8b952c2">
+    <Deployment runDeploymentRoot="_8128b7ce6a31_2026-10-18_14_10_59" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e04651f4-9fb9-4927-8eae-4752624f0131" testId="3932120f-9225-1c36-d0b8-db63ca1ae24a" testName="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 13)" computerName="8128b7ce6a31" duration="00:00:00.0009073" startTime="2026-10-18T14:10:59.8921061+00:00" endTime="2026-10-18T14:10:59.8929449+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e04651f4-9fb9-4927-8eae-4752624f0131" />
+    <UnitTestResult executionId="4e62dd67-26c8-4d80-8a7b-df6e017b6d3d" testId="328c1b85-e2d8-78e9-bb9d-fb5286a1ca1f" testName="FuturePath.Tests.PersistenceAndReportTests.AdminMaintainsRulesAndArchivedDegreesDisappearWithoutLosingHistory" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8189093+00:00" endTime="2026-10-18T14:10:59.8189309+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e62dd67-26c8-4d80-8a7b-df6e017b6d3d">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e578ed2a-b1e7-4325-aede-3864b5c22a6b" testId="2615cb0e-eceb-26f7-b31c-8316221ca9c5" testName="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 59, expected: PossibleMatch)" computerName="8128b7ce6a31" duration="00:00:00.0019306" startTime="2026-10-18T14:10:59.8667988+00:00" endTime="2026-10-18T14:10:59.8670367+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e578ed2a-b1e7-4325-aede-3864b5c22a6b" />
+    <UnitTestResult executionId="18073ac1-644b-4066-8d33-bb2eba389779" testId="6e5ff100-b9d0-64c7-01af-7e973650a7ab" testName="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 5, score: 100)" computerName="8128b7ce6a31" duration="00:00:00.0072002" startTime="2026-10-18T14:10:59.8600032+00:00" endTime="2026-10-18T14:10:59.8653929+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18073ac1-644b-4066-8d33-bb2eba389779" />
+    <UnitTestResult executionId="0d5ab129-8515-442f-9b29-10f882490e65" testId="bd4c581b-6f8a-c879-10f1-ffc93646c66e" testName="FuturePath.Tests.ReportFilterTests.AdvisorReportListsIncludeInactiveHistoricalReferenceKeys" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8697225+00:00" endTime="2026-10-18T14:10:59.8697396+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d5ab129-8515-442f-9b29-10f882490e65">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d526d29a-30ec-4d2a-b0f9-a1a01ae069af" testId="141b5849-59eb-3d22-3c0c-3a3d318fe0ac" testName="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;Sample school&quot;, province: &quot;Unknown&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0000122" startTime="2026-10-18T14:10:59.8456526+00:00" endTime="2026-10-18T14:10:59.8457026+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d526d29a-30ec-4d2a-b0f9-a1a01ae069af" />
+    <UnitTestResult executionId="cbf470e7-4db4-40bf-8d9e-c895b06c6ac9" testId="ffb60426-5cca-2508-f562-655d37d4f9f8" testName="FuturePath.Tests.PersistenceAndReportTests.AdvisorySummaryExportsRealFilesWithAllRequiredSectionsAndEscapesHtml" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7627876+00:00" endTime="2026-10-18T14:10:59.7628159+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cbf470e7-4db4-40bf-8d9e-c895b06c6ac9">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a028ba7f-2ac2-482a-88c3-17bb73d78a49" testId="0e30118b-d7c5-01d0-b3a9-211c25dbd15e" testName="FuturePath.Tests.AdvisingTests.MandatoryMarkBoundariesAreExplicit" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8380937+00:00" endTime="2026-10-18T14:10:59.8381198+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a028ba7f-2ac2-482a-88c3-17bb73d78a49">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f3150a13-32b1-443a-8e37-8e423c381492" testId="8fcaab9b-adff-9f9c-94ba-cc6bf95e3d12" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 7, expected: PossibleMatch)" computerName="8128b7ce6a31" duration="00:00:00.0035855" startTime="2026-10-18T14:10:59.8580230+00:00" endTime="2026-10-18T14:10:59.8580763+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3150a13-32b1-443a-8e37-8e423c381492" />
+    <UnitTestResult executionId="8f5b81a1-7c83-4514-a1ce-b674b05a0f65" testId="03416d7d-683a-d18d-6a11-bce25ee01fcf" testName="FuturePath.Tests.SecurityTests.BadPasswordAndInjectionDoNotGrantAccess" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8563194+00:00" endTime="2026-10-18T14:10:59.8563363+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f5b81a1-7c83-4514-a1ce-b674b05a0f65">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e189d09f-029a-4c29-861c-6b8d49ed74aa" testId="5de3ccfa-e01d-3369-c1df-1109ae0ffb5f" testName="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 55, expected: PossibleMatch)" computerName="8128b7ce6a31" duration="00:00:00.0015487" startTime="2026-10-18T14:10:59.8683592+00:00" endTime="2026-10-18T14:10:59.8698583+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e189d09f-029a-4c29-861c-6b8d49ed74aa" />
+    <UnitTestResult executionId="f17894ef-2e24-400f-80df-3e983be03c6d" testId="2c83dbab-2875-0fc1-e18e-596bc507b698" testName="FuturePath.Tests.ReportFilterTests.GapAndFundingSectionsDescribeTheirSavedAndCurrentSources" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8695678+00:00" endTime="2026-10-18T14:10:59.8695856+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f17894ef-2e24-400f-80df-3e983be03c6d">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="849a48c1-9b0f-4f48-8b79-498013d8e030" testId="ffd2046e-aa0e-16fd-e884-fb7d7e057cd8" testName="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 3, score: 50)" computerName="8128b7ce6a31" duration="00:00:00.0016396" startTime="2026-10-18T14:10:59.8664552+00:00" endTime="2026-10-18T14:10:59.8666583+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="849a48c1-9b0f-4f48-8b79-498013d8e030" />
+    <UnitTestResult executionId="e6831172-076c-458b-8495-3463e770e402" testId="b5dbf113-a66f-ebf6-33d5-72933c72173f" testName="FuturePath.Tests.PortableRuleTests.InvalidMarksAreRejectedBeforePersistence(value: 101)" computerName="8128b7ce6a31" duration="00:00:00.0011354" startTime="2026-10-18T14:10:59.8712161+00:00" endTime="2026-10-18T14:10:59.8712655+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e6831172-076c-458b-8495-3463e770e402" />
+    <UnitTestResult executionId="03a6f25a-ad4a-4e36-bec5-dccbdbd5f564" testId="6ce2b587-f599-5f7b-9475-8d07a8a915df" testName="FuturePath.Tests.AdvisingTests.MissingAnswersProduceMoreInformationAndNoFalseAlternatives" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8291990+00:00" endTime="2026-10-18T14:10:59.8292192+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03a6f25a-ad4a-4e36-bec5-dccbdbd5f564">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="977282ed-6840-4274-ac29-cb12067c40be" testId="b620ab2a-3f3b-9621-8e18-1bc3327028bc" testName="FuturePath.Tests.PortableRuleTests.InvalidMarksAreRejectedBeforePersistence(value: -1)" computerName="8128b7ce6a31" duration="00:00:00.0012257" startTime="2026-10-18T14:10:59.8710899+00:00" endTime="2026-10-18T14:10:59.8711385+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="977282ed-6840-4274-ac29-cb12067c40be" />
+    <UnitTestResult executionId="7fe601b7-90f7-4233-8407-4e1db098ee34" testId="d5492c25-6b75-0500-809d-765accccf313" testName="FuturePath.Tests.AdvisingTests.DuplicateSubjectsAreRejectedWithoutSavingAnything" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8302872+00:00" endTime="2026-10-18T14:10:59.8303048+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fe601b7-90f7-4233-8407-4e1db098ee34">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="878b905b-89d0-4a74-b846-3bb5909bfdf6" testId="0a245894-e31a-e075-95f4-d8aeebfa7400" testName="FuturePath.Tests.PersistenceAndReportTests.DatabaseEnforcesDuplicateRangeAndForeignKeyIntegrity" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8176917+00:00" endTime="2026-10-18T14:10:59.8177398+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="878b905b-89d0-4a74-b846-3bb5909bfdf6">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="04a3c464-6eb7-4a94-b180-55e5290baa62" testId="69635cdb-5e3d-d779-d633-1c6f573c435b" testName="FuturePath.Tests.PersistenceAndReportTests.NewSessionRoundTripsAndDoesNotOverwriteHistoricalResults" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7675810+00:00" endTime="2026-10-18T14:10:59.7676208+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04a3c464-6eb7-4a94-b180-55e5290baa62">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="457e6010-aa5a-4d5b-aa85-eb0d2b9ddf98" testId="c1b3ff07-c326-fb21-5df4-b05b0caa166a" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 5, expected: NotCurrentlyEligible)" computerName="8128b7ce6a31" duration="00:00:00.0017413" startTime="2026-10-18T14:10:59.8585681+00:00" endTime="2026-10-18T14:10:59.8586161+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="457e6010-aa5a-4d5b-aa85-eb0d2b9ddf98" />
+    <UnitTestResult executionId="38604754-7e68-4755-ba5b-049bce8d453e" testId="16f89e32-68fd-080f-b4d0-444c28f6cff9" testName="FuturePath.Tests.PersistenceAndReportTests.FailedMultiTableSaveRollsBackLearnerSessionAndAuditTogether" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8184616+00:00" endTime="2026-10-18T14:10:59.8184800+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38604754-7e68-4755-ba5b-049bce8d453e">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5ed9c0e7-5c1a-4f61-97cc-4e1f34f52fbe" testId="99007d42-23fb-7bc4-1d2f-53884698fcbb" testName="FuturePath.Tests.PortableRuleTests.ConnectionIsLocalIntegratedAndRejectsFilePathsOrSqlInjection" computerName="8128b7ce6a31" duration="00:00:00.0437388" startTime="2026-10-18T14:10:59.8945035+00:00" endTime="2026-10-18T14:10:59.9382400+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ed9c0e7-5c1a-4f61-97cc-4e1f34f52fbe" />
+    <UnitTestResult executionId="65aa0229-c2e8-48b6-ad31-37ad479aafb0" testId="1ca865f0-34eb-dd65-7781-2a7ab9282c25" testName="FuturePath.Tests.AdvisingTests.MarksOutsideTheRangeAreRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8366275+00:00" endTime="2026-10-18T14:10:59.8366476+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="65aa0229-c2e8-48b6-ad31-37ad479aafb0">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bb95ab8a-6fca-4b32-92ec-c11ff354db89" testId="9c779fd8-0c44-afb3-b517-12e78b47c301" testName="FuturePath.Tests.PortableRuleTests.AlternativesAreLimitedRankedAndExcludeSelectedAndInactiveProgrammes" computerName="8128b7ce6a31" duration="00:00:00.0092774" startTime="2026-10-18T14:10:59.8845779+00:00" endTime="2026-10-18T14:10:59.8894008+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb95ab8a-6fca-4b32-92ec-c11ff354db89" />
+    <UnitTestResult executionId="0d4f202d-e7ec-4541-9d61-ccbc7f12c8a9" testId="c96ce954-ad07-579b-ac0e-f90bcf4dc1aa" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 6)" computerName="8128b7ce6a31" duration="00:00:00.0018751" startTime="2026-10-18T14:10:59.8665875+00:00" endTime="2026-10-18T14:10:59.8668369+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d4f202d-e7ec-4541-9d61-ccbc7f12c8a9" />
+    <UnitTestResult executionId="594c7762-236b-4358-a5ac-4ecf8250e702" testId="75fb2b96-bf7c-59b5-e38f-afa4cf7583ca" testName="FuturePath.Tests.AdvisingTests.BlankSubjectListIsRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8301247+00:00" endTime="2026-10-18T14:10:59.8301416+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="594c7762-236b-4358-a5ac-4ecf8250e702">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cd3d982e-b579-4929-9b71-380906b30ebe" testId="00aa7569-aab1-c567-fa24-0111b788df6a" testName="FuturePath.Tests.AdvisingTests.UnconfirmedSubjectsProduceMoreInformationEvenWhenMarksPass" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8368372+00:00" endTime="2026-10-18T14:10:59.8368579+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd3d982e-b579-4929-9b71-380906b30ebe">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aa6e0256-1929-4a9c-add0-85cc6ddfa304" testId="d730fef7-ee30-9901-f8c6-bfa889e0efb9" testName="FuturePath.Tests.PortableRuleTests.QuestionnaireStepRejectsMissingDuplicateAndInvalidResponses" computerName="8128b7ce6a31" duration="00:00:00.0071799" startTime="2026-10-18T14:10:59.8715239+00:00" endTime="2026-10-18T14:10:59.8716109+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa6e0256-1929-4a9c-add0-85cc6ddfa304" />
+    <UnitTestResult executionId="11b997e2-c47e-4d0b-8f7f-94911373a095" testId="2c7b2123-8399-14af-2f28-1baf431ecd14" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 1)" computerName="8128b7ce6a31" duration="00:00:00.0019006" startTime="2026-10-18T14:10:59.8669882+00:00" endTime="2026-10-18T14:10:59.8671651+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11b997e2-c47e-4d0b-8f7f-94911373a095" />
+    <UnitTestResult executionId="ca43dc60-f944-4f25-a7e9-b10689a0a658" testId="4b7634d8-b0eb-933d-057b-a80561731f8d" testName="FuturePath.Tests.AdvisingTests.InvalidOptionalEmailIsRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8364471+00:00" endTime="2026-10-18T14:10:59.8364667+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca43dc60-f944-4f25-a7e9-b10689a0a658">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8dff98fe-339c-4ae2-9362-d30d4328e075" testId="6a1173fd-507d-bdc8-83e4-feffad866041" testName="FuturePath.Tests.SecurityTests.UserListingsNeverExposeHashes" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8565262+00:00" endTime="2026-10-18T14:10:59.8565449+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8dff98fe-339c-4ae2-9362-d30d4328e075">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2a9183e9-5dc3-48d6-8139-2c27398da3a6" testId="85dc61c9-346c-a576-78a5-38f6ce538a05" testName="FuturePath.Tests.PortableRuleTests.InvalidOptionalEmailIsRejected(email: &quot;bad email&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0010625" startTime="2026-10-18T14:10:59.8709075+00:00" endTime="2026-10-18T14:10:59.8709613+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a9183e9-5dc3-48d6-8139-2c27398da3a6" />
+    <UnitTestResult executionId="24ab5c37-21f7-4257-9ef5-9c6a17f4e73b" testId="e7e9cbed-3ba6-8ade-3829-cbd5074c5fb0" testName="FuturePath.Tests.AdvisingTests.AnonymousProfileIsSupported" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8361251+00:00" endTime="2026-10-18T14:10:59.8361437+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24ab5c37-21f7-4257-9ef5-9c6a17f4e73b">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ff04ba9a-6c4a-4413-a279-9e8da7f7cb82" testId="cc5e371c-17ff-7641-9e69-3bd9d8d08e4c" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 4, expected: StrongMatch)" computerName="8128b7ce6a31" duration="00:00:00.0018095" startTime="2026-10-18T14:10:59.8593961+00:00" endTime="2026-10-18T14:10:59.8594523+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff04ba9a-6c4a-4413-a279-9e8da7f7cb82" />
+    <UnitTestResult executionId="154f0d7d-c147-406c-8fb2-e4beea78d47c" testId="5b221985-2e0e-0922-feb6-065d2a5d7422" testName="FuturePath.Tests.AdvisingTests.BoundaryMarksAreAcceptedAndRoundTrip" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8313348+00:00" endTime="2026-10-18T14:10:59.8313572+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="154f0d7d-c147-406c-8fb2-e4beea78d47c">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="76a37c5e-aeda-46b8-8819-921f36537ec7" testId="ecced65f-0659-cb04-4bfa-9f46c08528a1" testName="FuturePath.Tests.PortableRuleTests.InactiveSelectionAndIncompleteConfigurationAreRejectedOrExplained" computerName="8128b7ce6a31" duration="00:00:00.0105738" startTime="2026-10-18T14:10:59.8558332+00:00" endTime="2026-10-18T14:10:59.8578428+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76a37c5e-aeda-46b8-8819-921f36537ec7" />
+    <UnitTestResult executionId="87f7b5ba-8753-4e7e-8b00-6094133353bd" testId="ee9d6b91-59c1-fcc3-1401-4645dd861b87" testName="FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupCreatesMissingDatabaseAndPreservesChangesOnRepeat" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8691569+00:00" endTime="2026-10-18T14:10:59.8691770+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87f7b5ba-8753-4e7e-8b00-6094133353bd">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d92c6046-71a6-495a-ad77-cd1528cffcbb" testId="6da3b098-f7dc-e476-91cd-73341e08c2fb" testName="FuturePath.Tests.AdvisingTests.AnOrRequirementDoesNotRequireBothMathsAndLiteracy" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8294179+00:00" endTime="2026-10-18T14:10:59.8294365+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d92c6046-71a6-495a-ad77-cd1528cffcbb">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5a16cdfe-8466-4af4-a6f0-170617cb0c38" testId="e5053100-9153-a926-468a-99e1f6d549f0" testName="FuturePath.Tests.SecurityTests.GuestsCannotReadOtherLearnersOrAccessStaffServices" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8560420+00:00" endTime="2026-10-18T14:10:59.8560619+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a16cdfe-8466-4af4-a6f0-170617cb0c38">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9821837b-f2d3-4eb8-ac28-4ed7434a08f8" testId="93396556-1c08-58e4-f7a9-abebc66d3f28" testName="FuturePath.Tests.SecurityTests.PasswordsUseUniqueSaltsAndVerifyWithoutPlaintextStorage" computerName="8128b7ce6a31" duration="00:00:00.1869323" startTime="2026-10-18T14:10:59.8577528+00:00" endTime="2026-10-18T14:10:59.9702543+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9821837b-f2d3-4eb8-ac28-4ed7434a08f8" />
+    <UnitTestResult executionId="697fab04-620e-4588-a222-a7d2ebc09bdf" testId="05eb65cf-15f6-6a5c-a11c-0abbafb212fe" testName="FuturePath.Tests.CourseValidationTests.CrossFacultyDegreeIsRejectedWithoutSavingSession" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8460959+00:00" endTime="2026-10-18T14:10:59.8461168+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="697fab04-620e-4588-a222-a7d2ebc09bdf">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="addf714e-e606-4dd4-b8d2-fee719ba0874" testId="5b021ca3-e8b2-f0fd-b46e-431a14ad17d0" testName="FuturePath.Tests.AdvisingTests.DecimalMarksArePreserved" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8362839+00:00" endTime="2026-10-18T14:10:59.8363026+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="addf714e-e606-4dd4-b8d2-fee719ba0874">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="da820b31-48d4-45e4-b3c4-3e4400fd431e" testId="bc4965e3-a30b-5640-0c3d-ca7042e8967b" testName="FuturePath.Tests.SecurityTests.PasswordChangeVerifiesOldPasswordAndAppliesNewPassword" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8567278+00:00" endTime="2026-10-18T14:10:59.8567486+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da820b31-48d4-45e4-b3c4-3e4400fd431e">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a5c1f9b3-d7f3-462f-95d1-e69a734e47bf" testId="d75632a6-6b6c-0020-3d10-e0b30869e6b2" testName="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;Sample school&quot;, province: &quot;&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0164337" startTime="2026-10-18T14:10:59.8402816+00:00" endTime="2026-10-18T14:10:59.8440619+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5c1f9b3-d7f3-462f-95d1-e69a734e47bf" />
+    <UnitTestResult executionId="817c2dfd-c77d-4239-9f06-7e2eed094e38" testId="43cdf652-1eac-b09b-6b21-d611fd463758" testName="FuturePath.Tests.SecurityTests.AdminCanCreateDisableAndResetAccounts" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8575408+00:00" endTime="2026-10-18T14:10:59.8575627+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="817c2dfd-c77d-4239-9f06-7e2eed094e38">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="23e75f5e-ac30-4d95-85d1-d7fc8b4815a3" testId="79128748-2635-ef46-8ae9-373d4fa8ca4d" testName="FuturePath.Tests.PersistenceAndReportTests.NewProgrammesMustHaveRulesAndMappingsBeforeActivation" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7685720+00:00" endTime="2026-10-18T14:10:59.7686070+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23e75f5e-ac30-4d95-85d1-d7fc8b4815a3">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bc371c79-e324-445d-85f1-51ac1022dd17" testId="ec5a7c61-9f4c-410a-d8cd-c887e0619bb0" testName="FuturePath.Tests.AdvisingTests.UnknownSubjectAndDuplicateResponseAreRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8289275+00:00" endTime="2026-10-18T14:10:59.8289612+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc371c79-e324-445d-85f1-51ac1022dd17">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e23e00c4-5bb2-4ebc-8bc5-30d7ab9b649a" testId="4374360f-54f6-c076-9449-6fa97c5e6ccb" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 8)" computerName="8128b7ce6a31" duration="00:00:00.0019420" startTime="2026-10-18T14:10:59.8653401+00:00" endTime="2026-10-18T14:10:59.8661869+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e23e00c4-5bb2-4ebc-8bc5-30d7ab9b649a" />
+    <UnitTestResult executionId="6f7f553f-7e00-4e9b-b018-1c2b3ca07828" testId="f682d2e3-c9fe-e7ee-2f29-5ba7dcca4c5b" testName="FuturePath.Tests.PortableRuleTests.BoundaryDecimalDuplicateAndUnknownSubjectsAreHandled" computerName="8128b7ce6a31" duration="00:00:00.0099451" startTime="2026-10-18T14:10:59.8471935+00:00" endTime="2026-10-18T14:10:59.8556372+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f7f553f-7e00-4e9b-b018-1c2b3ca07828" />
+    <UnitTestResult executionId="82fa61b7-e167-4a36-be14-49951fdcd7e9" testId="5d3eb0e2-d4b4-3113-0f4d-db3ace64d950" testName="FuturePath.Tests.CourseValidationTests.PreviewDoesNotWriteAndSaveWritesExactlyOneAssessment" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8458245+00:00" endTime="2026-10-18T14:10:59.8458434+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82fa61b7-e167-4a36-be14-49951fdcd7e9">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c734deff-e328-4c3c-92f8-67a3935997e6" testId="d6bb8f35-d8f1-3748-1c1f-abc6d99098f9" testName="FuturePath.Tests.AdvisingTests.CaseStudyScenariosAreComputedByRealEngine" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8295937+00:00" endTime="2026-10-18T14:10:59.8296109+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c734deff-e328-4c3c-92f8-67a3935997e6">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="890c269e-5309-432c-bdce-ce01f5676a0b" testId="cf172fb0-c110-de00-78d9-b776ea659981" testName="FuturePath.Tests.AdvisingTests.BiologyNamesTheExactMathematicsGap" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7303288+00:00" endTime="2026-10-18T14:10:59.7450504+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="890c269e-5309-432c-bdce-ce01f5676a0b">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="06ee066b-2500-494b-a9ce-cdfbf09bb1b5" testId="a7f9a080-9baa-e3af-e87d-39ea7161d25f" testName="FuturePath.Tests.CourseValidationTests.SchoolAndProvinceDoNotRequirePersonalNameOrContact" computerName="8128b7ce6a31" duration="00:00:00.0007477" startTime="2026-10-18T14:10:59.8473956+00:00" endTime="2026-10-18T14:10:59.8474461+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06ee066b-2500-494b-a9ce-cdfbf09bb1b5" />
+    <UnitTestResult executionId="ea1253de-c7d6-482c-a33c-7bc88acdb708" testId="d0372338-bbd1-ee09-2d96-fc0c187ecfcf" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 7)" computerName="8128b7ce6a31" duration="00:00:00.0019069" startTime="2026-10-18T14:10:59.8672670+00:00" endTime="2026-10-18T14:10:59.8684447+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea1253de-c7d6-482c-a33c-7bc88acdb708" />
+    <UnitTestResult executionId="b92664fb-187f-4f30-a206-413572b71894" testId="a157b8cf-2348-8495-437c-9f4759cf99a0" testName="FuturePath.Tests.PersistenceAndReportTests.FundingFiltersExpiredInactiveAndUnrelatedRecords" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8192181+00:00" endTime="2026-10-18T14:10:59.8192377+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b92664fb-187f-4f30-a206-413572b71894">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8462fbea-ec58-4ad1-ac87-1268f3bea58b" testId="c9ac7e0c-e053-b717-b0e7-47ce0a635abe" testName="FuturePath.Tests.SecurityTests.FifthFailureLocksAccountAndExpiryAllowsSuccessfulLogin" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.9705338+00:00" endTime="2026-10-18T14:10:59.9705554+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8462fbea-ec58-4ad1-ac87-1268f3bea58b">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2466dbbf-0429-4703-ac4c-ebd2f973f59d" testId="360cc82e-7909-5d26-d5ed-71c96dc31fd7" testName="FuturePath.Tests.PersistenceAndReportTests.StoredAverageRuleAffectsNewAssessmentsOnly" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7621466+00:00" endTime="2026-10-18T14:10:59.7621826+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2466dbbf-0429-4703-ac4c-ebd2f973f59d">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bf19fb96-b20e-44f8-8ad9-39a25afd025f" testId="6f715c14-1e74-484a-f7e2-96b54f72c3c4" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 9, expected: MoreInformationNeeded)" computerName="8128b7ce6a31" duration="00:00:00.0016765" startTime="2026-10-18T14:10:59.8586928+00:00" endTime="2026-10-18T14:10:59.8587404+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf19fb96-b20e-44f8-8ad9-39a25afd025f" />
+    <UnitTestResult executionId="ab24bca2-5867-4980-b938-81ef970cfd24" testId="2f6030e9-10c4-1a17-1f15-910ebf05dcfa" testName="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 54, expected: NotCurrentlyEligible)" computerName="8128b7ce6a31" duration="00:00:00.0016264" startTime="2026-10-18T14:10:59.8699867+00:00" endTime="2026-10-18T14:10:59.8700390+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab24bca2-5867-4980-b938-81ef970cfd24" />
+    <UnitTestResult executionId="00f6fbac-e9cc-44ee-901a-9721d86a69db" testId="d3eb58c9-3bcf-b513-c12e-855828936ee6" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 5)" computerName="8128b7ce6a31" duration="00:00:00.0019968" startTime="2026-10-18T14:10:59.8648542+00:00" endTime="2026-10-18T14:10:59.8649632+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00f6fbac-e9cc-44ee-901a-9721d86a69db" />
+    <UnitTestResult executionId="90e57169-cb26-4bba-8c09-48d73b837e5d" testId="49e2340d-714c-6e5d-39dc-159e62f25b0d" testName="FuturePath.Tests.PersistenceAndReportTests.SeedMeetsPartBCountsAndIsRepeatable" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8194740+00:00" endTime="2026-10-18T14:10:59.8194938+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90e57169-cb26-4bba-8c09-48d73b837e5d">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a9e12665-fa42-4598-966d-5456e96009d9" testId="c369d863-19c3-7c9e-4da1-ba38b9294a24" testName="FuturePath.Tests.PersistenceAndReportTests.InvalidMaintenanceValuesAndDuplicateNamesAreRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7679862+00:00" endTime="2026-10-18T14:10:59.7680106+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a9e12665-fa42-4598-966d-5456e96009d9">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9ea3577c-a9a5-4eba-8fae-ca885e85d348" testId="02263b18-0665-523a-7697-edadb7397e72" testName="FuturePath.Tests.SecurityTests.AdvisorCanReadAndReportButCannotMaintainReferenceDataOrAccounts" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.9721355+00:00" endTime="2026-10-18T14:10:59.9721539+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ea3577c-a9a5-4eba-8fae-ca885e85d348">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="55a9eb47-a961-4392-b953-e69787a7a9b2" testId="7b21c75d-81fe-f57b-002e-5088d77ff1b2" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 2, expected: NotCurrentlyEligible)" computerName="8128b7ce6a31" duration="00:00:00.0017380" startTime="2026-10-18T14:10:59.8584272+00:00" endTime="2026-10-18T14:10:59.8584908+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55a9eb47-a961-4392-b953-e69787a7a9b2" />
+    <UnitTestResult executionId="45abf9b6-0875-48e8-8a5d-5732fd976d6b" testId="ebc74e5a-4c11-6e68-f1cf-38e8e883c2e5" testName="FuturePath.Tests.SecurityTests.LearnerCanReadOnlySessionsCreatedInCurrentWorkspace" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.9718486+00:00" endTime="2026-10-18T14:10:59.9719011+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="45abf9b6-0875-48e8-8a5d-5732fd976d6b">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="098811b1-8e36-4740-9027-da39c9b42ea9" testId="086b3f3a-5a7b-4105-b9a8-7ab8e41c7897" testName="FuturePath.Tests.AdvisingTests.LowInterestCannotBeCalledStrongMatch" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8304737+00:00" endTime="2026-10-18T14:10:59.8304927+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="098811b1-8e36-4740-9027-da39c9b42ea9">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="52c1dc74-a07a-4110-929a-5def94e9229a" testId="dcffa67c-fea2-97fa-0e3f-635f106b9b02" testName="FuturePath.Tests.PortableRuleTests.GuestEntryPointsDenyStaffActionsBeforeReachingStore" computerName="8128b7ce6a31" duration="00:00:00.0013000" startTime="2026-10-18T14:10:59.8930948+00:00" endTime="2026-10-18T14:10:59.8943496+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52c1dc74-a07a-4110-929a-5def94e9229a" />
+    <UnitTestResult executionId="540ad7d9-b1b4-41a8-8e4c-2545280889b8" testId="87340d32-c9f5-d74a-3f84-8d917b6d9832" testName="FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupRefusesAnUnrelatedDatabaseWithoutChangingItsTable" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8686595+00:00" endTime="2026-10-18T14:10:59.8686792+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="540ad7d9-b1b4-41a8-8e4c-2545280889b8">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fe13ca05-8318-4443-8b78-929967299852" testId="8c755a50-0fd0-8adb-61e1-1a4b9af31b16" testName="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 60, expected: StrongMatch)" computerName="8128b7ce6a31" duration="00:00:00.0017600" startTime="2026-10-18T14:10:59.8671307+00:00" endTime="2026-10-18T14:10:59.8673191+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe13ca05-8318-4443-8b78-929967299852" />
+    <UnitTestResult executionId="304af86a-ef35-43e6-8ca9-4cc49d339697" testId="7281c053-3a38-a23f-612b-f8f08895ca67" testName="FuturePath.Tests.CourseValidationTests.FundingChoicesRemainConfiguredAfterCatalogInitialisation" computerName="8128b7ce6a31" duration="00:00:00.0152041" startTime="2026-10-18T14:10:59.8462948+00:00" endTime="2026-10-18T14:10:59.8472570+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="304af86a-ef35-43e6-8ca9-4cc49d339697" />
+    <UnitTestResult executionId="7c86df51-6629-4caf-80ec-d7e02e814d46" testId="f8640a6d-c0e8-ab13-08e9-7da4516f3d09" testName="FuturePath.Tests.PersistenceAndReportTests.FailedExportDoesNotCreateMetadataOrTruncateOtherReports" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8199888+00:00" endTime="2026-10-18T14:10:59.8200094+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c86df51-6629-4caf-80ec-d7e02e814d46">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aaf5a291-5c2b-4844-93b0-46e40961df81" testId="0c15abd3-f267-fc5b-9f00-68e4cba80c22" testName="FuturePath.Tests.PersistenceAndReportTests.FundingOptOutDoesNotLeakFundingIntoSummary" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7682740+00:00" endTime="2026-10-18T14:10:59.7682970+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aaf5a291-5c2b-4844-93b0-46e40961df81">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8e0915e8-a75b-41d2-ab7d-b094d3f4cbab" testId="f757fedb-72fa-0de2-3adb-8ea1e3a7867d" testName="FuturePath.Tests.SecurityTests.CurrentAdminCannotBeDemotedOrDisabled" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.9737616+00:00" endTime="2026-10-18T14:10:59.9737754+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e0915e8-a75b-41d2-ab7d-b094d3f4cbab">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="68301bd2-e94c-406f-b119-b021f234c177" testId="26b82f94-e1ab-c2c0-1025-a0693b409d81" testName="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;&quot;, province: &quot;Western Cape&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0017583" startTime="2026-10-18T14:10:59.8453435+00:00" endTime="2026-10-18T14:10:59.8454181+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="68301bd2-e94c-406f-b119-b021f234c177" />
+    <UnitTestResult executionId="31bea719-f6ac-4d10-9609-6618701c59ac" testId="37ce8eaa-c208-cebb-41ef-d836be73ae59" testName="FuturePath.Tests.PersistenceAndReportTests.FollowUpReusesLearnerAndRetainsOriginalAssessment" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7287012+00:00" endTime="2026-10-18T14:10:59.7309297+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31bea719-f6ac-4d10-9609-6618701c59ac">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6b734374-ab6c-4013-b3b6-978ec6395abf" testId="ec06bcb3-0034-c82a-52ed-7876dedd8e42" testName="FuturePath.Tests.PortableRuleTests.ActivityGapTotalsUseStoredExplanationsRatherThanCurrentRules" computerName="8128b7ce6a31" duration="00:00:00.0059495" startTime="2026-10-18T14:10:59.8721042+00:00" endTime="2026-10-18T14:10:59.8779000+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b734374-ab6c-4013-b3b6-978ec6395abf" />
+    <UnitTestResult executionId="55ecb784-f1f2-40d7-9f77-2019ef42b863" testId="bb691522-6ce4-3a26-8b44-18f8dfd594ef" testName="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 1, score: 0)" computerName="8128b7ce6a31" duration="00:00:00.0026677" startTime="2026-10-18T14:10:59.8661101+00:00" endTime="2026-10-18T14:10:59.8663534+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55ecb784-f1f2-40d7-9f77-2019ef42b863" />
+    <UnitTestResult executionId="0618bd7e-2cc5-45ed-a2f2-05f3fc0d6466" testId="fc827d29-11f7-a42e-0d5e-1089c43ca2b7" testName="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;   &quot;, province: &quot;Western Cape&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0000249" startTime="2026-10-18T14:10:59.8455189+00:00" endTime="2026-10-18T14:10:59.8455716+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0618bd7e-2cc5-45ed-a2f2-05f3fc0d6466" />
+    <UnitTestResult executionId="10d5a622-8337-4084-91f5-f564b5bc6740" testId="06aef454-d618-db95-fdd8-982acb3b26ef" testName="FuturePath.Tests.PortableRuleTests.ExplicitOrGroupAcceptsLiteracyWithoutRequiringMathematics" computerName="8128b7ce6a31" duration="00:00:00.0019738" startTime="2026-10-18T14:10:59.8717320+00:00" endTime="2026-10-18T14:10:59.8717822+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10d5a622-8337-4084-91f5-f564b5bc6740" />
+    <UnitTestResult executionId="ea61660b-b17f-4f1a-8a4b-7ca2a9b35727" testId="308fc912-94a0-081a-82ec-85ea4e22399b" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 4)" computerName="8128b7ce6a31" duration="00:00:00.0494716" startTime="2026-10-18T14:10:59.8562559+00:00" endTime="2026-10-18T14:10:59.8596877+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea61660b-b17f-4f1a-8a4b-7ca2a9b35727" />
+    <UnitTestResult executionId="dc5a6752-1a47-4f3f-b0cb-1c50a77cab38" testId="16304350-9b89-2c6a-79ee-f3e0d42797c5" testName="FuturePath.Tests.PortableRuleTests.AnonymousProfileAndValidOptionalContactAreSupported" computerName="8128b7ce6a31" duration="00:00:00.0336486" startTime="2026-10-18T14:10:59.8401934+00:00" endTime="2026-10-18T14:10:59.8463654+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc5a6752-1a47-4f3f-b0cb-1c50a77cab38" />
+    <UnitTestResult executionId="9c9ad4ec-b3ef-4cb9-ad60-7645c1349c55" testId="fb4be5a7-5132-6b49-4d33-bd3b9ce699ef" testName="FuturePath.Tests.AdvisingTests.WeightedScoresMatchDocumentedFormula" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8370998+00:00" endTime="2026-10-18T14:10:59.8371201+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c9ad4ec-b3ef-4cb9-ad60-7645c1349c55">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="db8a1126-1bde-40d1-a91f-abbfe7c0c4a5" testId="3ddf86ae-f5ec-d284-ffe0-e187a32d9aa6" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 9)" computerName="8128b7ce6a31" duration="00:00:00.0021713" startTime="2026-10-18T14:10:59.8597853+00:00" endTime="2026-10-18T14:10:59.8600409+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db8a1126-1bde-40d1-a91f-abbfe7c0c4a5" />
+    <UnitTestResult executionId="76f51070-21aa-4f33-a480-db11d8f068d8" testId="daa09bbf-c5a1-53a4-21f0-b0d8187852ed" testName="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 10)" computerName="8128b7ce6a31" duration="00:00:00.0011777" startTime="2026-10-18T14:10:59.8907726+00:00" endTime="2026-10-18T14:10:59.8919906+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76f51070-21aa-4f33-a480-db11d8f068d8" />
+    <UnitTestResult executionId="0ebbe057-266a-4416-8f58-8b52a7a98aa2" testId="f5d97380-a38d-f97f-662a-cebd95c01c25" testName="FuturePath.Tests.AdvisingTests.HealthSciencesExplainsBothMissingRequiredSubjects" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8359255+00:00" endTime="2026-10-18T14:10:59.8359469+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ebbe057-266a-4416-8f58-8b52a7a98aa2">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1e4d515b-7445-4416-81c6-018a01478f79" testId="8d4759f8-a56a-ad0d-8aae-d6dc6b88f483" testName="FuturePath.Tests.PortableRuleTests.IncompleteAnswersAndUnconfirmedSubjectsCannotProduceEligibleAlternatives" computerName="8128b7ce6a31" duration="00:00:00.0030668" startTime="2026-10-18T14:10:59.9384828+00:00" endTime="2026-10-18T14:10:59.9413950+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e4d515b-7445-4416-81c6-018a01478f79" />
+    <UnitTestResult executionId="d029fef2-9ede-4431-bee0-0ae452fd7937" testId="0f5f7ec2-bd57-7419-7dc7-a59737ce3854" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 1, expected: StrongMatch)" computerName="8128b7ce6a31" duration="00:00:00.0101458" startTime="2026-10-18T14:10:59.8581656+00:00" endTime="2026-10-18T14:10:59.8582169+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d029fef2-9ede-4431-bee0-0ae452fd7937" />
+    <UnitTestResult executionId="f25d2856-42d9-44e5-ace1-9865b9396d0e" testId="736d921c-64e3-a9ed-13e3-42bc62a4c87b" testName="FuturePath.Tests.ReportFilterTests.FacultyDegreeAndOutcomeFiltersUseSavedKeys" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8694043+00:00" endTime="2026-10-18T14:10:59.8694230+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f25d2856-42d9-44e5-ace1-9865b9396d0e">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="03bee27f-e81d-42cd-98d5-6db9adb3239e" testId="db10b79d-35f1-0e83-f0a3-1fcb36f2513e" testName="FuturePath.Tests.PortableRuleTests.InvalidOptionalEmailIsRejected(email: &quot;x@&quot;)" computerName="8128b7ce6a31" duration="00:00:00.0012096" startTime="2026-10-18T14:10:59.8701653+00:00" endTime="2026-10-18T14:10:59.8702133+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03bee27f-e81d-42cd-98d5-6db9adb3239e" />
+    <UnitTestResult executionId="f1bda3b5-22f2-4e1d-ae53-2f6fdbc1fde7" testId="4e7cc4c6-62db-169e-708c-39914de62a67" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 10)" computerName="8128b7ce6a31" duration="00:00:00.0019197" startTime="2026-10-18T14:10:59.8662985+00:00" endTime="2026-10-18T14:10:59.8664928+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1bda3b5-22f2-4e1d-ae53-2f6fdbc1fde7" />
+    <UnitTestResult executionId="212bcb7d-6f73-4169-9640-36caa8f287d8" testId="7e307179-65d6-9697-af3b-9e75ac0b2b9a" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 2)" computerName="8128b7ce6a31" duration="00:00:00.0019792" startTime="2026-10-18T14:10:59.8652062+00:00" endTime="2026-10-18T14:10:59.8652525+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="212bcb7d-6f73-4169-9640-36caa8f287d8" />
+    <UnitTestResult executionId="c0d590fb-a7ef-405f-ac2d-cab2390b5a8a" testId="6eaf13bf-9fc6-b513-534a-bff8a662f48d" testName="FuturePath.Tests.PersistenceAndReportTests.SeededOutcomesAndScoresMatchTheProductionEngineWithoutRewritingHistory" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.7632392+00:00" endTime="2026-10-18T14:10:59.7632712+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0d590fb-a7ef-405f-ac2d-cab2390b5a8a">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e9f43969-1006-40b4-9587-5d5d2e91f51b" testId="fd9b23f4-02ee-584d-fc18-9211461f3980" testName="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 3)" computerName="8128b7ce6a31" duration="00:00:00.0019783" startTime="2026-10-18T14:10:59.8650725+00:00" endTime="2026-10-18T14:10:59.8651249+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9f43969-1006-40b4-9587-5d5d2e91f51b" />
+    <UnitTestResult executionId="4f5da98e-e9ce-449c-93cd-4d4315fe2a87" testId="33b864dd-c6b9-4802-1715-8cc0e028624a" testName="FuturePath.Tests.PortableRuleTests.GapExplanationAndWeightedFormulaMatchReference" computerName="8128b7ce6a31" duration="00:00:00.0026555" startTime="2026-10-18T14:10:59.8719378+00:00" endTime="2026-10-18T14:10:59.8719876+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f5da98e-e9ce-449c-93cd-4d4315fe2a87" />
+    <UnitTestResult executionId="246af4cb-8787-4a58-a3cc-99f806ab54ba" testId="0a17f7ec-e61d-8f88-2f3b-f39beb51beb3" testName="FuturePath.Tests.AdvisingTests.AlternativesAcceptMathematicalLiteracyAndExcludeIneligibleDegrees" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8297552+00:00" endTime="2026-10-18T14:10:59.8297734+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="246af4cb-8787-4a58-a3cc-99f806ab54ba">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="966723b0-a38a-4d66-8fb0-32fee8a4a569" testId="48856d0f-ff0c-d96c-ebc1-06a59331b8e8" testName="FuturePath.Tests.PersistenceAndReportTests.BackupsAreConsistentAndDoNotOverwriteExistingFiles" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8182247+00:00" endTime="2026-10-18T14:10:59.8182469+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="966723b0-a38a-4d66-8fb0-32fee8a4a569">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6301a4db-b323-4b06-8202-0f39d90e026c" testId="491fa87f-147e-16cb-536c-a8f8cfb0725e" testName="FuturePath.Tests.PortableRuleTests.BothHealthScienceSubjectsAreExplainedAsMissing" computerName="8128b7ce6a31" duration="00:00:00.0017918" startTime="2026-10-18T14:10:59.8713705+00:00" endTime="2026-10-18T14:10:59.8714175+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6301a4db-b323-4b06-8202-0f39d90e026c" />
+    <UnitTestResult executionId="d401aff7-1feb-4443-aa3c-ee5b0c562954" testId="7c3e4a3a-661c-3c30-d878-5cbe4f919451" testName="FuturePath.Tests.AdvisingTests.OnlyGradesElevenAndTwelveAreAccepted" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8299537+00:00" endTime="2026-10-18T14:10:59.8299708+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d401aff7-1feb-4443-aa3c-ee5b0c562954">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b6a169f2-5a85-4b89-aa7a-eeb92df2d608" testId="2e89e20c-5593-57e8-e749-7866fd124a12" testName="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 3, expected: PossibleMatch)" computerName="8128b7ce6a31" duration="00:00:00.0017521" startTime="2026-10-18T14:10:59.8582972+00:00" endTime="2026-10-18T14:10:59.8583471+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6a169f2-5a85-4b89-aa7a-eeb92df2d608" />
+    <UnitTestResult executionId="877f839f-ced0-4822-ae03-ad14d969bf55" testId="ea73173a-8d1f-39c4-cdf5-827e46d67e27" testName="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 0)" computerName="8128b7ce6a31" duration="00:00:00.0011511" startTime="2026-10-18T14:10:59.8895812+00:00" endTime="2026-10-18T14:10:59.8906497+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="877f839f-ced0-4822-ae03-ad14d969bf55" />
+    <UnitTestResult executionId="20db0aca-29e8-4cff-a7a4-aa148b2e7c74" testId="755d1565-6b26-7e1b-f977-dfd8ab04220c" testName="FuturePath.Tests.PersistenceAndReportTests.RemovingLastQuestionOfActiveProgrammeCategoryIsPrevented" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8197424+00:00" endTime="2026-10-18T14:10:59.8197619+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20db0aca-29e8-4cff-a7a4-aa148b2e7c74">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b0dc603b-e103-4c0a-959d-c8953e14171e" testId="df4a94ea-b6aa-3024-ea3c-13cfc39091f9" testName="FuturePath.Tests.PortableRuleTests.AllReportSectionsAndHtmlEncodingUseRealComputedResults" computerName="8128b7ce6a31" duration="00:00:00.0176443" startTime="2026-10-18T14:10:59.8596395+00:00" endTime="2026-10-18T14:10:59.8598391+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0dc603b-e103-4c0a-959d-c8953e14171e" />
+    <UnitTestResult executionId="99bc6fb0-b06c-4b54-86bc-d9a4d2d8cd4f" testId="c4bd703b-28e1-2123-7857-648e43fe2067" testName="FuturePath.Tests.PersistenceAndReportTests.AllThreeReportsUseSavedSessionsAndRespectDateFilters" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8186758+00:00" endTime="2026-10-18T14:10:59.8186941+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99bc6fb0-b06c-4b54-86bc-d9a4d2d8cd4f">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e45f7408-548a-4cb3-90c0-82cb86608a1e" testId="ed09b0e3-bdd8-de54-39ea-b0da316497de" testName="FuturePath.Tests.PortableRuleTests.StoredAverageIsAnIndependentHardGate" computerName="8128b7ce6a31" duration="00:00:00.0021013" startTime="2026-10-18T14:10:59.8780835+00:00" endTime="2026-10-18T14:10:59.8836694+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e45f7408-548a-4cb3-90c0-82cb86608a1e" />
+    <UnitTestResult executionId="793a07f2-2fd2-4d4e-b942-e1f46f8b6484" testId="5b72cc5b-a9c5-c94c-9957-ba78b467874a" testName="FuturePath.Tests.AdvisingTests.OutOfRangeInterestScoresAreRejected" computerName="8128b7ce6a31" duration="00:00:00.0010000" startTime="2026-10-18T14:10:59.8356186+00:00" endTime="2026-10-18T14:10:59.8356793+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="793a07f2-2fd2-4d4e-b942-e1f46f8b6484">
+      <Output>
+        <ErrorInfo>
+          <Message>Requires Windows SQL Server LocalDB; no substitute database is used.</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FuturePath.Tests.SecurityTests.AdvisorCanReadAndReportButCannotMaintainReferenceDataOrAccounts" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="02263b18-0665-523a-7697-edadb7397e72">
+      <Execution id="9ea3577c-a9a5-4eba-8fae-ca885e85d348" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="AdvisorCanReadAndReportButCannotMaintainReferenceDataOrAccounts" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ConnectionIsLocalIntegratedAndRejectsFilePathsOrSqlInjection" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="99007d42-23fb-7bc4-1d2f-53884698fcbb">
+      <Execution id="5ed9c0e7-5c1a-4f61-97cc-4e1f34f52fbe" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ConnectionIsLocalIntegratedAndRejectsFilePathsOrSqlInjection" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.AlternativesAcceptMathematicalLiteracyAndExcludeIneligibleDegrees" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="0a17f7ec-e61d-8f88-2f3b-f39beb51beb3">
+      <Execution id="246af4cb-8787-4a58-a3cc-99f806ab54ba" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="AlternativesAcceptMathematicalLiteracyAndExcludeIneligibleDegrees" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.CurrentAdminCannotBeDemotedOrDisabled" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="f757fedb-72fa-0de2-3adb-8ea1e3a7867d">
+      <Execution id="8e0915e8-a75b-41d2-ab7d-b094d3f4cbab" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="CurrentAdminCannotBeDemotedOrDisabled" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 4)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="308fc912-94a0-081a-82ec-85ea4e22399b">
+      <Execution id="ea61660b-b17f-4f1a-8a4b-7ca2a9b35727" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.SeededOutcomesAndScoresMatchTheProductionEngineWithoutRewritingHistory" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6eaf13bf-9fc6-b513-534a-bff8a662f48d">
+      <Execution id="c0d590fb-a7ef-405f-ac2d-cab2390b5a8a" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="SeededOutcomesAndScoresMatchTheProductionEngineWithoutRewritingHistory" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 0)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ea73173a-8d1f-39c4-cdf5-827e46d67e27">
+      <Execution id="877f839f-ced0-4822-ae03-ad14d969bf55" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="MissingOrInvalidGradesAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.GapExplanationAndWeightedFormulaMatchReference" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="33b864dd-c6b9-4802-1715-8cc0e028624a">
+      <Execution id="4f5da98e-e9ce-449c-93cd-4d4315fe2a87" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="GapExplanationAndWeightedFormulaMatchReference" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.WeightedScoresMatchDocumentedFormula" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="fb4be5a7-5132-6b49-4d33-bd3b9ce699ef">
+      <Execution id="9c9ad4ec-b3ef-4cb9-ad60-7645c1349c55" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="WeightedScoresMatchDocumentedFormula" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.AdminCanCreateDisableAndResetAccounts" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="43cdf652-1eac-b09b-6b21-d611fd463758">
+      <Execution id="817c2dfd-c77d-4239-9f06-7e2eed094e38" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="AdminCanCreateDisableAndResetAccounts" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.FailedExportDoesNotCreateMetadataOrTruncateOtherReports" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="f8640a6d-c0e8-ab13-08e9-7da4516f3d09">
+      <Execution id="7c86df51-6629-4caf-80ec-d7e02e814d46" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="FailedExportDoesNotCreateMetadataOrTruncateOtherReports" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.RemovingLastQuestionOfActiveProgrammeCategoryIsPrevented" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="755d1565-6b26-7e1b-f977-dfd8ab04220c">
+      <Execution id="20db0aca-29e8-4cff-a7a4-aa148b2e7c74" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="RemovingLastQuestionOfActiveProgrammeCategoryIsPrevented" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.InvalidOptionalEmailIsRejected(email: &quot;x@&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="db10b79d-35f1-0e83-f0a3-1fcb36f2513e">
+      <Execution id="03bee27f-e81d-42cd-98d5-6db9adb3239e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="InvalidOptionalEmailIsRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.DatabaseEnforcesDuplicateRangeAndForeignKeyIntegrity" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="0a245894-e31a-e075-95f4-d8aeebfa7400">
+      <Execution id="878b905b-89d0-4a74-b846-3bb5909bfdf6" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="DatabaseEnforcesDuplicateRangeAndForeignKeyIntegrity" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.UnconfirmedSubjectsProduceMoreInformationEvenWhenMarksPass" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="00aa7569-aab1-c567-fa24-0111b788df6a">
+      <Execution id="cd3d982e-b579-4929-9b71-380906b30ebe" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="UnconfirmedSubjectsProduceMoreInformationEvenWhenMarksPass" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.NewSessionRoundTripsAndDoesNotOverwriteHistoricalResults" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="69635cdb-5e3d-d779-d633-1c6f573c435b">
+      <Execution id="04a3c464-6eb7-4a94-b180-55e5290baa62" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="NewSessionRoundTripsAndDoesNotOverwriteHistoricalResults" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.LearnerCanReadOnlySessionsCreatedInCurrentWorkspace" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ebc74e5a-4c11-6e68-f1cf-38e8e883c2e5">
+      <Execution id="45abf9b6-0875-48e8-8a5d-5732fd976d6b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="LearnerCanReadOnlySessionsCreatedInCurrentWorkspace" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 7)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d0372338-bbd1-ee09-2d96-fc0c187ecfcf">
+      <Execution id="ea1253de-c7d6-482c-a33c-7bc88acdb708" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.BoundaryDecimalDuplicateAndUnknownSubjectsAreHandled" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="f682d2e3-c9fe-e7ee-2f29-5ba7dcca4c5b">
+      <Execution id="6f7f553f-7e00-4e9b-b018-1c2b3ca07828" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="BoundaryDecimalDuplicateAndUnknownSubjectsAreHandled" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.InactiveSelectionAndIncompleteConfigurationAreRejectedOrExplained" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ecced65f-0659-cb04-4bfa-9f46c08528a1">
+      <Execution id="76a37c5e-aeda-46b8-8819-921f36537ec7" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="InactiveSelectionAndIncompleteConfigurationAreRejectedOrExplained" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.ReportFilterTests.AdvisorReportListsIncludeInactiveHistoricalReferenceKeys" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="bd4c581b-6f8a-c879-10f1-ffc93646c66e">
+      <Execution id="0d5ab129-8515-442f-9b29-10f882490e65" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.ReportFilterTests" name="AdvisorReportListsIncludeInactiveHistoricalReferenceKeys" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.FundingOptOutDoesNotLeakFundingIntoSummary" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="0c15abd3-f267-fc5b-9f00-68e4cba80c22">
+      <Execution id="aaf5a291-5c2b-4844-93b0-46e40961df81" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="FundingOptOutDoesNotLeakFundingIntoSummary" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.IncompleteAnswersAndUnconfirmedSubjectsCannotProduceEligibleAlternatives" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="8d4759f8-a56a-ad0d-8aae-d6dc6b88f483">
+      <Execution id="1e4d515b-7445-4416-81c6-018a01478f79" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="IncompleteAnswersAndUnconfirmedSubjectsCannotProduceEligibleAlternatives" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.HealthSciencesExplainsBothMissingRequiredSubjects" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="f5d97380-a38d-f97f-662a-cebd95c01c25">
+      <Execution id="0ebbe057-266a-4416-8f58-8b52a7a98aa2" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="HealthSciencesExplainsBothMissingRequiredSubjects" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.AnOrRequirementDoesNotRequireBothMathsAndLiteracy" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6da3b098-f7dc-e476-91cd-73341e08c2fb">
+      <Execution id="d92c6046-71a6-495a-ad77-cd1528cffcbb" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="AnOrRequirementDoesNotRequireBothMathsAndLiteracy" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 9)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="3ddf86ae-f5ec-d284-ffe0-e187a32d9aa6">
+      <Execution id="db8a1126-1bde-40d1-a91f-abbfe7c0c4a5" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 5, score: 100)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6e5ff100-b9d0-64c7-01af-7e973650a7ab">
+      <Execution id="18073ac1-644b-4066-8d33-bb2eba389779" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="LikertResponsesProduceDocumentedCategoryScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExplicitOrGroupAcceptsLiteracyWithoutRequiringMathematics" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="06aef454-d618-db95-fdd8-982acb3b26ef">
+      <Execution id="10d5a622-8337-4084-91f5-f564b5bc6740" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExplicitOrGroupAcceptsLiteracyWithoutRequiringMathematics" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 55, expected: PossibleMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="5de3ccfa-e01d-3369-c1df-1109ae0ffb5f">
+      <Execution id="e189d09f-029a-4c29-861c-6b8d49ed74aa" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="FivePointGapBoundaryOverridesHighWeightedScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.PasswordsUseUniqueSaltsAndVerifyWithoutPlaintextStorage" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="93396556-1c08-58e4-f7a9-abebc66d3f28">
+      <Execution id="9821837b-f2d3-4eb8-ac28-4ed7434a08f8" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="PasswordsUseUniqueSaltsAndVerifyWithoutPlaintextStorage" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.StoredAverageRuleAffectsNewAssessmentsOnly" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="360cc82e-7909-5d26-d5ed-71c96dc31fd7">
+      <Execution id="2466dbbf-0429-4703-ac4c-ebd2f973f59d" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="StoredAverageRuleAffectsNewAssessmentsOnly" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupRefusesAnUnrelatedDatabaseWithoutChangingItsTable" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="87340d32-c9f5-d74a-3f84-8d917b6d9832">
+      <Execution id="540ad7d9-b1b4-41a8-8e4c-2545280889b8" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.FirstRunSetupTests" name="EmbeddedSetupRefusesAnUnrelatedDatabaseWithoutChangingItsTable" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 3, score: 50)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ffd2046e-aa0e-16fd-e884-fb7d7e057cd8">
+      <Execution id="849a48c1-9b0f-4f48-8b79-498013d8e030" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="LikertResponsesProduceDocumentedCategoryScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.CrossFacultyDegreeIsRejectedWithoutSavingSession" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="05eb65cf-15f6-6a5c-a11c-0abbafb212fe">
+      <Execution id="697fab04-620e-4588-a222-a7d2ebc09bdf" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="CrossFacultyDegreeIsRejectedWithoutSavingSession" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.PasswordChangeVerifiesOldPasswordAndAppliesNewPassword" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="bc4965e3-a30b-5640-0c3d-ca7042e8967b">
+      <Execution id="da820b31-48d4-45e4-b3c4-3e4400fd431e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="PasswordChangeVerifiesOldPasswordAndAppliesNewPassword" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 1, expected: StrongMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="0f5f7ec2-bd57-7419-7dc7-a59737ce3854">
+      <Execution id="d029fef2-9ede-4431-bee0-0ae452fd7937" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 2)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="7e307179-65d6-9697-af3b-9e75ac0b2b9a">
+      <Execution id="212bcb7d-6f73-4169-9640-36caa8f287d8" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.InvalidOptionalEmailIsRejected(email: &quot;bad email&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="85dc61c9-346c-a576-78a5-38f6ce538a05">
+      <Execution id="2a9183e9-5dc3-48d6-8139-2c27398da3a6" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="InvalidOptionalEmailIsRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.LowInterestCannotBeCalledStrongMatch" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="086b3f3a-5a7b-4105-b9a8-7ab8e41c7897">
+      <Execution id="098811b1-8e36-4740-9027-da39c9b42ea9" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="LowInterestCannotBeCalledStrongMatch" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 10)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="4e7cc4c6-62db-169e-708c-39914de62a67">
+      <Execution id="f1bda3b5-22f2-4e1d-ae53-2f6fdbc1fde7" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.InvalidMarksAreRejectedBeforePersistence(value: -1)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="b620ab2a-3f3b-9621-8e18-1bc3327028bc">
+      <Execution id="977282ed-6840-4274-ac29-cb12067c40be" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="InvalidMarksAreRejectedBeforePersistence" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.AdminMaintainsRulesAndArchivedDegreesDisappearWithoutLosingHistory" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="328c1b85-e2d8-78e9-bb9d-fb5286a1ca1f">
+      <Execution id="4e62dd67-26c8-4d80-8a7b-df6e017b6d3d" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="AdminMaintainsRulesAndArchivedDegreesDisappearWithoutLosingHistory" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.FundingFiltersExpiredInactiveAndUnrelatedRecords" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="a157b8cf-2348-8495-437c-9f4759cf99a0">
+      <Execution id="b92664fb-187f-4f30-a206-413572b71894" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="FundingFiltersExpiredInactiveAndUnrelatedRecords" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.PreviewDoesNotWriteAndSaveWritesExactlyOneAssessment" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="5d3eb0e2-d4b4-3113-0f4d-db3ace64d950">
+      <Execution id="82fa61b7-e167-4a36-be14-49951fdcd7e9" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="PreviewDoesNotWriteAndSaveWritesExactlyOneAssessment" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.BackupsAreConsistentAndDoNotOverwriteExistingFiles" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="48856d0f-ff0c-d96c-ebc1-06a59331b8e8">
+      <Execution id="966723b0-a38a-4d66-8fb0-32fee8a4a569" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="BackupsAreConsistentAndDoNotOverwriteExistingFiles" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 9, expected: MoreInformationNeeded)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6f715c14-1e74-484a-f7e2-96b54f72c3c4">
+      <Execution id="bf19fb96-b20e-44f8-8ad9-39a25afd025f" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.StoredAverageIsAnIndependentHardGate" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ed09b0e3-bdd8-de54-39ea-b0da316497de">
+      <Execution id="e45f7408-548a-4cb3-90c0-82cb86608a1e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="StoredAverageIsAnIndependentHardGate" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 5)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d3eb58c9-3bcf-b513-c12e-855828936ee6">
+      <Execution id="00f6fbac-e9cc-44ee-901a-9721d86a69db" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 1)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="2c7b2123-8399-14af-2f28-1baf431ecd14">
+      <Execution id="11b997e2-c47e-4d0b-8f7f-94911373a095" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ActivityGapTotalsUseStoredExplanationsRatherThanCurrentRules" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ec06bcb3-0034-c82a-52ed-7876dedd8e42">
+      <Execution id="6b734374-ab6c-4013-b3b6-978ec6395abf" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ActivityGapTotalsUseStoredExplanationsRatherThanCurrentRules" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.ReportFilterTests.GapAndFundingSectionsDescribeTheirSavedAndCurrentSources" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="2c83dbab-2875-0fc1-e18e-596bc507b698">
+      <Execution id="f17894ef-2e24-400f-80df-3e983be03c6d" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.ReportFilterTests" name="GapAndFundingSectionsDescribeTheirSavedAndCurrentSources" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.MarksOutsideTheRangeAreRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="1ca865f0-34eb-dd65-7781-2a7ab9282c25">
+      <Execution id="65aa0229-c2e8-48b6-ad31-37ad479aafb0" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="MarksOutsideTheRangeAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 7, expected: PossibleMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="8fcaab9b-adff-9f9c-94ba-cc6bf95e3d12">
+      <Execution id="f3150a13-32b1-443a-8e37-8e423c381492" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.BiologyNamesTheExactMathematicsGap" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="cf172fb0-c110-de00-78d9-b776ea659981">
+      <Execution id="890c269e-5309-432c-bdce-ce01f5676a0b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="BiologyNamesTheExactMathematicsGap" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 2, expected: NotCurrentlyEligible)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="7b21c75d-81fe-f57b-002e-5088d77ff1b2">
+      <Execution id="55a9eb47-a961-4392-b953-e69787a7a9b2" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.SeedMeetsPartBCountsAndIsRepeatable" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="49e2340d-714c-6e5d-39dc-159e62f25b0d">
+      <Execution id="90e57169-cb26-4bba-8c09-48d73b837e5d" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="SeedMeetsPartBCountsAndIsRepeatable" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 10)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="daa09bbf-c5a1-53a4-21f0-b0d8187852ed">
+      <Execution id="76f51070-21aa-4f33-a480-db11d8f068d8" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="MissingOrInvalidGradesAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 6)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="c96ce954-ad07-579b-ac0e-f90bcf4dc1aa">
+      <Execution id="0d4f202d-e7ec-4541-9d61-ccbc7f12c8a9" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 4, expected: StrongMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="cc5e371c-17ff-7641-9e69-3bd9d8d08e4c">
+      <Execution id="ff04ba9a-6c4a-4413-a279-9e8da7f7cb82" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 5, expected: NotCurrentlyEligible)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="c1b3ff07-c326-fb21-5df4-b05b0caa166a">
+      <Execution id="457e6010-aa5a-4d5b-aa85-eb0d2b9ddf98" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.FifthFailureLocksAccountAndExpiryAllowsSuccessfulLogin" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="c9ac7e0c-e053-b717-b0e7-47ce0a635abe">
+      <Execution id="8462fbea-ec58-4ad1-ac87-1268f3bea58b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="FifthFailureLocksAccountAndExpiryAllowsSuccessfulLogin" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.BothHealthScienceSubjectsAreExplainedAsMissing" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="491fa87f-147e-16cb-536c-a8f8cfb0725e">
+      <Execution id="6301a4db-b323-4b06-8202-0f39d90e026c" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="BothHealthScienceSubjectsAreExplainedAsMissing" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 60, expected: StrongMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="8c755a50-0fd0-8adb-61e1-1a4b9af31b16">
+      <Execution id="fe13ca05-8318-4443-8b78-929967299852" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="FivePointGapBoundaryOverridesHighWeightedScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.DecimalMarksArePreserved" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="5b021ca3-e8b2-f0fd-b46e-431a14ad17d0">
+      <Execution id="addf714e-e606-4dd4-b8d2-fee719ba0874" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="DecimalMarksArePreserved" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.OutOfRangeInterestScoresAreRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="5b72cc5b-a9c5-c94c-9957-ba78b467874a">
+      <Execution id="793a07f2-2fd2-4d4e-b942-e1f46f8b6484" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="OutOfRangeInterestScoresAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 3)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="fd9b23f4-02ee-584d-fc18-9211461f3980">
+      <Execution id="e9f43969-1006-40b4-9587-5d5d2e91f51b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.CaseStudyScenariosAreComputedByRealEngine" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d6bb8f35-d8f1-3748-1c1f-abc6d99098f9">
+      <Execution id="c734deff-e328-4c3c-92f8-67a3935997e6" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="CaseStudyScenariosAreComputedByRealEngine" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.FundingChoicesRemainConfiguredAfterCatalogInitialisation" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="7281c053-3a38-a23f-612b-f8f08895ca67">
+      <Execution id="304af86a-ef35-43e6-8ca9-4cc49d339697" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="FundingChoicesRemainConfiguredAfterCatalogInitialisation" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.SchoolAndProvinceDoNotRequirePersonalNameOrContact" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="a7f9a080-9baa-e3af-e87d-39ea7161d25f">
+      <Execution id="06ee066b-2500-494b-a9ce-cdfbf09bb1b5" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="SchoolAndProvinceDoNotRequirePersonalNameOrContact" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.InvalidMarksAreRejectedBeforePersistence(value: 101)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="b5dbf113-a66f-ebf6-33d5-72933c72173f">
+      <Execution id="e6831172-076c-458b-8495-3463e770e402" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="InvalidMarksAreRejectedBeforePersistence" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.MissingOrInvalidGradesAreRejected(grade: 13)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="3932120f-9225-1c36-d0b8-db63ca1ae24a">
+      <Execution id="e04651f4-9fb9-4927-8eae-4752624f0131" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="MissingOrInvalidGradesAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.AnonymousProfileIsSupported" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="e7e9cbed-3ba6-8ade-3829-cbd5074c5fb0">
+      <Execution id="24ab5c37-21f7-4257-9ef5-9c6a17f4e73b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="AnonymousProfileIsSupported" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.OriginalScenarioRegressionTests.EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking(id: 8)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="4374360f-54f6-c076-9449-6fa97c5e6ccb">
+      <Execution id="e23e00c4-5bb2-4ebc-8bc5-30d7ab9b649a" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.OriginalScenarioRegressionTests" name="EverySeedRetainsItsFullOriginalScoresExplanationsAndRanking" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.QuestionnaireStepRejectsMissingDuplicateAndInvalidResponses" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d730fef7-ee30-9901-f8c6-bfa889e0efb9">
+      <Execution id="aa6e0256-1929-4a9c-add0-85cc6ddfa304" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="QuestionnaireStepRejectsMissingDuplicateAndInvalidResponses" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.FollowUpReusesLearnerAndRetainsOriginalAssessment" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="37ce8eaa-c208-cebb-41ef-d836be73ae59">
+      <Execution id="31bea719-f6ac-4d10-9609-6618701c59ac" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="FollowUpReusesLearnerAndRetainsOriginalAssessment" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 59, expected: PossibleMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="2615cb0e-eceb-26f7-b31c-8316221ca9c5">
+      <Execution id="e578ed2a-b1e7-4325-aede-3864b5c22a6b" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="FivePointGapBoundaryOverridesHighWeightedScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.BoundaryMarksAreAcceptedAndRoundTrip" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="5b221985-2e0e-0922-feb6-065d2a5d7422">
+      <Execution id="154f0d7d-c147-406c-8fb2-e4beea78d47c" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="BoundaryMarksAreAcceptedAndRoundTrip" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.AnonymousProfileAndValidOptionalContactAreSupported" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="16304350-9b89-2c6a-79ee-f3e0d42797c5">
+      <Execution id="dc5a6752-1a47-4f3f-b0cb-1c50a77cab38" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="AnonymousProfileAndValidOptionalContactAreSupported" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.MandatoryMarkBoundariesAreExplicit" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="0e30118b-d7c5-01d0-b3a9-211c25dbd15e">
+      <Execution id="a028ba7f-2ac2-482a-88c3-17bb73d78a49" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="MandatoryMarkBoundariesAreExplicit" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;   &quot;, province: &quot;Western Cape&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="fc827d29-11f7-a42e-0d5e-1089c43ca2b7">
+      <Execution id="0618bd7e-2cc5-45ed-a2f2-05f3fc0d6466" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="NewProfileRequiresSchoolAndValidProvince" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.AllThreeReportsUseSavedSessionsAndRespectDateFilters" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="c4bd703b-28e1-2123-7857-648e43fe2067">
+      <Execution id="99bc6fb0-b06c-4b54-86bc-d9a4d2d8cd4f" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="AllThreeReportsUseSavedSessionsAndRespectDateFilters" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.BlankSubjectListIsRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="75fb2b96-bf7c-59b5-e38f-afa4cf7583ca">
+      <Execution id="594c7762-236b-4358-a5ac-4ecf8250e702" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="BlankSubjectListIsRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.GuestEntryPointsDenyStaffActionsBeforeReachingStore" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="dcffa67c-fea2-97fa-0e3f-635f106b9b02">
+      <Execution id="52c1dc74-a07a-4110-929a-5def94e9229a" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="GuestEntryPointsDenyStaffActionsBeforeReachingStore" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.MissingAnswersProduceMoreInformationAndNoFalseAlternatives" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6ce2b587-f599-5f7b-9475-8d07a8a915df">
+      <Execution id="03a6f25a-ad4a-4e36-bec5-dccbdbd5f564" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="MissingAnswersProduceMoreInformationAndNoFalseAlternatives" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.AlternativesAreLimitedRankedAndExcludeSelectedAndInactiveProgrammes" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="9c779fd8-0c44-afb3-b517-12e78b47c301">
+      <Execution id="bb95ab8a-6fca-4b32-92ec-c11ff354db89" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="AlternativesAreLimitedRankedAndExcludeSelectedAndInactiveProgrammes" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.FivePointGapBoundaryOverridesHighWeightedScores(mark: 54, expected: NotCurrentlyEligible)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="2f6030e9-10c4-1a17-1f15-910ebf05dcfa">
+      <Execution id="ab24bca2-5867-4980-b938-81ef970cfd24" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="FivePointGapBoundaryOverridesHighWeightedScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.LikertResponsesProduceDocumentedCategoryScores(answer: 1, score: 0)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="bb691522-6ce4-3a26-8b44-18f8dfd594ef">
+      <Execution id="55ecb784-f1f2-40d7-9f77-2019ef42b863" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="LikertResponsesProduceDocumentedCategoryScores" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.OnlyGradesElevenAndTwelveAreAccepted" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="7c3e4a3a-661c-3c30-d878-5cbe4f919451">
+      <Execution id="d401aff7-1feb-4443-aa3c-ee5b0c562954" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="OnlyGradesElevenAndTwelveAreAccepted" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.NewProgrammesMustHaveRulesAndMappingsBeforeActivation" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="79128748-2635-ef46-8ae9-373d4fa8ca4d">
+      <Execution id="23e75f5e-ac30-4d95-85d1-d7fc8b4815a3" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="NewProgrammesMustHaveRulesAndMappingsBeforeActivation" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.AllReportSectionsAndHtmlEncodingUseRealComputedResults" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="df4a94ea-b6aa-3024-ea3c-13cfc39091f9">
+      <Execution id="b0dc603b-e103-4c0a-959d-c8953e14171e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="AllReportSectionsAndHtmlEncodingUseRealComputedResults" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupCreatesMissingDatabaseAndPreservesChangesOnRepeat" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ee9d6b91-59c1-fcc3-1401-4645dd861b87">
+      <Execution id="87f7b5ba-8753-4e7e-8b00-6094133353bd" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.FirstRunSetupTests" name="EmbeddedSetupCreatesMissingDatabaseAndPreservesChangesOnRepeat" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.InvalidMaintenanceValuesAndDuplicateNamesAreRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="c369d863-19c3-7c9e-4da1-ba38b9294a24">
+      <Execution id="a9e12665-fa42-4598-966d-5456e96009d9" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="InvalidMaintenanceValuesAndDuplicateNamesAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.UnknownSubjectAndDuplicateResponseAreRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ec5a7c61-9f4c-410a-d8cd-c887e0619bb0">
+      <Execution id="bc371c79-e324-445d-85f1-51ac1022dd17" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="UnknownSubjectAndDuplicateResponseAreRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.InvalidOptionalEmailIsRejected" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="4b7634d8-b0eb-933d-057b-a80561731f8d">
+      <Execution id="ca43dc60-f944-4f25-a7e9-b10689a0a658" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="InvalidOptionalEmailIsRejected" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.ReportFilterTests.FacultyDegreeAndOutcomeFiltersUseSavedKeys" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="736d921c-64e3-a9ed-13e3-42bc62a4c87b">
+      <Execution id="f25d2856-42d9-44e5-ace1-9865b9396d0e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.ReportFilterTests" name="FacultyDegreeAndOutcomeFiltersUseSavedKeys" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.UserListingsNeverExposeHashes" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="6a1173fd-507d-bdc8-83e4-feffad866041">
+      <Execution id="8dff98fe-339c-4ae2-9362-d30d4328e075" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="UserListingsNeverExposeHashes" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PortableRuleTests.ExactReferenceScenariosAreComputedWithoutDatabase(id: 3, expected: PossibleMatch)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="2e89e20c-5593-57e8-e749-7866fd124a12">
+      <Execution id="b6a169f2-5a85-4b89-aa7a-eeb92df2d608" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PortableRuleTests" name="ExactReferenceScenariosAreComputedWithoutDatabase" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.GuestsCannotReadOtherLearnersOrAccessStaffServices" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="e5053100-9153-a926-468a-99e1f6d549f0">
+      <Execution id="5a16cdfe-8466-4af4-a6f0-170617cb0c38" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="GuestsCannotReadOtherLearnersOrAccessStaffServices" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.FailedMultiTableSaveRollsBackLearnerSessionAndAuditTogether" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="16f89e32-68fd-080f-b4d0-444c28f6cff9">
+      <Execution id="38604754-7e68-4755-ba5b-049bce8d453e" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="FailedMultiTableSaveRollsBackLearnerSessionAndAuditTogether" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;&quot;, province: &quot;Western Cape&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="26b82f94-e1ab-c2c0-1025-a0693b409d81">
+      <Execution id="68301bd2-e94c-406f-b119-b021f234c177" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="NewProfileRequiresSchoolAndValidProvince" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.SecurityTests.BadPasswordAndInjectionDoNotGrantAccess" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="03416d7d-683a-d18d-6a11-bce25ee01fcf">
+      <Execution id="8f5b81a1-7c83-4514-a1ce-b674b05a0f65" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.SecurityTests" name="BadPasswordAndInjectionDoNotGrantAccess" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.AdvisingTests.DuplicateSubjectsAreRejectedWithoutSavingAnything" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d5492c25-6b75-0500-809d-765accccf313">
+      <Execution id="7fe601b7-90f7-4233-8407-4e1db098ee34" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.AdvisingTests" name="DuplicateSubjectsAreRejectedWithoutSavingAnything" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;Sample school&quot;, province: &quot;&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="d75632a6-6b6c-0020-3d10-e0b30869e6b2">
+      <Execution id="a5c1f9b3-d7f3-462f-95d1-e69a734e47bf" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="NewProfileRequiresSchoolAndValidProvince" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.PersistenceAndReportTests.AdvisorySummaryExportsRealFilesWithAllRequiredSectionsAndEscapesHtml" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="ffb60426-5cca-2508-f562-655d37d4f9f8">
+      <Execution id="cbf470e7-4db4-40bf-8d9e-c895b06c6ac9" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.PersistenceAndReportTests" name="AdvisorySummaryExportsRealFilesWithAllRequiredSectionsAndEscapesHtml" />
+    </UnitTest>
+    <UnitTest name="FuturePath.Tests.CourseValidationTests.NewProfileRequiresSchoolAndValidProvince(school: &quot;Sample school&quot;, province: &quot;Unknown&quot;)" storage="/workspace/verify-course-package/futurepath_course_visualstudio/tests/futurepath.tests/bin/release/net10.0/futurepath.tests.dll" id="141b5849-59eb-3d22-3c0c-3a3d318fe0ac">
+      <Execution id="d526d29a-30ec-4d2a-b0f9-a1a01ae069af" />
+      <TestMethod codeBase="/workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FuturePath.Tests.CourseValidationTests" name="NewProfileRequiresSchoolAndValidProvince" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="3932120f-9225-1c36-d0b8-db63ca1ae24a" executionId="e04651f4-9fb9-4927-8eae-4752624f0131" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="328c1b85-e2d8-78e9-bb9d-fb5286a1ca1f" executionId="4e62dd67-26c8-4d80-8a7b-df6e017b6d3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2615cb0e-eceb-26f7-b31c-8316221ca9c5" executionId="e578ed2a-b1e7-4325-aede-3864b5c22a6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e5ff100-b9d0-64c7-01af-7e973650a7ab" executionId="18073ac1-644b-4066-8d33-bb2eba389779" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bd4c581b-6f8a-c879-10f1-ffc93646c66e" executionId="0d5ab129-8515-442f-9b29-10f882490e65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="141b5849-59eb-3d22-3c0c-3a3d318fe0ac" executionId="d526d29a-30ec-4d2a-b0f9-a1a01ae069af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb60426-5cca-2508-f562-655d37d4f9f8" executionId="cbf470e7-4db4-40bf-8d9e-c895b06c6ac9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e30118b-d7c5-01d0-b3a9-211c25dbd15e" executionId="a028ba7f-2ac2-482a-88c3-17bb73d78a49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8fcaab9b-adff-9f9c-94ba-cc6bf95e3d12" executionId="f3150a13-32b1-443a-8e37-8e423c381492" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03416d7d-683a-d18d-6a11-bce25ee01fcf" executionId="8f5b81a1-7c83-4514-a1ce-b674b05a0f65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5de3ccfa-e01d-3369-c1df-1109ae0ffb5f" executionId="e189d09f-029a-4c29-861c-6b8d49ed74aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c83dbab-2875-0fc1-e18e-596bc507b698" executionId="f17894ef-2e24-400f-80df-3e983be03c6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffd2046e-aa0e-16fd-e884-fb7d7e057cd8" executionId="849a48c1-9b0f-4f48-8b79-498013d8e030" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5dbf113-a66f-ebf6-33d5-72933c72173f" executionId="e6831172-076c-458b-8495-3463e770e402" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ce2b587-f599-5f7b-9475-8d07a8a915df" executionId="03a6f25a-ad4a-4e36-bec5-dccbdbd5f564" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b620ab2a-3f3b-9621-8e18-1bc3327028bc" executionId="977282ed-6840-4274-ac29-cb12067c40be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5492c25-6b75-0500-809d-765accccf313" executionId="7fe601b7-90f7-4233-8407-4e1db098ee34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a245894-e31a-e075-95f4-d8aeebfa7400" executionId="878b905b-89d0-4a74-b846-3bb5909bfdf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69635cdb-5e3d-d779-d633-1c6f573c435b" executionId="04a3c464-6eb7-4a94-b180-55e5290baa62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1b3ff07-c326-fb21-5df4-b05b0caa166a" executionId="457e6010-aa5a-4d5b-aa85-eb0d2b9ddf98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16f89e32-68fd-080f-b4d0-444c28f6cff9" executionId="38604754-7e68-4755-ba5b-049bce8d453e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="99007d42-23fb-7bc4-1d2f-53884698fcbb" executionId="5ed9c0e7-5c1a-4f61-97cc-4e1f34f52fbe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ca865f0-34eb-dd65-7781-2a7ab9282c25" executionId="65aa0229-c2e8-48b6-ad31-37ad479aafb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c779fd8-0c44-afb3-b517-12e78b47c301" executionId="bb95ab8a-6fca-4b32-92ec-c11ff354db89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c96ce954-ad07-579b-ac0e-f90bcf4dc1aa" executionId="0d4f202d-e7ec-4541-9d61-ccbc7f12c8a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75fb2b96-bf7c-59b5-e38f-afa4cf7583ca" executionId="594c7762-236b-4358-a5ac-4ecf8250e702" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="00aa7569-aab1-c567-fa24-0111b788df6a" executionId="cd3d982e-b579-4929-9b71-380906b30ebe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d730fef7-ee30-9901-f8c6-bfa889e0efb9" executionId="aa6e0256-1929-4a9c-add0-85cc6ddfa304" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c7b2123-8399-14af-2f28-1baf431ecd14" executionId="11b997e2-c47e-4d0b-8f7f-94911373a095" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b7634d8-b0eb-933d-057b-a80561731f8d" executionId="ca43dc60-f944-4f25-a7e9-b10689a0a658" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a1173fd-507d-bdc8-83e4-feffad866041" executionId="8dff98fe-339c-4ae2-9362-d30d4328e075" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85dc61c9-346c-a576-78a5-38f6ce538a05" executionId="2a9183e9-5dc3-48d6-8139-2c27398da3a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7e9cbed-3ba6-8ade-3829-cbd5074c5fb0" executionId="24ab5c37-21f7-4257-9ef5-9c6a17f4e73b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc5e371c-17ff-7641-9e69-3bd9d8d08e4c" executionId="ff04ba9a-6c4a-4413-a279-9e8da7f7cb82" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b221985-2e0e-0922-feb6-065d2a5d7422" executionId="154f0d7d-c147-406c-8fb2-e4beea78d47c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ecced65f-0659-cb04-4bfa-9f46c08528a1" executionId="76a37c5e-aeda-46b8-8819-921f36537ec7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee9d6b91-59c1-fcc3-1401-4645dd861b87" executionId="87f7b5ba-8753-4e7e-8b00-6094133353bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6da3b098-f7dc-e476-91cd-73341e08c2fb" executionId="d92c6046-71a6-495a-ad77-cd1528cffcbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5053100-9153-a926-468a-99e1f6d549f0" executionId="5a16cdfe-8466-4af4-a6f0-170617cb0c38" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="93396556-1c08-58e4-f7a9-abebc66d3f28" executionId="9821837b-f2d3-4eb8-ac28-4ed7434a08f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05eb65cf-15f6-6a5c-a11c-0abbafb212fe" executionId="697fab04-620e-4588-a222-a7d2ebc09bdf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b021ca3-e8b2-f0fd-b46e-431a14ad17d0" executionId="addf714e-e606-4dd4-b8d2-fee719ba0874" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc4965e3-a30b-5640-0c3d-ca7042e8967b" executionId="da820b31-48d4-45e4-b3c4-3e4400fd431e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d75632a6-6b6c-0020-3d10-e0b30869e6b2" executionId="a5c1f9b3-d7f3-462f-95d1-e69a734e47bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43cdf652-1eac-b09b-6b21-d611fd463758" executionId="817c2dfd-c77d-4239-9f06-7e2eed094e38" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79128748-2635-ef46-8ae9-373d4fa8ca4d" executionId="23e75f5e-ac30-4d95-85d1-d7fc8b4815a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec5a7c61-9f4c-410a-d8cd-c887e0619bb0" executionId="bc371c79-e324-445d-85f1-51ac1022dd17" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4374360f-54f6-c076-9449-6fa97c5e6ccb" executionId="e23e00c4-5bb2-4ebc-8bc5-30d7ab9b649a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f682d2e3-c9fe-e7ee-2f29-5ba7dcca4c5b" executionId="6f7f553f-7e00-4e9b-b018-1c2b3ca07828" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d3eb0e2-d4b4-3113-0f4d-db3ace64d950" executionId="82fa61b7-e167-4a36-be14-49951fdcd7e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6bb8f35-d8f1-3748-1c1f-abc6d99098f9" executionId="c734deff-e328-4c3c-92f8-67a3935997e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf172fb0-c110-de00-78d9-b776ea659981" executionId="890c269e-5309-432c-bdce-ce01f5676a0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a7f9a080-9baa-e3af-e87d-39ea7161d25f" executionId="06ee066b-2500-494b-a9ce-cdfbf09bb1b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0372338-bbd1-ee09-2d96-fc0c187ecfcf" executionId="ea1253de-c7d6-482c-a33c-7bc88acdb708" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a157b8cf-2348-8495-437c-9f4759cf99a0" executionId="b92664fb-187f-4f30-a206-413572b71894" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9ac7e0c-e053-b717-b0e7-47ce0a635abe" executionId="8462fbea-ec58-4ad1-ac87-1268f3bea58b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="360cc82e-7909-5d26-d5ed-71c96dc31fd7" executionId="2466dbbf-0429-4703-ac4c-ebd2f973f59d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f715c14-1e74-484a-f7e2-96b54f72c3c4" executionId="bf19fb96-b20e-44f8-8ad9-39a25afd025f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f6030e9-10c4-1a17-1f15-910ebf05dcfa" executionId="ab24bca2-5867-4980-b938-81ef970cfd24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d3eb58c9-3bcf-b513-c12e-855828936ee6" executionId="00f6fbac-e9cc-44ee-901a-9721d86a69db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49e2340d-714c-6e5d-39dc-159e62f25b0d" executionId="90e57169-cb26-4bba-8c09-48d73b837e5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c369d863-19c3-7c9e-4da1-ba38b9294a24" executionId="a9e12665-fa42-4598-966d-5456e96009d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="02263b18-0665-523a-7697-edadb7397e72" executionId="9ea3577c-a9a5-4eba-8fae-ca885e85d348" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b21c75d-81fe-f57b-002e-5088d77ff1b2" executionId="55a9eb47-a961-4392-b953-e69787a7a9b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebc74e5a-4c11-6e68-f1cf-38e8e883c2e5" executionId="45abf9b6-0875-48e8-8a5d-5732fd976d6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="086b3f3a-5a7b-4105-b9a8-7ab8e41c7897" executionId="098811b1-8e36-4740-9027-da39c9b42ea9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dcffa67c-fea2-97fa-0e3f-635f106b9b02" executionId="52c1dc74-a07a-4110-929a-5def94e9229a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87340d32-c9f5-d74a-3f84-8d917b6d9832" executionId="540ad7d9-b1b4-41a8-8e4c-2545280889b8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c755a50-0fd0-8adb-61e1-1a4b9af31b16" executionId="fe13ca05-8318-4443-8b78-929967299852" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7281c053-3a38-a23f-612b-f8f08895ca67" executionId="304af86a-ef35-43e6-8ca9-4cc49d339697" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8640a6d-c0e8-ab13-08e9-7da4516f3d09" executionId="7c86df51-6629-4caf-80ec-d7e02e814d46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c15abd3-f267-fc5b-9f00-68e4cba80c22" executionId="aaf5a291-5c2b-4844-93b0-46e40961df81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f757fedb-72fa-0de2-3adb-8ea1e3a7867d" executionId="8e0915e8-a75b-41d2-ab7d-b094d3f4cbab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26b82f94-e1ab-c2c0-1025-a0693b409d81" executionId="68301bd2-e94c-406f-b119-b021f234c177" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37ce8eaa-c208-cebb-41ef-d836be73ae59" executionId="31bea719-f6ac-4d10-9609-6618701c59ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec06bcb3-0034-c82a-52ed-7876dedd8e42" executionId="6b734374-ab6c-4013-b3b6-978ec6395abf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bb691522-6ce4-3a26-8b44-18f8dfd594ef" executionId="55ecb784-f1f2-40d7-9f77-2019ef42b863" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc827d29-11f7-a42e-0d5e-1089c43ca2b7" executionId="0618bd7e-2cc5-45ed-a2f2-05f3fc0d6466" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06aef454-d618-db95-fdd8-982acb3b26ef" executionId="10d5a622-8337-4084-91f5-f564b5bc6740" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="308fc912-94a0-081a-82ec-85ea4e22399b" executionId="ea61660b-b17f-4f1a-8a4b-7ca2a9b35727" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="16304350-9b89-2c6a-79ee-f3e0d42797c5" executionId="dc5a6752-1a47-4f3f-b0cb-1c50a77cab38" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb4be5a7-5132-6b49-4d33-bd3b9ce699ef" executionId="9c9ad4ec-b3ef-4cb9-ad60-7645c1349c55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ddf86ae-f5ec-d284-ffe0-e187a32d9aa6" executionId="db8a1126-1bde-40d1-a91f-abbfe7c0c4a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="daa09bbf-c5a1-53a4-21f0-b0d8187852ed" executionId="76f51070-21aa-4f33-a480-db11d8f068d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5d97380-a38d-f97f-662a-cebd95c01c25" executionId="0ebbe057-266a-4416-8f58-8b52a7a98aa2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d4759f8-a56a-ad0d-8aae-d6dc6b88f483" executionId="1e4d515b-7445-4416-81c6-018a01478f79" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f5f7ec2-bd57-7419-7dc7-a59737ce3854" executionId="d029fef2-9ede-4431-bee0-0ae452fd7937" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="736d921c-64e3-a9ed-13e3-42bc62a4c87b" executionId="f25d2856-42d9-44e5-ace1-9865b9396d0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="db10b79d-35f1-0e83-f0a3-1fcb36f2513e" executionId="03bee27f-e81d-42cd-98d5-6db9adb3239e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4e7cc4c6-62db-169e-708c-39914de62a67" executionId="f1bda3b5-22f2-4e1d-ae53-2f6fdbc1fde7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e307179-65d6-9697-af3b-9e75ac0b2b9a" executionId="212bcb7d-6f73-4169-9640-36caa8f287d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6eaf13bf-9fc6-b513-534a-bff8a662f48d" executionId="c0d590fb-a7ef-405f-ac2d-cab2390b5a8a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd9b23f4-02ee-584d-fc18-9211461f3980" executionId="e9f43969-1006-40b4-9587-5d5d2e91f51b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33b864dd-c6b9-4802-1715-8cc0e028624a" executionId="4f5da98e-e9ce-449c-93cd-4d4315fe2a87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a17f7ec-e61d-8f88-2f3b-f39beb51beb3" executionId="246af4cb-8787-4a58-a3cc-99f806ab54ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="48856d0f-ff0c-d96c-ebc1-06a59331b8e8" executionId="966723b0-a38a-4d66-8fb0-32fee8a4a569" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="491fa87f-147e-16cb-536c-a8f8cfb0725e" executionId="6301a4db-b323-4b06-8202-0f39d90e026c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7c3e4a3a-661c-3c30-d878-5cbe4f919451" executionId="d401aff7-1feb-4443-aa3c-ee5b0c562954" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e89e20c-5593-57e8-e749-7866fd124a12" executionId="b6a169f2-5a85-4b89-aa7a-eeb92df2d608" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea73173a-8d1f-39c4-cdf5-827e46d67e27" executionId="877f839f-ced0-4822-ae03-ad14d969bf55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="755d1565-6b26-7e1b-f977-dfd8ab04220c" executionId="20db0aca-29e8-4cff-a7a4-aa148b2e7c74" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df4a94ea-b6aa-3024-ea3c-13cfc39091f9" executionId="b0dc603b-e103-4c0a-959d-c8953e14171e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4bd703b-28e1-2123-7857-648e43fe2067" executionId="99bc6fb0-b06c-4b54-86bc-d9a4d2d8cd4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed09b0e3-bdd8-de54-39ea-b0da316497de" executionId="e45f7408-548a-4cb3-90c0-82cb86608a1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b72cc5b-a9c5-c94c-9957-ba78b467874a" executionId="793a07f2-2fd2-4d4e-b942-e1f46f8b6484" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="105" executed="52" passed="52" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.13)
+[xUnit.net 00:00:00.10]   Discovering: FuturePath.Tests
+[xUnit.net 00:00:00.16]   Discovered:  FuturePath.Tests
+[xUnit.net 00:00:00.20]   Starting:    FuturePath.Tests
+[xUnit.net 00:00:00.25]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.26]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.27]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.27]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.27]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.28]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.28]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.28]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.28]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.PersistenceAndReportTests.FollowUpReusesLearnerAndRetainsOriginalAssessment' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.BiologyNamesTheExactMathematicsGap' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.StoredAverageRuleAffectsNewAssessmentsOnly' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.AdvisorySummaryExportsRealFilesWithAllRequiredSectionsAndEscapesHtml' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.SeededOutcomesAndScoresMatchTheProductionEngineWithoutRewritingHistory' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.NewSessionRoundTripsAndDoesNotOverwriteHistoricalResults' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.InvalidMaintenanceValuesAndDuplicateNamesAreRejected' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.FundingOptOutDoesNotLeakFundingIntoSummary' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.NewProgrammesMustHaveRulesAndMappingsBeforeActivation' was skipped in the test run.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.33]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.PersistenceAndReportTests.DatabaseEnforcesDuplicateRangeAndForeignKeyIntegrity' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.BackupsAreConsistentAndDoNotOverwriteExistingFiles' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.FailedMultiTableSaveRollsBackLearnerSessionAndAuditTogether' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.AllThreeReportsUseSavedSessionsAndRespectDateFilters' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.AdminMaintainsRulesAndArchivedDegreesDisappearWithoutLosingHistory' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.FundingFiltersExpiredInactiveAndUnrelatedRecords' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.SeedMeetsPartBCountsAndIsRepeatable' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.RemovingLastQuestionOfActiveProgrammeCategoryIsPrevented' was skipped in the test run.
+Test 'FuturePath.Tests.PersistenceAndReportTests.FailedExportDoesNotCreateMetadataOrTruncateOtherReports' was skipped in the test run.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.AdvisingTests.UnknownSubjectAndDuplicateResponseAreRejected' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.MissingAnswersProduceMoreInformationAndNoFalseAlternatives' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.AnOrRequirementDoesNotRequireBothMathsAndLiteracy' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.CaseStudyScenariosAreComputedByRealEngine' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.AlternativesAcceptMathematicalLiteracyAndExcludeIneligibleDegrees' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.OnlyGradesElevenAndTwelveAreAccepted' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.BlankSubjectListIsRejected' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.DuplicateSubjectsAreRejectedWithoutSavingAnything' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.LowInterestCannotBeCalledStrongMatch' was skipped in the test run.
+[xUnit.net 00:00:00.34]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.AdvisingTests.BoundaryMarksAreAcceptedAndRoundTrip' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.OutOfRangeInterestScoresAreRejected' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.HealthSciencesExplainsBothMissingRequiredSubjects' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.AnonymousProfileIsSupported' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.DecimalMarksArePreserved' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.InvalidOptionalEmailIsRejected' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.MarksOutsideTheRangeAreRejected' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.UnconfirmedSubjectsProduceMoreInformationEvenWhenMarksPass' was skipped in the test run.
+Test 'FuturePath.Tests.AdvisingTests.WeightedScoresMatchDocumentedFormula' was skipped in the test run.
+[xUnit.net 00:00:00.35]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.36]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.36]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.AdvisingTests.MandatoryMarkBoundariesAreExplicit' was skipped in the test run.
+Test 'FuturePath.Tests.CourseValidationTests.PreviewDoesNotWriteAndSaveWritesExactlyOneAssessment' was skipped in the test run.
+Test 'FuturePath.Tests.CourseValidationTests.CrossFacultyDegreeIsRejectedWithoutSavingSession' was skipped in the test run.
+[xUnit.net 00:00:00.37]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.37]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.37]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.37]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.SecurityTests.GuestsCannotReadOtherLearnersOrAccessStaffServices' was skipped in the test run.
+Test 'FuturePath.Tests.SecurityTests.BadPasswordAndInjectionDoNotGrantAccess' was skipped in the test run.
+Test 'FuturePath.Tests.SecurityTests.UserListingsNeverExposeHashes' was skipped in the test run.
+Test 'FuturePath.Tests.SecurityTests.PasswordChangeVerifiesOldPasswordAndAppliesNewPassword' was skipped in the test run.
+[xUnit.net 00:00:00.37]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.SecurityTests.AdminCanCreateDisableAndResetAccounts' was skipped in the test run.
+[xUnit.net 00:00:00.38]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.38]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.38]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.38]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.38]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupRefusesAnUnrelatedDatabaseWithoutChangingItsTable' was skipped in the test run.
+Test 'FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupCreatesMissingDatabaseAndPreservesChangesOnRepeat' was skipped in the test run.
+Test 'FuturePath.Tests.ReportFilterTests.FacultyDegreeAndOutcomeFiltersUseSavedKeys' was skipped in the test run.
+Test 'FuturePath.Tests.ReportFilterTests.GapAndFundingSectionsDescribeTheirSavedAndCurrentSources' was skipped in the test run.
+Test 'FuturePath.Tests.ReportFilterTests.AdvisorReportListsIncludeInactiveHistoricalReferenceKeys' was skipped in the test run.
+[xUnit.net 00:00:00.48]       Requires Windows SQL Server LocalDB; no substitute database is used.
+Test 'FuturePath.Tests.SecurityTests.FifthFailureLocksAccountAndExpiryAllowsSuccessfulLogin' was skipped in the test run.
+[xUnit.net 00:00:00.48]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.48]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.49]       Requires Windows SQL Server LocalDB; no substitute database is used.
+[xUnit.net 00:00:00.49]   Finished:    FuturePath.Tests
+Test 'FuturePath.Tests.SecurityTests.LearnerCanReadOnlySessionsCreatedInCurrentWorkspace' was skipped in the test run.
+Test 'FuturePath.Tests.SecurityTests.AdvisorCanReadAndReportButCannotMaintainReferenceDataOrAccounts' was skipped in the test run.
+Test 'FuturePath.Tests.SecurityTests.CurrentAdminCannotBeDemotedOrDisabled' was skipped in the test run.
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7354033+00:00">
+        <Text>[xUnit.net 00:00:00.25]     FuturePath.Tests.PersistenceAndReportTests.FollowUpReusesLearnerAndRetainsOriginalAssessment [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7460003+00:00">
+        <Text>[xUnit.net 00:00:00.26]     FuturePath.Tests.AdvisingTests.BiologyNamesTheExactMathematicsGap [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7640939+00:00">
+        <Text>[xUnit.net 00:00:00.27]     FuturePath.Tests.PersistenceAndReportTests.StoredAverageRuleAffectsNewAssessmentsOnly [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7641422+00:00">
+        <Text>[xUnit.net 00:00:00.27]     FuturePath.Tests.PersistenceAndReportTests.AdvisorySummaryExportsRealFilesWithAllRequiredSectionsAndEscapesHtml [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7641510+00:00">
+        <Text>[xUnit.net 00:00:00.27]     FuturePath.Tests.PersistenceAndReportTests.SeededOutcomesAndScoresMatchTheProductionEngineWithoutRewritingHistory [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7703406+00:00">
+        <Text>[xUnit.net 00:00:00.28]     FuturePath.Tests.PersistenceAndReportTests.NewSessionRoundTripsAndDoesNotOverwriteHistoricalResults [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7703848+00:00">
+        <Text>[xUnit.net 00:00:00.28]     FuturePath.Tests.PersistenceAndReportTests.InvalidMaintenanceValuesAndDuplicateNamesAreRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7704010+00:00">
+        <Text>[xUnit.net 00:00:00.28]     FuturePath.Tests.PersistenceAndReportTests.FundingOptOutDoesNotLeakFundingIntoSummary [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.7704105+00:00">
+        <Text>[xUnit.net 00:00:00.28]     FuturePath.Tests.PersistenceAndReportTests.NewProgrammesMustHaveRulesAndMappingsBeforeActivation [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8833680+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.DatabaseEnforcesDuplicateRangeAndForeignKeyIntegrity [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8833819+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.BackupsAreConsistentAndDoNotOverwriteExistingFiles [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8833922+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.FailedMultiTableSaveRollsBackLearnerSessionAndAuditTogether [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834015+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.AllThreeReportsUseSavedSessionsAndRespectDateFilters [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834101+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.AdminMaintainsRulesAndArchivedDegreesDisappearWithoutLosingHistory [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834329+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.FundingFiltersExpiredInactiveAndUnrelatedRecords [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834430+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.SeedMeetsPartBCountsAndIsRepeatable [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834549+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.RemovingLastQuestionOfActiveProgrammeCategoryIsPrevented [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8834648+00:00">
+        <Text>[xUnit.net 00:00:00.33]     FuturePath.Tests.PersistenceAndReportTests.FailedExportDoesNotCreateMetadataOrTruncateOtherReports [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8839853+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.UnknownSubjectAndDuplicateResponseAreRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8839966+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.MissingAnswersProduceMoreInformationAndNoFalseAlternatives [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840058+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.AnOrRequirementDoesNotRequireBothMathsAndLiteracy [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840274+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.CaseStudyScenariosAreComputedByRealEngine [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840375+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.AlternativesAcceptMathematicalLiteracyAndExcludeIneligibleDegrees [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840464+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.OnlyGradesElevenAndTwelveAreAccepted [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840553+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.BlankSubjectListIsRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840644+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.DuplicateSubjectsAreRejectedWithoutSavingAnything [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8840737+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.LowInterestCannotBeCalledStrongMatch [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8856937+00:00">
+        <Text>[xUnit.net 00:00:00.34]     FuturePath.Tests.AdvisingTests.BoundaryMarksAreAcceptedAndRoundTrip [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857046+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.OutOfRangeInterestScoresAreRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857141+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.HealthSciencesExplainsBothMissingRequiredSubjects [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857236+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.AnonymousProfileIsSupported [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857328+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.DecimalMarksArePreserved [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857413+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.InvalidOptionalEmailIsRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857514+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.MarksOutsideTheRangeAreRejected [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857602+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.UnconfirmedSubjectsProduceMoreInformationEvenWhenMarksPass [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8857688+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.WeightedScoresMatchDocumentedFormula [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8862496+00:00">
+        <Text>[xUnit.net 00:00:00.35]     FuturePath.Tests.AdvisingTests.MandatoryMarkBoundariesAreExplicit [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8862632+00:00">
+        <Text>[xUnit.net 00:00:00.36]     FuturePath.Tests.CourseValidationTests.PreviewDoesNotWriteAndSaveWritesExactlyOneAssessment [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8862723+00:00">
+        <Text>[xUnit.net 00:00:00.36]     FuturePath.Tests.CourseValidationTests.CrossFacultyDegreeIsRejectedWithoutSavingSession [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8865804+00:00">
+        <Text>[xUnit.net 00:00:00.37]     FuturePath.Tests.SecurityTests.GuestsCannotReadOtherLearnersOrAccessStaffServices [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8865917+00:00">
+        <Text>[xUnit.net 00:00:00.37]     FuturePath.Tests.SecurityTests.BadPasswordAndInjectionDoNotGrantAccess [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8866014+00:00">
+        <Text>[xUnit.net 00:00:00.37]     FuturePath.Tests.SecurityTests.UserListingsNeverExposeHashes [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8866145+00:00">
+        <Text>[xUnit.net 00:00:00.37]     FuturePath.Tests.SecurityTests.PasswordChangeVerifiesOldPasswordAndAppliesNewPassword [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8869270+00:00">
+        <Text>[xUnit.net 00:00:00.37]     FuturePath.Tests.SecurityTests.AdminCanCreateDisableAndResetAccounts [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8877756+00:00">
+        <Text>[xUnit.net 00:00:00.38]     FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupRefusesAnUnrelatedDatabaseWithoutChangingItsTable [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8877973+00:00">
+        <Text>[xUnit.net 00:00:00.38]     FuturePath.Tests.FirstRunSetupTests.EmbeddedSetupCreatesMissingDatabaseAndPreservesChangesOnRepeat [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8878078+00:00">
+        <Text>[xUnit.net 00:00:00.38]     FuturePath.Tests.ReportFilterTests.FacultyDegreeAndOutcomeFiltersUseSavedKeys [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8878174+00:00">
+        <Text>[xUnit.net 00:00:00.38]     FuturePath.Tests.ReportFilterTests.GapAndFundingSectionsDescribeTheirSavedAndCurrentSources [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.8878271+00:00">
+        <Text>[xUnit.net 00:00:00.38]     FuturePath.Tests.ReportFilterTests.AdvisorReportListsIncludeInactiveHistoricalReferenceKeys [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.9711215+00:00">
+        <Text>[xUnit.net 00:00:00.48]     FuturePath.Tests.SecurityTests.FifthFailureLocksAccountAndExpiryAllowsSuccessfulLogin [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.9732706+00:00">
+        <Text>[xUnit.net 00:00:00.48]     FuturePath.Tests.SecurityTests.LearnerCanReadOnlySessionsCreatedInCurrentWorkspace [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.9732832+00:00">
+        <Text>[xUnit.net 00:00:00.48]     FuturePath.Tests.SecurityTests.AdvisorCanReadAndReportButCannotMaintainReferenceDataOrAccounts [SKIP]</Text>
+      </RunInfo>
+      <RunInfo computerName="8128b7ce6a31" outcome="Warning" timestamp="2026-10-18T14:10:59.9739615+00:00">
+        <Text>[xUnit.net 00:00:00.49]     FuturePath.Tests.SecurityTests.CurrentAdminCannotBeDemotedOrDisabled [SKIP]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

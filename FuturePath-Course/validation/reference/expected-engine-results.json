@@ -1,0 +1,756 @@
+{
+  "1": {
+    "Selected": {
+      "DegreeId": 1,
+      "Programme": "BCom Information Systems",
+      "Faculty": "Commerce",
+      "Outcome": 0,
+      "SubjectScore": 100,
+      "MarkScore": 100,
+      "InterestScore": 93.75,
+      "PreferenceScore": 100,
+      "OverallScore": 98.44,
+      "Explanation": "Met: English 72% (minimum 60%).\nMet: Mathematics 70% (minimum 60%).\nInterest alignment: 93.75%. Your interests align with this study area.\nHelpful, not compulsory: Computer Applications Technology at 50%. Sample requirement. Verify official entry criteria.",
+      "OutcomeText": "Strong Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 2,
+        "Programme": "BCom Accounting",
+        "Faculty": "Commerce",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 88.16,
+        "PreferenceScore": 100,
+        "OverallScore": 97.04,
+        "Explanation": "Met: English 72% (minimum 60%).\nMet: Mathematics 70% (minimum 60%).\nMet: Accounting 74% (minimum 60%).\nInterest alignment: 88.16%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 82.89,
+        "PreferenceScore": 100,
+        "OverallScore": 95.72,
+        "Explanation": "Met: English 72% (minimum 55%).\nMet: Mathematics 70% (minimum 50%).\nInterest alignment: 82.89%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 4,
+        "Programme": "BSc Computer Science",
+        "Faculty": "Science",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 80.21,
+        "PreferenceScore": 0,
+        "OverallScore": 90.05,
+        "Explanation": "Met: English 72% (minimum 60%).\nMet: Mathematics 70% (minimum 70%).\nInterest alignment: 80.21%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 41.30,
+        "PreferenceScore": 0,
+        "OverallScore": 80.33,
+        "Explanation": "Met: English 72% (minimum 60%).\nMet: Mathematics 70% (minimum 50%).\nInterest alignment: 41.3%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 40,
+        "PreferenceScore": 0,
+        "OverallScore": 80.00,
+        "Explanation": "Met: English 72% (minimum 60%).\nMet: Mathematics 70% (minimum 50%).\nInterest alignment: 40%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 75,
+      "Helping People": 50,
+      "Technology": 100,
+      "Science and Research": 25,
+      "Reading, Writing and Analysis": 50,
+      "Business and Finance": 100,
+      "Design Thinking": 50,
+      "Society and Politics": 25
+    }
+  },
+  "2": {
+    "Selected": {
+      "DegreeId": 4,
+      "Programme": "BSc Computer Science",
+      "Faculty": "Science",
+      "Outcome": 2,
+      "SubjectScore": 50,
+      "MarkScore": 50,
+      "InterestScore": 85.42,
+      "PreferenceScore": 100,
+      "OverallScore": 61.35,
+      "Explanation": "Met: English 65% (minimum 60%).\nRequired: Mathematics at 70%. No mark was supplied. This required subject is missing from your confirmed subject list.\nInterest alignment: 85.42%. Your interests align with this study area.",
+      "OutcomeText": "Not Currently Eligible"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 56.58,
+        "PreferenceScore": 0,
+        "OverallScore": 84.14,
+        "Explanation": "Met: English 65% (minimum 55%).\nMet: Mathematical Literacy 78% (minimum 60%).\nInterest alignment: 56.58%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 9,
+        "Programme": "Law-related qualification",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 36.84,
+        "PreferenceScore": 0,
+        "OverallScore": 79.21,
+        "Explanation": "Met: English 65% (minimum 65%).\nMet: Mathematical Literacy 78% (minimum 60%).\nInterest alignment: 36.84%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 35.87,
+        "PreferenceScore": 0,
+        "OverallScore": 78.97,
+        "Explanation": "Met: English 65% (minimum 60%).\nMet: Mathematical Literacy 78% (minimum 60%).\nInterest alignment: 35.87%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 32,
+        "PreferenceScore": 0,
+        "OverallScore": 78.00,
+        "Explanation": "Met: English 65% (minimum 60%).\nMet: Mathematical Literacy 78% (minimum 60%).\nInterest alignment: 32%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 75,
+      "Helping People": 25,
+      "Technology": 100,
+      "Science and Research": 0,
+      "Reading, Writing and Analysis": 50,
+      "Business and Finance": 50,
+      "Design Thinking": 75,
+      "Society and Politics": 25
+    }
+  },
+  "3": {
+    "Selected": {
+      "DegreeId": 5,
+      "Programme": "BSc Biological Sciences",
+      "Faculty": "Science",
+      "Outcome": 1,
+      "SubjectScore": 100,
+      "MarkScore": 99.17,
+      "InterestScore": 81.58,
+      "PreferenceScore": 100,
+      "OverallScore": 95.10,
+      "Explanation": "Met: English 80% (minimum 60%).\nImprove Mathematics: 58% entered; 60% required (gap 2 percentage points).\nMet: Physical Sciences 62% (minimum 60%).\nMet: Life Sciences 70% (minimum 60%).\nInterest alignment: 81.58%. Your interests align with this study area.",
+      "OutcomeText": "Possible Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 66.30,
+        "PreferenceScore": 0,
+        "OverallScore": 86.58,
+        "Explanation": "Met: English 80% (minimum 60%).\nMet: Mathematics 58% (minimum 50%).\nInterest alignment: 66.3%. Your interests align with this study area.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 65,
+        "PreferenceScore": 0,
+        "OverallScore": 86.25,
+        "Explanation": "Met: English 80% (minimum 60%).\nMet: Mathematics 58% (minimum 50%).\nInterest alignment: 65%. Your interests align with this study area.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 9,
+        "Programme": "Law-related qualification",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 61.84,
+        "PreferenceScore": 0,
+        "OverallScore": 85.46,
+        "Explanation": "Met: English 80% (minimum 65%).\nMet: Mathematics 58% (minimum 50%).\nInterest alignment: 61.84%. Your interests align with this study area.\nHelpful, not compulsory: History at 55%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 10,
+        "Programme": "Bachelor of Health Sciences",
+        "Faculty": "Health Sciences",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 99.17,
+        "InterestScore": 79.55,
+        "PreferenceScore": 0,
+        "OverallScore": 89.59,
+        "Explanation": "Met: English 80% (minimum 60%).\nImprove Mathematics: 58% entered; 60% required (gap 2 percentage points).\nMet: Physical Sciences 62% (minimum 60%).\nMet: Life Sciences 70% (minimum 60%).\nInterest alignment: 79.55%. Your interests align with this study area.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 28.95,
+        "PreferenceScore": 0,
+        "OverallScore": 77.24,
+        "Explanation": "Met: English 80% (minimum 55%).\nMet: Mathematics 58% (minimum 50%).\nInterest alignment: 28.95%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 50,
+      "Helping People": 75,
+      "Technology": 25,
+      "Science and Research": 100,
+      "Reading, Writing and Analysis": 75,
+      "Business and Finance": 0,
+      "Design Thinking": 25,
+      "Society and Politics": 50
+    }
+  },
+  "4": {
+    "Selected": {
+      "DegreeId": 6,
+      "Programme": "BSc Engineering (Mechanical Engineering)",
+      "Faculty": "Engineering",
+      "Outcome": 0,
+      "SubjectScore": 100,
+      "MarkScore": 100,
+      "InterestScore": 87.5,
+      "PreferenceScore": 100,
+      "OverallScore": 96.88,
+      "Explanation": "Met: English 70% (minimum 60%).\nMet: Mathematics 75% (minimum 70%).\nMet: Physical Sciences 78% (minimum 70%).\nInterest alignment: 87.5%. Your interests align with this study area.",
+      "OutcomeText": "Strong Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 4,
+        "Programme": "BSc Computer Science",
+        "Faculty": "Science",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 79.17,
+        "PreferenceScore": 0,
+        "OverallScore": 89.79,
+        "Explanation": "Met: English 70% (minimum 60%).\nMet: Mathematics 75% (minimum 70%).\nInterest alignment: 79.17%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 1,
+        "Programme": "BCom Information Systems",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 54.17,
+        "PreferenceScore": 0,
+        "OverallScore": 83.54,
+        "Explanation": "Met: English 70% (minimum 60%).\nMet: Mathematics 75% (minimum 60%).\nInterest alignment: 54.17%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: Computer Applications Technology at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 44.74,
+        "PreferenceScore": 0,
+        "OverallScore": 81.18,
+        "Explanation": "Met: English 70% (minimum 55%).\nMet: Mathematics 75% (minimum 50%).\nInterest alignment: 44.74%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 16.30,
+        "PreferenceScore": 0,
+        "OverallScore": 74.08,
+        "Explanation": "Met: English 70% (minimum 60%).\nMet: Mathematics 75% (minimum 50%).\nInterest alignment: 16.3%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 15,
+        "PreferenceScore": 0,
+        "OverallScore": 73.75,
+        "Explanation": "Met: English 70% (minimum 60%).\nMet: Mathematics 75% (minimum 50%).\nInterest alignment: 15%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 100,
+      "Helping People": 25,
+      "Technology": 50,
+      "Science and Research": 75,
+      "Reading, Writing and Analysis": 25,
+      "Business and Finance": 25,
+      "Design Thinking": 100,
+      "Society and Politics": 0
+    }
+  },
+  "5": {
+    "Selected": {
+      "DegreeId": 10,
+      "Programme": "Bachelor of Health Sciences",
+      "Faculty": "Health Sciences",
+      "Outcome": 2,
+      "SubjectScore": 50,
+      "MarkScore": 50,
+      "InterestScore": 68.18,
+      "PreferenceScore": 100,
+      "OverallScore": 57.05,
+      "Explanation": "Met: English 82% (minimum 60%).\nRequired: Mathematics at 60%. No mark was supplied. This required subject is missing from your confirmed subject list.\nRequired: Physical Sciences at 60%. No mark was supplied. This required subject is missing from your confirmed subject list.\nMet: Life Sciences 68% (minimum 60%).\nInterest alignment: 68.18%. Your interests align with this study area.",
+      "OutcomeText": "Not Currently Eligible"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 73,
+        "PreferenceScore": 0,
+        "OverallScore": 88.25,
+        "Explanation": "Met: English 82% (minimum 60%).\nMet: Mathematical Literacy 76% (minimum 60%).\nInterest alignment: 73%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 71.74,
+        "PreferenceScore": 0,
+        "OverallScore": 87.93,
+        "Explanation": "Met: English 82% (minimum 60%).\nMet: Mathematical Literacy 76% (minimum 60%).\nInterest alignment: 71.74%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 9,
+        "Programme": "Law-related qualification",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 61.84,
+        "PreferenceScore": 0,
+        "OverallScore": 85.46,
+        "Explanation": "Met: English 82% (minimum 65%).\nMet: Mathematical Literacy 76% (minimum 60%).\nInterest alignment: 61.84%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 35.53,
+        "PreferenceScore": 0,
+        "OverallScore": 78.88,
+        "Explanation": "Met: English 82% (minimum 55%).\nMet: Mathematical Literacy 76% (minimum 60%).\nInterest alignment: 35.53%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 25,
+      "Helping People": 100,
+      "Technology": 0,
+      "Science and Research": 50,
+      "Reading, Writing and Analysis": 75,
+      "Business and Finance": 25,
+      "Design Thinking": 50,
+      "Society and Politics": 50
+    }
+  },
+  "6": {
+    "Selected": {
+      "DegreeId": 2,
+      "Programme": "BCom Accounting",
+      "Faculty": "Commerce",
+      "Outcome": 1,
+      "SubjectScore": 100,
+      "MarkScore": 97.22,
+      "InterestScore": 100,
+      "PreferenceScore": 100,
+      "OverallScore": 99.03,
+      "Explanation": "Met: English 68% (minimum 60%).\nMet: Mathematics 62% (minimum 60%).\nImprove Accounting: 55% entered; 60% required (gap 5 percentage points).\nInterest alignment: 100%. Your interests align with this study area.",
+      "OutcomeText": "Possible Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 89.47,
+        "PreferenceScore": 100,
+        "OverallScore": 97.37,
+        "Explanation": "Met: English 68% (minimum 55%).\nMet: Mathematics 62% (minimum 50%).\nInterest alignment: 89.47%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 1,
+        "Programme": "BCom Information Systems",
+        "Faculty": "Commerce",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 68.75,
+        "PreferenceScore": 100,
+        "OverallScore": 92.19,
+        "Explanation": "Met: English 68% (minimum 60%).\nMet: Mathematics 62% (minimum 60%).\nInterest alignment: 68.75%. Your interests align with this study area.\nHelpful, not compulsory: Computer Applications Technology at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 41.30,
+        "PreferenceScore": 0,
+        "OverallScore": 80.33,
+        "Explanation": "Met: English 68% (minimum 60%).\nMet: Mathematics 62% (minimum 50%).\nInterest alignment: 41.3%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 40,
+        "PreferenceScore": 0,
+        "OverallScore": 80.00,
+        "Explanation": "Met: English 68% (minimum 60%).\nMet: Mathematics 62% (minimum 50%).\nInterest alignment: 40%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 9,
+        "Programme": "Law-related qualification",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 36.84,
+        "PreferenceScore": 0,
+        "OverallScore": 79.21,
+        "Explanation": "Met: English 68% (minimum 65%).\nMet: Mathematics 62% (minimum 50%).\nInterest alignment: 36.84%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 55%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 100,
+      "Helping People": 50,
+      "Technology": 25,
+      "Science and Research": 0,
+      "Reading, Writing and Analysis": 50,
+      "Business and Finance": 100,
+      "Design Thinking": 25,
+      "Society and Politics": 25
+    }
+  },
+  "7": {
+    "Selected": {
+      "DegreeId": 4,
+      "Programme": "BSc Computer Science",
+      "Faculty": "Science",
+      "Outcome": 1,
+      "SubjectScore": 100,
+      "MarkScore": 100,
+      "InterestScore": 25,
+      "PreferenceScore": 100,
+      "OverallScore": 81.25,
+      "Explanation": "Met: English 66% (minimum 60%).\nMet: Mathematics 72% (minimum 70%).\nInterest alignment: 25%. Consider alternatives that align more closely with your interests.",
+      "OutcomeText": "Possible Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 66,
+        "PreferenceScore": 0,
+        "OverallScore": 86.50,
+        "Explanation": "Met: English 66% (minimum 60%).\nMet: Mathematics 72% (minimum 50%).\nInterest alignment: 66%. Your interests align with this study area.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 60.87,
+        "PreferenceScore": 0,
+        "OverallScore": 85.22,
+        "Explanation": "Met: English 66% (minimum 60%).\nMet: Mathematics 72% (minimum 50%).\nInterest alignment: 60.87%. Your interests align with this study area.\nHelpful, not compulsory: History at 50%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 9,
+        "Programme": "Law-related qualification",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 50,
+        "PreferenceScore": 0,
+        "OverallScore": 82.50,
+        "Explanation": "Met: English 66% (minimum 65%).\nMet: Mathematics 72% (minimum 50%).\nInterest alignment: 50%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: History at 55%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 6,
+        "Programme": "BSc Engineering (Mechanical Engineering)",
+        "Faculty": "Engineering",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 99.05,
+        "InterestScore": 30.36,
+        "PreferenceScore": 0,
+        "OverallScore": 77.26,
+        "Explanation": "Met: English 66% (minimum 60%).\nMet: Mathematics 72% (minimum 70%).\nImprove Physical Sciences: 68% entered; 70% required (gap 2 percentage points).\nInterest alignment: 30.36%. Consider alternatives that align more closely with your interests.\nHelpful, not compulsory: Engineering Graphics and Design at 60%. Sample requirement. Verify official entry criteria.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 17.11,
+        "PreferenceScore": 0,
+        "OverallScore": 74.28,
+        "Explanation": "Met: English 66% (minimum 55%).\nMet: Mathematics 72% (minimum 50%).\nInterest alignment: 17.11%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 25,
+      "Helping People": 100,
+      "Technology": 25,
+      "Science and Research": 50,
+      "Reading, Writing and Analysis": 50,
+      "Business and Finance": 0,
+      "Design Thinking": 25,
+      "Society and Politics": 50
+    }
+  },
+  "8": {
+    "Selected": {
+      "DegreeId": 9,
+      "Programme": "Law-related qualification",
+      "Faculty": "Humanities",
+      "Outcome": 0,
+      "SubjectScore": 100,
+      "MarkScore": 100,
+      "InterestScore": 100,
+      "PreferenceScore": 100,
+      "OverallScore": 100.00,
+      "Explanation": "Met: English 74% (minimum 65%).\nMet: Mathematical Literacy 72% (minimum 60%).\nInterest alignment: 100%. Your interests align with this study area.",
+      "OutcomeText": "Strong Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 7,
+        "Programme": "BA Humanities",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 94.57,
+        "PreferenceScore": 100,
+        "OverallScore": 98.64,
+        "Explanation": "Met: English 74% (minimum 60%).\nMet: Mathematical Literacy 72% (minimum 60%).\nInterest alignment: 94.57%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 0,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 92,
+        "PreferenceScore": 100,
+        "OverallScore": 98.00,
+        "Explanation": "Met: English 74% (minimum 60%).\nMet: Mathematical Literacy 72% (minimum 60%).\nInterest alignment: 92%. Your interests align with this study area.",
+        "OutcomeText": "Strong Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 40.79,
+        "PreferenceScore": 0,
+        "OverallScore": 80.20,
+        "Explanation": "Met: English 74% (minimum 55%).\nMet: Mathematical Literacy 72% (minimum 60%).\nInterest alignment: 40.79%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 25,
+      "Helping People": 75,
+      "Technology": 0,
+      "Science and Research": 25,
+      "Reading, Writing and Analysis": 100,
+      "Business and Finance": 25,
+      "Design Thinking": 25,
+      "Society and Politics": 100
+    }
+  },
+  "9": {
+    "Selected": {
+      "DegreeId": 5,
+      "Programme": "BSc Biological Sciences",
+      "Faculty": "Science",
+      "Outcome": 3,
+      "SubjectScore": 25,
+      "MarkScore": 25,
+      "InterestScore": 0,
+      "PreferenceScore": 100,
+      "OverallScore": 22.50,
+      "Explanation": "Met: English 63% (minimum 60%).\nRequired: Mathematics at 60%. No mark was supplied. Complete your subject list to confirm this requirement.\nRequired: Physical Sciences at 60%. No mark was supplied. Complete your subject list to confirm this requirement.\nRequired: Life Sciences at 60%. No mark was supplied. Complete your subject list to confirm this requirement.\nConfirm that all current subjects and marks have been captured.\nComplete the interest questionnaire (8 unanswered active questions).\nInterest alignment: 0%. Consider alternatives that align more closely with your interests.",
+      "OutcomeText": "More Information Needed"
+    },
+    "Alternatives": [],
+    "InterestScores": {}
+  },
+  "10": {
+    "Selected": {
+      "DegreeId": 7,
+      "Programme": "BA Humanities",
+      "Faculty": "Humanities",
+      "Outcome": 1,
+      "SubjectScore": 100,
+      "MarkScore": 98.33,
+      "InterestScore": 94.57,
+      "PreferenceScore": 100,
+      "OverallScore": 98.06,
+      "Explanation": "Improve English: 58% entered; 60% required (gap 2 percentage points).\nMet: Mathematical Literacy 65% (minimum 60%).\nInterest alignment: 94.57%. Your interests align with this study area.",
+      "OutcomeText": "Possible Match"
+    },
+    "Alternatives": [
+      {
+        "DegreeId": 8,
+        "Programme": "BSocSci",
+        "Faculty": "Humanities",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 98.33,
+        "InterestScore": 92,
+        "PreferenceScore": 100,
+        "OverallScore": 97.42,
+        "Explanation": "Improve English: 58% entered; 60% required (gap 2 percentage points).\nMet: Mathematical Literacy 65% (minimum 60%).\nInterest alignment: 92%. Your interests align with this study area.",
+        "OutcomeText": "Possible Match"
+      },
+      {
+        "DegreeId": 3,
+        "Programme": "BCom General",
+        "Faculty": "Commerce",
+        "Outcome": 1,
+        "SubjectScore": 100,
+        "MarkScore": 100,
+        "InterestScore": 40.79,
+        "PreferenceScore": 0,
+        "OverallScore": 80.20,
+        "Explanation": "Met: English 58% (minimum 55%).\nMet: Mathematical Literacy 65% (minimum 60%).\nInterest alignment: 40.79%. Consider alternatives that align more closely with your interests.",
+        "OutcomeText": "Possible Match"
+      }
+    ],
+    "InterestScores": {
+      "Numeracy": 25,
+      "Helping People": 75,
+      "Technology": 0,
+      "Science and Research": 25,
+      "Reading, Writing and Analysis": 100,
+      "Business and Finance": 25,
+      "Design Thinking": 25,
+      "Society and Politics": 100
+    }
+  }
+}

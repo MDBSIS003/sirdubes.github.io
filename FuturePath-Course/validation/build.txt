@@ -1,0 +1,11 @@
+  FuturePath.Business -> /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Business/bin/Release/net10.0/FuturePath.Business.dll
+  FuturePath.Data -> /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Data/bin/Release/net10.0/FuturePath.Data.dll
+  FuturePath.Tests -> /workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/bin/Release/net10.0/FuturePath.Tests.dll
+  FuturePath.Desktop -> /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Desktop/bin/Release/net10.0-windows/FuturePath.dll
+  FuturePath.Desktop.Tests -> /workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Desktop.Tests/bin/Release/net10.0-windows/FuturePath.Desktop.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.07

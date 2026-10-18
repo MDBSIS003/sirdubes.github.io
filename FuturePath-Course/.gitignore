@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.db
+*.db-shm
+*.db-wal
+artifacts/
+TestResults/
+
+# Local SQL Server data and backups are never source artifacts.
+*.mdf
+*.ldf
+*.bak
+downloads/

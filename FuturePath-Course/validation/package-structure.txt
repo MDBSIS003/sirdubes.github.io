@@ -1,0 +1,1 @@
+ZIP CRC check passed. Source/project/SQL/test/configuration equality checked for 140 files. All 29 Designer files have correct DependentUpon nesting. No bin/obj/database files are included. Original demo seed is byte-for-byte unchanged.

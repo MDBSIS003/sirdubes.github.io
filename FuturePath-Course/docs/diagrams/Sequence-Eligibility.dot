@@ -1,0 +1,14 @@
+digraph Eligibility { graph [rankdir=LR,bgcolor="white",pad=.3,nodesep=.35,ranksep=.55]; node [shape=box,style="rounded,filled",fillcolor="#edf5f7",fontname="DejaVu Sans",fontsize=10,color="#17364a"]; edge [fontname="DejaVu Sans",fontsize=9,color="#17766b"];
+Learner -> DegreeForm[label="1. Next"];
+DegreeForm -> Main[label="2. GoNext / SaveInput"];
+Main -> Controller[label="3. Preview(draft)"];
+Controller -> Validation[label="4. validate profile / marks / answers / degree"];
+Controller -> Engine[label="5. Assess / Evaluate / alternatives"];
+Engine -> Result[label="6. explained preview (no write)"];
+Learner -> FundingForm[label="7. Save and view summary"];
+FundingForm -> Controller[label="8. Assess(draft)"];
+Controller -> DAL[label="9. SaveSession"];
+DAL -> LocalDB[label="10. transaction: inputs + results + audit / commit"];
+LocalDB -> Summary[label="11. read saved summary"];
+label="Implementation interaction order; draft preview and atomic save are separate";
+}

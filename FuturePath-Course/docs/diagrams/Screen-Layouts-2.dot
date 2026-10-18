@@ -1,0 +1,9 @@
+digraph Screens { graph [rankdir=LR,bgcolor="white",pad=.3,nodesep=.35,ranksep=.55]; node [shape=box,style="rounded,filled",fillcolor="#edf5f7",fontname="DejaVu Sans",fontsize=10,color="#17364a"]; edge [fontname="DejaVu Sans",fontsize=9,color="#17766b"];
+node[shape=record];
+Degree[label="{4. Degree|Faculty *|Degree * (filtered)|Stored requirements|Back | Next | End}"];
+Result[label="{5. Results|Text + colour outcome|Component/total score|Reasons / gaps|Up to five ranked alternatives|Back | Next | End}"];
+Funding[label="{6. Funding|Opt-in checkbox|Linked open opportunities|Eligibility / documents / closing date / contact|Back | Save and view summary | End}"];
+Summary[label="{7. Saved summary|Read-only saved report|Save HTML / text|Print / PDF|Back disabled | Finish | End}"];
+Degree -> Result -> Funding -> Summary;
+label="Illustrative wireframes; one visible learner step inside the MDI parent.";
+}

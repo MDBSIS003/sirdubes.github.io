@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Business/FuturePath.Business.csproj (in 287 ms).
+  Restored /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Data/FuturePath.Data.csproj (in 367 ms).
+  Restored /workspace/verify-course-package/FuturePath_Course_VisualStudio/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 365 ms).
+  Restored /workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Desktop.Tests/FuturePath.Desktop.Tests.csproj (in 57 ms).
+  Restored /workspace/verify-course-package/FuturePath_Course_VisualStudio/tests/FuturePath.Tests/FuturePath.Tests.csproj (in 378 ms).

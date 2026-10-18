@@ -1,0 +1,21 @@
+digraph Navigation { graph [rankdir=LR,bgcolor="white",pad=.3,nodesep=.35,ranksep=.55]; node [shape=box,style="rounded,filled",fillcolor="#edf5f7",fontname="DejaVu Sans",fontsize=10,color="#17364a"]; edge [fontname="DejaVu Sans",fontsize=9,color="#17766b"];
+Home[label="frmWelcome\nOverview"];
+Profile[label="1. frmLearnerProfile"];
+Marks[label="2. frmSubjectMarks"];
+Interests[label="3. frmInterestQuestionnaire"];
+Degree[label="4. frmDegreeEligibility"];
+Result[label="5. frmAdvisoryResults\npreview only"];
+Funding[label="6. frmFundingOptions\nSave assessment"];
+Summary[label="7. frmAdvisorySummary\nexport / print"];
+Home -> Profile -> Marks -> Interests -> Degree -> Result -> Funding -> Summary;
+Summary -> Home[label="Finish"];
+Profile -> Home[label="End (confirm)",style=dashed];
+Home -> Login[label="Staff sign in"];
+Login -> Sessions[label="Advisor / Admin"];
+Sessions -> Profile[label="Follow-up"];
+Login -> Reports;
+Login -> Admin[label="Admin only"];
+Reports[label="frmReports\nfilters / report preview"];
+Admin[label="frmAdminMaintenance\nnamed editors / audit / backup"];
+label="One MDI parent; one visible learner child; Back retains controls";
+}
