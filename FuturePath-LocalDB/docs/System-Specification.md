@@ -65,7 +65,7 @@ The main window hosts all learner/staff/report/editor UserControls. AdvisingPage
 
 Segoe UI at 10pt is the default, with larger headings. A navy sidebar identifies navigation; teal buttons indicate the primary action. White cards on a light background group related information. Labels appear above inputs, required fields use `*`, dates use Windows date controls, marks use numeric controls, and reference fields use dropdown lookups. Outcomes are always labelled in text; colour alone does not convey meaning.
 
-Forms are DPI-aware, have a minimum size, and scroll when content exceeds the available space. Standard controls support keyboard focus and Tab navigation. Inputs have accessible names. Dialogs use consistent Save/Cancel actions. Failed validations explain the field or rule that needs attention; destructive navigation and subject removal use confirmations. Saved assessments become read-only, and follow-ups preserve the previous session.
+Forms/pages declare a shared 96-DPI design baseline with PerMonitorV2 awareness. Layout is suspended during construction, including dynamically opened pages and retained learner steps. The sidebar follows monitor DPI; headers/footer use automatic height; cards and labels fit the viewport up to a reading-width cap. The initial main window fits the monitor working area and pages scroll when content exceeds the available space. Standard controls support keyboard focus and Tab navigation. Inputs have accessible names. Dialogs use consistent Save/Cancel actions. Failed validations explain the field or rule that needs attention; destructive navigation and subject removal use confirmations. Saved assessments become read-only, and follow-ups preserve the previous session.
 
 ### 2.3 Detailed screen layouts and data
 
@@ -465,7 +465,7 @@ Development: .NET 10 SDK and Windows desktop development tooling on Windows 10/1
 
 The portable suite executes shared profile/mark/question validation, eligibility boundaries, exact Part B outcomes, alternative ranking, report composition/encoding, password hashing and guest entry restrictions. The ported Windows LocalDB suite covers real funding queries, persistence, exports/metadata, database constraints, roles, login failures/lockout, password changes, maintenance, backups/restore and follow-ups. Tests use valid, invalid, boundary and exception cases and a fixed clock for time-dependent rules. Portable tests execute the real engine and validation/report composition, but do not claim persistence verification. The ported integration tests exercise real disposable LocalDB databases on Windows.
 
-Four Windows tests construct form/editor/report controls, drive real learner capture/save, check Back/Next retention and absence of early writes, and verify that report/editor controls do not open a second main window. They are not claimed as executed in Linux. Manual Windows acceptance covers layout at 100/125/150% DPI, keyboard navigation, real printing/PDF, offline use, second-instance protection, save cancellation and filesystem failures.
+Four Windows tests construct form/editor/report controls, drive real learner capture/save, check Back/Next retention and absence of early writes, and verify that report/editor controls do not open a second main window. Three additional overview resize cases check card/sidebar bounds at 960/1280/1600 logical pixels on the host display. Windows UI cases are not claimed as executed in Linux. Manual Windows acceptance covers layout at 100/125/150/200% DPI, keyboard navigation, real printing/PDF, offline use, second-instance protection, save cancellation and filesystem failures.
 
 ### 11.3 Detailed cases, problem tracking and schedule
 
@@ -479,7 +479,7 @@ The case-specific Part 1 instructions take precedence over unrelated hotel/booki
 
 ## LocalDB implementation update
 
-Setup is explicit through Database/01–04 and SETUP-DEMO.cmd. Startup verifies SchemaVersion and never drops/recreates/seeds. SchemaVersion is metadata in addition to the 20 domain entities shown above. No existing SQLite data file was attached; those files are left untouched. The transferred reference inputs and generated SQL outcomes are retained under validation/reference and Database/03_SeedData.sql.
+Setup is explicit through the in-app Prepare demonstration database button, or optionally Database/01–04 and SETUP-DEMO.cmd. The default FuturePath.sln opens the Windows Forms project; F5 shows MainForm before background SchemaVersion verification. Ordinary startup never drops, resets or silently seeds. In-app setup runs embedded Database/01–03 and preserves nonempty databases. SchemaVersion is metadata in addition to the 20 domain entities shown above. No existing SQLite data file was attached; those files are left untouched. The transferred reference inputs and generated SQL outcomes are retained under validation/reference and Database/03_SeedData.sql.
 
 Only Microsoft.Data.SqlClient is a direct runtime package; the existing provider PKCS dependency is security-pinned. Existing xUnit/Test SDK packages remain test-only. See Dependencies.md. The implementation is not package-free. Detailed SQL types/limits now come from the generated Data-Dictionary.md and LocalDB schema, not the archived original SQLite diagram.
 

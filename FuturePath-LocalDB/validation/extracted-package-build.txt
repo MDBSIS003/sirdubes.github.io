@@ -1,0 +1,13 @@
+  Determining projects to restore...
+  Restored /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Business/FuturePath.Business.csproj (in 1.79 sec).
+  Restored /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Data/FuturePath.Data.csproj (in 1.88 sec).
+  Restored /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 1.88 sec).
+  FuturePath.Business -> /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Business/bin/Release/net10.0/FuturePath.Business.dll
+  FuturePath.Data -> /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Data/bin/Release/net10.0/FuturePath.Data.dll
+  FuturePath.Desktop -> /tmp/futurepath-display-package-check/FuturePath_VisualStudio/src/FuturePath.Desktop/bin/Release/net10.0-windows/FuturePath.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:09.26

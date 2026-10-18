@@ -31,8 +31,7 @@ internal static class Program
             }
 
             var store = new SqlServerStore(databaseName);
-            store.Initialize();
-            Application.Run(new MainForm(new AppServices(store)));
+            Application.Run(new MainForm(new AppServices(store), store));
         }
         catch (Exception ex)
         {

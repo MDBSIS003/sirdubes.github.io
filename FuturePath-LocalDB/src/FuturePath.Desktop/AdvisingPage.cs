@@ -2,7 +2,7 @@ using System.ComponentModel;
 using FuturePath.Business;
 
 namespace FuturePath.Desktop;
-internal sealed class AdvisingPage : UserControl
+internal sealed class AdvisingPage : AppPage
 {
     private readonly AppServices services;
     private readonly Action<ReportDocument> showReport;
@@ -11,6 +11,7 @@ internal sealed class AdvisingPage : UserControl
         Dock = DockStyle.Fill
     };
     private readonly List<FlowLayoutPanel> steps = new();
+    private readonly Dictionary<int, AppPage> stepHosts = new();
     private readonly Label progress = Ui.Label("", 11, FontStyle.Bold);
     private readonly Button back;
     private readonly Button next;
@@ -71,7 +72,8 @@ internal sealed class AdvisingPage : UserControl
         var footer = new FlowLayoutPanel
         {
             Dock = DockStyle.Bottom,
-            Height = 76,
+            AutoSize = true,
+            AutoSizeMode = AutoSizeMode.GrowAndShrink,
             Padding = new Padding(20, 10, 20, 10),
             BackColor = Color.White
         };
@@ -152,6 +154,7 @@ internal sealed class AdvisingPage : UserControl
         funding.CheckedChanged += (_, _) => Dirty();
         HasUnsavedInput = followUp != null;
         ShowStep(0);
+        FinishLayout();
     }
 
     private void Dirty()
@@ -176,7 +179,14 @@ internal sealed class AdvisingPage : UserControl
         currentStep = index;
         // Remove, do not dispose: the same controls retain unsaved input when Back is clicked.
         stepContent.Controls.Clear();
-        stepContent.Controls.Add(steps[index]);
+        if (!stepHosts.TryGetValue(index, out var host))
+        {
+            host = new AppPage { Dock = DockStyle.Fill };
+            host.Controls.Add(steps[index]);
+            host.FinishLayout();
+            stepHosts.Add(index, host);
+        }
+        stepContent.Controls.Add(host);
         progress.Text = $"Step {index + 2} of 7  •  {steps[index].Name}     ";
         back.Enabled = index > 0 && !isSaved;
         next.Text = index == 3 ? "Check eligibility & save" : index == 4 ? "View advisory summary →" : "Next →";
@@ -463,8 +473,12 @@ internal sealed class AdvisingPage : UserControl
     protected override void Dispose(bool disposing)
     {
         if (disposing)
+        {
+            foreach (var host in stepHosts.Values)
+                host.Dispose();
             foreach (var step in steps)
                 step.Dispose();
+        }
         base.Dispose(disposing);
     }
 }

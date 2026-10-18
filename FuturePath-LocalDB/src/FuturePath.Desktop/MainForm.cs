@@ -1,10 +1,12 @@
 using FuturePath.Business;
+using FuturePath.Data;
 
 namespace FuturePath.Desktop;
 internal sealed class MainForm : AppForm
 {
     private readonly AppServices services;
     private Control? reportSource;
+    private bool arrangingNavigation;
     private readonly Panel content = new()
     {
         Dock = DockStyle.Fill
@@ -15,13 +17,14 @@ internal sealed class MainForm : AppForm
         Width = 215,
         FlowDirection = FlowDirection.TopDown,
         WrapContents = false,
+        AutoScroll = true,
         Padding = new Padding(16, 26, 12, 20),
         BackColor = Ui.Navy
     };
     private readonly Label title = Ui.Label("Welcome to Future Path", 25, FontStyle.Bold);
     private readonly Label subtitle = Ui.Label("Find a study pathway with confidence.");
     private readonly Label identity = Ui.Label("Learner workspace");
-    public MainForm(AppServices services)
+    public MainForm(AppServices services, SqlServerStore? startupStore = null)
     {
         this.services = services;
         Text = "Future Path | Student Advising";
@@ -31,7 +34,8 @@ internal sealed class MainForm : AppForm
         var header = new FlowLayoutPanel
         {
             Dock = DockStyle.Top,
-            Height = 114,
+            AutoSize = true,
+            AutoSizeMode = AutoSizeMode.GrowAndShrink,
             FlowDirection = FlowDirection.TopDown,
             WrapContents = false,
             BackColor = Color.White,
@@ -39,6 +43,11 @@ internal sealed class MainForm : AppForm
         };
         header.Controls.Add(title);
         header.Controls.Add(subtitle);
+        header.ClientSizeChanged += (_, _) =>
+        {
+            int width = Math.Max(1, header.ClientSize.Width - header.Padding.Horizontal);
+            title.MaximumSize = subtitle.MaximumSize = new Size(width, 0);
+        };
         var status = new StatusStrip
         {
             SizingGrip = true,
@@ -54,12 +63,118 @@ internal sealed class MainForm : AppForm
         main.Controls.Add(status);
         Controls.Add(main);
         Controls.Add(navigation);
+        navigation.Layout += (_, _) => ArrangeNavigation();
+        Shown += (_, _) => FitWorkingArea();
+        DpiChanged += (_, _) => FitWorkingArea();
         FormClosing += (_, e) =>
         {
             e.Cancel = !CanLeave();
         };
-        RefreshNavigation();
-        Home();
+        if (startupStore == null)
+        {
+            RefreshNavigation();
+            Home();
+        }
+        else
+        {
+            navigation.Enabled = false;
+            ShowStartupPage("Opening your local database…");
+            Shown += async (_, _) => await OpenDatabaseAsync(startupStore, prepareDemo: false);
+        }
+        FinishLayout();
+    }
+
+    private void FitWorkingArea()
+    {
+        var area = Screen.FromControl(this).WorkingArea;
+        MinimumSize = new Size(Math.Min(LogicalToDeviceUnits(950), area.Width), Math.Min(LogicalToDeviceUnits(620), area.Height));
+        if (WindowState == FormWindowState.Normal)
+        {
+            Size = new Size(Math.Min(Width, area.Width), Math.Min(Height, area.Height));
+            Location = new Point(Math.Clamp(Left, area.Left, area.Right - Width), Math.Clamp(Top, area.Top, area.Bottom - Height));
+        }
+        ArrangeNavigation();
+    }
+
+    private void ArrangeNavigation()
+    {
+        if (arrangingNavigation)
+            return;
+        arrangingNavigation = true;
+        try
+        {
+            navigation.Width = LogicalToDeviceUnits(215);
+            int available = Math.Max(1, navigation.ClientSize.Width - navigation.Padding.Horizontal);
+            foreach (Control child in navigation.Controls)
+            {
+                int width = Math.Max(1, available - child.Margin.Horizontal);
+                child.MaximumSize = new Size(width, 0);
+                if (child is Button button)
+                {
+                    button.MinimumSize = Size.Empty;
+                    button.Width = width;
+                    button.Height = Math.Max(LogicalToDeviceUnits(45), button.GetPreferredSize(new Size(width, 0)).Height);
+                }
+            }
+        }
+        finally
+        {
+            arrangingNavigation = false;
+        }
+    }
+
+    private void ShowStartupPage(string message, SqlServerStore? store = null)
+    {
+        var page = new AppPage();
+        var stack = Ui.Stack();
+        page.Controls.Add(stack);
+        var card = Ui.Card("Welcome to Future Path", message);
+        if (store != null)
+        {
+            card.Controls.Add(Ui.Label("First time? Prepare the fictional demonstration data here, then the advising overview will open. Existing records and passwords are preserved. No terminal or separate setup script is required."));
+            card.Controls.Add(Ui.Label("Requires SQL Server Express LocalDB. Install it through Visual Studio Installer → Modify → Individual components, then return here and retry.", 9));
+            card.Controls.Add(Ui.Row(
+                Ui.Button("Prepare demonstration database", () => _ = OpenDatabaseAsync(store, prepareDemo: true), true),
+                Ui.Button("Retry connection", () => _ = OpenDatabaseAsync(store, prepareDemo: false))));
+        }
+        stack.Controls.Add(card);
+        page.FinishLayout();
+        ShowPage(page, "Welcome to Future Path", "Local student advising • " + services.DatabaseName);
+    }
+
+    private async Task OpenDatabaseAsync(SqlServerStore store, bool prepareDemo)
+    {
+        ShowStartupPage(prepareDemo ? "Preparing your local demonstration database…" : "Opening your local database…");
+        UseWaitCursor = true;
+        try
+        {
+            await Task.Run(() =>
+            {
+                if (prepareDemo)
+                    DatabaseSetup.PrepareDemo(store.DatabaseName);
+                else
+                    store.Initialize();
+            });
+            if (IsDisposed || Disposing)
+                return;
+            navigation.Enabled = true;
+            RefreshNavigation();
+            Home();
+        }
+        catch (Exception ex)
+        {
+            if (IsDisposed || Disposing)
+                return;
+            string message = ex is Microsoft.Data.SqlClient.SqlException
+                ? "LocalDB could not prepare the database. Check that SQL Server Express LocalDB is installed. " + ex.Message
+                : ex.Message;
+            ShowStartupPage(message, store);
+        }
+        finally
+        {
+            if (!IsDisposed && !Disposing)
+                UseWaitCursor = false;
+        }
     }
 
     private void RefreshNavigation()
@@ -91,17 +206,15 @@ internal sealed class MainForm : AppForm
             Nav("Staff sign in", Login);
         identity.Text = services.Access.IsStaff ? $"{services.Access.DisplayName}\n{(services.Access.Role == UserRole.Advisor ? "Career Advisor" : "Administrator")}" : "Private learner workspace\nNo sign-in needed";
         identity.ForeColor = Color.FromArgb(174, 205, 214);
-        identity.MaximumSize = new Size(178, 0);
         identity.Margin = new Padding(0, 28, 0, 10);
         navigation.Controls.Add(identity);
+        ArrangeNavigation();
     }
 
     private void Nav(string text, Action action)
     {
         var b = Ui.Button(text, action);
-        b.Width = 182;
         b.AutoSize = false;
-        b.Height = 45;
         b.BackColor = Ui.Navy;
         b.ForeColor = Color.White;
         b.FlatAppearance.BorderSize = 0;
@@ -139,7 +252,7 @@ internal sealed class MainForm : AppForm
 
     private void Home()
     {
-        var page = new UserControl();
+        var page = new AppPage();
         var stack = Ui.Stack();
         page.Controls.Add(stack);
         var hero = Ui.Card("Your next chapter starts with a clearer picture.", "Explore your subjects, interests and study options. Every recommendation explains the rules behind it.");
@@ -156,6 +269,7 @@ internal sealed class MainForm : AppForm
             stack.Controls.Add(Ui.Card(item.Item1, item.Item2));
         stack.Controls.Add(Ui.Label(RecommendationEngine.Disclaimer, 9));
         stack.Controls.Add(Ui.Label("Privacy: a learner workspace cannot browse other learners. For privacy on a shared computer, end your session by closing the app. Staff can retrieve saved records after signing in.", 9));
+        page.FinishLayout();
         ShowPage(page, "Plan your future", "Step 1 of 7 • Overview. Understand your options and identify the next step.");
     }
 
@@ -273,6 +387,7 @@ internal sealed class LoginDialog : AppForm
         AcceptButton = signIn;
         CancelButton = cancel;
         stack.Controls.Add(Ui.Label("Demo staff credentials are listed in the README.\nFive failed attempts lock an account for five minutes.", 9));
+        FinishLayout();
     }
 }
 
@@ -312,5 +427,6 @@ internal sealed class PasswordDialog : AppForm
             MessageBox.Show("Password updated.", "Future Path");
             Close();
         }, true));
+        FinishLayout();
     }
 }

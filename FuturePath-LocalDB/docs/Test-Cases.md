@@ -27,7 +27,7 @@ Use a fresh demonstration database, not real learner records. Record actual resu
 | TC21 | Funding maintenance | Create funding option, select valid type/date, link faculty/programme; deactivate | Only proper matching active/open funding appears; faculty-wide and programme-specific rules follow documented semantics |
 | TC22 | Staff maintenance | Admin creates advisor, resets password, disables account; attempts self-demotion | Advisor authenticates with new password; inactive account denied; current administrator cannot disable/demote itself; hashes not displayed |
 | TC23 | Backup/restart | Create session; export; admin backup; close/reopen same database; restore a .bak to a new LocalDB database and connect to it | Session and scores survive restart; copy-only checksummed SQL backup restores its records; existing .bak files are not overwritten |
-| TC24 | Navigation and layout | Use keyboard/Tab, resize to minimum, Windows 125%/150% DPI; navigate away from unsaved session | Visible labels and focus; scrolling works; confirmation protects unsaved data; sign-out clears learner information from screen |
+| TC24 | Navigation and layout | Use keyboard/Tab, resize to minimum, Windows 100%/125%/150%/200% DPI; navigate away from unsaved session | Visible labels and focus; scrolling works; confirmation protects unsaved data; sign-out clears learner information from screen |
 | TC25 | Privacy and offline operation | Disconnect network after setup; create complete session and export; restart as guest | Workflow works offline; guest cannot retrieve other or prior-workspace sessions; staff can retrieve persisted sessions after login |
 | TC26 | Fault tolerance | Choose unwritable export destination; open the same LocalDB database twice; cancel save/print dialogs | Clear error without truncating old report; second app instance denied; cancellation leaves data intact |
 
@@ -47,13 +47,16 @@ Before presenting, complete TC14, TC24–TC26 on the actual Windows demonstratio
 
 | ID | State and action | Expected result |
 |---|---|---|
-| TC27 | Fresh Windows LocalDB; run SETUP-DEMO.cmd or Database/01–04 | Correct named database,20 domain tables plus SchemaVersion; expected counts and five scenario results; no SQLite file created |
+| TC27 | Fresh Windows LocalDB; open FuturePath.sln, press F5, then Prepare demonstration database | Correct named database,20 domain tables plus SchemaVersion; expected counts and five scenario results; no SQLite file created |
 | TC28 | Edit a profile/reference row; record counts; rerun setup and restart | Existing records/credentials/results retained; demo seed skips all inserts on nonempty database |
 | TC29 | Enter name, Next, Back; enter marks/questions and navigate | One main window; retained input; step indicator; no assessment saved until Check eligibility & save |
 | TC30 | Leave grade invalid, no marks or unanswered required questions; use Next | Validation identifies the current step and keeps it visible; no premature write |
 | TC31 | Complete assessment; summary; Back; Finish | Embedded summary with export/print; Back returns to saved outcome; Finish returns to overview in same window |
 | TC32 | Staff edit a reference/account; Cancel, Save, or navigate away | Editor stays inside main window; Save validates/persists; Cancel returns list; leaving unsaved edit asks for confirmation |
 | TC33 | Invalid/unavailable LocalDB instance or unknown schema | Actionable setup error; no automatic database creation/reset or loss of existing records |
-| TC34 | Run the full automated solution tests on Windows | Real isolated LocalDB setup/repeat/CRUD/rollback/auth/backup/restore tests and four UI tests complete; save TRX results; investigate failures |
+| TC34 | Run the full automated solution tests on Windows | Real isolated LocalDB setup/repeat/CRUD/rollback/auth/backup/restore tests and Windows UI/layout tests complete; save TRX results; investigate failures |
+| TC35 | Open FuturePath.sln on a clean Windows extraction | Desktop is the only runnable app; F5 opens the GUI with no PASS console; database setup appears in that same window |
+| TC36 | Repeat in-app setup after editing a learner and staff password; try an unrelated database | Existing records/passwords remain unchanged; unrelated tables are refused and preserved |
+| TC37 | On Windows 10 and Windows 11, restart at 100%,125%,150%,200%; resize; open late learner/staff/report pages; move between monitors with different scale; navigate Back/Next | FUTURE/PATH remains two lines; menu text and footer actions remain visible; cards fit without horizontal overflow on overview; input remains retained; vertical scrolling works |
 
-The Linux portable run skips LocalDB cases explicitly. Complete these actual Windows checks, including125%/150% DPI, before presenting. SQL grammar parsing does not prove schema execution or data persistence.
+The Linux portable run skips LocalDB cases explicitly. Complete these actual Windows checks, including 100%/125%/150%/200% DPI, before presenting. SQL grammar parsing does not prove schema execution or data persistence.

@@ -2,9 +2,9 @@
 
 ## 1. Start the real app
 
-Open **FuturePath-App.sln**, build and press F5. In the full solution the startup project is **FuturePath.Desktop**, not a test project. `RUN-FUTUREPATH.cmd` builds only Desktop and starts its Windows executable.
+Open **FuturePath.sln**, build and press F5. This solution contains only **FuturePath.Desktop** and its two supporting libraries. **FuturePath.Development.sln** additionally includes the tests. `RUN-FUTUREPATH.cmd` builds only Desktop and starts its Windows executable.
 
-`src/FuturePath.Desktop/Program.cs` configures Windows Forms, chooses the LocalDB database name (default `FuturePathStudentAdvisingSystem`), prevents a second app instance for that name, verifies setup with `SqlServerStore.Initialize()`, and opens **one MainForm**. It does not create/seed/delete databases at startup. `AppServices` constructs the access session and business services. This is direct construction, not a dependency-injection framework.
+`src/FuturePath.Desktop/Program.cs` configures Windows Forms, chooses the LocalDB database name (default `FuturePathStudentAdvisingSystem`), prevents a second app instance for that name, opens **one MainForm** immediately, then verifies setup with `SqlServerStore.Initialize()` in a background task. If the database needs preparation, MainForm offers **Prepare demonstration database**. This explicit action calls `DatabaseSetup.PrepareDemo` using the embedded SQL scripts, then returns to the overview in the same window. Existing nonempty databases are not reseeded; no database is deleted or reset. `AppServices` constructs the access session and business services. This is direct construction, not a dependency-injection framework.
 
 ## 2. One window, different contents
 
@@ -84,3 +84,7 @@ Connections/readers/commands are disposed with using. User values use parameters
 | Separation of concerns | UI gathers/displays; Business validates/calculates/authorizes; Data executes SQL |
 
 The portable checks execute real rules/validation/report composition against reference input fixtures. They are **not** SQL integration tests. Run the complete suite on Windows with LocalDB and collect manual layout/printing evidence before presenting. Do not claim an unrun test or an invented group contribution.
+
+## Display sizing
+
+`AppForm` in Ui.cs and `AppPage` in LayoutControls.cs declare a 96-DPI design baseline. Their constructors suspend layout; derived forms/pages call FinishLayout after building their controls. This also applies to pages created after the main window is visible. AdvisingPage wraps each retained step in an AppPage when first visited. `PageStack` and `ContentCard` fit cards and text to the viewport, with a reading-width cap; MainForm.ArrangeNavigation derives sidebar sizes from DeviceDpi and available width. Header/footer use automatic height. Layout tests compile for Windows; the actual DPI matrix remains a manual Windows check.

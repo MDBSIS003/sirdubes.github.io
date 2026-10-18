@@ -63,20 +63,13 @@ internal static class Ui
         MessageBox.Show(message, "Future Path — action needed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
     }
 
-    public static FlowLayoutPanel Stack() => new()
-    {
-        Dock = DockStyle.Fill,
-        FlowDirection = FlowDirection.TopDown,
-        WrapContents = false,
-        AutoScroll = true,
-        Padding = new Padding(24),
-        BackColor = Background
-    };
+    public static FlowLayoutPanel Stack() => new PageStack();
     public static FlowLayoutPanel Row(params Control[] controls)
     {
         var row = new FlowLayoutPanel
         {
             AutoSize = true,
+            AutoSizeMode = AutoSizeMode.GrowAndShrink,
             WrapContents = true,
             Margin = new Padding(0, 8, 0, 8),
             MaximumSize = new Size(1100, 0)
@@ -85,25 +78,9 @@ internal static class Ui
         return row;
     }
 
-    public static Panel Card(string title, string description, int width = 820)
+    public static Panel Card(string title, string description, int width = 1100)
     {
-        var p = new FlowLayoutPanel
-        {
-            FlowDirection = FlowDirection.TopDown,
-            WrapContents = false,
-            AutoSize = true,
-            Width = width,
-            Padding = new Padding(22),
-            BackColor = Color.White,
-            Margin = new Padding(0, 0, 0, 18),
-            MinimumSize = new Size(width, 0),
-            MaximumSize = new Size(width, 0)
-        };
-        p.ControlAdded += (_, e) =>
-        {
-            if (e.Control is Label label)
-                label.MaximumSize = new Size(width - 44, 0);
-        };
+        var p = new ContentCard(width);
         p.Controls.Add(Label(title, 16, FontStyle.Bold));
         p.Controls.Add(Label(description));
         return p;
@@ -221,11 +198,15 @@ internal class AppForm : Form
 {
     public AppForm()
     {
+        SuspendLayout();
+        AutoScaleDimensions = new SizeF(96, 96);
+        AutoScaleMode = AutoScaleMode.Dpi;
         Font = Ui.Body();
         ForeColor = Ui.Navy;
         BackColor = Ui.Background;
         StartPosition = FormStartPosition.CenterParent;
-        AutoScaleMode = AutoScaleMode.Dpi;
         MinimumSize = new Size(640, 480);
     }
+
+    internal void FinishLayout() => ResumeLayout(true);
 }

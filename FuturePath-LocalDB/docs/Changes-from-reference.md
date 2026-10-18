@@ -20,7 +20,7 @@ The input ZIP is unchanged. A separate working copy/branch preserves the baselin
 | Root `Database/01–04` | Explicit create/schema/seed/verify; no destructive startup action; refuse unknown schema; skip nonempty demo seed |
 | Old Data `Schema.sql`/`Seed.sql` | Replaced by canonical LocalDB scripts; original definitions remain in baseline history, not as a competing runtime database |
 | `validation/reference/sample-data.json`, seed generator | Exact noncredential input fixture retained from reference; production engine generates persisted SQL demo results; no outcome-name hardcoding |
-| `Program.cs` | Select database name instead of file path; verify setup; keep mutex and MainForm startup |
+| `Program.cs` | Select database name instead of file path; keep mutex; open MainForm before background verification and offer explicit in-app demo setup |
 | `AdvisingPage.cs` | Replace freely selectable tabs with retained in-window panels and validated Next/Back; clear progress and Finish |
 | `AdvisingValidation.cs`, `AdvisingService.cs` | Shared page/service validation and conventional constructors; assessment audit joins the same save transaction |
 | `RecommendationEngine.cs` | Named weights/thresholds, readable mandatory/OR grouping, deterministic tie-breaking; same policy/results |
@@ -32,7 +32,8 @@ The input ZIP is unchanged. A separate working copy/branch preserves the baselin
 | `tests/Shared` and original test files | Port actual database fixtures/constraints/reopen/backup/restore to LocalDB; protect cleanup with generated test names; skip explicitly on Linux |
 | `PortableRuleTests.cs` | Real rules/shared validation/report tests against exact fixtures; no replacement database and no SQL persistence claim |
 | Desktop tests | Retain constructor/save tests and add Back/Next/no-early-write/one-window checks |
-| `FuturePath-App.sln`, `RUN-FUTUREPATH.cmd` | Make app startup unambiguous; tests remain in original full solution |
+| `FuturePath.sln`, `FuturePath.Development.sln` | Default solution contains only Desktop/Business/Data; complete test solution is separate |
+| `DatabaseSetup.cs`, Data embedded resources, MainForm startup | Open the GUI first; prepare demo data explicitly inside the same window using the canonical SQL scripts |
 | `SETUP-DEMO.cmd`, setup helper | Explicit beginner setup without assuming sqlcmd is installed; manual SQL route for blocked PowerShell policy |
 | Docs/diagrams/Word, CI/packaging/cloud scripts | Remove stale SQLite/run-path instructions, document provider trade-off and actual validation limits |
 
@@ -41,3 +42,5 @@ No existing SQLite learner database was attached, so there are no actual learner
 Setup no longer fabricates a first-run sample export. ExportReport rows represent files actually saved by a user/test. Stored sample assessments are precomputed by the production engine during seed generation; runtime never rewrites old assessments to complete a seed.
 
 Remaining before demonstration: real Windows LocalDB setup/repeat/save/reopen/constraint/lockout/backup tests, the four Windows UI tests, manual DPI/keyboard/print/offline/error cases and team review against the approved specification. Source, grammar validation and portable tests cannot establish those Windows outcomes.
+
+Display correction 1.0.1 adds LayoutControls.cs (AppPage/PageStack/ContentCard), declares matching DPI baselines in AppForm, adapts MainForm navigation/header/window bounds and completes layout in each learner/staff/report page. Three Windows-only overview resize cases were added. Runtime DPI checks remain pending; no database schema/data/rule change is part of this correction.

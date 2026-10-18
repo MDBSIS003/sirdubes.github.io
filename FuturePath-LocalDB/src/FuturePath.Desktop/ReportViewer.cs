@@ -2,7 +2,7 @@ using System.Drawing.Printing;
 using FuturePath.Business;
 
 namespace FuturePath.Desktop;
-internal sealed class ReportViewer : UserControl
+internal sealed class ReportViewer : AppPage
 {
     private readonly ReportDocument report;
     private int printPosition;
@@ -58,6 +58,7 @@ internal sealed class ReportViewer : UserControl
         body.Controls.Add(text);
         Controls.Add(body);
         Controls.Add(toolbar);
+        FinishLayout();
     }
 
     private void Print()

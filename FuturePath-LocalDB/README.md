@@ -4,15 +4,21 @@ This is a controlled update of the supplied **FuturePath_VisualStudio_Project.zi
 
 The app is Windows desktop software. It does not call an online AI/API, run a web server, or use SQLite. The input ZIP and earlier integration remain separate and unchanged.
 
-## Start on Windows — three steps
+## Open in Visual Studio
 
-1. **Install prerequisites:** Visual Studio 2026 with **.NET desktop development**, .NET 10 SDK, and **SQL Server Express LocalDB** (Visual Studio Installer → Individual components). Extract the entire ZIP to a writable folder.
-2. **Prepare the demonstration database:** double-click **SETUP-DEMO.cmd**. This explicitly creates/prepares `(localdb)\MSSQLLocalDB` → **FuturePathStudentAdvisingSystem**, using your Windows identity. Existing records are preserved; a nonempty database is not reseeded. If PowerShell policy blocks the helper, use the four SQL scripts in SSMS/SQL Server Object Explorer as described in [Database-Setup](docs/Database-Setup.md). Do not change your machine's execution policy just to run this project.
-3. **Run the app:** double-click **RUN-FUTUREPATH.cmd**, or open **FuturePath-App.sln**, build with **Ctrl+Shift+B**, and press **F5**. In the full `FuturePath.sln`, set **FuturePath.Desktop** as startup project. `FuturePath.Tests` is for tests; PASS output in a terminal is not the app.
+1. Extract the entire ZIP to a writable Windows folder.
+2. Double-click **FuturePath.sln**. Visual Studio opens the editable Windows Forms solution; **FuturePath.Desktop** is its only application project.
+3. Press **F5** (the green Start button). Visual Studio restores packages, builds and opens the **Future Path** window. On the first run, click **Prepare demonstration database** inside the app. Later runs open the advising overview directly.
 
-The expected screen is the navy/white **Future Path** overview, with **New advisory session** and **Staff sign in**. The status bar identifies the LocalDB database in use.
+Install Visual Studio 2026 with **.NET desktop development**, .NET 10 SDK and **SQL Server Express LocalDB** (Visual Studio Installer → Individual components). The app uses your Windows identity. No terminal, GitHub account or separate setup script is needed for this workflow.
 
-These are editable source packages, not a claim of a Windows runtime validation. Current build/test evidence and remaining Windows checks are in [Validation](docs/Validation.md).
+Double-clicking a `.sln` opens Visual Studio; **F5** launches the app. **FuturePath.Development.sln** additionally includes automated tests for developers. Open **FuturePath.sln** for normal use.
+
+The expected screen is the navy/white **Future Path** window with first-run setup or the overview, **New advisory session** and **Staff sign in**. The status bar identifies the LocalDB database in use. These are editable source files; Windows GUI/LocalDB runtime checks still need a Windows machine. See [Validation](docs/Validation.md).
+
+## Display scaling on Windows 10 / Windows 11
+
+Version **1.0.1** corrects the missing DPI baseline and fixed sidebar/card sizing that could clip text on higher-scale displays. Extract this version into a new folder and open its FuturePath.sln. It uses the existing LocalDB database under the same Windows account. See [Display layout correction](DISPLAY-LAYOUT-FIX.md) for upgrade instructions and a temporary workaround. Windows DPI runtime verification remains pending.
 
 ## What is preserved and improved
 
@@ -30,14 +36,14 @@ Default connection: `Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=FuturePa
 
 The certificate setting is for the local development SQL Server instance. No package/artifact verification is disabled. No SQL password is hardcoded or required. The schema keeps the reference entity/column names, with SQL Server types, identities, keys, checks and indexes; `SchemaVersion` is installation metadata.
 
-Run scripts in order:
+For optional manual setup, run scripts in order:
 
 1. `Database/01_CreateDatabase.sql`
 2. `Database/02_CreateTables.sql`
 3. `Database/03_SeedData.sql` — explicit fictional demo data, for an empty database only.
 4. `Database/04_VerifyDatabase.sql`
 
-Startup **verifies** this installation and never creates, drops, resets or silently seeds a database. Script02 rejects unversioned/unrelated tables rather than modifying unknown data. Script03 skips a nonempty database in its entirety to avoid stable-ID collisions and accidental overwrites. Preserve backups before applying setup to an existing database.
+Startup opens the app window and **verifies** the installation in the background. If setup is needed, **Prepare demonstration database** explicitly runs the embedded create/schema/demo scripts and then opens the overview. Startup never drops, resets or silently seeds a database. The SQL scripts and `SETUP-DEMO.cmd` remain optional manual tools. Script02 rejects unversioned/unrelated tables rather than modifying unknown data. Script03 skips a nonempty database in its entirety to avoid stable-ID collisions and accidental overwrites. Preserve backups before applying setup to an existing database.
 
 The sample data contains10 learners,18 subjects,5 faculties,10 degrees,8 categories,8 questions,10 funding opportunities and10 computed advisory sessions. Requirement thresholds, additional learner marks, funding dates and names come from the supplied reference. All are sample information requiring verification; nothing guarantees admission or funding. Export metadata is created only when a real export succeeds; setup does not invent exported files.
 
@@ -76,10 +82,10 @@ Missing information/configuration takes priority. A confirmed missing mandatory 
 From the solution root:
 
 ```powershell
-dotnet restore FuturePath.sln --locked-mode
-dotnet build FuturePath.sln -c Release --no-restore
+dotnet restore FuturePath.Development.sln --locked-mode
+dotnet build FuturePath.Development.sln -c Release --no-restore
 # On Windows with LocalDB installed:
-dotnet test FuturePath.sln -c Release --no-build --logger trx --results-directory TestResults
+dotnet test FuturePath.Development.sln -c Release --no-build --logger trx --results-directory TestResults
 ```
 
 On Linux, run only the portable test project; LocalDB cases are explicitly skipped:
@@ -88,7 +94,7 @@ On Linux, run only the portable test project; LocalDB cases are explicitly skipp
 dotnet test tests/FuturePath.Tests -c Release --no-build --logger trx --results-directory TestResults
 ```
 
-Portable tests use exact reference **input fixtures**, the real recommendation engine, shared validation and report composition. They do not substitute another database or claim SQL CRUD passed. Real LocalDB tests create uniquely named `FuturePathTest_<guid>` databases, apply and repeat setup, test persistence/constraints/roles/reports/backups and remove only those disposable databases. The four Windows UI tests exercise control construction, workflow saving, Back/Next retention and the one-window editor/report design.
+Portable tests use exact reference **input fixtures**, the real recommendation engine, shared validation and report composition. They do not substitute another database or claim SQL CRUD passed. Real LocalDB tests create uniquely named `FuturePathTest_<guid>` databases, apply and repeat setup, test persistence/constraints/roles/reports/backups and remove only those disposable databases. Four original Windows UI tests exercise control construction, workflow saving, Back/Next retention and the one-window editor/report design. Three additional layout cases resize the overview to 960, 1280 and 1600 logical pixels and check sidebar/card bounds at the host display DPI.
 
 .NET 10 needs a SQL Server provider: the only direct application NuGet reference is **Microsoft.Data.SqlClient**. Its existing PKCS dependency is pinned to a patched version through central dependency management. This is **not package-free**. Existing xUnit/Test SDK packages are test-only. See [Dependencies](docs/Dependencies.md).
 

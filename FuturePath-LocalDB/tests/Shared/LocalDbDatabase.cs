@@ -32,13 +32,14 @@ public sealed class LocalDbDatabase : IDisposable
         InitialCatalog = "master"
     }.ConnectionString;
 
-    public LocalDbDatabase(bool seed = true)
+    public LocalDbDatabase(bool seed = true, bool createDatabase = true)
     {
         Store = new SqlServerStore(DatabaseName);
         Directory.CreateDirectory(DirectoryPath);
         try
         {
-            Execute("CREATE DATABASE [" + DatabaseName + "]", MasterConnection);
+            if (createDatabase)
+                Execute("CREATE DATABASE [" + DatabaseName + "]", MasterConnection);
             if (seed)
                 ApplySetupAgain();
         }

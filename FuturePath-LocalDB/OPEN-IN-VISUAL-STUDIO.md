@@ -1,14 +1,16 @@
-# Open the Windows Forms app
+# Open and run in Visual Studio
 
-1. Extract the whole ZIP to a writable Windows folder.
-2. Install Visual Studio 2026 with **.NET desktop development**, .NET 10 SDK and **SQL Server Express LocalDB**.
-3. Run **SETUP-DEMO.cmd** once. If PowerShell blocks it, use the four Database scripts in SSMS/SQL Server Object Explorer (Database-Setup.md).
-4. Open **FuturePath-App.sln**. Build with **Ctrl+Shift+B**, then press **F5**.
+1. **Extract All** from the ZIP. Keep every folder together.
+2. Double-click **FuturePath.sln** in the extracted project folder.
+3. In Visual Studio, press **F5** or the green **Start** button.
+4. First run only: click **Prepare demonstration database** in the Future Path window. The app then opens its overview. Existing records are preserved.
 
-The actual startup project is **FuturePath.Desktop**. The full `FuturePath.sln` also contains test projects; right-click Desktop → Set as Startup Project if needed. A terminal printing PASS is the test runner, not the application. `RUN-FUTUREPATH.cmd` is another way to build and start only the app.
+Requirements: Windows, Visual Studio 2026 with **.NET desktop development**, .NET 10 SDK and **SQL Server Express LocalDB** (Visual Studio Installer → Modify → Individual components). Visual Studio restores the required NuGet packages automatically; allow the initial restore to finish.
 
-The result should be one **Future Path** window with overview, sidebar and LocalDB database name. New advisory session uses retained panels with validated Next/Back. Reports and staff editors stay inside the shell. Code-built controls remain editable in C#; separate drag-and-drop Designer files are not part of the reference architecture.
+`FuturePath.sln` contains the Windows Forms application and its Business/Data libraries. Its startup project is **FuturePath.Desktop**, which produces **FuturePath.exe** with no console. Double-clicking the solution opens Visual Studio; F5 runs the application.
 
-Default server/database: `(localdb)\MSSQLLocalDB` / `FuturePathStudentAdvisingSystem`, Windows authentication. No SQLite file is used. Startup verifies setup; it does not reset data. Optional argument: `--database FuturePathDemo2026` after explicitly preparing that database name. A `.db` path is not accepted.
+The separate **FuturePath.Development.sln** includes automated tests. Use it only when developing/running tests. No GitHub account, terminal or command file is needed to open and run the normal solution.
 
-NuGet restore is necessary for Microsoft.Data.SqlClient and existing test packages. This project is not package-free. Read README.md, docs/Dependencies.md and docs/Validation.md for exact restore/build/tests and unverified Windows checks.
+Default connection: `(localdb)\MSSQLLocalDB` / `FuturePathStudentAdvisingSystem`, Windows authentication. Setup uses the embedded copies of Database/01–03, refuses unknown tables, and skips demo insertion into any nonempty database. Optional manual setup and troubleshooting are in docs/Database-Setup.md. See docs/Validation.md for completed checks and Windows checks still pending.
+
+For a Mac running Windows or a high-scale display, use this version 1.0.1 from a fresh extraction. See DISPLAY-LAYOUT-FIX.md. Existing LocalDB data on the same Windows installation/account is reused.

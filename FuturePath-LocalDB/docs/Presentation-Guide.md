@@ -1,6 +1,6 @@
 # 5–10 minute presentation guide
 
-Before the presentation, install LocalDB, run the explicit demo setup, execute the Windows tests and record the manual cases in Test-Cases.md. Confirm that the startup project is FuturePath.Desktop. Use fictional data and protect exported files.
+Before the presentation, install LocalDB, open FuturePath.sln, press F5 and choose Prepare demonstration database on first run, execute the Windows tests and record the manual cases in Test-Cases.md. Confirm that the startup project is FuturePath.Desktop. Use fictional data and protect exported files.
 
 | Time | Demonstrate | Explain |
 |---|---|---|

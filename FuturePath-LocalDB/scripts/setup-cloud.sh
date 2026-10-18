@@ -30,6 +30,6 @@ PY
   tar -xzf "$sdk_temp/sdk.tar.gz" -C "$DOTNET_ROOT"
 fi
 dotnet --version
-dotnet restore FuturePath.sln --locked-mode
-dotnet build FuturePath.sln -c Release --no-restore
+dotnet restore FuturePath.Development.sln --locked-mode
+dotnet build FuturePath.Development.sln -c Release --no-restore
 dotnet test tests/FuturePath.Tests -c Release --no-build --logger 'trx;LogFileName=futurepath.trx' --results-directory TestResults

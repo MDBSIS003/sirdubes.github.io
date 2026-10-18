@@ -18,8 +18,8 @@ The runtime Microsoft.Data.Sqlite/native SQLite packages have been removed. No S
 Restore/build from solution root:
 
 ```powershell
-dotnet restore FuturePath.sln --locked-mode
-dotnet build FuturePath.sln -c Release --no-restore
+dotnet restore FuturePath.Development.sln --locked-mode
+dotnet build FuturePath.Development.sln -c Release --no-restore
 ```
 
 Internet is needed for the initial NuGet/tool restore. After installation, advising, SQL queries, export and printing run locally/offline. SQL Server Express LocalDB is a separate Windows prerequisite; a self-contained .NET publish does not install it.

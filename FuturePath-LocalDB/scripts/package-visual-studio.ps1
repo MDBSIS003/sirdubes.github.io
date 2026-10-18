@@ -3,8 +3,8 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 $projectRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $downloadDirectory = Join-Path $projectRoot 'downloads'
 [System.IO.Directory]::CreateDirectory($downloadDirectory) | Out-Null
-$destination = Join-Path $downloadDirectory 'FuturePath_LocalDB_VisualStudio.zip'
-$excludedDirectories = @('.git', '.vs', 'bin', 'obj', 'downloads', 'artifacts', 'TestResults')
+$destination = Join-Path $downloadDirectory 'FuturePath_VisualStudio_Ready.zip'
+$excludedDirectories = @('.git', '.github', '.vs', 'bin', 'obj', 'downloads', 'artifacts', 'TestResults')
 $sourceFiles = Get-ChildItem -LiteralPath $projectRoot -File -Recurse -Force | Where-Object {
     $relative = $_.FullName.Substring($projectRoot.Length + 1)
     $parts = $relative -split '[\\/]'
@@ -20,4 +20,4 @@ try {
     }
 } finally { $archive.Dispose() }
 Write-Host "Source project ZIP: $destination"
-Write-Host 'Extract All, run SETUP-DEMO.cmd, then open FuturePath-App.sln, and press F5.'
+Write-Host 'Extract All, open FuturePath.sln, press F5. First run: Prepare demonstration database inside the app.'

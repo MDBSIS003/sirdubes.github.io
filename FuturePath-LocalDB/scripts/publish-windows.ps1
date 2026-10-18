@@ -1,10 +1,10 @@
 $ErrorActionPreference = 'Stop'
 Set-Location (Join-Path $PSScriptRoot '..')
-dotnet restore FuturePath.sln --locked-mode
+dotnet restore FuturePath.Development.sln --locked-mode
 if ($LASTEXITCODE -ne 0) { throw 'Restore failed' }
-dotnet build FuturePath.sln -c Release --no-restore
+dotnet build FuturePath.Development.sln -c Release --no-restore
 if ($LASTEXITCODE -ne 0) { throw 'Build failed' }
-dotnet test FuturePath.sln -c Release --no-build --logger trx --results-directory TestResults
+dotnet test FuturePath.Development.sln -c Release --no-build --logger trx --results-directory TestResults
 if ($LASTEXITCODE -ne 0) { throw 'Tests failed' }
 dotnet publish src/FuturePath.Desktop -c Release -r win-x64 --self-contained true -o artifacts/windows
 if ($LASTEXITCODE -ne 0) { throw 'Publish failed' }

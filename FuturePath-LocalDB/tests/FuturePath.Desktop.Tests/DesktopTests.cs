@@ -49,6 +49,42 @@ public sealed class DesktopTests
         action(new AppServices(database.Store));
     }
 
+    [Theory]
+    [InlineData(960)]
+    [InlineData(1280)]
+    [InlineData(1600)]
+    public void OverviewFitsTheViewportAndKeepsNavigationReadableAfterResize(int logicalWidth) => Sta(() =>
+    {
+        // The overview has no database dependency. Exercise real WinForms layout at the host's DPI.
+        using var main = new MainForm(new AppServices(new SqlServerStore()));
+        main.Show();
+        main.MinimumSize = Size.Empty;
+        double scale = main.DeviceDpi / 96d;
+        main.ClientSize = new Size((int)(logicalWidth * scale), (int)(720 * scale));
+        Application.DoEvents();
+
+        var brand = Descendants(main).OfType<Label>().Single(l => l.Text == "FUTURE\nPATH");
+        var navigation = (FlowLayoutPanel)brand.Parent!;
+        int lineHeight = TextRenderer.MeasureText("FUTURE", brand.Font).Height;
+        Assert.True(brand.Height <= lineHeight * 2 + (int)(8 * scale), "The two-line brand wrapped into additional lines.");
+        Assert.True(brand.Right <= navigation.ClientSize.Width - navigation.Padding.Right);
+        foreach (var button in navigation.Controls.OfType<Button>())
+        {
+            Assert.True(button.Right <= navigation.ClientSize.Width - navigation.Padding.Right);
+            Assert.True(button.Height >= button.GetPreferredSize(new Size(button.Width, 0)).Height);
+        }
+
+        var cards = Descendants(main).OfType<ContentCard>().ToList();
+        Assert.Equal(4, cards.Count);
+        foreach (var card in cards)
+        {
+            var stack = (PageStack)card.Parent!;
+            Assert.True(card.Width <= stack.ClientSize.Width - stack.Padding.Horizontal, "A card overflowed its viewport.");
+            Assert.False(stack.HorizontalScroll.Visible);
+        }
+        main.Close();
+    });
+
     [Fact]
     public void FormsConstructWithRealBindingsForEachRole() => Sta(() => WithApp(app =>
     {

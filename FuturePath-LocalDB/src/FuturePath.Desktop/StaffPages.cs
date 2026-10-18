@@ -1,7 +1,7 @@
 using FuturePath.Business;
 
 namespace FuturePath.Desktop;
-internal sealed class AdvisorPage : UserControl
+internal sealed class AdvisorPage : AppPage
 {
     private readonly AppServices services;
     private readonly TextBox search = Ui.Input(260);
@@ -78,6 +78,7 @@ internal sealed class AdvisorPage : UserControl
                 Ui.Run(() => showReport(services.Reports.Summary(Selected())));
         };
         RefreshRows();
+        FinishLayout();
     }
 
     private int Selected() => grid.CurrentRow?.DataBoundItem is SessionSummary row ? row.Id : throw new ValidationException("Select an advisory session first.");
@@ -89,7 +90,7 @@ internal sealed class AdvisorPage : UserControl
     }
 }
 
-internal sealed class ReportsPage : UserControl
+internal sealed class ReportsPage : AppPage
 {
     public ReportsPage(AppServices services, Action<ReportDocument> showReport)
     {
@@ -119,10 +120,11 @@ internal sealed class ReportsPage : UserControl
         stack.Controls.Add(exception);
         stack.Controls.Add(Ui.Card("Learner Advisory Summary", "Open Learners & sessions, select a learner’s session, and choose View / export summary. Learners can also export their own new assessment."));
         stack.Controls.Add(Ui.Label("Reports display on screen and can be saved as text or printable HTML, or printed through Windows. Use Microsoft Print to PDF if available.", 9));
+        FinishLayout();
     }
 }
 
-internal sealed class MaintenancePage : UserControl
+internal sealed class MaintenancePage : AppPage
 {
     private readonly AppServices services;
     private readonly ComboBox entity;
@@ -168,6 +170,7 @@ internal sealed class MaintenancePage : UserControl
                 Ui.Run(EditSelected);
         };
         RefreshRows();
+        FinishLayout();
     }
 
     private string Key => entity.SelectedIndex < ReferenceCatalog.Definitions.Count ? ReferenceCatalog.Definitions[entity.SelectedIndex].Key : entity.Text == "Staff accounts" ? "UserAccount" : "AuditEvent";
@@ -236,7 +239,7 @@ internal sealed class MaintenancePage : UserControl
     }
 }
 
-internal sealed class ReferenceEditor : UserControl
+internal sealed class ReferenceEditor : AppPage
 {
     public ReferenceEditor(AppServices services, ReferenceDefinition definition, ReferenceRow? row, Action saved, Action cancel)
     {
@@ -329,10 +332,11 @@ internal sealed class ReferenceEditor : UserControl
             saved();
         }, true));
         stack.Controls.Add(Ui.Button("Cancel — back to list", cancel));
+        FinishLayout();
     }
 }
 
-internal sealed class AccountEditor : UserControl
+internal sealed class AccountEditor : AppPage
 {
     public AccountEditor(AppServices services, ReferenceRow? row, Action saved, Action cancel)
     {
@@ -371,5 +375,6 @@ internal sealed class AccountEditor : UserControl
             saved();
         }, true));
         stack.Controls.Add(Ui.Button("Cancel — back to list", cancel));
+        FinishLayout();
     }
 }

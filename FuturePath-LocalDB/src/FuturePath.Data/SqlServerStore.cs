@@ -64,7 +64,7 @@ public sealed class SqlServerStore : IFuturePathStore
         }
         catch (SqlException ex)when (ex.Number is 4060 or 208 or -2 or 2 or 26 or 50)
         {
-            throw new ValidationException("Cannot open the Future Path LocalDB database. Install/start SQL Server LocalDB, then run SETUP-DEMO.cmd or the Database scripts. " + "Expected database: " + DatabaseName + ". Existing data is not reset.");
+            throw new ValidationException("Cannot open the Future Path LocalDB database. Install SQL Server Express LocalDB through Visual Studio Installer, then use Prepare demonstration database in the app. " + "Expected database: " + DatabaseName + ". Existing data is not reset.");
         }
     }
 

@@ -20,5 +20,5 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-echo Ready. Next open FuturePath-App.sln or run RUN-FUTUREPATH.cmd.
+echo Ready. Next open FuturePath.sln or run RUN-FUTUREPATH.cmd.
 pause
