@@ -1,0 +1,129 @@
+digraph G {graph[bgcolor="white",ranksep=.62,nodesep=1.0];node[fontname="DejaVu Sans",fontsize=10];edge[fontname="DejaVu Sans",fontsize=9,color="#315b70"];
+h0[label="Learner / AdvisingPage",shape=box,style=filled,fillcolor="#edf6f3",group="g0"];
+h1[label="AdvisingService",shape=box,style=filled,fillcolor="#edf6f3",group="g1"];
+h2[label="SqlServerStore",shape=box,style=filled,fillcolor="#edf6f3",group="g2"];
+h3[label="SQL Server LocalDB",shape=box,style=filled,fillcolor="#edf6f3",group="g3"];
+{rank=same;h0;h1;h2;h3;}
+h0 -> h1 -> h2 -> h3[style=invis,weight=10];
+p0_0[shape=point,width=.02,label="",group="g0"];
+h0 -> p0_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p0_1[shape=point,width=.02,label="",group="g1"];
+h1 -> p0_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p0_2[shape=point,width=.02,label="",group="g2"];
+h2 -> p0_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p0_3[shape=point,width=.02,label="",group="g3"];
+h3 -> p0_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p0_0;p0_1;p0_2;p0_3;}
+p0_0 -> p0_1 -> p0_2 -> p0_3[style=invis,weight=10];
+p0_0 -> p0_1[constraint=false,label="1. Assess validated in-memory input"];
+p1_0[shape=point,width=.02,label="",group="g0"];
+p0_0 -> p1_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p1_1[shape=point,width=.02,label="",group="g1"];
+p0_1 -> p1_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p1_2[shape=point,width=.02,label="",group="g2"];
+p0_2 -> p1_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p1_3[shape=point,width=.02,label="",group="g3"];
+p0_3 -> p1_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p1_0;p1_1;p1_2;p1_3;}
+p1_0 -> p1_1 -> p1_2 -> p1_3[style=invis,weight=10];
+p1_1 -> p1_2[constraint=false,label="2. Read active rules / questions"];
+p2_0[shape=point,width=.02,label="",group="g0"];
+p1_0 -> p2_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p2_1[shape=point,width=.02,label="",group="g1"];
+p1_1 -> p2_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p2_2[shape=point,width=.02,label="",group="g2"];
+p1_2 -> p2_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p2_3[shape=point,width=.02,label="",group="g3"];
+p1_3 -> p2_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p2_0;p2_1;p2_2;p2_3;}
+p2_0 -> p2_1 -> p2_2 -> p2_3[style=invis,weight=10];
+p2_2 -> p2_3[constraint=false,label="3. Parameterized SELECTs"];
+p3_0[shape=point,width=.02,label="",group="g0"];
+p2_0 -> p3_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p3_1[shape=point,width=.02,label="",group="g1"];
+p2_1 -> p3_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p3_2[shape=point,width=.02,label="",group="g2"];
+p2_2 -> p3_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p3_3[shape=point,width=.02,label="",group="g3"];
+p2_3 -> p3_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p3_0;p3_1;p3_2;p3_3;}
+p3_0 -> p3_1 -> p3_2 -> p3_3[style=invis,weight=10];
+p3_3 -> p3_2[constraint=false,label="4. Stored reference data"];
+p4_0[shape=point,width=.02,label="",group="g0"];
+p3_0 -> p4_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p4_1[shape=point,width=.02,label="",group="g1"];
+p3_1 -> p4_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p4_2[shape=point,width=.02,label="",group="g2"];
+p3_2 -> p4_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p4_3[shape=point,width=.02,label="",group="g3"];
+p3_3 -> p4_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p4_0;p4_1;p4_2;p4_3;}
+p4_0 -> p4_1 -> p4_2 -> p4_3[style=invis,weight=10];
+p4_2 -> p4_1[constraint=false,label="5. Typed domain objects"];
+p5_0[shape=point,width=.02,label="",group="g0"];
+p4_0 -> p5_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p5_1[shape=point,width=.02,label="",group="g1"];
+p4_1 -> p5_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p5_2[shape=point,width=.02,label="",group="g2"];
+p4_2 -> p5_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p5_3[shape=point,width=.02,label="",group="g3"];
+p4_3 -> p5_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p5_0;p5_1;p5_2;p5_3;}
+p5_0 -> p5_1 -> p5_2 -> p5_3[style=invis,weight=10];
+p5_1 -> p5_1[constraint=false,label="6. RecommendationEngine: evaluate rules"];
+p6_0[shape=point,width=.02,label="",group="g0"];
+p5_0 -> p6_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p6_1[shape=point,width=.02,label="",group="g1"];
+p5_1 -> p6_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p6_2[shape=point,width=.02,label="",group="g2"];
+p5_2 -> p6_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p6_3[shape=point,width=.02,label="",group="g3"];
+p5_3 -> p6_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p6_0;p6_1;p6_2;p6_3;}
+p6_0 -> p6_1 -> p6_2 -> p6_3[style=invis,weight=10];
+p6_1 -> p6_2[constraint=false,label="7. SaveSession with actor identity"];
+p7_0[shape=point,width=.02,label="",group="g0"];
+p6_0 -> p7_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p7_1[shape=point,width=.02,label="",group="g1"];
+p6_1 -> p7_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p7_2[shape=point,width=.02,label="",group="g2"];
+p6_2 -> p7_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p7_3[shape=point,width=.02,label="",group="g3"];
+p6_3 -> p7_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p7_0;p7_1;p7_2;p7_3;}
+p7_0 -> p7_1 -> p7_2 -> p7_3[style=invis,weight=10];
+p7_2 -> p7_3[constraint=false,label="8. BEGIN; learner/session/inputs/results/audit"];
+p8_0[shape=point,width=.02,label="",group="g0"];
+p7_0 -> p8_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p8_1[shape=point,width=.02,label="",group="g1"];
+p7_1 -> p8_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p8_2[shape=point,width=.02,label="",group="g2"];
+p7_2 -> p8_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p8_3[shape=point,width=.02,label="",group="g3"];
+p7_3 -> p8_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p8_0;p8_1;p8_2;p8_3;}
+p8_0 -> p8_1 -> p8_2 -> p8_3[style=invis,weight=10];
+p8_3 -> p8_2[constraint=false,label="9. COMMIT and identity IDs"];
+p9_0[shape=point,width=.02,label="",group="g0"];
+p8_0 -> p9_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p9_1[shape=point,width=.02,label="",group="g1"];
+p8_1 -> p9_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p9_2[shape=point,width=.02,label="",group="g2"];
+p8_2 -> p9_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p9_3[shape=point,width=.02,label="",group="g3"];
+p8_3 -> p9_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p9_0;p9_1;p9_2;p9_3;}
+p9_0 -> p9_1 -> p9_2 -> p9_3[style=invis,weight=10];
+p9_2 -> p9_1[constraint=false,label="10. Saved session ID"];
+p10_0[shape=point,width=.02,label="",group="g0"];
+p9_0 -> p10_0[style=dashed,arrowhead=none,color="#9fb3ba"];
+p10_1[shape=point,width=.02,label="",group="g1"];
+p9_1 -> p10_1[style=dashed,arrowhead=none,color="#9fb3ba"];
+p10_2[shape=point,width=.02,label="",group="g2"];
+p9_2 -> p10_2[style=dashed,arrowhead=none,color="#9fb3ba"];
+p10_3[shape=point,width=.02,label="",group="g3"];
+p9_3 -> p10_3[style=dashed,arrowhead=none,color="#9fb3ba"];
+{rank=same;p10_0;p10_1;p10_2;p10_3;}
+p10_0 -> p10_1 -> p10_2 -> p10_3[style=invis,weight=10];
+p10_1 -> p10_0[constraint=false,label="11. Outcome, alternatives, optional funding"];
+}

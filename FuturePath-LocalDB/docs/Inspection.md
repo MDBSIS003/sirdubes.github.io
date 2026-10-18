@@ -1,0 +1,15 @@
+# Reference inspection (before implementation)
+
+Input: FuturePath_VisualStudio_Project.zip, extracted to a separate working copy. Its original archive is unchanged. The smaller Future-Path-Student-Advising-System-main.zip contains only SQL scripts and a README, so it is supporting reference data rather than a second application. Earlier integration outputs are preserved separately.
+
+Entry: FuturePath.sln, .NET 10, FuturePath.Desktop (WinExe, Windows Forms); Program constructs MainForm. Business and Data are separate projects; xUnit business/data and Windows desktop test projects already exist. MainForm owns a content panel and UserControl pages. However, the learner uses five freely selectable tabs, Next does not validate, no explicit Back/Finish exists, and ReportViewer opens a separate full-size Form. These are the navigation gaps addressed by the PDF.
+
+Existing implemented behavior: local deterministic35/35/25/5 rules, mandatory/OR/average checks, five-point near-match policy, eight questions, ten required/additional sample learners, transaction-backed assessment saving, immutable results/follow-ups, staff password hashing/lockout, reference maintenance, funding, three reports, HTML/text export, printing, audit and backup. Preserve these features.
+
+Persistence migration inventory: SqliteStore, Schema.sql, Seed.sql, Data project provider reference/lockfile; Program database path/mutex/AppServices constructor; Ui exception handling; staff backup filter; test database fixtures/raw constraint/export-count/backup queries; both test projects' database setup; README/Visual Studio instructions; dictionary/specification/class/sequence diagrams and Word artifact; validation provenance; packaging and CI/cloud scripts. SQLite-specific PRAGMAs, rowid identity retrieval, substr/instr/date/text types, LIMIT and online file backup all require SQL Server equivalents.
+
+Baseline verification actually executed before migration: dotnet test tests/FuturePath.Tests -c Release.58 passed, 0 failed, 0 skipped against real temporary SQLite databases. This is reference evidence only; it does not validate LocalDB. Windows tests were not executed. Baseline TRX is retained under validation/reference.
+
+Migration choices: retain .NET 10 and the same three projects/classes where practical; replace provider with ordinary Microsoft.Data.SqlClient; default database FuturePathStudentAdvisingSystem at (localdb)\\MSSQLLocalDB, using Windows integrated authentication. Do not reuse or overwrite the previous differently named FuturePathAdvisingSystem database. Preserve all 20 domain entities and keys, add only schema-version metadata. Setup/seed is explicit, never a destructive application-startup action. Existing SQLite files are not opened or deleted; no learner data file was attached for importing.
+
+Remaining verification boundary: the Linux machine cannot execute Windows Forms or SQL Server LocalDB. Preserve and port real integration tests for Windows; add executable portable rule/service tests using explicit test fixtures and no substitute database engine. Never report fixture tests as SQL persistence verification.

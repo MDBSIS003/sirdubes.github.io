@@ -1,0 +1,15 @@
+  Determining projects to restore...
+  Restored /workspace/futurepath-localdb/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 356 ms).
+  Restored /workspace/futurepath-localdb/tests/FuturePath.Tests/FuturePath.Tests.csproj (in 356 ms).
+  Restored /workspace/futurepath-localdb/src/FuturePath.Data/FuturePath.Data.csproj (in 356 ms).
+  Restored /workspace/futurepath-localdb/tests/FuturePath.Desktop.Tests/FuturePath.Desktop.Tests.csproj (in 356 ms).
+  Restored /workspace/futurepath-localdb/src/FuturePath.Business/FuturePath.Business.csproj (in 3 ms).
+
+The following sources were used:
+   https://api.nuget.org/v3/index.json
+
+The given project `FuturePath.Desktop` has no vulnerable packages given the current sources.
+The given project `FuturePath.Business` has no vulnerable packages given the current sources.
+The given project `FuturePath.Data` has no vulnerable packages given the current sources.
+The given project `FuturePath.Tests` has no vulnerable packages given the current sources.
+The given project `FuturePath.Desktop.Tests` has no vulnerable packages given the current sources.

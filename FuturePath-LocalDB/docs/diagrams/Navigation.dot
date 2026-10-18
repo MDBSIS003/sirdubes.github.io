@@ -1,0 +1,10 @@
+digraph G {rankdir=TB;graph[bgcolor="white",nodesep=.5,ranksep=.65];node[shape=box,style="rounded,filled",fillcolor="#f0f7f5",color="#187563",fontname="DejaVu Sans",margin=.2];edge[color="#4e6d7a",fontname="DejaVu Sans",fontsize=10];
+graph[label="All workspaces and report previews remain in one MainForm"];
+Overview -> "Profile / Grade" -> "Subjects & marks" -> "Interest questionnaire" -> "Programme / Funding opt-in" -> "Saved outcome";
+"Profile / Grade" -> "Subjects & marks" [dir=both,label="Next / Back; in-memory input"];
+"Saved outcome" -> "Alternatives & funding"; "Saved outcome" -> "Advisory summary" -> "Export / Print";
+"Advisory summary" -> Overview[label="Finish"];
+Overview -> "Staff sign-in"; "Staff sign-in" -> "Advisor: sessions / follow-ups"; "Staff sign-in" -> "Activity / exception reports" -> "Export / Print";
+"Staff sign-in" -> "Administrator maintenance"; "Administrator maintenance" -> "Reference data / Accounts"; "Administrator maintenance" -> "Audit / Backup";
+"Advisor: sessions / follow-ups" -> "Advisory summary"; "Advisor: sessions / follow-ups" -> "Profile / Grade" [label="new assessment"];
+}

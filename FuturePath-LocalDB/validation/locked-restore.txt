@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored /workspace/futurepath-localdb/tests/FuturePath.Tests/FuturePath.Tests.csproj (in 1.83 sec).
+  Restored /workspace/futurepath-localdb/src/FuturePath.Data/FuturePath.Data.csproj (in 1.83 sec).
+  Restored /workspace/futurepath-localdb/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 1.83 sec).
+  Restored /workspace/futurepath-localdb/tests/FuturePath.Desktop.Tests/FuturePath.Desktop.Tests.csproj (in 1.83 sec).
+  Restored /workspace/futurepath-localdb/src/FuturePath.Business/FuturePath.Business.csproj (in 4 ms).

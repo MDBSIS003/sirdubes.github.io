@@ -1,0 +1,1 @@
+Parsed 30 actual T-SQL scripts/complete query literals; 0 errors. This is grammar validation, not LocalDB execution.

@@ -1,0 +1,72 @@
+digraph G {rankdir=TB;graph[bgcolor="white",nodesep=.4,ranksep=.7];node[shape=record,style=filled,fillcolor="#f6f9fb",color="#406679",fontname="DejaVu Sans",fontsize=10];edge[color="#406679",fontname="DejaVu Sans",fontsize=9];
+subgraph cluster_ui {label="Presentation — Windows Forms";color="#bdd7ce";
+AppForm[label="AppForm|shared form styling / scaling"];
+MainForm[label="MainForm|- services : AppServices|navigation / role-aware pages"];
+AdvisingPage[label="AdvisingPage|- marks : BindingList
+- answers : List
++ HasUnsavedInput : bool|~ SubmitAssessment()"];
+AdvisorPage[label="AdvisorPage|search / follow-ups"];
+MaintenancePage[label="MaintenancePage|typed reference editors"];
+ReportViewer[label="ReportViewer|export / Windows print"];
+MainForm -> AppForm[arrowhead=empty]; ReportViewer -> UserControl[arrowhead=empty]; AdvisingPage -> UserControl[arrowhead=empty]; MainForm -> ReportViewer[label="hosts inside content panel"];}
+subgraph cluster_business {label="Business logic and domain";color="#bdd7ce";
+AdvisingService[label="AdvisingService|- store : IFuturePathStore
+- access : AccessSession|+ Assess(input)
++ Load(id)
++ Search(filters)"];
+Engine[label="RecommendationEngine|+ RuleVersion : string|+ Evaluate(input, programme)
++ Assess(input, rules)
++ CalculateInterests()"];
+Access[label="AccessSession|- ownedSessions : HashSet
++ Role : UserRole (private set)|+ RequireStaff()
++ RequireAdmin()
++ RequireSession(id)
++ SignOut()"];
+Auth[label="AuthenticationService|+ Login()
++ ChangePassword()
++ SaveUser()"];
+Maint[label="MaintenanceService|+ Rows()
++ Save()
++ Backup()"];
+Reports[label="ReportService|+ Summary()
++ Activity()
++ Export()"];
+Input[label="AdvisoryInput|+ Learner : LearnerProfile
++ Marks : List SubjectMark
++ Responses : List InterestResponse
++ DegreeId : int
++ SubjectsComplete : bool"];
+Session[label="AdvisorySession|+ Id : int
++ Input : AdvisoryInput
++ Selected : Recommendation
++ Alternatives : List
++ RuleVersion : string"];
+Degree[label="DegreeProgramme|+ Id : int
++ FacultyId : int
++ Name : string
++ Active : bool
++ Requirements : List
++ Interests : List"];
+Result[label="Recommendation|+ Outcome : AdvisoryOutcome
++ SubjectScore : decimal
++ MarkScore : decimal
++ InterestScore : decimal
++ OverallScore : decimal
++ Explanation : string"];
+Store[label="«interface» IFuturePathStore|+ GetProgrammes()
++ GetQuestions()
++ SaveSession()
++ GetSession()
++ FindSessions()
++ SaveReference()"];
+Clock[label="«interface» IClock|+ UtcNow : DateTime
++ Today : DateOnly"];
+}
+SqlServer[label="SqlServerStore|+ DatabaseName : string|+ Initialize()
+parameterized SQL / transactions"];
+AdvisingPage -> AdvisingService; AdvisorPage -> AdvisingService; MaintenancePage -> Maint;ReportViewer -> Reports;
+AdvisingService -> Engine; AdvisingService -> Store; AdvisingService -> Access;AdvisingService -> Clock;
+Auth -> Access; Auth -> Store;Maint -> Access;Maint -> Store;Reports -> Store;Reports -> Access;
+SqlServer -> Store[style=dashed,arrowhead=empty,label="implements"];
+Session -> Input[dir=both,arrowtail=diamond,arrowhead=none,label="1"];Session -> Result[dir=both,arrowtail=diamond,arrowhead=none,label="1..6"];Engine -> Degree;Engine -> Session;
+}
