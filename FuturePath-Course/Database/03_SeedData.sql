@@ -576,7 +576,7 @@ INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT 10,Id,100 FRO
 INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT 10,Id,25 FROM dbo.InterestCategory WHERE Name=N'Business and Finance';
 INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT 10,Id,25 FROM dbo.InterestCategory WHERE Name=N'Design Thinking';
 INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT 10,Id,100 FROM dbo.InterestCategory WHERE Name=N'Society and Politics';
-INSERT dbo.UserAccount(Username,PasswordHash,Role,Active) VALUES(N'admin_test',N'210000:8WIgqIxYkTg1AzXPfsT1YA==:MbK6L/ObrY90cOYCAHk4IqhPe521lOLoyaXFCqL4qHw=',N'Administrator',1);
-INSERT dbo.UserAccount(Username,PasswordHash,Role,Active) VALUES(N'advisor_test',N'210000:rVxSH2GVNeDwXRnBiex0sQ==:n0ZHVx0A4+84+4lPhXWgU8s9WDqPA6R0B2jUw8MaCJ0=',N'Advisor',1);
+INSERT dbo.UserAccount(Username,PasswordHash,Role,Active) VALUES(N'Adonias',N'210000:loKRTa0L3rLCHmEIoy2oeA==:LrSt3+eHt16oK+SnEIIx6NiX7wNKTKWadwdIt7iDlYI=',N'Administrator',1);
+INSERT dbo.UserAccount(Username,PasswordHash,Role,Active) VALUES(N'SIRDUBES',N'210000:I1KnRv64/7DdTEVw43y9Yw==:hcjFeSR4aZ0VhcRQJvzJrgnHzsEjsTiMqRGZlU4xwL0=',N'Advisor',1);
 COMMIT TRANSACTION;
 GO

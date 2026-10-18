@@ -85,14 +85,14 @@ namespace FuturePath.Data
                     using (SqlCommand command = Command(connection, "SELECT MAX(Version) FROM dbo.SchemaVersion"))
                     {
                         object version = command.ExecuteScalar();
-                        if (version == null || version == DBNull.Value || (Convert.ToInt32(version) != 1 && Convert.ToInt32(version) != 2))
+                        if (version == null || version == DBNull.Value || (Convert.ToInt32(version) < 1 || Convert.ToInt32(version) > 3))
                         {
                             throw new ValidationException("The database schema version is not supported. Use Prepare demonstration database in the application.");
                         }
                         schemaVersion = Convert.ToInt32(version);
                     }
                 }
-                if (schemaVersion == 1)
+                if (schemaVersion < 3)
                 {
                     DatabaseSetup.Upgrade(DatabaseName);
                 }

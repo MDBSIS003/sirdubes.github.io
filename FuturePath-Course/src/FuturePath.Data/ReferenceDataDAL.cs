@@ -70,7 +70,7 @@ namespace FuturePath.Data
             string sql;
             if (key == "UserAccount")
             {
-                sql = "SELECT u.Id,u.Username,u.Role,u.Active,u.FailedAttempts,u.LockedUntilUtc,COALESCE(t.Email,N'') AS Email FROM UserAccount u LEFT JOIN TesterRegistration t ON t.UserId=u.Id ORDER BY u.Username";
+                sql = "SELECT Id,Username,Role,Active,FailedAttempts,LockedUntilUtc FROM UserAccount ORDER BY Username";
             }
             else if (key == "AuditEvent")
             {

@@ -1,0 +1,4 @@
+  Determining projects to restore...
+  Restored /workspace/verify-2.2/FuturePath/src/FuturePath.Business/FuturePath.Business.csproj (in 2.04 sec).
+  Restored /workspace/verify-2.2/FuturePath/src/FuturePath.Desktop/FuturePath.Desktop.csproj (in 2.13 sec).
+  Restored /workspace/verify-2.2/FuturePath/src/FuturePath.Data/FuturePath.Data.csproj (in 2.13 sec).

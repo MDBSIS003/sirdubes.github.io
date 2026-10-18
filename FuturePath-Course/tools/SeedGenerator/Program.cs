@@ -68,16 +68,10 @@ foreach (var row in fixture.Rows("AdvisorySession"))
         sql.AppendLine($"INSERT dbo.SessionInterestScore(SessionId,CategoryId,Score) SELECT {id},Id,{category.Value.ToString(CultureInfo.InvariantCulture)} FROM dbo.InterestCategory WHERE Name={Quote(category.Key)};");
 }
 
-// These public credentials belong only to explicitly requested fictional demonstration databases.
-var hasher = new PasswordHasher();
-foreach (var account in new[]
-{
-    ("admin_test", "FuturePathAdmin2026!", "Administrator"),
-    ("advisor_test", "FuturePathAdvisor2026!", "Advisor")
-}
-
-)
-    sql.AppendLine($"INSERT dbo.UserAccount(Username,PasswordHash,Role,Active) VALUES({Quote(account.Item1)},{Quote(hasher.Hash(account.Item2))},{Quote(account.Item3)},1);");
+string staffScript = File.ReadAllText(Path.Combine(root, "Database", "06_StaffAccounts.sql"));
+foreach (System.Text.RegularExpressions.Match account in System.Text.RegularExpressions.Regex.Matches(staffScript,
+    @"INSERT dbo.UserAccount\(Username,PasswordHash,Role,Active\) VALUES\(N'[^']+',N'[^']+',N'[^']+',1\);"))
+    sql.AppendLine(account.Value);
 sql.AppendLine("COMMIT TRANSACTION;\nGO");
 File.WriteAllText(Path.Combine(root, "Database", "03_SeedData.sql"), sql.ToString(), new UTF8Encoding(false));
 Console.WriteLine("Generated LocalDB seed using the production rules and unchanged reference inputs. No database was opened.");

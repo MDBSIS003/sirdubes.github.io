@@ -1,40 +1,35 @@
-# Future Path 2.1
+# Future Path 2.2
 
-C# Windows Forms student advising application with a local SQL Server database and three projects: Desktop, Business and Data.
+C# Windows Forms student advising system with Desktop, Business and Data projects.
 
-## Run
+## Open and run
 
 1. Install Visual Studio 2026 with .NET desktop development, the .NET 10 SDK and SQL Server Express LocalDB.
-2. Extract the complete ZIP and open `FuturePath.sln`.
-3. Allow package restore, then press F5. `FuturePath.Desktop` is the startup project.
-4. If the database is missing, choose **Prepare demonstration database** in the application.
+2. Extract the entire ZIP before opening `FuturePath.sln`.
+3. Allow NuGet package restore to finish, then press F5. `FuturePath.Desktop` is the startup project.
+4. If there is no database, select **Prepare demonstration database** in the application.
 
-The default database is `FuturePathStudentAdvisingSystem` on `(localdb)\MSSQLLocalDB`. On first use, version 1 databases receive an additive upgrade for tester registration. Existing learner records and staff passwords are retained.
+The database is `FuturePathStudentAdvisingSystem` on `(localdb)\MSSQLLocalDB`. Existing version 1 or 2 databases are upgraded automatically. Existing learner records, assessments and staff accounts are preserved.
 
-## Learner entry
+## Staff login details
 
-Name, school, province, grade, email and contact number are required. Contact numbers must contain exactly ten digits, including a leading zero where applicable. At least seven different subjects and their marks must be captured and confirmed. Every active interest question must be answered before continuing. Requirements, funding and results are display-only, wrapping sections without inner scrollbars. Complete the funding step with **Complete and save** to store the profile, captured marks, answers, scores, outcomes, alternatives and funding preference together. The saved summary shows a reference such as **FP-13** and can be exported or printed.
+Select **Staff sign in** and use one of these accounts:
 
-## Staff sign-in
-
-To create an account for assessment testing:
-
-1. Select **Staff sign in**, then **Create tester staff account**.
-2. Enter an email, username, password and confirmation. Passwords require 12–128 characters, including a letter and a digit.
-3. Choose **Administrator** to test all staff functions, or **Advisor** to test advisor access.
-4. Select **Request test code**, then **Code inserted (test)** within five minutes.
-
-This is an offline tester registration flow: no email is sent and no real email verification occurs. Account creation, the email link and its audit entry commit together in the database before sign-in. Closing the application does not delete the account. Later, sign in using the username or registered email and chosen password. An existing username or registered tester email cannot be used to create a replacement account.
-
-Original demonstration accounts remain available:
-
-| Role | Username | Demonstration password |
+| Role | Username | Password |
 |---|---|---|
-| Career Advisor | advisor_test | FuturePathAdvisor2026! |
-| Administrator | admin_test | FuturePathAdmin2026! |
+| Administrator | Adonias | NKSADO001 |
+| Advisor | SIRDUBES | MDBSI003 |
 
-These credentials apply to an unchanged demonstration account. Sign-in opens the staff workspace. Advisors can search saved learner sessions by name, school, email, contact number, province, degree or reference and retrieve their reports. Administrators can also maintain reference data and staff accounts. **Security** allows staff to change their own username and password after confirming their current password; leaving both new-password fields empty keeps the existing password. Staff can complete missing historical profile fields when creating a follow-up without replacing the learner or deleting earlier assessments.
+Enter the passwords exactly as shown. There is no registration or email-code step. These accounts are stored in the database. If an account's details have been changed in Security or by an administrator, use the updated details; reopening the application does not reset them.
 
-## Verification
+The Administrator can use learner searches, reports, reference-data maintenance, staff-account administration and database backup. The Advisor can search learners, retrieve assessments, create follow-up assessments and use reports. Administrative functions require the Administrator account.
 
-See [docs/Validation.md](docs/Validation.md). The current portable suite passed 143 tests. Windows LocalDB cases and Windows Forms runtime/display checks require Windows and were not executed on the Linux build host. `FuturePath.Development.sln` contains the test projects; normal use starts from `FuturePath.sln`. The downloadable application ZIP contains the solution, its three projects and database scripts; development tests and verification evidence remain in the repository.
+Both roles can open **Security** to change their username or password after confirming the current password. Leave both new-password fields empty to keep the existing password. New passwords entered through Security or staff administration require 12–128 characters with a letter and a number. The two initial login passwords above are already configured.
+
+## Learner assessments
+
+Name, school, province, grade, email and contact number are required. Contact numbers must contain exactly ten digits, including the leading zero. Capture at least seven different subjects and marks, confirm the subject list, and answer every interest question before continuing.
+
+Programme requirements, outcomes and funding information are display-only. Funding information wraps without an inner textbox scrollbar. Use **Complete and save** to store the learner profile, subjects, marks, responses, scores, recommendations, alternatives and funding preference in one assessment. The final summary shows its saved reference, such as **FP-13**, and offers export or printing.
+
+Staff can search saved assessments by learner name, school, email, contact number, province, degree or FP-reference. Learner summaries contain the advising outcome and next steps; staff reports include the full assessment details.

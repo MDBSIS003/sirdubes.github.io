@@ -21,24 +21,13 @@ namespace FuturePath.Desktop
             ActiveControl = txtUsername;
         }
 
-        private void btnCreateStaff_Click(object? sender, EventArgs e)
-        {
-            using (frmTesterRegistration registration = new frmTesterRegistration(app))
-            {
-                if (registration.ShowDialog(this) == DialogResult.OK)
-                {
-                    DialogResult = DialogResult.OK;
-                }
-            }
-        }
-
         private void btnLogin_Click(object? sender, EventArgs e)
         {
             try
             {
                 if (string.IsNullOrWhiteSpace(txtUsername.Text) || txtPassword.Text.Length == 0)
                 {
-                    throw new ValidationException("Enter your staff username or email and password.");
+                    throw new ValidationException("Enter your staff username and password.");
                 }
 
                 btnLogin.Enabled = false;

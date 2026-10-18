@@ -32,7 +32,7 @@ namespace FuturePath.Data
         {
             using (SqlConnection c = Open())
             {
-                using (SqlCommand cmd = Command(c, "SELECT u.Id,u.Username,u.PasswordHash,u.Role,u.Active,u.FailedAttempts,u.LockedUntilUtc FROM UserAccount u LEFT JOIN TesterRegistration t ON t.UserId=u.Id WHERE u.Username=@p0 OR t.Email=@p0", null, username))
+                using (SqlCommand cmd = Command(c, "SELECT u.Id,u.Username,u.PasswordHash,u.Role,u.Active,u.FailedAttempts,u.LockedUntilUtc FROM UserAccount u WHERE u.Username=@p0", null, username))
                 {
                     DataTable tableData = ReadData(cmd);
                     if (tableData.Rows.Count == 0)
@@ -77,31 +77,6 @@ UPDATE UserAccount SET FailedAttempts=CASE WHEN @p1=1 THEN 0 ELSE FailedAttempts
             using (SqlConnection c = Open())
             {
                 Execute(c, "UPDATE UserAccount SET PasswordHash=@p1,FailedAttempts=0,LockedUntilUtc=NULL WHERE Id=@p0", null, userId, hash);
-            }
-        }
-
-        public UserAccount CreateTesterAccount(string email, string username, string hash, UserRole role, DateTime now)
-        {
-            using (SqlConnection c = Open())
-            using (SqlTransaction tx = c.BeginTransaction())
-            {
-                try
-                {
-                    int id;
-                    using (SqlCommand command = Command(c, "INSERT INTO UserAccount(Username,PasswordHash,Role,Active) OUTPUT INSERTED.Id VALUES(@p0,@p1,@p2,1)", tx, username, hash, role.ToString()))
-                    {
-                        id = Convert.ToInt32(command.ExecuteScalar());
-                    }
-                    Execute(c, "INSERT INTO TesterRegistration(UserId,Email,CreatedUtc) VALUES(@p0,@p1,@p2)", tx, id, email, now);
-                    Execute(c, "INSERT INTO AuditEvent(UserId,Action,Detail,CreatedUtc) VALUES(@p0,@p1,@p2,@p3)", tx,
-                        id, "Offline tester account created", username, now);
-                    tx.Commit();
-                    return new UserAccount { Id = id, Username = username, PasswordHash = hash, Role = role, Active = true };
-                }
-                catch (SqlException ex) when (ex.Number is 2601 or 2627)
-                {
-                    throw new ValidationException("That username or tester email is already registered. Sign in or use different account details.");
-                }
             }
         }
 

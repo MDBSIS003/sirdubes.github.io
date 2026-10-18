@@ -1,0 +1,10 @@
+  FuturePath.Business -> /workspace/sirdubes.github.io/FuturePath-Course/src/FuturePath.Business/bin/Release/net10.0/FuturePath.Business.dll
+  FuturePath.Data -> /workspace/sirdubes.github.io/FuturePath-Course/src/FuturePath.Data/bin/Release/net10.0/FuturePath.Data.dll
+  FuturePath.Desktop -> /workspace/sirdubes.github.io/FuturePath-Course/src/FuturePath.Desktop/bin/Release/net10.0-windows/FuturePath.dll
+  FuturePath.Desktop.Tests -> /workspace/sirdubes.github.io/FuturePath-Course/tests/FuturePath.Desktop.Tests/bin/Release/net10.0-windows/FuturePath.Desktop.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:05.34

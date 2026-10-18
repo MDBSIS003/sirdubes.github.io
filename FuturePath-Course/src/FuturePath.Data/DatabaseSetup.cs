@@ -12,7 +12,7 @@ namespace FuturePath.Data
         public static void Upgrade(string databaseName)
         {
             DatabaseConnection database = new DatabaseConnection(databaseName);
-            using (Stream stream = typeof(DatabaseSetup).Assembly.GetManifestResourceStream("FuturePath.Setup.05_TesterRegistration.sql") ?? throw new InvalidOperationException("The database upgrade resource is missing."))
+            using (Stream stream = typeof(DatabaseSetup).Assembly.GetManifestResourceStream("FuturePath.Setup.06_StaffAccounts.sql") ?? throw new InvalidOperationException("The database upgrade resource is missing."))
             using (StreamReader reader = new StreamReader(stream))
             using (SqlConnection connection = database.CreateConnection())
             {
@@ -41,7 +41,7 @@ namespace FuturePath.Data
                     "01_CreateDatabase.sql",
                     "02_CreateTables.sql",
                     "03_SeedData.sql",
-                    "05_TesterRegistration.sql"
+                    "06_StaffAccounts.sql"
                 }
 
                 )

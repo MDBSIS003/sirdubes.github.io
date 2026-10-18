@@ -1,0 +1,8 @@
+  FuturePath.Business -> /workspace/sirdubes.github.io/FuturePath-Course/src/FuturePath.Business/bin/Release/net10.0/FuturePath.Business.dll
+  SeedGenerator -> /workspace/sirdubes.github.io/FuturePath-Course/tools/SeedGenerator/bin/Release/net10.0/SeedGenerator.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.46

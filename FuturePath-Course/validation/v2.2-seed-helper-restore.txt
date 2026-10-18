@@ -1,0 +1,3 @@
+  Determining projects to restore...
+  Restored /workspace/sirdubes.github.io/FuturePath-Course/tools/SeedGenerator/SeedGenerator.csproj (in 200 ms).
+  Restored /workspace/sirdubes.github.io/FuturePath-Course/src/FuturePath.Business/FuturePath.Business.csproj (in 191 ms).

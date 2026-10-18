@@ -57,7 +57,7 @@ public class DesktopTests
             new frmMain(), new frmWelcome(), new frmDatabaseSetup(), new frmLearnerProfile(),
             new frmSubjectMarks(), new frmInterestQuestionnaire(), new frmDegreeEligibility(),
             new frmAdvisoryResults(), new frmFundingOptions(), new frmAdvisorySummary(),
-            new frmLogin(), new frmTesterRegistration(), new frmSecurity(), new frmLearnerSessions(), new frmReports(),
+            new frmLogin(), new frmSecurity(), new frmLearnerSessions(), new frmReports(),
             new frmReportPreview(), new frmAdminMaintenance(), new frmEditDegreeProgramme(),
             new frmEditProgrammeRequirement(), new frmEditInterestQuestion(), new frmEditDegreeInterestMapping(),
             new frmEditFundingOption(), new frmEditFundingFaculty(), new frmEditFundingProgramme(),
@@ -190,10 +190,10 @@ public class DesktopTests
         using LocalDbDatabase db = new LocalDbDatabase();
         AppController app = new AppController(db.Store);
         Assert.Throws<AccessDeniedException>(() => app.Maintenance.Rows("Subject"));
-        app.Authentication.Login("advisor_test", "FuturePathAdvisor2026!");
+        app.Authentication.Login("SIRDUBES", "MDBSI003");
         using (frmReports reports = new frmReports(app)) { reports.CreateControl(); }
         Assert.Throws<AccessDeniedException>(() => new frmAdminMaintenance(app));
-        app.Authentication.Login("admin_test", "FuturePathAdmin2026!");
+        app.Authentication.Login("Adonias", "NKSADO001");
         using (frmAdminMaintenance admin = new frmAdminMaintenance(app)) { admin.CreateControl(); }
         ReferenceRow user = app.Maintenance.Rows("UserAccount").First();
         using (frmEditUserAccount editor = new frmEditUserAccount(app, user))
@@ -243,8 +243,10 @@ public class DesktopTests
         AppController app = new(db.Store);
         using frmLogin login = new(app);
         login.Show();
-        Field<TextBox>(login,"txtUsername").Text = "advisor_test";
-        Field<TextBox>(login,"txtPassword").Text = "FuturePathAdvisor2026!";
+        Assert.Single(Descendants(login).OfType<Button>());
+        Assert.Equal("Sign in", Descendants(login).OfType<Button>().Single().Text);
+        Field<TextBox>(login,"txtUsername").Text = "SIRDUBES";
+        Field<TextBox>(login,"txtPassword").Text = "MDBSI003";
         Field<Button>(login,"btnLogin").PerformClick();
         Assert.Equal(DialogResult.OK,login.DialogResult);
         Assert.Equal(UserRole.Advisor,app.Access.Role);
@@ -254,7 +256,7 @@ public class DesktopTests
         Form welcome = main.MdiChildren.OfType<frmWelcome>().Single();
         Assert.True(Field<Button>(welcome,"btnReports").Visible);
         Assert.False(Field<Button>(welcome,"btnAdministration").Visible);
-        app.Authentication.Login("admin_test","FuturePathAdmin2026!");
+        app.Authentication.Login("Adonias","NKSADO001");
         main.ShowOverview();
         welcome = main.MdiChildren.OfType<frmWelcome>().Single();
         Assert.True(Field<Button>(welcome,"btnAdministration").Visible);
@@ -268,12 +270,12 @@ public class DesktopTests
     {
         using LocalDbDatabase db = new();
         AppController app = new(db.Store);
-        app.Authentication.Login("advisor_test","FuturePathAdvisor2026!");
+        app.Authentication.Login("SIRDUBES","MDBSI003");
         using frmSecurity form = new(app);
         form.Show();
-        Assert.Equal("advisor_test",Field<TextBox>(form,"txtUsername").Text);
+        Assert.Equal("SIRDUBES",Field<TextBox>(form,"txtUsername").Text);
         Field<TextBox>(form,"txtUsername").Text="qa.advisor";
-        Field<TextBox>(form,"txtCurrent").Text="FuturePathAdvisor2026!";
+        Field<TextBox>(form,"txtCurrent").Text="MDBSI003";
         if (replacePassword)
         {
             Field<TextBox>(form,"txtNew").Text="ReplacementPass2026!";
@@ -283,7 +285,7 @@ public class DesktopTests
         Assert.Equal(DialogResult.OK,form.DialogResult);
         Assert.Equal("qa.advisor",app.Access.DisplayName);
         app.Access.SignOut();
-        app.Authentication.Login("qa.advisor",replacePassword ? "ReplacementPass2026!" : "FuturePathAdvisor2026!");
+        app.Authentication.Login("qa.advisor",replacePassword ? "ReplacementPass2026!" : "MDBSI003");
         Assert.Equal(UserRole.Advisor,app.Access.Role);
         form.Close();
     });
@@ -295,7 +297,7 @@ public class DesktopTests
     {
         using LocalDbDatabase db = new();
         AppController app = new(db.Store);
-        app.Authentication.Login("admin_test","FuturePathAdmin2026!");
+        app.Authentication.Login("Adonias","NKSADO001");
         using frmEditUserAccount editor = new(app,null);
         editor.Show();
         Field<TextBox>(editor,"txtUsername").Text="marker.account";
@@ -309,30 +311,6 @@ public class DesktopTests
         app.Authentication.Login("marker.account","MarkerPassword2026!");
         Assert.Equal(role,app.Access.Role);
         editor.Close();
-    });
-
-    [Fact]
-    public void OfflineTesterFormCreatesAccountThenOrdinaryLoginWorks() => Sta(() =>
-    {
-        using LocalDbDatabase db = new();
-        AppController app = new(db.Store);
-        using frmTesterRegistration form = new(app);
-        form.Show();
-        Assert.False(Field<Button>(form,"btnCode").Enabled);
-        Field<TextBox>(form,"txtEmail").Text="marker@example.com";
-        Field<TextBox>(form,"txtUsername").Text="marker.account";
-        Field<TextBox>(form,"txtPassword").Text="MarkerPassword2026!";
-        Field<TextBox>(form,"txtConfirm").Text="MarkerPassword2026!";
-        Field<ComboBox>(form,"cboRole").SelectedItem=UserRole.Administrator;
-        Field<Button>(form,"btnRequest").PerformClick();
-        Assert.False(app.Access.IsStaff);
-        Assert.True(Field<Button>(form,"btnCode").Enabled);
-        Field<Button>(form,"btnCode").PerformClick();
-        Assert.Equal(DialogResult.OK,form.DialogResult);
-        Assert.Equal(UserRole.Administrator,app.Access.Role);
-        form.Close(); app.Access.SignOut();
-        app.Authentication.Login("marker@example.com","MarkerPassword2026!");
-        Assert.Equal("marker.account",app.Access.DisplayName);
     });
 
 }

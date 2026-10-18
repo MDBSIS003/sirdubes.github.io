@@ -15,8 +15,6 @@ namespace FuturePath.Desktop
         private Label lbltxtPassword = null!;
         private TextBox txtPassword = null!;
         private Button btnLogin = null!;
-        private Button btnCreateStaff = null!;
-        private Label lblAccountHelp = null!;
         protected override void Dispose(bool disposing)
         {
             if (disposing && components != null)
@@ -49,10 +47,6 @@ namespace FuturePath.Desktop
             txtPassword.Name = "txtPassword";
             btnLogin = new Button();
             btnLogin.Name = "btnLogin";
-            btnCreateStaff = new Button();
-            btnCreateStaff.Name = "btnCreateStaff";
-            lblAccountHelp = new Label();
-            lblAccountHelp.Name = "lblAccountHelp";
             SuspendLayout();
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
@@ -76,15 +70,15 @@ namespace FuturePath.Desktop
             lblError.ForeColor = Color.Firebrick;
             tblDialog.Controls.Add(lblHeading, 0, 0);
             tblDialog.Controls.Add(lblError, 0, 1);
-            lbltxtUsername.Text = "Username or email";
+            lbltxtUsername.Text = "Username";
             lbltxtUsername.AutoSize = true;
             lbltxtUsername.Margin = new Padding(5, 10, 5, 3);
             tblDialog.Controls.Add(lbltxtUsername, 0, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.AccessibleName = "Username or email";
+            txtUsername.AccessibleName = "Username";
             txtUsername.Dock = DockStyle.Fill;
             txtUsername.Margin = new Padding(5, 3, 5, 8);
-            txtUsername.MaxLength = 150;
+            txtUsername.MaxLength = 60;
             tblDialog.Controls.Add(txtUsername, 0, 3);
             lbltxtPassword.Text = "Password";
             lbltxtPassword.AutoSize = true;
@@ -106,19 +100,7 @@ namespace FuturePath.Desktop
             btnLogin.Text = "Sign in";
             btnLogin.Click += btnLogin_Click;
             tblDialog.Controls.Add(btnLogin, 0, 6);
-            btnCreateStaff.Text = "Create tester staff account";
-            btnCreateStaff.AutoSize = true;
-            btnCreateStaff.Dock = DockStyle.Fill;
-            btnCreateStaff.MinimumSize = new Size(0, 40);
-            btnCreateStaff.Margin = new Padding(5, 3, 5, 8);
-            btnCreateStaff.Click += btnCreateStaff_Click;
-            lblAccountHelp.AutoSize = true;
-            lblAccountHelp.Dock = DockStyle.Fill;
-            lblAccountHelp.Margin = new Padding(5, 8, 5, 8);
-            lblAccountHelp.Text = "For offline assessment testing, create your own staff account with the simulated email-code option. Existing staff can sign in above.";
-            tblDialog.Controls.Add(btnCreateStaff, 0, 7);
-            tblDialog.Controls.Add(lblAccountHelp, 0, 8);
-            tblDialog.RowCount = 9;
+            tblDialog.RowCount = 7;
             pnlScroll.Controls.Add(tblDialog);
             Controls.Add(pnlScroll);
             Text = "Future Path | Staff sign in";

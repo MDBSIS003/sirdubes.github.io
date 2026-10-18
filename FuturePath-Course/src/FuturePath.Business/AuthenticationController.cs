@@ -38,56 +38,6 @@ namespace FuturePath.Business
             access.SignIn(user);
         }
 
-        private string pendingEmail = "";
-        private string pendingUsername = "";
-        private string pendingHash = "";
-        private UserRole pendingRole;
-        private DateTime? pendingUntil;
-
-        public void RequestTesterRegistration(string email, string username, string password, UserRole role)
-        {
-            CancelTesterRegistration();
-            email = email.Trim().ToLowerInvariant();
-            username = username.Trim();
-            if (email.Length > 150 || !System.Net.Mail.MailAddress.TryCreate(email, out var address) || address.Address != email)
-            {
-                throw new ValidationException("Enter a valid email address.");
-            }
-            ValidateUsername(username);
-            if (role is not (UserRole.Advisor or UserRole.Administrator))
-            {
-                throw new ValidationException("Choose Advisor or Administrator for the tester account.");
-            }
-            string hash = hasher.Hash(password);
-            if (store.FindUser(username) != null)
-            {
-                throw new ValidationException("That username already exists. Sign in or choose another username.");
-            }
-            pendingEmail = email;
-            pendingUsername = username;
-            pendingHash = hash;
-            pendingRole = role;
-            pendingUntil = clock.UtcNow.AddMinutes(5);
-        }
-
-        public void CompleteTesterRegistration()
-        {
-            if (pendingUntil == null || clock.UtcNow >= pendingUntil.Value)
-            {
-                CancelTesterRegistration();
-                throw new ValidationException("Request a new test code before continuing.");
-            }
-            UserAccount user = store.CreateTesterAccount(pendingEmail, pendingUsername, pendingHash, pendingRole, clock.UtcNow);
-            CancelTesterRegistration();
-            access.SignIn(user);
-        }
-
-        public void CancelTesterRegistration()
-        {
-            pendingEmail = pendingUsername = pendingHash = "";
-            pendingUntil = null;
-        }
-
         public void ChangePassword(string currentPassword, string newPassword)
         {
             access.RequireStaff();
