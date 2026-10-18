@@ -9,3 +9,9 @@ This version addresses the layout seen at 200% display scaling: forms/pages shar
 The same Windows installation/account reuses its existing **FuturePathStudentAdvisingSystem** database at **(localdb)\MSSQLLocalDB**. No database scripts need to be repeated just for this layout correction. A different Windows installation has its own LocalDB instance.
 
 Validation: the complete solution and a fresh ZIP extraction build with zero warnings/errors. Three Windows overview resize regression cases compile. Windows 10/11 visual DPI checks remain pending; they cannot run in the Linux build environment. Details: FuturePath-LocalDB/docs/Validation.md.
+
+## Test checklist
+
+[Download the 167-case Excel checklist](https://github.com/MDBSIS003/sirdubes.github.io/raw/refs/heads/integration/localdb-single-window/Test-Material/FuturePath_Test_Checklist.xlsx) · [Download CSV](https://github.com/MDBSIS003/sirdubes.github.io/raw/refs/heads/integration/localdb-single-window/Test-Material/FuturePath_Test_Checklist.csv) · [Read the complete test plan](Test-Material/Full-Test-Plan.md).
+
+The workbook includes priorities, execution steps, expected results, blank result fields, exact sample inputs, a Windows 10/11 display matrix and a failure log. All statuses begin Not run. Running the existing automated suite does not automatically execute every manual or proposed advanced case in the checklist.
